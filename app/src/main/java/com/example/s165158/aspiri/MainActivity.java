@@ -1,24 +1,18 @@
 package com.example.s165158.aspiri;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     ListView lst;
 
     String[] nameArray = {"Trigonometri"};
 
+    // Lavet som array så man kan tilføje flere beskrivelser
     String[] infoArray = {
             "Her lærer du om Sin, Cos og Tan"
     };
