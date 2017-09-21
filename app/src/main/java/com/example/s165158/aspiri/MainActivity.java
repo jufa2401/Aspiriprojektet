@@ -10,14 +10,14 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
     ListView lst;
 
-    String[] nameArray = {"Trigonometri"};
+    String[] nameArray = {"Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri"};
 
     // Lavet som array så man kan tilføje flere beskrivelser
     String[] infoArray = {
-            "Her lærer du om Sin, Cos og Tan"
+            "Her lærer du om Sin, Cos og Tan","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri"
     };
 
-    Integer[] imageArray = {R.drawable.trig
+    Integer[] imageArray = {R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig,R.drawable.trig
     };
 
     @Override
