@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
     ListView lst;
 
-    String[] nameArray = {"Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri","Trigonometri"};
+    String[] nameArray = {"Rentes Regning","Kvatratsætninger","Potensregneregler","Polynomier","Lineær eksponentiel og potens-sammenhænge","Statistik","Differentialregning","Integralregning","Geometri","Plangeometri med vektore","Rumgeometri med vektore","Areal, omkreds og rumfang","Placeholder","Placeholder","Placeholder"};
 
     // Lavet som array så man kan tilføje flere beskrivelser
     String[] infoArray = {
