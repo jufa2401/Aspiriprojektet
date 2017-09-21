@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Navigation {
     ListView lst;
 
     String[] nameArray = {"Rentes Regning","Kvatratsætninger","Potensregneregler","Polynomier","Lineær eksponentiel og potens-sammenhænge","Statistik","Differentialregning","Integralregning","Geometri","Plangeometri med vektore","Rumgeometri med vektore","Areal, omkreds og rumfang","Placeholder","Placeholder","Placeholder"};
@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 // User chose the "Settings" item, show the app settings UI...
                 return true;
 
-            //case R.id.action_favorite:
+            case R.id.action_favorite:
             // User chose the "Favorite" action, mark the current item
             // as a favorite...
-            //  return true;
+            return true;
 
             default:
                 // If we got here, the user's action was not recognized.
