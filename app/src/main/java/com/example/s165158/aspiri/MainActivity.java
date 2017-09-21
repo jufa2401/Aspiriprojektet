@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     };
 
     Integer[] imageArray = {R.drawable.trig
-           };
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // Fanebladet
+        // Fanebladet
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             //case R.id.action_favorite:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
-              //  return true;
+            // User chose the "Favorite" action, mark the current item
+            // as a favorite...
+            //  return true;
 
             default:
                 // If we got here, the user's action was not recognized.
@@ -60,4 +60,4 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-  }
+}
