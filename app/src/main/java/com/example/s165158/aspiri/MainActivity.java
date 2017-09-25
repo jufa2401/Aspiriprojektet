@@ -1,5 +1,5 @@
 /**
- * OBS! Denne klasse gør ikke noget som den står nu, men eg har gemt den til hvis nu der var noget i den som jeg havde glemt og kunne bruge senere  OBS!
+ * OBS! Denne klasse gør ikke noget som den står nu, men eg har gemt den til hvis nu der var noget i den som jeg havde glemt og kunne bruge senere  OBS! //
  */
 package com.example.s165158.aspiri;
 
