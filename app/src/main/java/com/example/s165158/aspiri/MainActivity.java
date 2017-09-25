@@ -1,3 +1,6 @@
+/**
+ * OBS! Denne klasse gør ikke noget som den står nu, men eg har gemt den til hvis nu der var noget i den som jeg havde glemt og kunne bruge senere  OBS!
+ */
 package com.example.s165158.aspiri;
 
 import android.os.Bundle;
@@ -7,6 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+/**
+ *
+ */
 public class MainActivity extends Navigation {
     ListView lst;
 
