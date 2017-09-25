@@ -16,8 +16,8 @@
     //Her sættes farve for navigation viewet
     <android.support.design.widget.NavigationView
 
-        app:itemIconTint="#2196f3"
-        app:itemTextColor="#050505"
+        app:itemIconTint="@color/itemIconColor"
+        app:itemTextColor="@color/itemTextColor"
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

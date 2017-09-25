@@ -22,10 +22,10 @@ public class CustomListAdapter extends ArrayAdapter {
         //to store the animal images
         private final Integer[] imageIDarray;
 
-        //to store the list of countries
+        //to store the list of names
         private final String[] nameArray;
 
-        //to store the list of countries
+        //to store the list of information
         private final String[] infoArray;
 
     public CustomListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageIDArrayParam){
