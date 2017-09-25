@@ -39,14 +39,19 @@ public class Navigation extends AppCompatActivity
        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
        setSupportActionBar(toolbar);
 
+
+        // Den flyvende knap nede i højre hjørne.
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
+            // OnClick metode for den flyvende knap
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
+        //Navigation menu oppe til venstre
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -58,12 +63,12 @@ public class Navigation extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        // Objekt for den scrollende liste
         CustomListAdapter whatever = new CustomListAdapter(this, nameArray, infoArray, imageArray);
         lst = (ListView) findViewById(R.id.list);
         lst.setAdapter(whatever);
     }
-
+    //On return pressed
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -80,7 +85,7 @@ public class Navigation extends AppCompatActivity
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
-
+    // OnClick for Settings and favorite options!
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -99,6 +104,8 @@ public class Navigation extends AppCompatActivity
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    // On click for de forskellige optioner i navigation menuen.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
