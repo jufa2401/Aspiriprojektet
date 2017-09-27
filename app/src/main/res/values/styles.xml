@@ -18,11 +18,10 @@
 
 
     </style>
-
-    // Dette refererer til hele appbaren (titelbaren for appen)
+    <!-- Dette refererer til hele appbaren (titelbaren for appen) -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
-   //Popup er temaet for f.eks når vi trykker på de 3 prikker i øverste højre hjørne
+    <!-- Popup er temaet for f.eks når vi trykker på de 3 prikker i øverste højre hjørne. -->
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

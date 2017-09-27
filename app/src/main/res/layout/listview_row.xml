@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-
+<!--Listen indeholder som følgende-->
     <ImageView
         android:id="@+id/imageView1ID"
         android:layout_width="wrap_content"

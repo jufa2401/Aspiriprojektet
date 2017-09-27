@@ -18,4 +18,13 @@
         android:visible="true"
         app:showAsAction="collapseActionView" />
 
+    <item
+        android:id="@+id/action_quit"
+        android:title="@string/action_exit"
+        android:visible="true"
+        app:showAsAction="collapseActionView"
+        />
+
+
+
 </menu>
