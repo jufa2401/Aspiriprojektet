@@ -55,4 +55,5 @@ public class CustomListAdapter extends ArrayAdapter {
         return rowView;
 
     };
+    
 }
