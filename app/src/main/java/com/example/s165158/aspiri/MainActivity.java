@@ -18,7 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Navigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
     ListView lst;
 
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String[] infoArray = {
             "Her lærer du om Sin, Cos og Tan", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri"
     };
-
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
 
@@ -55,8 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        //MainActivity menu oppe til venstre
-
+        //Navigation menu oppe til venstre
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -76,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent intent = new Intent(MainActivity.this, ClickOnList.class);
+                Intent intent = new Intent(Navigation.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = nameArray[position];
 //                Tilføjer nu strengen som en "extra" til Intent
@@ -85,10 +83,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
-
-
-
-
     }
 
 
