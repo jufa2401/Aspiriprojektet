@@ -5,4 +5,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_favorite">Favorit</string>
     <string name="action_exit">Afslut</string>
+
+
+
+    <string-array
+        name="subject_list_da">
+        <item
+            >text_string</item>
+    </string-array>
 </resources>
