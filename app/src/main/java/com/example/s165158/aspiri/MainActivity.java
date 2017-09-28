@@ -18,7 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Navigation extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
     ListView lst;
 
@@ -55,7 +55,7 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
-        //Navigation menu oppe til venstre
+        //MainActivity menu oppe til venstre
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,7 +76,7 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent intent = new Intent(Navigation.this, ClickOnList.class);
+                Intent intent = new Intent(MainActivity.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = nameArray[position];
 //                Tilføjer nu strengen som en "extra" til Intent

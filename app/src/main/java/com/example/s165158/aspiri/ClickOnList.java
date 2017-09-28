@@ -12,8 +12,11 @@ public class ClickOnList extends AppCompatActivity {
         setContentView(R.layout.activity_click_on_list);
 
 
+//        Henter "Den extra String" fra MainActivity
         String savedExtra = getIntent().getStringExtra("content");
+//        Vi erklærer textview i java som peger på vores textview contentID i clickonlist.xml
         TextView myText = (TextView) findViewById(R.id.contentID);
+//        Vi sætter den hentede String til at ryge ind i TextViewet
         myText.setText(savedExtra);
     }
 }
