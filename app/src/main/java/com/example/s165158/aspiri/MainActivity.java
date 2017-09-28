@@ -1,6 +1,7 @@
 package com.example.s165158.aspiri;
-
+import java.lang.*;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -23,15 +24,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ListView lst;
 
 //    Forsøg at hente String Array fra string xml??
-//    String[] k = getResources().getStringArray(R.array.subject_list_da);
 
-
-    String[] nameArray = {"Rentes Regning", "Kvatratsætninger", "Potensregneregler", "Polynomier", "Lineær eksponentiel og potens-sammenhænge", "Statistik", "Differentialregning", "Integralregning", "Geometri", "Plangeometri med vektore", "Rumgeometri med vektore", "Areal, omkreds og rumfang", "Placeholder", "Placeholder", "Placeholder"};
-
+    String[] nameArray;
     // Lavet som array så man kan tilføje flere beskrivelser
-    String[] infoArray = {
-            "Her lærer du om Sin, Cos og Tan", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri"
-    };
+    String[] infoArray;
+
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
 
@@ -39,9 +36,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+        nameArray = getResources().getStringArray(R.array.subject_list);
+        infoArray = getResources().getStringArray(R.array.subtext_list_da22222);
+
         // Fanebladet
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
 
         // Den flyvende knap nede i højre hjørne. BEMÆRKK Hvordan den laver et nyt view!
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -74,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent intent = new Intent(Navigation.this, ClickOnList.class);
+                Intent intent = new Intent(MainActivity.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = nameArray[position];
 //                Tilføjer nu strengen som en "extra" til Intent
