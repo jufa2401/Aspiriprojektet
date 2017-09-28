@@ -8,6 +8,7 @@
         android:roundIcon="@mipmap/aspiri"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Navigation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
