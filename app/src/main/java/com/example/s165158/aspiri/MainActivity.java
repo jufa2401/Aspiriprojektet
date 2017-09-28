@@ -2,6 +2,7 @@ package com.example.s165158.aspiri;
 import java.lang.*;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -19,41 +20,55 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import static android.R.id.message;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
     ListView lst;
 
-//    Forsøg at hente String Array fra string xml??
 
-    String[] nameArray;
-    // Lavet som array så man kan tilføje flere beskrivelser
-    String[] infoArray;
+    //instantierer Arrays så det kan bruges uden for klassen, og refereres til fra Strings
+    String[] subjectListArray;
+    String[] subtextListArray;
 
+    //Skal laves om!
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
 
+
+    //On createmetode
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        nameArray = getResources().getStringArray(R.array.subject_list);
-        infoArray = getResources().getStringArray(R.array.subtext_list_da22222);
+        subjectListArray = getResources().getStringArray(R.array.subject_list);
+        subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
         // Fanebladet
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-
-
         // Den flyvende knap nede i højre hjørne. BEMÆRKK Hvordan den laver et nyt view!
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton floatingActionButton1 = (FloatingActionButton) findViewById(R.id.fab);
+
+        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
+
             @Override
             // OnClick metode for den flyvende knap
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","jm@aspiri.dk",null));
+                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.startMail));
+                startActivity(Intent.createChooser(intent, "Choose an Email client :"));
+
+
+                System.out.println("Mail_icon pressed");
             }
         });
 
@@ -69,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         // Objekt for den scrollende liste
-        CustomListAdapter whatever = new CustomListAdapter(this, nameArray, infoArray, imageArray);
+        CustomListAdapter whatever = new CustomListAdapter(this, subjectListArray, subtextListArray, imageArray);
         lst = (ListView) findViewById(R.id.list);
         lst.setAdapter(whatever);
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                Intent er hvad man bruger til at skifte imellem activities
                 Intent intent = new Intent(MainActivity.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
-                String message = nameArray[position];
+                String message = subjectListArray[position];
 //                Tilføjer nu strengen som en "extra" til Intent
                 intent.putExtra("content", message);
                 startActivity(intent);
@@ -89,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+    //Vides ikke. Justin kommenter pls
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -110,12 +126,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.action_quit:
                 finish();
+                System.out.println("action_quit pressed");
                 return true;
 
 
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                System.out.println("action_settings pressed");
                 return true;
 
             case R.id.action_favorite:
@@ -123,10 +141,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // as a favorite...
 
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                System.out.println("action_favorite pressed");
                 return true;
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
+
                 return super.onOptionsItemSelected(item);
         }
     }

@@ -21,9 +21,12 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
 
         Button b1 = (Button) findViewById(R.id.button);
         b1.setOnClickListener(this);
+
+        System.out.println("created new view");
     }
 
 
+    //Knapper
     @Override
     public void onClick(View view) {
 
@@ -33,6 +36,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
             case R.id.button:
                 Intent intent = new Intent(ClickOnList.this, MainActivity.class);
                 startActivity(intent);
+                System.out.println("back button pressed");
                 break;
 
             default:

@@ -26,27 +26,35 @@ class OnNavigationItemSelectedListener extends AppCompatActivity implements Navi
 
         if (id == R.id.nav_camera) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_camera pressed");
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_gallery pressed");
 
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_slideshow pressed");
 
         } else if (id == R.id.nav_manage) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_manage pressed");
 
         } else if (id == R.id.nav_share) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_share pressed");
 
         } else if (id == R.id.nav_send) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_send pressed");
 
         } else if (id == R.id.nav_home) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_home pressed");
 
         } else if (id == R.id.nav_store) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("nav_store pressed");
         }
 
 

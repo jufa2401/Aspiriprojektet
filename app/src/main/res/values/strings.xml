@@ -7,31 +7,35 @@
     <string name="action_exit">Afslut</string>
     <string name="back">Tilbage</string>
 
+    <!--Mail-->
+    <string name="subject">Vedrørende Aspiri App Android</string>
+    <string name="startMail">Kære Aspiri App team, \\n \\n</string>
+
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>1text_string</item>
-        <item>2Rentes Regning</item>
-        <item>3Kvatratsætninger</item>
-        <item>4Potensregneregler</item>
-        <item>5Polynomier</item>
-        <item>6Lineær Eksponentiel og potenssammenænge</item>
-        <item>7Statistik</item>
-        <item>8Differentialregning</item>
-        <item>9Geometri</item>
-        <item>10Plangeometri med vektore</item>
-        <item>11Rumgeometri med vektore</item>
-        <item>12Areal omkreds og rumfang</item>
-        <item>13Placeholder</item>
-        <item>14Placeholder</item>
-        <item>15Placeholder</item>
-        <item>16Placeholder</item>
+        <item>1 Trigonometri</item>
+        <item>2 Rentes Regning</item>
+        <item>3 Kvatratsætninger</item>
+        <item>4 Potensregneregler</item>
+        <item>5 Polynomier</item>
+        <item>6 Lineær Eksponentiel og potenssammenænge</item>
+        <item>7 Statistik</item>
+        <item>8 Differentialregning</item>
+        <item>9 Geometri</item>
+        <item>10 Plangeometri med vektore</item>
+        <item>11 Rumgeometri med vektore</item>
+        <item>12 Areal omkreds og rumfang</item>
+        <item>13 Placeholder</item>
+        <item>14 Placeholder</item>
+        <item>15 Placeholder</item>
+        <item>16 Placeholder</item>
     </string-array>
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array
-        name="subtext_list_da22222">
+        name="subtext_list">
         <item>1Her lærer du om Sin, Cos og Tan</item>\
         <item>2Dette afsnit kan bruges til din bank</item>
         <item>3Placeholder</item>
