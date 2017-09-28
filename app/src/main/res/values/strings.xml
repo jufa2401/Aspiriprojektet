@@ -7,44 +7,7 @@
     <string name="action_exit">Afslut</string>
 
 
-    <!--Array til navne i overskrifter-->
-    <string-array
-        name="subject_list_da">
+    <string-array name="subject_list_da">
         <item>text_string</item>
-        <item>Rentes Regning</item>
-        <item>Kvatratsætninger</item>
-        <item>Potensregneregler</item>
-        <item>Polynomier</item>
-        <item>Lineær Eksponentiel og potenssammenænge</item>
-        <item>Statistik</item>
-        <item>Differentialregning</item>
-        <item>Geometri</item>
-        <item>Plangeometri med vektore</item>
-        <item>Rumgeometri med vektore</item>
-        <item>Areal omkreds og rumfang</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
     </string-array>
-
-    <!--Array til navne i underoverskrifter-->
-    <string-array
-        name="subtext_list_da">
-        <item>Her lærer du om Sin, Cos og Tan</item>\
-        <item>Dette afsnit kan bruges til din bank</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-    </string-array>
-
 </resources>

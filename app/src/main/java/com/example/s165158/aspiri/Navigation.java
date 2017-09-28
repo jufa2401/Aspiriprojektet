@@ -72,8 +72,18 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Navigation.this, ClickOnList.class);
+                String message = nameArray[position];
+                intent.putExtra("content", message);
+                startActivity(intent);
+
             }
         });
+
+
+
+
     }
 
 
