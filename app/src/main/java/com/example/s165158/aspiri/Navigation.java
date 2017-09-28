@@ -23,7 +23,7 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
     ListView lst;
 
 
-    String[] nameArray = {"Rentes Regning", "Kvatratsætninger", "Potensregneregler", "Polynomier", "Lineær eksponentiel og potens-sammenhænge", "Statistik", "Differentialregning", "Integralregning", "Geometri", "Plangeometri med vektore", "Rumgeometri med vektore", "Areal, omkreds og rumfang", "Placeholder", "Placeholder", "Placeholder"};
+    String[] nameArray = { "test","Kvatratsætninger", "Potensregneregler", "Polynomier", "Lineær eksponentiel og potens-sammenhænge", "Statistik", "Differentialregning", "Integralregning", "Geometri", "Plangeometri med vektore", "Rumgeometri med vektore", "Areal, omkreds og rumfang", "Placeholder", "Placeholder", "Placeholder"};
 
     // Lavet som array så man kan tilføje flere beskrivelser
     String[] infoArray = {

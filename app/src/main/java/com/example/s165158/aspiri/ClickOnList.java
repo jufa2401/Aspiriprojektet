@@ -13,7 +13,5 @@ public class ClickOnList extends AppCompatActivity {
 
 
         String savedExtra = getIntent().getStringExtra("animal");
-        TextView myText = (TextView) findViewById(R.id.content_id);
-        myText.setText(savedExtra);
     }
 }
