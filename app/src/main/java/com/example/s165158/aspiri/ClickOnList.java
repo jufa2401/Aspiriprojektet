@@ -3,7 +3,7 @@ package com.example.s165158.aspiri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-//Denne klasse håndterer den activity man ryger ind i når man klikker på et list-objekt
+//Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
 public class ClickOnList extends AppCompatActivity {
 
     @Override
@@ -12,6 +12,8 @@ public class ClickOnList extends AppCompatActivity {
         setContentView(R.layout.activity_click_on_list);
 
 
-        String savedExtra = getIntent().getStringExtra("animal");
+        String savedExtra = getIntent().getStringExtra("content");
+        TextView myText = (TextView) findViewById(R.id.contentID);
+        myText.setText(savedExtra);
     }
 }

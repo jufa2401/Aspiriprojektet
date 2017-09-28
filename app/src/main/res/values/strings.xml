@@ -10,42 +10,44 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list_da">
-        <item>text_string</item>
-        <item>Rentes Regning</item>
-        <item>Kvatratsætninger</item>
-        <item>Potensregneregler</item>
-        <item>Polynomier</item>
-        <item>Lineær Eksponentiel og potenssammenænge</item>
-        <item>Statistik</item>
-        <item>Differentialregning</item>
-        <item>Geometri</item>
-        <item>Plangeometri med vektore</item>
-        <item>Rumgeometri med vektore</item>
-        <item>Areal omkreds og rumfang</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
+        <item>1text_string</item>
+        <item>2Rentes Regning</item>
+        <item>3Kvatratsætninger</item>
+        <item>4Potensregneregler</item>
+        <item>5Polynomier</item>
+        <item>6Lineær Eksponentiel og potenssammenænge</item>
+        <item>7Statistik</item>
+        <item>8Differentialregning</item>
+        <item>9Geometri</item>
+        <item>10Plangeometri med vektore</item>
+        <item>11Rumgeometri med vektore</item>
+        <item>12Areal omkreds og rumfang</item>
+        <item>13Placeholder</item>
+        <item>14Placeholder</item>
+        <item>15Placeholder</item>
+        <item>16Placeholder</item>
     </string-array>
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array
-        name="subtext_list_da">
-        <item>Her lærer du om Sin, Cos og Tan</item>\
-        <item>Dette afsnit kan bruges til din bank</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
+        name="subtext_list_da22222">
+        <item>1Her lærer du om Sin, Cos og Tan</item>\
+        <item>2Dette afsnit kan bruges til din bank</item>
+        <item>3Placeholder</item>
+        <item>4Placeholder</item>
+        <item>5Placeholder</item>
+        <item>6Placeholder</item>
+        <item>7Placeholder</item>
+        <item>8Placeholder</item>
+        <item>9Placeholder</item>
+        <item>10Placeholder</item>
+        <item>11Placeholder</item>
+        <item>12Placeholder</item>
+        <item>13Placeholder</item>
+        <item>14Placeholder</item>
+        <item>15Placeholder</item>
+        <item>16Placeholder</item>
     </string-array>
 
 </resources>

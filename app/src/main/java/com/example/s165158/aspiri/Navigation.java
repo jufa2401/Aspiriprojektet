@@ -22,8 +22,11 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
     private final static String MESSAGE = "MESSAGE";
     ListView lst;
 
+//    Forsøg at hente String Array fra string xml??
+//    String[] k = getResources().getStringArray(R.array.subject_list_da);
 
-    String[] nameArray = { "test","Kvatratsætninger", "Potensregneregler", "Polynomier", "Lineær eksponentiel og potens-sammenhænge", "Statistik", "Differentialregning", "Integralregning", "Geometri", "Plangeometri med vektore", "Rumgeometri med vektore", "Areal, omkreds og rumfang", "Placeholder", "Placeholder", "Placeholder"};
+
+    String[] nameArray = {"Rentes Regning", "Kvatratsætninger", "Potensregneregler", "Polynomier", "Lineær eksponentiel og potens-sammenhænge", "Statistik", "Differentialregning", "Integralregning", "Geometri", "Plangeometri med vektore", "Rumgeometri med vektore", "Areal, omkreds og rumfang", "Placeholder", "Placeholder", "Placeholder"};
 
     // Lavet som array så man kan tilføje flere beskrivelser
     String[] infoArray = {
@@ -38,8 +41,8 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
         // Fanebladet
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // Den flyvende knap nede i højre hjørne. BEMÆRKK Hvordan den laver et nyt view!
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -72,9 +75,11 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
-
+//                Intent er hvad man bruger til at skifte imellem activities
                 Intent intent = new Intent(Navigation.this, ClickOnList.class);
+//                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = nameArray[position];
+//                Tilføjer nu strengen som en "extra" til Intent
                 intent.putExtra("content", message);
                 startActivity(intent);
 
