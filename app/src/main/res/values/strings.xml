@@ -26,6 +26,7 @@
         <item>Placeholder</item>
     </string-array>
 
+
     <!--Array til navne i underoverskrifter-->
     <string-array
         name="subtext_list_da">
