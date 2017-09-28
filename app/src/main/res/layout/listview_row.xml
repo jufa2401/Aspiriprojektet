@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
+        android:animationCache="false"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
@@ -33,6 +34,6 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="12sp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
     </LinearLayout>
 </LinearLayout>
