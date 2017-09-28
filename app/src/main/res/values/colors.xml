@@ -7,6 +7,7 @@
     <color name="colorAccent">#64e7d3</color>
     <color name="titleTextColor">#fffffe</color>
     <color name="menuTextColor">#000000</color>
+
     <!-- Navbar color palette -->
     <color name="itemIconColor">#2196f3</color>
     <color name="itemTextColor">#050505</color>

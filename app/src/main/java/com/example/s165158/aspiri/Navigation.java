@@ -32,7 +32,6 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
     String[] infoArray = {
             "Her lærer du om Sin, Cos og Tan", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri", "Trigonometri"
     };
-
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
 
@@ -56,7 +55,6 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
         });
 
         //Navigation menu oppe til venstre
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -85,10 +83,6 @@ public class Navigation extends AppCompatActivity implements NavigationView.OnNa
 
             }
         });
-
-
-
-
     }
 
 
