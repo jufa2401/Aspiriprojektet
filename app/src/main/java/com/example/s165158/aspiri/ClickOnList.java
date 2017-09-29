@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 //Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
-public class ClickOnList extends AppCompatActivity implements View.OnClickListener {
+public class ClickOnList extends MainActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_click_on_list);
+        //setContentView(R.layout.activity_click_on_list);
 
         String savedExtra = getIntent().getStringExtra("content");
         TextView myText = (TextView) findViewById(R.id.contentID);
@@ -25,6 +25,11 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
         System.out.println("created new view");
     }
 
+    @Override
+    protected int getLayoutResourceId() {
+        return R.layout.activity_click_on_list;
+    }
+
 
     //Knapper
     @Override
@@ -34,7 +39,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
 
             //Knap test udføres bare ved normale brugertest
             case R.id.button:
-                Intent intent = new Intent(ClickOnList.this, MainActivity.class);
+                Intent intent = new Intent(ClickOnList.this, Main2Activity.class);
                 startActivity(intent);
                 System.out.println("back button pressed");
                 break;

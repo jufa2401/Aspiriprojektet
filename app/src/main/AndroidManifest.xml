@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/aspiri"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClickOnList"></activity>
+        <activity android:name=".ClickOnList" />
+            <intent-filler>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filler>
     </application>
 
 </manifest>

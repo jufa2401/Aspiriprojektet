@@ -22,18 +22,9 @@ import android.widget.Toast;
 
 import static android.R.id.message;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public abstract class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
-    ListView lst;
 
-
-    //instantierer Arrays så det kan bruges uden for klassen, og refereres til fra Strings
-    String[] subjectListArray;
-    String[] subtextListArray;
-
-    //Skal laves om!
-    Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
-    };
 
 
     //On createmetode
@@ -41,8 +32,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        subjectListArray = getResources().getStringArray(R.array.subject_list);
-        subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
         // Fanebladet
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -61,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setAction("Action", null).show();
 
 
-
-                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","jm@aspiri.dk",null));
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
                 intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
                 intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.startMail));
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
@@ -83,26 +71,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        // Objekt for den scrollende liste
-        CustomListAdapter whatever = new CustomListAdapter(this, subjectListArray, subtextListArray, imageArray);
-        lst = (ListView) findViewById(R.id.list);
-        lst.setAdapter(whatever);
-        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
-//                Intent er hvad man bruger til at skifte imellem activities
-                Intent intent = new Intent(MainActivity.this, ClickOnList.class);
-//                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
-                String message = subjectListArray[position];
-//                Tilføjer nu strengen som en "extra" til Intent
-                intent.putExtra("content", message);
-                startActivity(intent);
-
-            }
-        });
     }
-
+    protected abstract int getLayoutResourceId();
 
     //Vides ikke. Justin kommenter pls
     public void onBackPressed() {
@@ -188,6 +158,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 
 
 }

@@ -34,8 +34,7 @@
 
 
     <!--Array til navne i underoverskrifter-->
-    <string-array
-        name="subtext_list">
+    <string-array name="subtext_list">
         <item>1Her lærer du om Sin, Cos og Tan</item>\
         <item>2Dette afsnit kan bruges til din bank</item>
         <item>3Placeholder</item>
