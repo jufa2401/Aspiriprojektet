@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<!--Headeren for MainActivity Bar (altså helt i toppen hvor log billedet er)-->
+<!--Headeren for BaseActivity Bar (altså helt i toppen hvor log billedet er)-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -19,5 +19,6 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="Aspiri-logo"
         app:srcCompat="@drawable/aspiri_tab_icon" />
 </LinearLayout>

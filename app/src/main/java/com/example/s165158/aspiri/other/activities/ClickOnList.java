@@ -1,19 +1,22 @@
-package com.example.s165158.aspiri;
+package com.example.s165158.aspiri.other.activities;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.s165158.aspiri.BaseActivity;
+import com.example.s165158.aspiri.Main2Activity;
+import com.example.s165158.aspiri.R;
+
 //Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
-public class ClickOnList extends MainActivity implements View.OnClickListener {
+public class ClickOnList extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_click_on_list);
+        setContentView(R.layout.activity_click_on_list);
 
         String savedExtra = getIntent().getStringExtra("content");
         TextView myText = (TextView) findViewById(R.id.contentID);

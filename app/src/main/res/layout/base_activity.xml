@@ -28,7 +28,6 @@
         app:menu="@menu/activity_navigation_drawer" />
 
 
-    //app:itemBackground="@drawable/my_ripple"
 
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,15 +1,14 @@
-package com.example.s165158.aspiri;
+package com.example.s165158.aspiri.objects;
 
 import android.app.Activity;
-import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.s165158.aspiri.R;
 
 /**
  * Created by s165158 on 20-09-2017.
@@ -30,7 +29,7 @@ public class CustomListAdapter extends ArrayAdapter {
 
     public CustomListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageIDArrayParam){
 
-        super(context,R.layout.listview_row , nameArrayParam);
+        super(context, R.layout.listview_row, nameArrayParam);
         this.context=context;
         this.imageIDarray = imageIDArrayParam;
         this.nameArray = nameArrayParam;
@@ -54,6 +53,6 @@ public class CustomListAdapter extends ArrayAdapter {
 
         return rowView;
 
-    };
-    
+    }
+
 }

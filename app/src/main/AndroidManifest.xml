@@ -16,10 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClickOnList" />
-            <intent-filler>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filler>
+        <activity android:name=".other.activities.ClickOnList" />
+
+        <intent-filler>
+            <action android:name="android.intent.action.VIEW" />
+        </intent-filler>
+
+        <activity
+            android:name=".other.activities.TestActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

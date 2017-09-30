@@ -1,14 +1,18 @@
 package com.example.s165158.aspiri;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends MainActivity  {
+import com.example.s165158.aspiri.objects.CustomListAdapter;
+import com.example.s165158.aspiri.other.activities.ClickOnList;
+
+public class Main2Activity extends BaseActivity {
     ListView lst;
 
 
@@ -22,11 +26,16 @@ public class Main2Activity extends MainActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        setContentView(R.layout.base_activity);
 
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
         createList(subjectListArray,subtextListArray,imageArray);
+
+        activateToolbar();
+        activateFloatingActionButton();
+        activateNavigationView();
     }
 
 
@@ -57,5 +66,13 @@ public class Main2Activity extends MainActivity  {
     protected int getLayoutResourceId() {
         return R.layout.activity_main2;
     }
+
+    static class ViewHolder {
+        private TextView titleTextView;
+        private TextView descriptionTextView;
+        private ImageView iconImageView;
+    }
+
+
 }
 
