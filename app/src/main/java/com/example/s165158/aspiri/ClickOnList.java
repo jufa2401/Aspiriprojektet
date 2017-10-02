@@ -34,8 +34,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
 
             //Knap test udføres bare ved normale brugertest
             case R.id.button:
-                Intent intent = new Intent(ClickOnList.this, MainActivity.class);
-                startActivity(intent);
+                super.onBackPressed();
                 System.out.println("back button pressed");
                 break;
 
