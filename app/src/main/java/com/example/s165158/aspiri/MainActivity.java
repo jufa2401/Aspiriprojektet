@@ -57,18 +57,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             // OnClick metode for den flyvende knap
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","jm@aspiri.dk",null));
-                intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject));
-                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.startMail));
+                intent.putExtra(Intent.EXTRA_SUBJECT, R.string.Email_subject);
+                intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.Email_beginning_1));
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
-
-
                 System.out.println("Mail_icon pressed");
+
             }
         });
 
@@ -95,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent = new Intent(MainActivity.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = subjectListArray[position];
-//                Tilføjer nu strengen som en "extra" til Intent
+                //Tilføjer nu strengen som en "extra" til Intent
                 intent.putExtra("content", message);
                 startActivity(intent);
 
@@ -104,15 +100,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    //Vides ikke. Justin kommenter pls
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    //Vides ikke. Justin kommenter pls
+
+//    public void onBackPressed() {
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -129,7 +126,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 System.out.println("action_quit pressed");
                 return true;
 
-
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
@@ -139,8 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
-
-                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Action Favorite is yet to be implemented", Toast.LENGTH_SHORT).show();
                 System.out.println("action_favorite pressed");
                 return true;
 
@@ -152,37 +147,51 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    //BURDE VI IKKE BRUGE SWITCH? Mindre kode
     // On click for de forskellige optioner i navigation menuen.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        //Getting int for if statements
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_slideshow) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_manage) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_share) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_send) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_home) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed nav_home");
 
         } else if (id == R.id.nav_store) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-        }
+            Toast.makeText(getApplicationContext(), getString(R.string.opening_store), Toast.LENGTH_SHORT).show();
+            System.out.println("Opening Webstore");
+            String url = "https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
 
+        } else if (id == R.id.nav_camera) {
+            Toast.makeText(getApplicationContext(), "Camera is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Camera");
+
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
+            Toast.makeText(getApplicationContext(), "Gallery is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Nav_Gallery");
+
+        } else if (id == R.id.nav_slideshow) {
+            Toast.makeText(getApplicationContext(), "Slideshow/import is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Nav_Slideshow");
+
+        } else if (id == R.id.nav_manage) {
+            Toast.makeText(getApplicationContext(), "Manage/Tools is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Nav_Manage");
+
+        } else if (id == R.id.nav_share) {
+            Toast.makeText(getApplicationContext(), "Share is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Nav_Share");
+
+        } else if (id == R.id.nav_send) {
+            Toast.makeText(getApplicationContext(), "Send is yet to be implemented", Toast.LENGTH_SHORT).show();
+            System.out.println("Pressed Nav_send");
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

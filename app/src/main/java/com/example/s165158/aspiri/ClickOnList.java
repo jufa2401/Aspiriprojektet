@@ -31,7 +31,6 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
     public void onClick(View view) {
 
         switch (view.getId()) {
-
             //Knap test udføres bare ved normale brugertest
             case R.id.button:
                 super.onBackPressed();
