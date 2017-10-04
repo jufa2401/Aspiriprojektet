@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+<!---->
+<string name="app_name">Aspiri</string>
+<string name="action_settings">Indstillinger</string>
+<string name="navigation_drawer_open">Open navigation drawer</string>
+<string name="navigation_drawer_close">Close navigation drawer</string>
+<string name="action_favorite">Favorit</string>
+<string name="action_exit">Afslut</string>
+<string name="back">Tilbage</string>
+
+<!--Hamburger menu-->
+<string name="opening_store">Åbner Butikken</string>
+<string name="home">Hjem</string>
+<string name="Buy_Course">Køb Kurser</string>
+<string name="Communicate">Skriv til os</string>
+<string name="share">Del</string>
+
+<!--Mail-->
+<string name="Email_subject">Vedrørende Aspiri App Android</string>
+<string name="Email_beginning_1">Kære Aspiri App team, \\n \\n</string>
+
+
+<!--Array til navne i overskrifter-->
+<string-array name="subject_list">
+    <item>NYNORSK Trigonometri</item>
+    <item>NYNORSK Rentes Regning</item>
+    <item>NYNORSK Kvatratsætninger</item>
+    <item>NYNORSK Potensregneregler</item>
+    <item>NYNORSK Polynomier</item>
+    <item>NYNORSK Lineær Eksponentiel og potenssammenænge</item>
+    <item>NYNORSK Statistik</item>
+    <item>NYNORSK Differentialregning</item>
+    <item>NYNORSK Geometri</item>
+    <item>NYNORSK Plangeometri med vektore</item>
+    <item>11 Rumgeometri med vektore</item>
+    <item>12 Areal omkreds og rumfang</item>
+    <item>13 Placeholder</item>
+    <item>14 Placeholder</item>
+    <item>15 Placeholder</item>
+    <item>16 Placeholder</item>
+</string-array>
+
+
+<!--Array til navne i underoverskrifter-->
+<string-array
+    name="subtext_list">
+    <item>1Her lærer du om Sin, Cos og Tan</item>\
+    <item>2Dette afsnit kan bruges til din bank</item>
+    <item>3Placeholder</item>
+    <item>4Placeholder</item>
+    <item>5Placeholder</item>
+    <item>6Placeholder</item>
+    <item>7Placeholder</item>
+    <item>8Placeholder</item>
+    <item>9Placeholder</item>
+    <item>10Placeholder</item>
+    <item>11Placeholder</item>
+    <item>12Placeholder</item>
+    <item>13Placeholder</item>
+    <item>14Placeholder</item>
+    <item>15Placeholder</item>
+    <item>16Placeholder</item>
+</string-array>
+
+</resources>
+

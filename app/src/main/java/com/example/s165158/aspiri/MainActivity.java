@@ -111,13 +111,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        }
 //    }
 
+
+//    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
-    // OnClick for Settings and favorite options!
+
+//    Onclick for tredottede menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -140,25 +142,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-
+//                Vi burde ikke kommer hertil, det betyder at der ikke har været et godkendt input fra brugeren af.
                 return super.onOptionsItemSelected(item);
         }
     }
 
     //BURDE VI IKKE BRUGE SWITCH? Mindre kode
-    // On click for de forskellige optioner i navigation menuen.
+    // On click for de forskellige optioner i hamburgernavigation menuen.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         //Getting int for if statements
         int id = item.getItemId();
 
+//        Hjem knappen - skal gå til hovedmenuen
         if (id == R.id.nav_home) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed nav_home");
 
+//        Butikken, til web
         } else if (id == R.id.nav_store) {
             Toast.makeText(getApplicationContext(), getString(R.string.opening_store), Toast.LENGTH_SHORT).show();
             System.out.println("Opening Webstore");
@@ -167,23 +169,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             i.setData(Uri.parse(url));
             startActivity(i);
 
+//            Skal ikke være der
         } else if (id == R.id.nav_camera) {
             Toast.makeText(getApplicationContext(), "Camera is yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed Camera");
 
-            // Handle the camera action
+//            Skal ikke være der
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(), "Gallery is yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed Nav_Gallery");
 
+//            Skal ikke være der
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(getApplicationContext(), "Slideshow/import is yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed Nav_Slideshow");
 
+//            Skal ikke være der
         } else if (id == R.id.nav_manage) {
             Toast.makeText(getApplicationContext(), "Manage/Tools is yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed Nav_Manage");
 
+//            Share knappen. Skal integreres med facebook osv.
         } else if (id == R.id.nav_share) {
             Toast.makeText(getApplicationContext(), "Share is yet to be implemented", Toast.LENGTH_SHORT).show();
             System.out.println("Pressed Nav_Share");
@@ -197,8 +203,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
 
 
