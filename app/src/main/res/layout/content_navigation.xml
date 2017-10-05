@@ -13,6 +13,7 @@
         android:id="@+id/list"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:background="@android:color/background_light"
         android:footerDividersEnabled="false"
         android:visibility="visible"

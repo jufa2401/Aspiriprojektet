@@ -10,14 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--Main-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+             </intent-filter>
         </activity>
+
+        <!--OnClickListener-->
         <activity android:name=".ClickOnList"></activity>
+
+        <!--ExtraScreen-->
+        <activity android:name=".extra_screen"
+            android:label="Get Name"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

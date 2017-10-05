@@ -19,6 +19,7 @@
     <!--Mail-->
     <string name="Email_subject">Vedrørende Aspiri App Android</string>
     <string name="Email_beginning_1">Kære Aspiri App team, \\n \\n</string>
+    <string name="Action_OpenNew">Open New</string>
 
 
     <!--Array til navne i overskrifter-->
