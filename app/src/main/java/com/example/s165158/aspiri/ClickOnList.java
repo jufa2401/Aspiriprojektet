@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,7 +26,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
         Button b1 = (Button) findViewById(R.id.button);
         b1.setOnClickListener(this);
 
-        System.out.println("created new view");
+        Log.d("AspiriApp","created new view");
     }
 
 
@@ -37,7 +38,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
             //Knap test udføres bare ved normale brugertest
             case R.id.button:
                 super.onBackPressed();
-                System.out.println("back button pressed");
+                Log.d("AspiriApp","back button pressed");
                 break;
 
             default:

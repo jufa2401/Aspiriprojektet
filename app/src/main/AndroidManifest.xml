@@ -22,7 +22,7 @@
         <!--OnClickListener-->
         <activity android:name=".ClickOnList"></activity>
 
-        <!--ExtraScreen-->
+        <!--ExtraScreen -->
         <activity android:name=".extra_screen"
             android:label="Get Name"
             android:theme="@style/AppTheme"/>

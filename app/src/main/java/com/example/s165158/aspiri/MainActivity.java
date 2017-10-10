@@ -13,6 +13,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent.putExtra(Intent.EXTRA_SUBJECT, R.string.Email_subject);
                 intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.Email_beginning_1));
                 startActivity(Intent.createChooser(intent, "Choose an Email client :"));
-                System.out.println("Mail_icon pressed");
+                Log.d("AspiriApp","Mail_icon pressed");
 
             }
         });
@@ -125,20 +126,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.action_quit:
                 finish();
-                System.out.println("action_quit pressed");
+                Log.d("AspiriApp","action_quit pressed");
                 return true;
 
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-                System.out.println("action_settings pressed");
+                Log.d("AspiriApp","action_settings pressed");
                 return true;
 
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
                 Toast.makeText(getApplicationContext(), "Action Favorite is yet to be implemented", Toast.LENGTH_SHORT).show();
-                System.out.println("action_favorite pressed");
+                Log.d("AspiriApp","action_favorite pressed");
                 return true;
 
             default:
@@ -158,12 +159,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        Hjem knappen - skal gå til hovedmenuen
         if (id == R.id.nav_home) {
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed nav_home");
+            Log.d("AspiriApp","Pressed nav_home");
 
 //        Butikken, til web
         } else if (id == R.id.nav_store) {
             Toast.makeText(getApplicationContext(), getString(R.string.opening_store), Toast.LENGTH_SHORT).show();
-            System.out.println("Opening Webstore");
+            Log.d("AspiriApp","Opening Webstore");
             String url = "https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
@@ -172,31 +173,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //            Skal ikke være der
         } else if (id == R.id.nav_camera) {
             Toast.makeText(getApplicationContext(), "Camera is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Camera");
+            Log.d("AspiriApp","Pressed Camera");
 
 //            Skal ikke være der
         } else if (id == R.id.nav_gallery) {
             Toast.makeText(getApplicationContext(), "Gallery is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Nav_Gallery");
+            Log.d("AspiriApp","Pressed Nav_Gallery");
+
 
 //            Skal ikke være der
         } else if (id == R.id.nav_slideshow) {
             Toast.makeText(getApplicationContext(), "Slideshow/import is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Nav_Slideshow");
+            Log.d("AspiriApp","Pressed Nav_Slideshow");
 
 //            Skal ikke være der
         } else if (id == R.id.nav_manage) {
             Toast.makeText(getApplicationContext(), "Manage/Tools is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Nav_Manage");
+            Log.d("AspiriApp", "Pressed Nav_Manage");
+
 
 //            Share knappen. Skal integreres med facebook osv.
         } else if (id == R.id.nav_share) {
             Toast.makeText(getApplicationContext(), "Share is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Nav_Share");
+            Log.d("AspiriApp","Pressed Nav_Share");
 
         } else if (id == R.id.nav_send) {
             Toast.makeText(getApplicationContext(), "Send is yet to be implemented", Toast.LENGTH_SHORT).show();
-            System.out.println("Pressed Nav_send");
+            Log.d("AspiriApp","Pressed Nav_send");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
