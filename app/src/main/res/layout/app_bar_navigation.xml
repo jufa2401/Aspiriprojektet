@@ -21,7 +21,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <include layout="@layout/list" />
+    <!--<include layout="@layout/list" />-->
 
     <!--Email ikonet nede højre hjørne-->
     <android.support.design.widget.FloatingActionButton

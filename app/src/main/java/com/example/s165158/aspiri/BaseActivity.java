@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,7 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public abstract class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mToolbar;
     private FloatingActionButton floatingActionButton1;
     private DrawerLayout drawer;
@@ -89,10 +91,19 @@ public abstract class BaseActivity extends AppCompatActivity implements Navigati
         activateToolbar();
         activateFloatingActionButton();
         activateNavigationView();
+
+        if(savedInstanceState == null) {
+//        Instance of list fragment
+            Fragment listFragment = new MyListFragment();
+
+//            add Fragment to FrameLayout (container) using FragmentManager *Does not appear visually?? control with TA*
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.add(R.id.fragmentindhold, listFragment);
+            ft.commit();
+        }
     }
 
 
-    protected abstract int getLayoutResourceId();
 
     // Sætter draweren til at lukke med tilbageklik(hw) rettere end at at lukke applikationen
     public void onBackPressed() {

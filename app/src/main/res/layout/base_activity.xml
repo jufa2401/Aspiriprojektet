@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-
+    <FrameLayout
+        android:id="@+id/fragmentindhold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
     <include
         layout="@layout/app_bar_navigation"
         android:layout_width="match_parent"
@@ -26,8 +29,6 @@
         app:itemIconTint="@color/itemIconColor"
         app:itemTextColor="@color/itemTextColor"
         app:menu="@menu/activity_navigation_drawer" />
-
-
 
 
 </android.support.v4.widget.DrawerLayout>

@@ -8,7 +8,7 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context="com.example.s165158.aspiri.Main2Activity">
+    tools:context="com.example.s165158.aspiri.MyListFragment">
 
     <include layout="@layout/base_activity" />
 

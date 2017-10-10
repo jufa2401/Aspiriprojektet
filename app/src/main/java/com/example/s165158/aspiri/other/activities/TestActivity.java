@@ -1,13 +1,10 @@
 package com.example.s165158.aspiri.other.activities;
 
-import com.example.s165158.aspiri.BaseActivity;
+import android.support.v7.app.AppCompatActivity;
 
-public class TestActivity extends BaseActivity {
+public class TestActivity extends AppCompatActivity {
 
-    @Override
-    protected int getLayoutResourceId() {
-        return 0;
-    }
+
 
 
 }
