@@ -89,12 +89,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent intent = new Intent(MainActivity.this, ClickOnList.class);
+                Intent openClickOnList = new Intent(MainActivity.this, ClickOnList.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = subjectListArray[position];
                 //Tilføjer nu strengen som en "extra" til Intent
-                intent.putExtra("content", message);
-                startActivity(intent);
+                openClickOnList.putExtra("content", message);
+                startActivity(openClickOnList);
 
             }
         });
@@ -133,6 +133,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // User chose the "Settings" item, show the app settings UI...
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 Log.d("AspiriApp","action_settings pressed");
+
+                Intent goToSettings = new Intent(this, settings_screen.class);
+                startActivity(goToSettings);
+
                 return true;
 
             case R.id.action_favorite:
