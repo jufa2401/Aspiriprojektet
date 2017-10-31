@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 /**
  * Created by s165158 on 28-09-2017.
- * Udkommenteret af Jonas - Hvad laver alt det her kode?
+ * Udkommenteret af Jonas - Hvad laver alt det her kode? - Det er navigation menuen til venstre, det er pladsholdere.
  */
 //
 
