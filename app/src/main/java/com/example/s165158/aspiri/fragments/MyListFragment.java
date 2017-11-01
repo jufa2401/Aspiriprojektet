@@ -47,7 +47,7 @@ public class MyListFragment extends Fragment {
             @Override
             public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
                 View view = inflater.inflate(R.layout.list_view, container, false);
-                lst = (ListView) view.findViewById(R.id.listview);
+                lst = (ListView) view.findViewById(R.id.list);
 
                 if (savedInstanceState != null) {
                     subjectListArray = getResources().getStringArray(R.array.subject_list);

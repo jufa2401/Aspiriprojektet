@@ -9,14 +9,6 @@
     tools:openDrawer="start">
 
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragmentindhold1"
-        class="com.example.s165158.aspiri.fragments.MyListFragment"
-    />
-
-
     <FrameLayout
         android:id="@+id/fragmentindhold"
         android:layout_width="match_parent"

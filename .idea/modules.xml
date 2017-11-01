@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiri.iml" filepath="C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aspiriprojektet.iml" filepath="$PROJECT_DIR$/Aspiriprojektet.iml" />
       <module fileurl="file://C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiriprojektet.iml" filepath="C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiriprojektet.iml" />
       <module fileurl="file://C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiriprojektet2.iml" filepath="C:\Users\s165158\AndroidStudioProjects\AspiriprojektetDANK\Aspiriprojektet2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AspiriprojektetDANK.iml" filepath="$PROJECT_DIR$/AspiriprojektetDANK.iml" />
+      <module fileurl="file://C:\Users\Justin\AndroidStudioProjects\Aspiriprojektet\AspiriprojektetDANK.iml" filepath="C:\Users\Justin\AndroidStudioProjects\Aspiriprojektet\AspiriprojektetDANK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
@@ -21,8 +20,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.s165158.aspiri.fragments.MyListFragment;
-import com.example.s165158.aspiri.other.activities.other.fragments.MyListFragment222;
 import com.example.s165158.aspiri.other.activities.other.fragments.BlankFragment;
+import com.example.s165158.aspiri.other.activities.other.fragments.MyListFragment222;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mToolbar;
@@ -51,8 +50,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
             @Override
             // OnClick metode for den flyvende knap
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
 
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
@@ -100,15 +99,18 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         if(savedInstanceState == null) {
 //        Instance of list_view fragment
             Fragment listFragment = new MyListFragment();
+            ListFragment list2Fragment = new MyListFragment222();
+
+            //           other.... not working
             Fragment blankFragment = new BlankFragment();
 
-            ListFragment list2Fragment = new MyListFragment222();
+
 //            add Fragment to FrameLayout (container) using FragmentManager *Does not appear visually?? control with TA*
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.fragmentindhold1, listFragment);
+            ft.add(R.id.fragmentindhold, listFragment);
 
 //           Subject fragment
-            ft.add(R.id.fragmentindhold, blankFragment);
+//            ft.add(R.id.fragmentindhold, blankFragment);
 
             ft.commit();
         }
