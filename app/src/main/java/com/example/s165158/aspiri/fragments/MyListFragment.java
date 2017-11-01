@@ -1,8 +1,6 @@
-package com.example.s165158.aspiri;
+package com.example.s165158.aspiri.fragments;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,8 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.s165158.aspiri.R;
 import com.example.s165158.aspiri.objects.CustomListAdapter;
-import com.example.s165158.aspiri.other.activities.ClickOnList;
 
 public class MyListFragment extends Fragment {
     ListView lst;
@@ -32,7 +30,7 @@ public class MyListFragment extends Fragment {
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.base_activity);
+//        setContentView(R.layout.main_activity);
 
 //        if (savedInstanceState != null) {
 //
@@ -48,7 +46,7 @@ public class MyListFragment extends Fragment {
             @Nullable
             @Override
             public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-                View view = inflater.inflate(R.layout.list, container, false);
+                View view = inflater.inflate(R.layout.list_view, container, false);
                 lst = (ListView) view.findViewById(R.id.listview);
 
                 if (savedInstanceState != null) {

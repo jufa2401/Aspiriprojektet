@@ -1,7 +1,7 @@
 package com.example.s165158.aspiri.other.activities;
 
 public  class ClickOnList {
-//Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
+//Denne klasse håndterer den activity man ryger ind i  når man klikker på et list_view-objekt
 //public class ClickOnList extends Fragment implements View.OnClickListener {
 
 

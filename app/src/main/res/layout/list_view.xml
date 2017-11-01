@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.s165158.aspiri.MyListFragment"
-    tools:showIn="@layout/app_bar_navigation">
+    tools:context="com.example.s165158.aspiri.fragments.MyListFragment"
+    tools:showIn="@layout/toolbar_top">
 
 
     <!--I indholdet er der en liste-->

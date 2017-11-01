@@ -7,12 +7,22 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentindhold1"
+        class="com.example.s165158.aspiri.fragments.MyListFragment"
+    />
+
+
     <FrameLayout
         android:id="@+id/fragmentindhold"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></FrameLayout>
     <include
-        layout="@layout/app_bar_navigation"
+        layout="@layout/toolbar_top"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -25,7 +35,7 @@
 
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_navigation"
+        app:headerLayout="@layout/drawer_header_navigation"
         app:itemIconTint="@color/itemIconColor"
         app:itemTextColor="@color/itemTextColor"
         app:menu="@menu/activity_navigation_drawer" />

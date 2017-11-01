@@ -9,6 +9,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -18,6 +19,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.s165158.aspiri.fragments.MyListFragment;
+import com.example.s165158.aspiri.other.activities.other.fragments.MyListFragment222;
+import com.example.s165158.aspiri.other.activities.other.fragments.BlankFragment;
 
 public class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mToolbar;
@@ -86,19 +91,25 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.base_activity);
+        setContentView(R.layout.main_activity);
 
         activateToolbar();
         activateFloatingActionButton();
         activateNavigationView();
 
         if(savedInstanceState == null) {
-//        Instance of list fragment
+//        Instance of list_view fragment
             Fragment listFragment = new MyListFragment();
+            Fragment blankFragment = new BlankFragment();
 
+            ListFragment list2Fragment = new MyListFragment222();
 //            add Fragment to FrameLayout (container) using FragmentManager *Does not appear visually?? control with TA*
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.fragmentindhold, listFragment);
+            ft.add(R.id.fragmentindhold1, listFragment);
+
+//           Subject fragment
+            ft.add(R.id.fragmentindhold, blankFragment);
+
             ft.commit();
         }
     }
@@ -160,6 +171,8 @@ public class BaseActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
+
+
             Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
