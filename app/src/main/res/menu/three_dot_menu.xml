@@ -64,13 +64,13 @@
         <!-- "Mark Favorite", should appear as action button if possible -->
 
         <item
-            android:id="@+id/action_favorite"
+            android:id="@+id/three_dot_favorite"
             android:icon="@drawable/ic_action_name"
             android:title="@string/action_favorite"
             app:showAsAction="ifRoom"/>
 
         <item
-            android:id="@+id/action_quit"
+            android:id="@+id/three_dot_quit"
             android:checkable="false"
             android:icon="@drawable/ic_menu_home"
             android:orderInCategory="101"
@@ -79,7 +79,7 @@
             app:showAsAction="collapseActionView" />
 
         <item
-            android:id="@+id/action_settings"
+            android:id="@+id/three_dot_settings"
             android:checkable="false"
             android:icon="@color/menuTextColor"
             android:orderInCategory="100"
