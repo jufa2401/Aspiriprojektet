@@ -14,5 +14,6 @@
 
     <!--Solid colors-->
     <color name="black">#000000</color>
+    <color name="text_background">#79a1a1a1</color>
 </resources>
 

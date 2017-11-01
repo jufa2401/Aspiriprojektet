@@ -2,7 +2,6 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context="tie.hackathon.travelguide.destinations.description.FinalCityInfo">
+        android:padding="10dp"
+        >
 
         <ImageView
             android:id="@+id/image"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sample_subject_breadtext"
             expandableTextView:animDuration="200"
-            expandableTextView:maxCollapsedLines="20">
+            expandableTextView:maxCollapsedLines="12">
 
             <TextView
                 android:id="@id/expandable_text"
@@ -77,7 +77,7 @@
                 android:layout_weight="1.0"
                 android:background="@drawable/shadow"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="10dp"
+                android:padding="7dp"
                 android:orientation="horizontal"
                 >
 
