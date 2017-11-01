@@ -17,30 +17,32 @@ import android.widget.ImageButton;
 
 public class settings_screen extends Activity implements View.OnClickListener {
 
+    //Initializing button
     Button backButton;
 
+
+    //Oncreate method
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+        //Setting xml file view
         setContentView(R.layout.settings_screen);
 
-        backButton = (Button)findViewById(R.id.SettingsBackButton);
-        backButton.setOnClickListener(this);
-
-
+        //Casting button to button and setting onclicklistener
         backButton = (Button)findViewById(R.id.SettingsBackButton);
         backButton.setOnClickListener(this);
 
     }
 
 
-    //Knapper
+    //Buttons onClick methods
     @Override
     public void onClick(View view) {
 
         switch (view.getId()) {
-            //Knap test udføres bare ved normale brugertest
+
             case R.id.SettingsBackButton:
                 super.onBackPressed();
                 Log.d("AspiriApp","back button pressed");
