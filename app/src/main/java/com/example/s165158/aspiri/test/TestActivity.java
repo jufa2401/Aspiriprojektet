@@ -1,13 +1,27 @@
 package com.example.s165158.aspiri.test;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.s165158.aspiri.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
+import static com.example.s165158.aspiri.R.id.game_button;
+
 public class TestActivity extends AppCompatActivity {
     ExpandableTextView expandableTextView;
+    ImageView img;
+    TextView txt;
+
+    LinearLayout gamebutton;
+
+    String shortText = "Spil et spil til dette emne!";
     String longText = "By so delight of showing neither believe he present. Deal sigh up in shew away when. Pursuit express no or prepare replied. Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building man carriage gay. Considered introduced themselves mr to discretion at. Means among saw hopes for. Death mirth in oh learn he equal on. \n" +
             "\n" +
             "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but. Resembled at perpetual no believing is otherwise sportsman. Is do he dispatched cultivated travelling astonished. Melancholy am considered possession on collecting everything. \n" +
@@ -36,5 +50,23 @@ public class TestActivity extends AppCompatActivity {
 
         expandableTextView = (ExpandableTextView)findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
+
+        txt = (TextView)findViewById(R.id.game_text);
+        img = (ImageView)findViewById(R.id.game_thumb);
+
+        txt.setText(shortText);
+        img.setImageResource(R.drawable.ic_game);
+        gamebutton = (LinearLayout) findViewById(game_button);
+        gamebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+        //        img.setImageDrawable(R);
+
+
     }
+
 }
