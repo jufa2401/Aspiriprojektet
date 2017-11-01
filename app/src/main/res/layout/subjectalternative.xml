@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/sample_subject_breadtext"
             expandableTextView:animDuration="200"
-            expandableTextView:maxCollapsedLines="4">
+            expandableTextView:maxCollapsedLines="20">
 
             <TextView
                 android:id="@id/expandable_text"
@@ -63,6 +63,7 @@
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
@@ -75,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
                 android:background="@drawable/shadow"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:padding="10dp"
                 android:orientation="horizontal"
                 >
