@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent openClickOnList = new Intent(MainActivity.this, ListViewOnClick.class);
+                Intent openClickOnList = new Intent(MainActivity.this, Subject2.class);
+
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = subjectListArray[position];
                 //Tilføjer nu strengen som en "extra" til Intent

@@ -14,7 +14,7 @@ public class ListViewOnClick extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subject_1);
+        setContentView(R.layout.fragment_subject2);
 
 //        String savedExtra = getIntent().getStringExtra("content");
 //        TextView myText = (TextView) findViewById(R.id.contentID);
