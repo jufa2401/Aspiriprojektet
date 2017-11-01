@@ -1,13 +1,11 @@
 package com.example.s165158.aspiri;
 import java.lang.*;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,8 +18,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import static android.R.id.message;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation);
+        setContentView(R.layout.main_activity);
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
@@ -89,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
 //                Intent er hvad man bruger til at skifte imellem activities
-                Intent openClickOnList = new Intent(MainActivity.this, ClickOnList.class);
+                Intent openClickOnList = new Intent(MainActivity.this, ListViewOnClick.class);
 //                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
                 String message = subjectListArray[position];
                 //Tilføjer nu strengen som en "extra" til Intent
@@ -101,22 +97,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-//    //Vides ikke. Justin kommenter pls
-
-//    public void onBackPressed() {
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
-//    }
-
-
 //    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.three_dot_menu, menu);
         return true;
     }
 
@@ -152,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    //BURDE VI IKKE BRUGE SWITCH? Mindre kode
     // On click for de forskellige optioner i hamburgernavigation menuen.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

@@ -11,5 +11,8 @@
     <!-- Navbar color palette -->
     <color name="item_icon_color">#2196f3</color>
     <color name="item_text_color">#050505</color>
+
+    <!--Solid colors-->
+    <color name="black">#000000</color>
 </resources>
 

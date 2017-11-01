@@ -20,7 +20,7 @@
         </activity>
 
         <!-- OnClickListener -->
-        <activity android:name=".ClickOnList" />
+        <activity android:name=".ListViewOnClick" />
 
         <!-- ExtraScreen -->
 

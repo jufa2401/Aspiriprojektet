@@ -9,39 +9,20 @@ import android.widget.Button;
 import android.widget.TextView;
 
 //Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
-public class ClickOnList extends AppCompatActivity implements View.OnClickListener {
+public class ListViewOnClick extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.subject_1);
 
-        String savedExtra = getIntent().getStringExtra("content");
-        TextView myText = (TextView) findViewById(R.id.contentID);
-        myText.setText(savedExtra);
-
-        Button b1 = (Button) findViewById(R.id.button);
-        b1.setOnClickListener(this);
+//        String savedExtra = getIntent().getStringExtra("content");
+//        TextView myText = (TextView) findViewById(R.id.contentID);
 
         Log.d("AspiriApp","created new view");
     }
 
 
-    //Knapper
-    @Override
-    public void onClick(View view) {
-
-        switch (view.getId()) {
-            //Knap test udføres bare ved normale brugertest
-            case R.id.button:
-                super.onBackPressed();
-                Log.d("AspiriApp","back button pressed");
-                break;
-
-            default:
-                break;
-        }
-    }
 
 
     @Override
@@ -49,7 +30,7 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
         super.onActivityResult(requestCode, resultCode, data);
 
 //        Appender data
-        TextView usersNameMessage = (TextView) findViewById(R.id.users_name_message);
+        TextView usersNameMessage = (TextView) findViewById(R.id.subject_title);
         String nameSentBack = data.getStringExtra("UsersName");
         usersNameMessage.append(" " + nameSentBack);
     }
