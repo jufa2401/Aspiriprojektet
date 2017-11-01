@@ -8,27 +8,22 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <!--Includes the front page layout-->
     <include
-        layout="@layout/app_bar_navigation"
+        layout="@layout/toolbar_top"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <!--Her sættes farve for navigation viewet-->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_navigation"
-        app:itemIconTint="@color/itemIconColor"
-        app:itemTextColor="@color/itemTextColor"
+        app:headerLayout="@layout/drawer_header_navigation"
+        app:itemIconTint="@color/item_icon_color"
+        app:itemTextColor="@color/item_text_color"
         app:menu="@menu/activity_navigation_drawer" />
-
-
-    //app:itemBackground="@drawable/my_ripple"
-
 
 </android.support.v4.widget.DrawerLayout>

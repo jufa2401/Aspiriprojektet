@@ -9,7 +9,7 @@
     <color name="menuTextColor">#000000</color>
 
     <!-- Navbar color palette -->
-    <color name="itemIconColor">#2196f3</color>
-    <color name="itemTextColor">#050505</color>
+    <color name="item_icon_color">#2196f3</color>
+    <color name="item_text_color">#050505</color>
 </resources>
 

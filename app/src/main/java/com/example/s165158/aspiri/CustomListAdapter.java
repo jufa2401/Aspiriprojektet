@@ -1,9 +1,6 @@
 package com.example.s165158.aspiri;
 
 import android.app.Activity;
-import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +27,7 @@ public class CustomListAdapter extends ArrayAdapter {
 
     public CustomListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageIDArrayParam){
 
-        super(context,R.layout.listview_row , nameArrayParam);
+        super(context,R.layout.list_view_row, nameArrayParam);
         this.context=context;
         this.imageIDarray = imageIDArrayParam;
         this.nameArray = nameArrayParam;
@@ -40,9 +37,9 @@ public class CustomListAdapter extends ArrayAdapter {
 
     public View getView(int position, View view, ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.listview_row, null,true);
+        View rowView=inflater.inflate(R.layout.list_view_row, null,true);
 
-        //this code gets references to objects in the listview_row.xml file
+        //this code gets references to objects in the list_view_row.xmll file
         TextView nameTextField = (TextView) rowView.findViewById(R.id.nameTextViewID);
         TextView infoTextField = (TextView) rowView.findViewById(R.id.infoTextViewID);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView1ID);

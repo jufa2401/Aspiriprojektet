@@ -1,7 +1,6 @@
 package com.example.s165158.aspiri;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,15 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 //Denne klasse håndterer den activity man ryger ind i  når man klikker på et list-objekt
 public class ClickOnList extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_click_on_list);
+        setContentView(R.layout.subject_1);
 
         String savedExtra = getIntent().getStringExtra("content");
         TextView myText = (TextView) findViewById(R.id.contentID);
@@ -44,23 +41,8 @@ public class ClickOnList extends AppCompatActivity implements View.OnClickListen
             default:
                 break;
         }
-
     }
 
-
-
-//Metode der styrer
-    public void onGetNameClick(View view) {
-
-//        Ny Intent
-        Intent getNameScreenIntent = new Intent(this, extra_screen.class);
-
-//        Det som skal appendes - calling activity  er nøglen, som når brugt i extra screen er hvad der kan hentes i Main activity
-        final int result =1;
-        getNameScreenIntent.putExtra("callingActivity", "MainActivity");
-        startActivityForResult(getNameScreenIntent, result);
-
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
