@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Aspiriprojektet.iml" filepath="$PROJECT_DIR$/Aspiriprojektet.iml" />
       <module fileurl="file://C:\Users\Justin\AndroidStudioProjects\Aspiriprojektet22\Aspiriprojektet.iml" filepath="C:\Users\Justin\AndroidStudioProjects\Aspiriprojektet22\Aspiriprojektet.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Aspiriprojektet22.iml" filepath="$PROJECT_DIR$/.idea/Aspiriprojektet22.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
