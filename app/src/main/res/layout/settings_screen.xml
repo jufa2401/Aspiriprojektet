@@ -29,7 +29,7 @@
             android:layout_width=   "30dp"
             android:layout_height=  "30dp"
             android:id="@+id/SettingsBackButton"
-            android:background="@drawable/ic_menu_home"
+            android:background="@drawable/drawer_home"
             app:layout_constraintLeft_toRightOf="@id/constraintLayoutTop"
             app:layout_constraintBottom_toBottomOf="@id/constraintLayoutTop"
             app:layout_constraintTop_toTopOf="@id/constraintLayoutTop"/>

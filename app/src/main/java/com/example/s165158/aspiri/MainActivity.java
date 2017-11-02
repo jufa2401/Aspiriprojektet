@@ -57,18 +57,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
                 Intent sendMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","jm@aspiri.dk",null));
-                sendMail.putExtra(Intent.EXTRA_SUBJECT, R.string.Email_subject);
-                sendMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.Email_beginning_1));
+                sendMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
+                sendMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
                 startActivity(Intent.createChooser(sendMail, "Choose an Email client :"));
                 Log.d("AspiriApp","Mail_icon pressed");
 
             }
         });
 
-        //Navigation menu oppe til venstre
+        //Drawer menu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -151,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //        Store, goes to webview
         } else if (id == R.id.drawer_store) {
-            Toast.makeText(getApplicationContext(), getString(R.string.opening_store), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), getString(R.string.drawer_store), Toast.LENGTH_SHORT).show();
             Log.d("AspiriApp","Opening Webstore");
             String url = "https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx";
             Intent i = new Intent(Intent.ACTION_VIEW);

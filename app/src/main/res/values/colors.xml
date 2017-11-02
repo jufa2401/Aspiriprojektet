@@ -5,8 +5,6 @@
     <color name="colorPrimary">#24C6AE</color>
     <color name="colorPrimaryDark">#0D917D</color>
     <color name="colorAccent">#64e7d3</color>
-    <color name="titleTextColor">#fffffe</color>
-    <color name="menuTextColor">#000000</color>
 
     <!-- Navbar color palette -->
     <color name="item_icon_color">#2196f3</color>
@@ -14,5 +12,6 @@
 
     <!--Solid colors-->
     <color name="black">#000000</color>
+    <color name="white">#fffffe</color>
 </resources>
 

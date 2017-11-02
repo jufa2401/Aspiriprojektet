@@ -4,23 +4,23 @@
 
     <!---->
     <string name="app_name">Aspiri</string>
-    <string name="action_settings">Indstillinger</string>
+    <string name="three_dot_settings">Indstillinger</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_favorite">Favorit</string>
-    <string name="action_exit">Afslut</string>
+    <string name="three_dot_favorite">Favorit</string>
+    <string name="three_dot_exit">Afslut</string>
     <string name="back">Tilbage</string>
 
     <!--Hamburger menu-->
-    <string name="opening_store">Åbner Butikken</string>
-    <string name="home">Hjem</string>
-    <string name="Buy_Course">Køb Kurser</string>
-    <string name="Communicate">Skriv til os</string>
-    <string name="share">Del</string>
+    <string name="drawer_store">Åbner Butikken</string>
+    <string name="drawer_home">Hjem</string>
+    <string name="drawer_uy_Course">Køb Kurser</string>
+    <string name="drawer_communicate">Skriv til os</string>
+    <string name="drawer_share">Del</string>
 
     <!--Mail-->
-    <string name="Email_subject">Vedrørende Aspiri App Android</string>
-    <string name="Email_beginning_1">Kære Aspiri App team, \\n \\n</string>
+    <string name="mail_subject">Vedrørende Aspiri App Android</string>
+    <string name="mail_beginning">Kære Aspiri App team, \\n \\n</string>
 
 
     <!--Array til navne i overskrifter-->

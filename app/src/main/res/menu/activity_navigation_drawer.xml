@@ -4,90 +4,90 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/drawer_home"
-            android:icon="@drawable/ic_menu_home"
-            android:title="@string/home" />
+            android:icon="@drawable/drawer_home"
+            android:title="@string/drawer_home" />
         <item
             android:id="@+id/drawer_store"
             android:icon="@drawable/ic_menu_store"
-            android:title="@string/Buy_Course" />
+            android:title="@string/drawer_uy_Course" />
 
         <!--Camera, Gallery og Slideshow skal ud-->
         <item
             android:id="@+id/drawer_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/camera" />
+            android:icon="@drawable/drawer_camera"
+            android:title="@string/drawer_camera" />
         <item
             android:id="@+id/drawer_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/gallery" />
+            android:icon="@drawable/drawer_gallery"
+            android:title="@string/drawer_gallery" />
         <item
             android:id="@+id/drawer_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/slideshow" />
+            android:icon="@drawable/drawer_slideshow"
+            android:title="@string/drawer_slideshow" />
         <item
             android:id="@+id/drawer_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/tools" />
+            android:icon="@drawable/drawer_manage"
+            android:title="@string/drawer_tool" />
     </group>
 
     <!--Underkategorier husk at rette id'er ! -->
-    <item android:title="@string/Communicate">
+    <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/drawer_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/share" />
+                android:icon="@drawable/drawer_share"
+                android:title="@string/drawer_share" />
             <item
                 android:id="@+id/drawer_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/Communicate" />
+                android:icon="@drawable/drawer_send"
+                android:title="@string/drawer_communicate" />
         </menu>
     </item>
-    <item android:title="@string/Communicate">
+    <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/drawer_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/send" />
+                android:icon="@drawable/drawer_share"
+                android:title="@string/drawer_send" />
             <item
                 android:id="@+id/drawer_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/send"/>
+                android:icon="@drawable/drawer_send"
+                android:title="@string/drawer_send"/>
         </menu>
     </item>
-    <item android:title="@string/Communicate">
+    <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/drawer_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/share"/>
+                android:icon="@drawable/drawer_share"
+                android:title="@string/drawer_share"/>
             <item
                 android:id="@+id/drawer_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/drawer_send"
                 android:title="Send" />
         </menu>
     </item>
-    <item android:title="@string/Communicate">
+    <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/drawer_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/drawer_share"
                 android:title="Send" />
             <item
                 android:id="@+id/drawer_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/drawer_send"
                 android:title="Send" />
         </menu>
     </item>
-    <item android:title="@string/Communicate">
+    <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/drawer_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/drawer_share"
                 android:title="Send" />
             <item
                 android:id="@+id/drawer_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/drawer_send"
                 android:title="Send" />
         </menu>
     </item>

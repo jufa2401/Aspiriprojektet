@@ -18,7 +18,7 @@
 <!--android:id="@+id/action_settings"-->
 <!--android:checkable="false"-->
 <!--android:title="@string/action_settings"-->
-<!--android:icon="@drawable/ic_menu_manage"-->
+<!--android:icon="@drawadrawer_managenage"-->
 <!--android:visible="true"-->
 <!--android:orderInCategory="100"-->
 <!--app:showAsAction="collapseActionView" />-->
@@ -27,7 +27,7 @@
 <!--android:id="@+id/action_quit"-->
 <!--android:title="@string/action_exit"-->
 <!--android:visible="true"-->
-<!--android:icon="@drawable/ic_menu_home"-->
+<!--android:icon="@drawadrawer_homehome"-->
 <!--app:showAsAction="collapseActionView"-->
 <!--android:orderInCategory="101"-->
 <!--/>-->
@@ -66,24 +66,24 @@
         <item
             android:id="@+id/three_dot_favorite"
             android:icon="@drawable/ic_action_name"
-            android:title="@string/action_favorite"
+            android:title="@string/three_dot_favorite"
             app:showAsAction="ifRoom"/>
 
         <item
             android:id="@+id/three_dot_quit"
             android:checkable="false"
-            android:icon="@drawable/ic_menu_home"
+            android:icon="@drawable/drawer_home"
             android:orderInCategory="101"
-            android:title="@string/action_exit"
+            android:title="@string/three_dot_exit"
             android:visible="true"
             app:showAsAction="collapseActionView" />
 
         <item
             android:id="@+id/three_dot_settings"
             android:checkable="false"
-            android:icon="@color/menuTextColor"
+            android:icon="@color/black"
             android:orderInCategory="100"
-            android:title="@string/action_settings"
+            android:title="@string/three_dot_settings"
             android:visible="true"
             app:showAsAction="collapseActionView" />
 
