@@ -169,6 +169,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(goToFalonerAlle);
                 Log.d("AspiriApp", "drawer_HQ pressed");
                 return true;
+
+            case R.id.go_to_subject1:
+                Intent goToSubject1 = new Intent(this, Subject1.class);
+                startActivity(goToSubject1);
+                return true;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
