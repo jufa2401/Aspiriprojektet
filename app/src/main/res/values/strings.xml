@@ -157,5 +157,15 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+    <string name="drawer_we_are_here">Her holder vi til</string>
+    <string name="drawer_kbh">København</string>
+    <string name="drawer_odense">Odense</string>
+    <string name="drawer_Aarhus">Aarhus</string>
+    <string name="drawer_HQ">Hovedkvarter</string>
+    <string name="drawer_kbh_to_maps">https://www.google.dk/maps/place/Sigurdsgade+26,+2200+K%C3%B8benhavn+N/@55.702761,12.5531248,17z/data=!3m1!4b1!4m5!3m4!1s0x4652525124df9de3:0x56181b7bc5385d44!8m2!3d55.702761!4d12.5553135</string>
+    <string name="drawer_HQ_to_maps">https://www.google.dk/maps/place/Aspiri+A%2FS/@55.6804197,12.53155,17z/data=!3m1!4b1!4m5!3m4!1s0x465253bb7ef8ec77:0x4dc02be6470bb7fc!8m2!3d55.6804197!4d12.5337387</string>
+    <string name="drawer_Aarhus_to_maps">https://www.google.dk/maps/place/VIA+University+College+-+Campus+Aarhus+C/@56.1560488,10.1880261,17z/data=!3m1!4b1!4m5!3m4!1s0x464c3fec300c1d71:0x357ff97e45c9d66a!8m2!3d56.1560488!4d10.1902148</string>
+    <string name="drawer_Odense_to_maps">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
+    <string name="drawer_store_url">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
 
 </resources>

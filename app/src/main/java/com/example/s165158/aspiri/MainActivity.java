@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
-                Intent sendMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","jm@aspiri.dk",null));
+                Intent sendMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
                 sendMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
                 sendMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
                 startActivity(Intent.createChooser(sendMail, "Choose an Email client :"));
-                Log.d("AspiriApp","Mail_icon pressed");
+                Log.d("AspiriApp", "Mail_icon pressed");
 
             }
         });
@@ -97,26 +97,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-//    Tredottede menu initialiseres her
+    //    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.three_dot_menu, menu);
         return true;
     }
 
-//    Onclick for tredottede menu
+    //    Onclick for tredottede menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.three_dot_quit:
                 finish();
-                Log.d("AspiriApp","action_quit pressed");
+                Log.d("AspiriApp", "action_quit pressed");
                 return true;
 
             case R.id.three_dot_settings:
                 // User chose the "Settings" item, show the app settings UI...
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-                Log.d("AspiriApp","action_settings pressed");
+                Log.d("AspiriApp", "action_settings pressed");
 
                 Intent goToSettings = new Intent(this, settings_screen.class);
                 startActivity(goToSettings);
@@ -127,10 +127,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
                 Toast.makeText(getApplicationContext(), "Action Favorite is yet to be implemented", Toast.LENGTH_SHORT).show();
-                Log.d("AspiriApp","action_favorite pressed");
+                Log.d("AspiriApp", "action_favorite pressed");
                 return true;
 
-                //Should be unused at all times
+            //Should be unused at all times
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -140,53 +140,63 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        //Getting int for if statements
-        int id = item.getItemId();
 
-//        Home button, returns to landing page
-        if (id == R.id.drawer_home) {
-            Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed nav_home");
+        switch (item.getItemId()) {
 
-//        Store, goes to webview
-        } else if (id == R.id.drawer_store) {
-            Toast.makeText(getApplicationContext(), getString(R.string.drawer_store), Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Opening Webstore");
-            String url = "https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            startActivity(i);
+            //        Top functions
+            case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
+                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                Log.d("AspiriApp","Pressed nav_home");
+                return true;
 
-//            Remove this
-        } else if (id == R.id.drawer_camera) {
-            Toast.makeText(getApplicationContext(), "Camera is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed Camera");
+            case R.id.drawer_store:
+                Intent goToStore = new Intent(Intent.ACTION_VIEW);
+                goToStore.setData(Uri.parse(getString(R.string.drawer_store_url)));
+                startActivity(goToStore);
+                Log.d("AspiriApp","Opening Webstore");
+                return true;
 
-//            Remove this
-        } else if (id == R.id.drawer_gallery) {
-            Toast.makeText(getApplicationContext(), "Gallery is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed Nav_Gallery");
+            case R.id.drawer_camera:
+                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
+                return true;
 
+            case R.id.drawer_gallery:
+                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
+                return true;
 
-//            Skal ikke være der
-        } else if (id == R.id.drawer_slideshow) {
-            Toast.makeText(getApplicationContext(), "Slideshow/import is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed Nav_Slideshow");
+            case R.id.drawer_manage:
+                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
+                return true;
 
-//            Skal ikke være der
-        } else if (id == R.id.drawer_manage) {
-            Toast.makeText(getApplicationContext(), "Manage/Tools is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp", "Pressed Nav_Manage");
+            case R.id.drawer_slideshow:
+                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
+                return true;
 
 
-//            Share knappen. Skal integreres med facebook osv.
-        } else if (id == R.id.drawer_share) {
-            Toast.makeText(getApplicationContext(), "Share is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed Nav_Share");
+                //        Maps Navigation
+            case R.id.drawer_Kbh:
+                Log.d("AspiriApp", "action_quit pressed");
+                Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_kbh_to_maps)));
+                startActivity(goToSigurdsGade);
+                return true;
 
-        } else if (id == R.id.drawer_send) {
-            Toast.makeText(getApplicationContext(), "Send is yet to be implemented", Toast.LENGTH_SHORT).show();
-            Log.d("AspiriApp","Pressed Nav_send");
+            case R.id.drawer_Aarhus:
+                Log.d("AspiriApp", "action_settings pressed");
+                Intent goToAarhus = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_Aarhus_to_maps)));
+                startActivity(goToAarhus);
+                return true;
+
+            case R.id.drawer_Odense:
+                Log.d("AspiriApp", "action_settings pressed");
+                Intent goToOdense = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_Odense_to_maps)));
+                startActivity(goToOdense);
+                return true;
+
+            case R.id.drawer_HQ:
+                Log.d("AspiriApp", "action_settings pressed");
+                Intent goToFalonerAlle = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_HQ_to_maps)));
+                startActivity(goToFalonerAlle);
+                return true;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -194,5 +204,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 }
+
+
+
 
 

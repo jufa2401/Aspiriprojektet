@@ -31,16 +31,26 @@
     </group>
 
     <!--Underkategorier husk at rette id'er ! -->
-    <item android:title="@string/drawer_communicate">
+    <item android:title="@string/drawer_we_are_here">
         <menu>
             <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="@string/drawer_share" />
+                android:id="@+id/drawer_Kbh"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_kbh" />
             <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="@string/drawer_communicate" />
+                android:id="@+id/drawer_Odense"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_odense" />
+            <item
+                android:id="@+id/drawer_Aarhus"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_Aarhus" />
+            <item
+                android:id="@+id/drawer_HQ"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_HQ" />
+
+
         </menu>
     </item>
     <item android:title="@string/drawer_communicate">
