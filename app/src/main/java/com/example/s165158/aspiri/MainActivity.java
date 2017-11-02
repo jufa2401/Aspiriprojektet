@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -46,25 +45,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
 
 
-        // Den flyvende knap nede i højre hjørne. BEMÆRKK Hvordan den laver et nyt view!
-        FloatingActionButton floatingActionButton1 = (FloatingActionButton) findViewById(R.id.fab);
-
-        floatingActionButton1.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            // OnClick metode for den flyvende knap
-            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-
-                Intent sendMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
-                sendMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
-                sendMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
-                startActivity(Intent.createChooser(sendMail, "Choose an Email client :"));
-                Log.d("AspiriApp", "Mail_icon pressed");
-
-            }
-        });
-
         //Drawer menu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -77,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Objekt for den scrollende liste
         CustomListAdapter whatever = new CustomListAdapter(this, subjectListArray, subtextListArray, imageArray);
-        lst = (ListView) findViewById(R.id.list);
+        lst = (ListView) findViewById(R.id.theList);
         lst.setAdapter(whatever);
         lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -146,56 +126,48 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //        Top functions
             case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-                Log.d("AspiriApp","Pressed nav_home");
+                Log.d("AspiriApp","HoHome Button pressed");
                 return true;
 
             case R.id.drawer_store:
                 Intent goToStore = new Intent(Intent.ACTION_VIEW);
                 goToStore.setData(Uri.parse(getString(R.string.drawer_store_url)));
                 startActivity(goToStore);
-                Log.d("AspiriApp","Opening Webstore");
+                Log.d("AspiriApp","Webstore pressed");
                 return true;
 
-            case R.id.drawer_camera:
-                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
-                return true;
+            case R.id.drawer_send_us_mail:
+                Intent sendUsMail= new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@man_at_blackboad_round.dk", null));
+                sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
+                sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
+                startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
+                Log.d("AspiriApp", "Mail_icon pressed");
 
-            case R.id.drawer_gallery:
-                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
-                return true;
-
-            case R.id.drawer_manage:
-                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
-                return true;
-
-            case R.id.drawer_slideshow:
-                Toast.makeText(getApplicationContext(), "remove me", Toast.LENGTH_SHORT).show();
-                return true;
 
 
                 //        Maps Navigation
             case R.id.drawer_Kbh:
-                Log.d("AspiriApp", "action_quit pressed");
                 Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_kbh_to_maps)));
                 startActivity(goToSigurdsGade);
+                Log.d("AspiriApp", "drawer_KBH pressed");
                 return true;
 
             case R.id.drawer_Aarhus:
-                Log.d("AspiriApp", "action_settings pressed");
                 Intent goToAarhus = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_Aarhus_to_maps)));
                 startActivity(goToAarhus);
+                Log.d("AspiriApp", "drawer_Aarhus pressed");
                 return true;
 
             case R.id.drawer_Odense:
-                Log.d("AspiriApp", "action_settings pressed");
                 Intent goToOdense = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_Odense_to_maps)));
                 startActivity(goToOdense);
+                Log.d("AspiriApp", "drawer_Odense pressed");
                 return true;
 
             case R.id.drawer_HQ:
-                Log.d("AspiriApp", "action_settings pressed");
                 Intent goToFalonerAlle = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_HQ_to_maps)));
                 startActivity(goToFalonerAlle);
+                Log.d("AspiriApp", "drawer_HQ pressed");
                 return true;
         }
 
