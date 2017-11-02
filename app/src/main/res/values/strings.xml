@@ -20,7 +20,7 @@
     <string name="drawer_share">Del</string>
     <string name="drawer_open_new">Open New</string>
     <string name="drawer_gallery">Galleri</string>
-    <string name="drawer_slideshow">Slideshow</string>
+    <string name="drawer_slideshow">Flipcards</string>
     <string name="drawer_tool">Værktøjer</string>
     <string name="drawer_camera">Cam</string>
     <string name="drawer_send">Send</string>
@@ -168,5 +168,14 @@
     <string name="drawer_Odense_to_maps">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_store_url">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
     <string name="drawer_contact">Kom i kontakt</string>
+
+
+    <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
+    <string name="description_image_1">Lasagne</string>
+    <string name="card_back_title">Hvad er best ved lasagne?</string>
+    <string name="card_back_description">Fadet selvfølgelig</string>
+    <string name="action_info">Photo info</string>
+    <string name="action_photo">View photo</string>
+    <string name="drawer_communicate" />
 
 </resources>

@@ -31,7 +31,7 @@ public class settings_screen extends Activity implements View.OnClickListener {
         setContentView(R.layout.settings_screen);
 
         //Casting button to button and setting onclicklistener
-        backButton = (Button)findViewById(R.id.SettingsBackButton);
+        backButton = findViewById(R.id.SettingsBackButton);
         backButton.setOnClickListener(this);
 
     }

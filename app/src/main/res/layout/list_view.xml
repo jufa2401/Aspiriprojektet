@@ -10,7 +10,7 @@
 
     <!--I indholdet er der en liste-->
     <ListView
-        android:id="@+id/theList"
+        android:id="@+id/list"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"

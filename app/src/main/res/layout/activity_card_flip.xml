@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="expandable_text" type="id" />
-    <item name="expand_collapse" type="id" />
-    <!--
-  Copyright 2012 The Android Open Source Project
+<!--
+  Copyright 2017 The Android Open Source Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -18,14 +15,9 @@
   limitations under the License.
   -->
 
-    <!--
-        These action bar item IDs (menu item IDs) are defined here for
-        programmatic use. Normally, IDs are created using the "@+id/foo"
-        syntax, but since these IDs aren't created in menu XML, rather
-        used for programmatically-instantiated action bar items, they
-        are defined here.
-    -->
-    <item name="action_next" type="id" />
-    <item name="action_flip" type="id" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-</resources>
+</FrameLayout>
