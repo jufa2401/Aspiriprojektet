@@ -18,7 +18,7 @@
             android:layout_height="200dp"
             android:contentDescription="@string/empty_description"
             android:scaleType="centerCrop"
-            android:src="@drawable/aspiri" />
+            android:src="@drawable/man_at_blackboad_round" />
 
 
         <TextView
@@ -63,7 +63,7 @@
 
 
         <LinearLayout
-
+            android:baselineAligned="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
@@ -72,7 +72,7 @@
 
             <LinearLayout
                 android:id="@+id/game_button"
-                android:layout_width="fill_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
                 android:background="@drawable/shadow"

@@ -24,9 +24,17 @@
 
         <!-- ExtraScreen -->
 
+        <activity
+            android:name=".Subject1"
+            android:label="Subject1"
+            android:theme="@style/AppTheme"/>
+
+
 
         <!-- Settings Screen -->
         <activity android:name=".settings_screen" />
+
+
         <activity
             android:name=".Subject2"
             android:label="@string/title_activity_subject2"
@@ -40,6 +48,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Test activity -->
+        <activity android:name=".test.TestMultipleChoiceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
+
+
 
 </manifest>

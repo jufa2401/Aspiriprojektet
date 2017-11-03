@@ -10,40 +10,37 @@
             android:id="@+id/drawer_store"
             android:icon="@drawable/ic_menu_store"
             android:title="@string/drawer_uy_Course" />
-
-        <!--Camera, Gallery og Slideshow skal ud-->
         <item
-            android:id="@+id/drawer_camera"
-            android:icon="@drawable/drawer_camera"
-            android:title="@string/drawer_camera" />
-        <item
-            android:id="@+id/drawer_gallery"
-            android:icon="@drawable/drawer_gallery"
-            android:title="@string/drawer_gallery" />
-        <item
-            android:id="@+id/drawer_slideshow"
-            android:icon="@drawable/drawer_slideshow"
-            android:title="@string/drawer_slideshow" />
-        <item
-            android:id="@+id/drawer_manage"
-            android:icon="@drawable/drawer_manage"
-            android:title="@string/drawer_tool" />
+            android:id="@+id/drawer_send_us_mail"
+            android:icon="@drawable/drawer_send"
+            android:title="@string/drawer_contact" />
     </group>
 
+
     <!--Underkategorier husk at rette id'er ! -->
-    <item android:title="@string/drawer_communicate">
+    <item android:title="@string/drawer_we_are_here">
         <menu>
             <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="@string/drawer_share" />
+                android:id="@+id/drawer_Kbh"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_kbh" />
             <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="@string/drawer_communicate" />
+                android:id="@+id/drawer_Odense"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_odense" />
+            <item
+                android:id="@+id/drawer_Aarhus"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_Aarhus" />
+            <item
+                android:id="@+id/drawer_HQ"
+                android:icon="@drawable/drawer_gallery"
+                android:title="@string/drawer_HQ" />
         </menu>
     </item>
-    <item android:title="@string/drawer_communicate">
+
+
+    <item android:title="@string/drawer_communicate_with_us">
         <menu>
             <item
                 android:id="@+id/drawer_share"
@@ -55,7 +52,7 @@
                 android:title="@string/drawer_send"/>
         </menu>
     </item>
-    <item android:title="@string/drawer_communicate">
+    <item android:title="@string/drawer_communicate_with_us">
         <menu>
             <item
                 android:id="@+id/drawer_share"
@@ -67,19 +64,15 @@
                 android:title="Send" />
         </menu>
     </item>
-    <item android:title="@string/drawer_communicate">
+    <item android:title="test ting">
         <menu>
             <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="Send" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="Send" />
+                android:id="@+id/go_to_subject1"
+                android:icon="@drawable/ic_game"
+                android:title="goToSubject1" />
         </menu>
     </item>
-    <item android:title="@string/drawer_communicate">
+    <item android:title="@string/drawer_communicate_with_us">
         <menu>
             <item
                 android:id="@+id/drawer_share"

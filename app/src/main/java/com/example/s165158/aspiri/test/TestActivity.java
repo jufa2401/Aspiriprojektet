@@ -1,10 +1,8 @@
 package com.example.s165158.aspiri.test;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -64,7 +62,7 @@ public class TestActivity extends AppCompatActivity {
 
             }
         });
-        //        img.setImageDrawable(R);
+        //        img1.setImageDrawable(R);
 
 
     }
