@@ -13,6 +13,6 @@ class Subject1 extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subject_1);
+        setContentView(R.layout.subject1);
     }
 }

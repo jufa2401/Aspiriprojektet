@@ -39,49 +39,12 @@
         </menu>
     </item>
 
-
-    <item android:title="@string/drawer_communicate_with_us">
-        <menu>
-            <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="@string/drawer_send" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="@string/drawer_send"/>
-        </menu>
-    </item>
-    <item android:title="@string/drawer_communicate_with_us">
-        <menu>
-            <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="@string/drawer_share"/>
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="Send" />
-        </menu>
-    </item>
     <item android:title="test ting">
         <menu>
             <item
                 android:id="@+id/go_to_subject1"
                 android:icon="@drawable/ic_game"
                 android:title="goToSubject1" />
-        </menu>
-    </item>
-    <item android:title="@string/drawer_communicate_with_us">
-        <menu>
-            <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="Send" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="Send" />
         </menu>
     </item>
 

@@ -170,9 +170,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.d("AspiriApp", "drawer_HQ pressed");
                 return true;
 
+
+                //Tests
             case R.id.go_to_subject1:
                 Intent goToSubject1 = new Intent(this, Subject1.class);
                 startActivity(goToSubject1);
+                Log.d("AspiriApp", "going to subject 1");
                 return true;
         }
 
