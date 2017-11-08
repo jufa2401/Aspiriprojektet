@@ -70,7 +70,9 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                 }
                 FragmentManager manager = ((Activity)context).getFragmentManager();
                 manager.beginTransaction()
-                        .replace(R.id.fragmentindhold,subjectFragment).commit();
+                        .replace(R.id.fragmentindhold,subjectFragment)
+                        .addToBackStack("back to list from subject")
+                        .commit();
 
 
             }
