@@ -1,5 +1,6 @@
 package com.example.s165158.aspiri;
-import java.lang.*;
+
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,15 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
-    ListView lst;
 
+    com.example.s165158.aspiri.test2.ListFragment listFragment;
 
     //instantierer Arrays så det kan bruges uden for klassen, og refereres til fra Strings
     String[] subjectListArray;
@@ -37,8 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        subjectListArray = getResources().getStringArray(R.array.subject_list);
-        subtextListArray = getResources().getStringArray(R.array.subtext_list);
+
 
         // Fanebladet
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -48,32 +45,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Drawer menu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        listFragment = new com.example.s165158.aspiri.test2.ListFragment();
+// Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragmentindhold, listFragment)
+                .commit();
 
-        // Objekt for den scrollende liste
-        CustomListAdapter whatever = new CustomListAdapter(this, subjectListArray, subtextListArray, imageArray);
-        lst = (ListView) findViewById(R.id.theList);
-        lst.setAdapter(whatever);
-        lst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "ID: " + id, Toast.LENGTH_SHORT).show();
-//                Intent er hvad man bruger til at skifte imellem activities
-                Intent openClickOnList = new Intent(MainActivity.this, Subject2.class);
 
-//                Laver en string variabel og positionerer den efter hvilken række i listen der blev valgt
-                String message = subjectListArray[position];
-                //Tilføjer nu strengen som en "extra" til Intent
-                openClickOnList.putExtra("content", message);
-                startActivity(openClickOnList);
 
-            }
-        });
     }
 
 

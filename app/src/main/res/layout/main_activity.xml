@@ -8,6 +8,11 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <FrameLayout
+        android:id="@+id/fragmentindhold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
     <!--Includes the front page layout-->
     <include
         layout="@layout/toolbar_top"
@@ -25,5 +30,6 @@
         app:itemIconTint="@color/item_icon_color"
         app:itemTextColor="@color/item_text_color"
         app:menu="@menu/drawer_content" />
+
 
 </android.support.v4.widget.DrawerLayout>
