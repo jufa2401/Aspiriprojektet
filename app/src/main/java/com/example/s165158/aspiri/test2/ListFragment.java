@@ -28,45 +28,10 @@ public class ListFragment extends Fragment {
     };
 
 
-    /// /    Button button_playagain;
-
-    //    DatabaseHelper databaseHelper;
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View rootView = inflater.inflate(R.layout.fragment_list_test2, container, false);
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.listRecyclerView);
-//        getActivity().setTitle(R.string.high_score);
 
-//        databaseHelper = new DatabaseHelper(getActivity());
-
-//        System.out.println(databaseHelper.getData().toString());
-
-
-//        prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-//        scores = prefs.getString("Forsøg","").split("\\|");
-//        StringBuilder scorebuilder = new StringBuilder("");
-//
-//        for(String scorearray:scores){
-//            scorebuilder.append(scorearray+"\n");
-//        }
-
-//
-//        button_playagain = (Button)rootView.findViewById(R.id.button_play_again);
-//        button_playagain.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Menu menu = new Menu();
-//// Insert the fragment by replacing any existing fragment
-//                FragmentManager fragmentManager = getFragmentManager();
-//                fragmentManager.beginTransaction()
-//                        .replace(R.id.fragment_container, menu)
-//                        .commit();
-//
-//            }
-//        });
-
-//        ListAdapter listAdapter = new ListAdapter(databaseHelper.getColumn(0),
-//                databaseHelper.getColumn(1), databaseHelper.getColumn(2),
-//                databaseHelper.getColumn(3),databaseHelper.getColumn(4));
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
@@ -79,10 +44,6 @@ public class ListFragment extends Fragment {
         return rootView;
     }
 
-    /**
-     * customizable toast
-     * @param message
-     */
 
 
 

@@ -13,17 +13,12 @@ import com.example.s165158.aspiri.R;
  */
 
 public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapter.ViewHolder> {
-
-
-
     Listener mListener;
 
     String[] subjectListArray;
     String[] subtextListArray;
+    Integer[] imageArray;
 
-    //Skal laves om!
-    Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
-    };
     public RecyclerListAdapter(String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
         this.subtextListArray = subtextListArray;
