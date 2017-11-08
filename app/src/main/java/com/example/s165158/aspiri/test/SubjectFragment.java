@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
+import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
 
 public class SubjectFragment extends Fragment {
@@ -58,8 +59,18 @@ public class SubjectFragment extends Fragment {
         img.setImageResource(R.drawable.ic_game);
         gamebutton = (LinearLayout) rootView.findViewById(game_button);
         gamebutton.setOnClickListener(new View.OnClickListener() {
+
+
+        TestMultipleChoiceActivity quiz = new TestMultipleChoiceActivity();
             @Override
             public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .setTransition(TRANSIT_FRAGMENT_OPEN)
+                        .replace(R.id.fragmentindhold,quiz)
+                        .addToBackStack("back to subject from quiz")
+
+                        .commit();
 
 
             }

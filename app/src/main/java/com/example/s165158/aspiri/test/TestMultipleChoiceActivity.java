@@ -1,15 +1,18 @@
 package com.example.s165158.aspiri.test;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.s165158.aspiri.R;
 
-public class TestMultipleChoiceActivity extends AppCompatActivity {
+public class TestMultipleChoiceActivity extends Fragment {
 
     TextView question, answer1,answer2,answer3,answer4;
     ImageView img1,img2,img3,img4;
@@ -21,23 +24,23 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
     String questiontxt = "Hvad er kvadratroden af 16";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.multiple_choice_quiz);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
+        View view = inflater.inflate(R.layout.multiple_choice_quiz, container, false);
 
 
-        question = (TextView) findViewById(R.id.question_text);
+
+        question = (TextView) view.findViewById(R.id.question_text);
         question.setText(questiontxt);
 
-        answer1 = (TextView)findViewById(R.id.option1_text);
-        answer2 =(TextView)findViewById(R.id.option2_text);
-        answer3 =(TextView)findViewById(R.id.option3_text);
-        answer4 =(TextView)findViewById(R.id.option4_text);
+        answer1 = (TextView)view.findViewById(R.id.option1_text);
+        answer2 =(TextView)view.findViewById(R.id.option2_text);
+        answer3 =(TextView)view.findViewById(R.id.option3_text);
+        answer4 =(TextView)view.findViewById(R.id.option4_text);
 
-        img1 = (ImageView)findViewById(R.id.option1_thumb);
-        img2 = (ImageView)findViewById(R.id.option2_thumb);
-        img3 = (ImageView)findViewById(R.id.option3_thumb);
-        img4 = (ImageView)findViewById(R.id.option4_thumb);
+        img1 = (ImageView)view.findViewById(R.id.option1_thumb);
+        img2 = (ImageView)view.findViewById(R.id.option2_thumb);
+        img3 = (ImageView)view.findViewById(R.id.option3_thumb);
+        img4 = (ImageView)view.findViewById(R.id.option4_thumb);
 
         answer1.setText(answertxt);
         answer2.setText(answertxt);
@@ -52,7 +55,7 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
 
 
 
-        answerbutton1 = (LinearLayout) findViewById(R.id.option1_button);
+        answerbutton1 = (LinearLayout) view.findViewById(R.id.option1_button);
         answerbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +63,7 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
 
             }
         });
-        answerbutton2 = (LinearLayout) findViewById(R.id.option2_button);
+        answerbutton2 = (LinearLayout) view.findViewById(R.id.option2_button);
         answerbutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +71,7 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
 
             }
         });
-        answerbutton3 = (LinearLayout) findViewById(R.id.option3_button);
+        answerbutton3 = (LinearLayout) view.findViewById(R.id.option3_button);
         answerbutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +79,7 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
 
             }
         });
-        answerbutton4 = (LinearLayout) findViewById(R.id.option4_button);
+        answerbutton4 = (LinearLayout) view.findViewById(R.id.option4_button);
         answerbutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +89,7 @@ public class TestMultipleChoiceActivity extends AppCompatActivity {
         });
         //        img1.setImageDrawable(R);
 
-
+        return view;
     }
 
 }
