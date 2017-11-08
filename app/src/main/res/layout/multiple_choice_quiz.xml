@@ -13,7 +13,7 @@
 
 
         <TextView
-            android:id="@+id/head"
+            android:id="@+id/quiz_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -26,7 +26,7 @@
 
 
         <ImageView
-            android:id="@+id/image"
+            android:id="@+id/quiz_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:contentDescription="@string/empty_description"

@@ -61,9 +61,9 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     public void onBindViewHolder(ViewHolder holder, final int position) {
         View view = holder.view;
 
-        TextView title = (TextView) view.findViewById(R.id.nameTextViewID);
+        TextView title = (TextView) view.findViewById(R.id.listSubjectTitle);
         title.setText(subjectListArray[position]);
-        TextView subtext = (TextView)view.findViewById(R.id.infoTextViewID);
+        TextView subtext = (TextView)view.findViewById(R.id.listSubtext);
         subtext.setText(subtextListArray[position]);
         ImageView images = (ImageView) view.findViewById(R.id.imageView1ID);
         images.setImageResource(imageArray[position]);
