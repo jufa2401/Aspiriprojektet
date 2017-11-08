@@ -35,7 +35,7 @@ public class ListFragment extends Fragment {
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
-        RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(subjectListArray,subtextListArray,imageArray);
+        RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(getActivity(),subjectListArray,subtextListArray,imageArray);
 
         recyclerView.setAdapter(recyclerListAdapter);
 
