@@ -2,11 +2,13 @@ package com.example.s165158.aspiri.test2;
 
 import android.app.Activity;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.s165158.aspiri.R;
@@ -58,9 +60,15 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         View view = holder.view;
+
         TextView title = (TextView) view.findViewById(R.id.nameTextViewID);
-        final SubjectFragment subjectFragment = new SubjectFragment();
         title.setText(subjectListArray[position]);
+        TextView subtext = (TextView)view.findViewById(R.id.infoTextViewID);
+        subtext.setText(subtextListArray[position]);
+        ImageView images = (ImageView) view.findViewById(R.id.imageView1ID);
+        images.setImageResource(imageArray[position]);
+
+        final SubjectFragment subjectFragment = new SubjectFragment();
         view.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -68,10 +76,16 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 //                 sætter on click listerner til at indekserer efter position i listen.
                     mListener.onClick(position);
                 }
+
+
                 FragmentManager manager = ((Activity)context).getFragmentManager();
                 manager.beginTransaction()
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .replace(R.id.fragmentindhold,subjectFragment)
+
                         .addToBackStack("back to list from subject")
+//                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+
                         .commit();
 
 
@@ -82,5 +96,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     @Override
     public int getItemCount() {
         return subjectListArray.length;
+
     }
 }

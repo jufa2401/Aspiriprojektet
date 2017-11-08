@@ -8,18 +8,22 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <!--Includes the front page layout-->
+
     <FrameLayout
         android:id="@+id/fragmentindhold"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nav_view"></FrameLayout>
 
-    <!--Includes the front page layout-->
     <include
         layout="@layout/toolbar_top"
+        android:id="@+id/includedtoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <!--Her sættes farve for navigation viewet-->
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
