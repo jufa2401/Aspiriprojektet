@@ -9,12 +9,21 @@
     tools:openDrawer="start">
 
     <!--Includes the front page layout-->
+
+    <FrameLayout
+        android:id="@+id/fragmentindhold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nav_view"></FrameLayout>
+
     <include
         layout="@layout/toolbar_top"
+        android:id="@+id/includedtoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <!--Her sættes farve for navigation viewet-->
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -25,5 +34,6 @@
         app:itemIconTint="@color/item_icon_color"
         app:itemTextColor="@color/item_text_color"
         app:menu="@menu/drawer_content" />
+
 
 </android.support.v4.widget.DrawerLayout>

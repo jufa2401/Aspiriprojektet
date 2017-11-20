@@ -1,8 +1,11 @@
 package com.example.s165158.aspiri.test;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -10,9 +13,10 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
+import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
 
-public class TestActivity extends AppCompatActivity {
+public class SubjectFragment extends Fragment {
     ExpandableTextView expandableTextView;
     ImageView img;
     TextView txt;
@@ -41,23 +45,32 @@ public class TestActivity extends AppCompatActivity {
             "Name were we at hope. Remainder household direction zealously the unwilling bed sex. Lose and gay ham sake met that. Stood her place one ten spoke yet. Head case knew ever set why over. Marianne returned of peculiar replying in moderate. Roused get enable garret estate old county. Entreaties you devonshire law dissimilar terminated. \n" +
             "\n";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.subjectalternative);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
+        View rootView = inflater.inflate(R.layout.subjectalternative, container, false);
 
-        expandableTextView = (ExpandableTextView)findViewById(R.id.expand_text_view);
+
+        expandableTextView = (ExpandableTextView)rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
 
-        txt = (TextView)findViewById(R.id.game_text);
-        img = (ImageView)findViewById(R.id.game_thumb);
+        txt = (TextView)rootView.findViewById(R.id.game_text);
+        img = (ImageView)rootView.findViewById(R.id.game_thumb);
 
         txt.setText(shortText);
         img.setImageResource(R.drawable.ic_game);
-        gamebutton = (LinearLayout) findViewById(game_button);
+        gamebutton = (LinearLayout) rootView.findViewById(game_button);
         gamebutton.setOnClickListener(new View.OnClickListener() {
+
+
+        TestMultipleChoiceActivity quiz = new TestMultipleChoiceActivity();
             @Override
             public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .setTransition(TRANSIT_FRAGMENT_OPEN)
+                        .replace(R.id.fragmentindhold,quiz)
+                        .addToBackStack("back to subject from quiz")
+
+                        .commit();
 
 
             }
@@ -65,6 +78,7 @@ public class TestActivity extends AppCompatActivity {
         //        img1.setImageDrawable(R);
 
 
+        return rootView;
     }
 
 }
