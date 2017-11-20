@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import com.example.s165158.aspiri.test.TestFlipcard;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
@@ -84,8 +85,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 Log.d("AspiriApp", "action_settings pressed");
 
-                Intent goToSettings = new Intent(this, settings_screen.class);
-                startActivity(goToSettings);
 
                 return true;
 
@@ -128,8 +127,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
                 startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
                 Log.d("AspiriApp", "Mail_icon pressed");
+                return true;
 
-
+            case R.id.drawer_flipcards:
+                Intent goToFlipCards = new Intent(this,TestFlipcard.class);
+                startActivity(goToFlipCards);
+                Log.d("AspiriApp","Flipcard_pressed");
+                return true;
 
                 //        Maps Navigation
             case R.id.drawer_Kbh:

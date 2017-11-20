@@ -65,7 +65,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         title.setText(subjectListArray[position]);
         TextView subtext = (TextView)view.findViewById(R.id.listSubtext);
         subtext.setText(subtextListArray[position]);
-        ImageView images = (ImageView) view.findViewById(R.id.imageView1ID);
+        ImageView images = (ImageView) view.findViewById(R.id.listImageView);
         images.setImageResource(imageArray[position]);
 
         final SubjectFragment subjectFragment = new SubjectFragment();

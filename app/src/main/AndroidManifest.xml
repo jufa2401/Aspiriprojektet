@@ -31,13 +31,7 @@
 
 
         <!-- Settings Screen -->
-        <activity android:name=".settings_screen" />
 
-
-        <activity
-            android:name=".Subject2"
-            android:label="@string/title_activity_subject2"
-            android:theme="@style/AppTheme" />
 
         <!-- Test activity -->
         <activity android:name=".test.SubjectFragment">

@@ -11,6 +11,12 @@
             android:icon="@drawable/ic_menu_store"
             android:title="@string/drawer_uy_Course" />
 
+        <item
+            android:id="@+id/drawer_send_us_mail"
+            android:icon="@drawable/drawer_send"
+            android:title="@string/drawer_contact" />
+
+
         <!--Camera, Gallery og Slideshow skal ud-->
         <item
             android:id="@+id/drawer_camera"
@@ -21,7 +27,7 @@
             android:icon="@drawable/drawer_gallery"
             android:title="@string/drawer_gallery" />
         <item
-            android:id="@+id/drawer_slideshow"
+            android:id="@+id/drawer_flipcards"
             android:icon="@drawable/drawer_slideshow"
             android:title="@string/drawer_slideshow" />
         <item
@@ -53,7 +59,7 @@
         </menu>
     </item>
 
-    <item android:title="test ting">
+    <item android:title="test ting"/>
     <item android:title="@string/drawer_communicate">
         <menu>
             <item
