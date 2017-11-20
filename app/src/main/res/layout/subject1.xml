@@ -41,7 +41,6 @@
         android:contentDescription="Subject Picture"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:paddingTop="2dp"
         android:src="@android:drawable/star_big_on"/>
 
     <ImageView
