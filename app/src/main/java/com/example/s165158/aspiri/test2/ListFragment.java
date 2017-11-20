@@ -1,5 +1,6 @@
 package com.example.s165158.aspiri.test2;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -21,32 +22,40 @@ import com.example.s165158.aspiri.R;
 public class ListFragment extends Fragment {
 
     private String[] subjectListArray,subtextListArray;
+    RecyclerView recyclerView;
+    LinearLayoutManager layoutManager;
+    Activity parentActivity;
 
     //Skal laves om!
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
+
+    public void onCreate(Bundle savedinstanceSate) {
+        // listen to backstack changes
+
+
+        // other fragment init stuff
+        super.onCreate(savedinstanceSate);
+    }
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
-        View rootView = inflater.inflate(R.layout.fragment_list_test2, container, false);
-        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.listRecyclerView);
+        View rootView = inflater.inflate(R.layout.recycler_list, container, false);
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.listRecyclerView);
 
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
 
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
 
         RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(getActivity(),subjectListArray,subtextListArray,imageArray);
-
         recyclerView.setAdapter(recyclerListAdapter);
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
+
         return rootView;
+
+
+
+
     }
-
-
-
-
-
 }
-
-
 

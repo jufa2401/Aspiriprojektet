@@ -10,14 +10,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
-import static com.example.s165158.aspiri.R.id.subject_title;
 
-public class SubjectFragment extends Fragment {
+public class SubjectFragment extends Fragment  {
     private ExpandableTextView expandableTextView;
     private ImageView img;
     private TextView txt, title;
@@ -25,7 +25,7 @@ public class SubjectFragment extends Fragment {
     private int listindex;
     private String subject_title;
 
-//    example strings
+    //    example strings
     String shortText = "Spil et spil til dette emne!";
     String longText = "By so delight of showing neither believe he present. Deal sigh up in shew away when. Pursuit express no or prepare replied. Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building man carriage gay. Considered introduced themselves mr to discretion at. Means among saw hopes for. Death mirth in oh learn he equal on. \n" +
             "\n" +
@@ -48,15 +48,17 @@ public class SubjectFragment extends Fragment {
             "Name were we at hope. Remainder household direction zealously the unwilling bed sex. Lose and gay ham sake met that. Stood her place one ten spoke yet. Head case knew ever set why over. Marianne returned of peculiar replying in moderate. Roused get enable garret estate old county. Entreaties you devonshire law dissimilar terminated. \n" +
             "\n";
 
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
-        View rootView = inflater.inflate(R.layout.subjectalternative, container, false);
 
-        expandableTextView = (ExpandableTextView)rootView.findViewById(R.id.expand_text_view);
+
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
+        View rootView = inflater.inflate(R.layout.subject, container, false);
+
+        expandableTextView = (ExpandableTextView) rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
 
         title = (TextView) rootView.findViewById(R.id.subject_title);
-        txt = (TextView)rootView.findViewById(R.id.game_text);
-        img = (ImageView)rootView.findViewById(R.id.game_thumb);
+        txt = (TextView) rootView.findViewById(R.id.game_text);
+        img = (ImageView) rootView.findViewById(R.id.game_thumb);
 
         txt.setText(shortText);
         img.setImageResource(R.drawable.ic_game);
@@ -66,7 +68,7 @@ public class SubjectFragment extends Fragment {
         listindex = args.getInt("listindex");
         subject_title = args.getString("title");
         title.setText(subject_title);
-        switch (listindex){
+        switch (listindex) {
             case 0:
                 expandableTextView.setText("Subject 1 has been pressed Ay");
                 break;
@@ -100,20 +102,21 @@ public class SubjectFragment extends Fragment {
                 break;
             case 14:
                 break;
-                default:
+            default:
 
         }
 
         gamebutton.setOnClickListener(new View.OnClickListener() {
 
 
-        TestMultipleChoiceActivity quiz = new TestMultipleChoiceActivity();
+            TestMultipleChoiceActivity quiz = new TestMultipleChoiceActivity();
+
             @Override
             public void onClick(View v) {
                 getFragmentManager()
                         .beginTransaction()
                         .setTransition(TRANSIT_FRAGMENT_OPEN)
-                        .replace(R.id.fragmentindhold,quiz)
+                        .replace(R.id.fragmentindhold, quiz)
                         .addToBackStack("back to subject from quiz")
 
                         .commit();
@@ -123,8 +126,11 @@ public class SubjectFragment extends Fragment {
         });
         //        img1.setImageDrawable(R);
 
+//        TODO: Display backbutton instead of drawerbutton away from home.
+        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         return rootView;
     }
+
 
 }

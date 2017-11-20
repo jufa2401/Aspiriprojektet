@@ -11,17 +11,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import com.example.s165158.aspiri.test2.ListFragment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
 import com.example.s165158.aspiri.test.TestFlipcard;
+import com.example.s165158.aspiri.test2.ListFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
 
     ListFragment listFragment;
+    Toolbar toolbar;
+
     //On createmetode
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +33,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         // Fanebladet
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         //Drawer menu
@@ -43,12 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        listFragment = new ListFragment();
-// Insert the fragment by replacing any existing fragment
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.fragmentindhold, listFragment)
-                .commit();
+
     }
     //    Tredottede menu initialiseres her
     @Override
@@ -61,6 +62,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+
+
+                return true;
+
             case R.id.three_dot_quit:
                 finish();
                 Log.d("AspiriApp", "action_quit pressed");
@@ -157,6 +163,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        listFragment = new ListFragment();
+// Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragmentindhold, listFragment)
+                .commit();
+
+    }
+//    TODO: FIX HOME AS UP
+    @Override
+    public void onBackPressed() {
+        int count = getFragmentManager().getBackStackEntryCount();
+        if(count ==0){
+            super.onBackPressed();
+        } else {
+            getFragmentManager().popBackStack();
+        }
     }
 }
 
