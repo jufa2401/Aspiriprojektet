@@ -20,8 +20,7 @@ import com.example.s165158.aspiri.R;
 
 public class ListFragment extends Fragment {
 
-    String[] subjectListArray;
-    String[] subtextListArray;
+    private String[] subjectListArray,subtextListArray;
 
     //Skal laves om!
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
@@ -32,6 +31,7 @@ public class ListFragment extends Fragment {
 
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
+
 
         RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(getActivity(),subjectListArray,subtextListArray,imageArray);
 

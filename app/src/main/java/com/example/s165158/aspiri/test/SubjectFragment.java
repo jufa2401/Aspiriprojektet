@@ -20,8 +20,9 @@ public class SubjectFragment extends Fragment {
     ExpandableTextView expandableTextView;
     ImageView img;
     TextView txt;
-
     LinearLayout gamebutton;
+    int listindex;
+
 
     String shortText = "Spil et spil til dette emne!";
     String longText = "By so delight of showing neither believe he present. Deal sigh up in shew away when. Pursuit express no or prepare replied. Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building man carriage gay. Considered introduced themselves mr to discretion at. Means among saw hopes for. Death mirth in oh learn he equal on. \n" +
@@ -48,7 +49,6 @@ public class SubjectFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View rootView = inflater.inflate(R.layout.subjectalternative, container, false);
 
-
         expandableTextView = (ExpandableTextView)rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
 
@@ -58,6 +58,47 @@ public class SubjectFragment extends Fragment {
         txt.setText(shortText);
         img.setImageResource(R.drawable.ic_game);
         gamebutton = (LinearLayout) rootView.findViewById(game_button);
+
+        Bundle args = getArguments();
+        listindex = args.getInt("listindex");
+        switch (listindex){
+            case 0:
+                expandableTextView.setText("Subject 1 has been pressed Ay");
+                break;
+            case 1:
+                expandableTextView.setText("Subject 2, 420 has been pressed Ay");
+                break;
+            case 2:
+                expandableTextView.setText("Subject 1 has been pressed Ay din mor");
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+                default:
+
+        }
+
         gamebutton.setOnClickListener(new View.OnClickListener() {
 
 
