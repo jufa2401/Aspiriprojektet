@@ -80,8 +80,10 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
 
                 FragmentManager manager = ((Activity)context).getFragmentManager();
+//              bundle til at oveføre det indtrykkede index til SubjectFragment
                 final Bundle bundle = new Bundle();
                 bundle.putInt("listindex",position);
+//              Hvis vi vil have forskellige layouts til forskellige emner, skal koden ligge her!
                 subjectFragment.setArguments(bundle);
 
                 manager.beginTransaction()
