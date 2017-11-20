@@ -15,13 +15,15 @@ import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
+import static com.example.s165158.aspiri.R.id.subject_title;
 
 public class SubjectFragment extends Fragment {
     private ExpandableTextView expandableTextView;
     private ImageView img;
-    private TextView txt;
+    private TextView txt, title;
     private LinearLayout gamebutton;
     private int listindex;
+    private String subject_title;
 
 //    example strings
     String shortText = "Spil et spil til dette emne!";
@@ -52,6 +54,7 @@ public class SubjectFragment extends Fragment {
         expandableTextView = (ExpandableTextView)rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
 
+        title = (TextView) rootView.findViewById(R.id.subject_title);
         txt = (TextView)rootView.findViewById(R.id.game_text);
         img = (ImageView)rootView.findViewById(R.id.game_thumb);
 
@@ -61,6 +64,8 @@ public class SubjectFragment extends Fragment {
 
         Bundle args = getArguments();
         listindex = args.getInt("listindex");
+        subject_title = args.getString("title");
+        title.setText(subject_title);
         switch (listindex){
             case 0:
                 expandableTextView.setText("Subject 1 has been pressed Ay");
