@@ -26,8 +26,6 @@ public class ListFragment extends Fragment {
     //Skal laves om!
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
     };
-
-
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View rootView = inflater.inflate(R.layout.fragment_list_test2, container, false);
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.listRecyclerView);

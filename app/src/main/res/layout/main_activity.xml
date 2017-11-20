@@ -8,14 +8,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <!--Includes the front page layout-->
-
-    <FrameLayout
-        android:id="@+id/fragmentindhold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nav_view"></FrameLayout>
-
     <include
         layout="@layout/toolbar_top"
         android:id="@+id/includedtoolbar"
@@ -29,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         app:headerLayout="@layout/drawer_header_navigation"
         app:itemIconTint="@color/item_icon_color"
         app:itemTextColor="@color/item_text_color"

@@ -21,10 +21,10 @@ import com.example.s165158.aspiri.test.SubjectFragment;
 public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapter.ViewHolder> {
     private Listener mListener;
 
-    private String[] subjectListArray;
-    private String[] subtextListArray;
+    private String[] subjectListArray, subtextListArray;
     private Integer[] imageArray;
     private Context context;
+
     public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
         this.subtextListArray = subtextListArray;
@@ -82,10 +82,8 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                 manager.beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .replace(R.id.fragmentindhold,subjectFragment)
-
                         .addToBackStack("back to list from subject")
 //                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
-
                         .commit();
 
 

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.s165158.aspiri.MainActivity">
+    tools:context="com.example.s165158.aspiri.MainActivity"
+    tools:showIn="@layout/main_activity">
 
     <!-- Faneblad i toppen, grøn-->
     <android.support.design.widget.AppBarLayout
@@ -17,10 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
 
 
-
+    <include layout="@layout/content_main" />
 
 </android.support.design.widget.CoordinatorLayout>

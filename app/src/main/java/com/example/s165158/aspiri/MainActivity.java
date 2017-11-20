@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import com.example.s165158.aspiri.test2.ListFragment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,17 +21,7 @@ import com.example.s165158.aspiri.test.TestFlipcard;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
 
-    com.example.s165158.aspiri.test2.ListFragment listFragment;
-
-    //instantierer Arrays så det kan bruges uden for klassen, og refereres til fra Strings
-    String[] subjectListArray;
-    String[] subtextListArray;
-
-    //Skal laves om!
-    Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
-    };
-
-
+    ListFragment listFragment;
     //On createmetode
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,18 +43,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        listFragment = new com.example.s165158.aspiri.test2.ListFragment();
+        listFragment = new ListFragment();
 // Insert the fragment by replacing any existing fragment
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.fragmentindhold, listFragment)
                 .commit();
-
-
-
     }
-
-
     //    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -90,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.three_dot_favorite:
                 // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+                // as a favorite..  .
                 Toast.makeText(getApplicationContext(), "Action Favorite is yet to be implemented", Toast.LENGTH_SHORT).show();
                 Log.d("AspiriApp", "action_favorite pressed");
                 return true;
@@ -104,8 +90,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // On click for de forskellige optioner i hamburgernavigation menuen.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-
         switch (item.getItemId()) {
 
             //        Top functions
@@ -129,14 +113,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.d("AspiriApp", "Mail_icon pressed");
                 return true;
 
-                //Goes to flipcards.
+            //Goes to flipcards.
             case R.id.drawer_flipcards:
                 Intent goToFlipCards = new Intent(this,TestFlipcard.class);
                 startActivity(goToFlipCards);
                 Log.d("AspiriApp","Flipcard_pressed");
                 return true;
 
-                //        Maps Navigation
+            //        Maps Navigation
             case R.id.drawer_Kbh:
                 Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_kbh_to_maps)));
                 startActivity(goToSigurdsGade);
@@ -162,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
 
-                //Tests
+            //Tests
             case R.id.go_to_subject1:
                 Intent goToSubject1 = new Intent(this, Subject1.class);
                 startActivity(goToSubject1);
