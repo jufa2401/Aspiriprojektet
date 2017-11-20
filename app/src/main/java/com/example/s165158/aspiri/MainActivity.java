@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.d("AspiriApp", "Mail_icon pressed");
                 return true;
 
+                //Goes to flipcards.
             case R.id.drawer_flipcards:
                 Intent goToFlipCards = new Intent(this,TestFlipcard.class);
                 startActivity(goToFlipCards);
