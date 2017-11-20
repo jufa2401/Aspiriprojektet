@@ -17,13 +17,13 @@ import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
 
 public class SubjectFragment extends Fragment {
-    ExpandableTextView expandableTextView;
-    ImageView img;
-    TextView txt;
-    LinearLayout gamebutton;
-    int listindex;
+    private ExpandableTextView expandableTextView;
+    private ImageView img;
+    private TextView txt;
+    private LinearLayout gamebutton;
+    private int listindex;
 
-
+//    example strings
     String shortText = "Spil et spil til dette emne!";
     String longText = "By so delight of showing neither believe he present. Deal sigh up in shew away when. Pursuit express no or prepare replied. Wholly formed old latter future but way she. Day her likewise smallest expenses judgment building man carriage gay. Considered introduced themselves mr to discretion at. Means among saw hopes for. Death mirth in oh learn he equal on. \n" +
             "\n" +
