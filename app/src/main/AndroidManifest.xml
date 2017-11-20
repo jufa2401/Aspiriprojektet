@@ -19,18 +19,6 @@
             </intent-filter>
         </activity>
 
-        <!-- OnClickListener -->
-
-        <!-- ExtraScreen -->
-
-        <activity
-            android:name=".Subject1"
-            android:label="Subject1"
-            android:theme="@style/AppTheme"/>
-
-
-
-        <!-- Settings Screen -->
 
 
         <!-- Test activity -->
