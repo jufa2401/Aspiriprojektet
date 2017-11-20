@@ -30,6 +30,7 @@
             android:title="@string/drawer_tool" />
     </group>
 
+
     <!--Underkategorier husk at rette id'er ! -->
     <item android:title="@string/drawer_we_are_here">
         <menu>
@@ -49,13 +50,16 @@
                 android:id="@+id/drawer_HQ"
                 android:icon="@drawable/drawer_gallery"
                 android:title="@string/drawer_HQ" />
-
-
         </menu>
     </item>
+
+    <item android:title="test ting">
     <item android:title="@string/drawer_communicate">
         <menu>
             <item
+                android:id="@+id/go_to_subject1"
+                android:icon="@drawable/ic_game"
+                android:title="goToSubject1" />
                 android:id="@+id/drawer_share"
                 android:icon="@drawable/drawer_share"
                 android:title="@string/drawer_send" />

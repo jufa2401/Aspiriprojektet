@@ -48,11 +48,13 @@ public class Subject2 extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        FloatingActionButton theFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
-        theFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+
+//        Skal laves til at gå til øvelsesaktiviteten for det pågældende tema
+        FloatingActionButton goToTestOfSubject = (FloatingActionButton) findViewById(R.id.fab_go_to_test);
+        goToTestOfSubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This must go to the appropriate test", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
