@@ -65,14 +65,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+
         // get the listview
-        //expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
+        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        //prepareListData();
+        prepareListData();
 
         //Creating the list adapter from class
-        //listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
+        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
 
         // setting list adapter
         //expandableListView.setAdapter(listAdapter);
@@ -91,8 +93,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-
-
                 return true;
 
             case R.id.three_dot_quit:
@@ -184,7 +184,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 Intent goToTest1 = new Intent(this, mathviewTEST.class);
                 startActivity(goToTest1);
-//                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 return true;
         }
 
