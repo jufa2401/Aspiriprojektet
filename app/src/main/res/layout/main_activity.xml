@@ -15,7 +15,6 @@
         android:layout_height="match_parent" />
 
     <!--Her sættes farve for navigation viewet-->
-
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -25,6 +24,13 @@
         app:itemIconTint="@color/item_icon_color"
         app:itemTextColor="@color/item_text_color"
         app:menu="@menu/drawer_content" />
+
+
+    <!--DEN HER SKAL FLYTTES TIL DRAWER-->
+    <!--<ExpandableListView-->
+        <!--android:id="@+id/lvExp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"/>-->
 
 
 </android.support.v4.widget.DrawerLayout>
