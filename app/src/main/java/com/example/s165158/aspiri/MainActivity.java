@@ -154,9 +154,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Tests
             case R.id.go_to_subject1:
-                Intent goToSubject1 = new Intent(this, Subject1.class);
-                startActivity(goToSubject1);
-                Log.d("AspiriApp", "going to subject 1");
+                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 return true;
         }
 
