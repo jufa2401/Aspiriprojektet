@@ -33,4 +33,7 @@ dependencies {
     compile 'com.android.support:design:25.4.0'
     compile 'com.ms-square:expandableTextView:0.1.4'
     testCompile 'junit:junit:4.12'
+
+    //Manually added
+    compile 'io.github.kexanie.library:MathView:0.0.6'
 }

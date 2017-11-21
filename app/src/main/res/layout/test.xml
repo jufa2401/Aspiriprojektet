@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--First-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formula one: from xml with MathJax"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/formula_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\)
+        and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"
+            app:engine="MathJax">
+        </io.github.kexanie.library.MathView>
+
+
+        <!--Second-->
+        <TextView
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formula two: from Java String with KaTeX in javaclass"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/formula_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            engine="KaTeX"
+            >
+        </io.github.kexanie.library.MathView>
+
+
+        <!--Third-->
+        <TextView
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formula three: from Java String with KaTeX in xml"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <io.github.kexanie.library.MathView
+            android:id="@+id/formula_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:text="@string/shorTest"
+            engine="KaTeX"
+            >
+        </io.github.kexanie.library.MathView>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

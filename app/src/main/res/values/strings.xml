@@ -98,6 +98,26 @@
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
+
+                    <!--Fag-->
+    <!--General-->
+    <string name="Title_Teori"></string>
+    <string name="Title_ReviewProblems">Opgave</string>
+    <string name="Title_Solutions"></string>
+
+    <!--Kvadratsætninger-->
+    <string name="Kvartratsætninger_intro">Kvadratsætningerne bliver brugt til at omskrive ligninger så de kan anvendes til faktorisering. De bruges normalt ikke til decideret udregning, men kun til at omskrive ligninger, derfor er det også vigtigt, at kende dem så man kan gennemskue, hvornår de skal bruges. De tre kendte kvadratsætninger får du her:</string>
+    <string name="Kvartratsætninger_sum_1">I nogle sammenhænge kan man få brug for at kunne udregne en formel eller omskrive en ligning, som indeholder kvadratet på en sum.</string>
+    <string name="Kvartratsætninger_sum_2">I Amerika bruger man ofte "FOIL" metoden, som står for "First Outer Inner Last". Dette er rækkefølgen med hvilken man skal gange leddene i paranteser sammen. Se blot her:</string>
+    <string name="Kvartratsætninger_difference_1">I andre tilfælde kan man have brug for at udregne en formel, eller omskrive en ligning, som indeholder kvadratet på en differens.</string>
+    <string name="Kvartratsætninger_difference_2">Differensen udregnes på samme måde som en sum, man trækker blot leddene fra hinandne. Det ser ud som følger:</string>
+    <string name="Kvartratsætninger_problem1_1">Reducer udtrykket:</string>
+    <string name="Kvartratsætninger_problem1_2">Reducer udtrykket:</string>
+    <string name="Kvartratsætninger_problem1_text">When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\ and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$</string>
+
+    <string name="shorTest"> When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\ and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$</string>
+    <string name="shorTest2">"This come from string. You can insert inline formula:"</string>
+
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->

@@ -154,7 +154,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Tests
             case R.id.go_to_subject1:
-                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+
+                Intent goToTest1 = new Intent(this, mathviewTEST.class);
+                startActivity(goToTest1);
+//                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 return true;
         }
 

@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
 
+
         <!-- Test activiy 2 -->
         <activity
             android:name=".test.TestFlipcard">
@@ -31,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".mathviewTEST" />
 
     </application>
 
