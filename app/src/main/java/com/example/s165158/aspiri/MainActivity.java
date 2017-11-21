@@ -65,16 +65,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
         // get the listview
-        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
+        //expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
+        //prepareListData();
 
         //Creating the list adapter from class
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        //listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
 
         // setting list adapter
         //expandableListView.setAdapter(listAdapter);
@@ -93,6 +91,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+
+
                 return true;
 
             case R.id.three_dot_quit:
@@ -184,6 +184,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 Intent goToTest1 = new Intent(this, mathviewTEST.class);
                 startActivity(goToTest1);
+//                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
                 return true;
         }
 
@@ -220,35 +221,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
+        listDataHeader.add("København");
+        listDataHeader.add("Odense");
+        listDataHeader.add("Aarhus");
         listDataHeader.add("Testeri");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> København = new ArrayList<String>();
+        København.add("The Shawshank Redemption");
+        København.add("The Godfather");
+        København.add("The Godfather: Part II");
+        København.add("Pulp Fiction");
+        København.add("The Good, the Bad and the Ugly");
+        København.add("The Dark Knight");
+        København.add("12 Angry Men");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
+        List<String> Odense = new ArrayList<String>();
+        Odense.add("The Conjuring");
+        Odense.add("Despicable Me 2");
+        Odense.add("Turbo");
+        Odense.add("Grown Ups 2");
+        Odense.add("Red 2");
+        Odense.add("The Wolverine");
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
+        List<String> Aarhus = new ArrayList<String>();
+        Aarhus.add("2 Guns");
+        Aarhus.add("The Smurfs 2");
+        Aarhus.add("The Spectacular Now");
+        Aarhus.add("The Canyons");
+        Aarhus.add("Europa Report");
 
         List<String> Testeri = new ArrayList<String>();
         Testeri.add("noget 1");
@@ -257,9 +258,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Testeri.add("noget 4");
 
         // Header, Child data
-        listDataChild.put(listDataHeader.get(0), top250);
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+        listDataChild.put(listDataHeader.get(0), København);
+        listDataChild.put(listDataHeader.get(1), Odense);
+        listDataChild.put(listDataHeader.get(2), Aarhus);
         listDataChild.put(listDataHeader.get(3), Testeri);
     }
 }
