@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-<!--Listen indeholder som følgende-->
+
+    <!--Listen indeholder som følgende-->
     <ImageView
         android:id="@+id/listImageView"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="48dp"
         app:srcCompat="@drawable/trig" />
 
+    <!--Title and subtitle-->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -20,19 +22,19 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
+        <!--Title-->
         <TextView
             android:id="@+id/listSubjectTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
+        <!--Subtitle-->
         <TextView
             android:id="@+id/listSubtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
             android:textSize="12sp"
             android:textStyle="italic" />
     </LinearLayout>

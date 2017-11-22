@@ -12,6 +12,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:orientation="vertical">
 
             <!--First test-->
@@ -80,7 +82,7 @@
 
 
 
-            <!--Formula controls>-->
+            <!--Sådan kunne en side se ud-->
             <TextView
                 android:paddingTop="50dp"
                 android:layout_width="match_parent"
@@ -92,18 +94,20 @@
                 android:textStyle="bold"
                 android:paddingBottom="30dp"/>
 
-            <!--Intro-->
+            <!--Header-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Title_Teori"
                 android:textSize="25sp" />
 
+            <!--Intro text-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_intro"/>
 
+            <!--Table 1-->
             <ImageView
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
@@ -120,11 +124,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_sum_1"/>
 
+            <!--FOIL metoden-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_sum_2"/>
 
+            <!--Table 2-->
             <ImageView
                 android:paddingTop="10dp"
                 android:id="@+id/imageview_company_logo"
@@ -134,6 +140,7 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/kvartratsaetninger_table2" />
 
+            <!--Table 2 bottom-->
             <ImageView
                 android:paddingBottom="10dp"
                 android:id="@+id/imageview_company_logo"
@@ -149,11 +156,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_difference_1"/>
 
+            <!--Differens 2-->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_difference_2"/>
 
+            <!--Mathview til Differens intro-->
             <io.github.kexanie.library.MathView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,13 +174,14 @@
 
 
             <!--Eksempel-->
+            <!--Begge regler kan bruges-->
             <TextView
                 android:paddingTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_problem1_1"/>
 
-
+            <!---->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -268,9 +278,6 @@
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:src="@drawable/kvartratsaetninger_table4" />
-
-
-
         </LinearLayout>
 
     </ScrollView>
