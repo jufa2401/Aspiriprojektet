@@ -216,8 +216,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+
+
     private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
+        listDataHeader = new ArrayList<>();
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data

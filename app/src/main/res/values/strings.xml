@@ -35,7 +35,7 @@
     <string name="drawer_URL_Odense">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
     <string name="drawer_contact">Kom i kontakt</string>
-
+    <string name="drawer_communicate">REPLACE ME</string>
 
     <!--Mail-->
     <string name="mail_subject">Vedrørende Aspiri App Android</string>
@@ -58,39 +58,40 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>1 Trigonometri</item>
-        <item>2 Rentes Regning</item>
-        <item>3 Kvatratsætninger</item>
-        <item>4 Potensregneregler</item>
-        <item>5 Polynomier</item>
-        <item>6 Lineær Eksponentiel og potenssammenænge</item>
-        <item>7 Statistik</item>
-        <item>8 Differentialregning</item>
-        <item>9 Geometri</item>
-        <item>10 Plangeometri med vektore</item>
-        <item>11 Rumgeometri med vektore</item>
-        <item>12 Areal omkreds og rumfang</item>
-        <item>13 Placeholder</item>
-        <item>14 Placeholder</item>
-        <item>15 Placeholder</item>
-        <item>16 Placeholder</item>
+        <item>Rentes Regning</item>
+        <item>Kvadratsætningerne</item>
+        <item>Potensregneregler</item>
+        <item>Polynomier</item>
+        <item>Lineær Eksponentiel og potenssammenænge</item>
+        <item>Statistik</item>
+        <item>Differentialregning</item>
+        <item>Integralregning</item>
+        <item>Logaritmer</item>
+        <item>Geometri</item>
+        <item>Plangeometri med vektore</item>
+        <item>Rumgeometri med vektore</item>
+        <item>Areal omkreds og rumfang</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
+        <item>Placeholder</item>
     </string-array>
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
-        <item>1Her lærer du om Sin, Cos og Tan</item>\
-        <item>2Dette afsnit kan bruges til din bank</item>
-        <item>3Placeholder</item>
-        <item>4Placeholder</item>
+        <item>Fremskrivning af indestående</item>\
+        <item>Spar massere af tid, hvis du lærer disse uden ad</item>
+        <item>I hvilken rækkefølge skal man gøre hvad?</item>
+        <item>Toppunkter, nulpunkter og stigning</item>
         <item>5Placeholder</item>
-        <item>6Placeholder</item>
-        <item>7Placeholder</item>
-        <item>8Placeholder</item>
-        <item>9Placeholder</item>
-        <item>10Placeholder</item>
-        <item>11Placeholder</item>
-        <item>12Placeholder</item>
+        <item>Sammenhæng mellem data, NulHypotese</item>
+        <item>f\'(x) er din ven</item>
+        <item>F(x) er også din ven</item>
+        <item>Transformering af udtryk</item>
+        <item>Trekanter, Firkanter og Cirkler</item>
+        <item>Størrelser i plan</item>
+        <item>Størrelser i Rum</item>
         <item>13Placeholder</item>
         <item>14Placeholder</item>
         <item>15Placeholder</item>
@@ -139,6 +140,5 @@
     <string name="card_back_description">Fadet selvfølgelig</string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
-    <string name="drawer_communicate">REPLACE ME</string>
 
 </resources>

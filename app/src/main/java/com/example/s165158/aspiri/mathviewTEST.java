@@ -12,7 +12,8 @@ import io.github.kexanie.library.MathView;
 public class mathviewTEST extends AppCompatActivity {
 
     MathView formula_two;
-    MathView formula_three;
+
+    //Remember to use \\( CONTENT \\) instead of $$ CONTENT $$ for inline formulas  /makes everything easier
     String tex = "This come from string. You can insert inline formula:" +
             " \\(ax^2 + bx + c = 0\\) " +
             "or displayed formula: $$\\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}$$";
