@@ -71,9 +71,6 @@
         <item>Plangeometri med vektore</item>
         <item>Rumgeometri med vektore</item>
         <item>Areal omkreds og rumfang</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
-        <item>Placeholder</item>
     </string-array>
 
 
@@ -91,10 +88,8 @@
         <item>Trekanter, Firkanter og Cirkler</item>
         <item>Størrelser i plan</item>
         <item>Størrelser i Rum</item>
-        <item>13Placeholder</item>
-        <item>14Placeholder</item>
-        <item>15Placeholder</item>
-        <item>16Placeholder</item>
+        <item>Andre Arealer</item>
+
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
