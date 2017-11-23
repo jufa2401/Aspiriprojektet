@@ -31,11 +31,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
 
-    ListFragment listFragment;
-    Toolbar toolbar;
-    DrawerLayout drawer;
-    ActionBarDrawerToggle mActionBarDrawerToggle;
+    private ListFragment listFragment;
+    private Toolbar toolbar;
+    private DrawerLayout drawer;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
     private FragmentManager mFragmentManager;
+    protected boolean isHomeAsUp = false;
     ExpandableListAdapter listAdapter;
     ExpandableListView expandableListView;
     List<String> listDataHeader;
@@ -49,17 +50,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.main_activity);
 
         // Fanebladet
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Drawer menu
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
 //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
@@ -87,13 +88,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mFragmentManager = getFragmentManager();
 
-        replaceFragment(new ListFragment(), getString(R.string.app_name), ListFragment.TAG);
+        replaceFragment(new ListFragment(), ListFragment.TAG);
 
         // get the listview
 //        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-//        prepareListData();
+        prepareListData();
 
 //        Creating the list adapter from class
 //        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
@@ -115,10 +116,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case android.R.id.home:
-
-
-                return true;
 
             case R.id.three_dot_quit:
                 finish();
@@ -152,8 +149,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //        Top functions
             case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
-                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-                Log.d("AspiriApp", "HoHome Button pressed");
+                if (mFragmentManager.getBackStackEntryCount() == 0) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+                    Intent intent = getIntent();
+                    finish();
+                    startActivity(intent);
+                }
                 return true;
 
             case R.id.drawer_store:
@@ -211,6 +213,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .beginTransaction()
                         .replace(R.id.fragmentindhold, mathviewTEST)
                         .addToBackStack("back to subject from quiz")
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
 
                         .commit();
 
@@ -221,12 +224,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    public void replaceFragment(Fragment fragment, String actionBarTitle, String tag) {
+    public void replaceFragment(Fragment fragment, String tag) {
 
         if (mFragmentManager == null)
             return;
@@ -236,12 +239,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (!tag.equals(ListFragment.TAG))
             fragmentTransaction.addToBackStack(tag);
         fragmentTransaction.commit();
-
-        setActionBarTitle(actionBarTitle);
     }
 
     //    TODO: FIX HOME AS UP
-
 
 
     private void prepareListData() {
@@ -293,8 +293,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -314,7 +312,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (mActionBarDrawerToggle != null) {
             mActionBarDrawerToggle.setDrawerIndicatorEnabled(value);
         }
-
     }
 }
 

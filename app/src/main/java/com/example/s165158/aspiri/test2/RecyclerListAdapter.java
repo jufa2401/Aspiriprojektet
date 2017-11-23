@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
-import com.example.s165158.aspiri.test.SubjectFragment;
+import com.example.s165158.aspiri.SubjectFragment;
 
 /**
  * Created by s165158 on 08-11-2017.
@@ -37,8 +37,8 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     }
 
 
-    public static interface Listener{
-        public void onClick(int position);
+    public interface Listener {
+        void onClick(int position);
     }
 
     public void setListener(Listener listener) {
@@ -64,11 +64,11 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     public void onBindViewHolder(ViewHolder holder, final int position) {
         View view = holder.view;
 
-        TextView title = (TextView) view.findViewById(R.id.listSubjectTitle);
+        TextView title = view.findViewById(R.id.listSubjectTitle);
         title.setText(subjectListArray[position]);
-        TextView subtext = (TextView)view.findViewById(R.id.listSubtext);
+        TextView subtext = view.findViewById(R.id.listSubtext);
         subtext.setText(subtextListArray[position]);
-        ImageView images = (ImageView) view.findViewById(R.id.listImageView);
+        ImageView images = view.findViewById(R.id.listImageView);
         images.setImageResource(imageArray[position]);
 
         final SubjectFragment subjectFragment = new SubjectFragment();
@@ -99,7 +99,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
                 if (context instanceof Activity)
                     mActivity = (AppCompatActivity) context;
-                ((MainActivity) mActivity).replaceFragment(subjectFragment, subjectListArray[position], SubjectFragment.TAG);
+                ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
 
             }
         });

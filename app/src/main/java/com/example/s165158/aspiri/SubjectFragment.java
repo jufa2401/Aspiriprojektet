@@ -1,10 +1,13 @@
-package com.example.s165158.aspiri.test;
+package com.example.s165158.aspiri;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -14,8 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
-import com.example.s165158.aspiri.R;
+import com.example.s165158.aspiri.test.TestMultipleChoiceActivity;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
@@ -34,6 +36,8 @@ public class SubjectFragment extends Fragment  {
     private int listindex;
     private String subject_title;
     private Toolbar toolbar;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private DrawerLayout drawer;
 
     //    example strings
     String shortText = "Spil et spil til dette emne!";
@@ -59,7 +63,7 @@ public class SubjectFragment extends Fragment  {
             "\n";
 
 
-        @Override
+    @Override
         public void onAttach(Context context) {
             super.onAttach(context);
             if (context instanceof Activity)
@@ -67,21 +71,22 @@ public class SubjectFragment extends Fragment  {
 
         }
 
-        @Override
+
+    @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
 
-            setHasOptionsMenu(true);
             // update the actionbar to show the up carat/affordance
-            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
             setHasOptionsMenu(true);
-//            ActionBar actionBar = mActivity.getSupportActionBar();
-//            if (actionBar != null) {
-////                actionBar.setDisplayShowTitleEnabled(false);
-//                actionBar.setDisplayHomeAsUpEnabled(true);
-//
-//            }
+        ActionBar actionBar = mActivity.getSupportActionBar();
+        if (actionBar != null) {
+//              actionBar.setDisplayShowTitleEnabled(false);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+
+        }
         }
 
 
@@ -93,17 +98,16 @@ public class SubjectFragment extends Fragment  {
         setHasOptionsMenu(true);
 
 
-
-        expandableTextView = (ExpandableTextView) rootView.findViewById(R.id.expand_text_view);
+        expandableTextView = rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
 
-        title = (TextView) rootView.findViewById(R.id.subject_title);
-        txt = (TextView) rootView.findViewById(R.id.game_text);
-        img = (ImageView) rootView.findViewById(R.id.game_thumb);
+        title = rootView.findViewById(R.id.subject_title);
+        txt = rootView.findViewById(R.id.game_text);
+        img = rootView.findViewById(R.id.game_thumb);
 
         txt.setText(shortText);
         img.setImageResource(R.drawable.ic_game);
-        gamebutton = (LinearLayout) rootView.findViewById(game_button);
+        gamebutton = rootView.findViewById(game_button);
 
         Bundle args = getArguments();
         listindex = args.getInt("listindex");
