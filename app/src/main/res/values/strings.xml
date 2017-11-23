@@ -94,7 +94,7 @@
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
 
-                    <!--Fag-->
+    <!--Fag-->
     <!--General-->
     <string name="Title_Teori">Teori:</string>
     <string name="Title_ReviewProblems">Opgaver:</string>
@@ -134,5 +134,45 @@
     <string name="card_back_description">Fadet selvfølgelig</string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
+
+    <string-array name="Arealer_list">
+        <item>Generelt</item>
+    </string-array>
+    <!-- Geometry in the plane and vectors -->
+
+    <string-array name="PlanGeometri_list">
+        <item>Generelt</item>
+    </string-array>
+
+    <string-array name="PlanGeometri_sublist">
+        <item>Arealer</item>
+        <item>Trekanter</item>
+    </string-array>
+    <!-- Geometry and vectors -->
+
+    <string-array name="GeometriVektor_list">
+        <item>Generelt</item>
+    </string-array>
+
+    <string-array name="GeometriVektor_sublist">
+        <item>Rumgeometri</item>
+    </string-array>
+
+    <!-- Strings for Area, circumference and volume -->
+
+    <string-array name="Arealer_list">
+        <item>Generelt</item>
+    </string-array>
+
+    <string-array name="Arealer_sublist">
+        <item>cirkel</item>
+        <item>Trekant</item>
+        <item>Parralelogram</item>
+        <item>Trapez</item>
+        <item>Kegle</item>
+        <item>Kugle</item>
+        <item>Cylinder</item>
+    </string-array>
+
 
 </resources>
