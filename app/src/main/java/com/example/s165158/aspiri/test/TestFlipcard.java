@@ -83,7 +83,7 @@ public class TestFlipcard extends Activity
         }
 
         // Monitor back stack changes to ensure the action bar shows the appropriate
-        // button (either "photo" or "info").
+        // button (either "photo" or "info") .
         getFragmentManager().addOnBackStackChangedListener(this);
     }
 
