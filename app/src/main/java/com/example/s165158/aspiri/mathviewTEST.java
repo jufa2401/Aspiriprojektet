@@ -8,8 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ms.square.android.expandabletextview.ExpandableTextView;
-
-import io.github.kexanie.library.MathView;
+import com.nishant.math.MathView;
 
 /**
  * Created by jonas on 21/11/2017.
@@ -19,6 +18,8 @@ public class mathviewTEST extends Fragment {
 
     MathView formula_two;
     private ExpandableTextView expandableTextView1, expandableTextView2;
+
+
 
     //Remember to use \\( CONTENT \\) instead of $$ CONTENT $$ for inline formulas  /makes everything easier
     String tex = "This come from string. You can insert inline formula:" +

@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     ListFragment listFragment;
     Toolbar toolbar;
+    DrawerLayout drawer;
 
     ExpandableListAdapter listAdapter;
     ExpandableListView expandableListView;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Drawer menu
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
@@ -180,8 +181,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .addToBackStack("back to subject from quiz")
 
                         .commit();
+                drawer.closeDrawers();
 
                 return true;
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
