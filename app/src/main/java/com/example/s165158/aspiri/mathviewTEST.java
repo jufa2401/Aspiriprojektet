@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ms.square.android.expandabletextview.ExpandableTextView;
+
 import io.github.kexanie.library.MathView;
 
 /**
@@ -16,6 +18,7 @@ import io.github.kexanie.library.MathView;
 public class mathviewTEST extends Fragment {
 
     MathView formula_two;
+    private ExpandableTextView expandableTextView1, expandableTextView2;
 
     //Remember to use \\( CONTENT \\) instead of $$ CONTENT $$ for inline formulas  /makes everything easier
     String tex = "This come from string. You can insert inline formula:" +
@@ -30,6 +33,9 @@ public class mathviewTEST extends Fragment {
 
         formula_two = (MathView) view.findViewById(R.id.formula_two);
         formula_two.setText(tex);
+
+//        expandableTextView1 = (ExpandableTextView) view.findViewById(R.id.expand_text_view1);
+
 
         return view;
     }

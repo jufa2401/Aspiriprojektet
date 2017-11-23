@@ -6,6 +6,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="back">Tilbage</string>
     <string name="help">Hjælp</string>
+    <string name="LoremIpsum_SampleText">lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</string>
 
     <!--Three dot-->
     <string name="three_dot_favorite">Favorit</string>
@@ -135,6 +136,7 @@
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
 
+
     <string-array name="Arealer_list">
         <item>Generelt</item>
     </string-array>
@@ -160,9 +162,6 @@
 
     <!-- Strings for Area, circumference and volume -->
 
-    <string-array name="Arealer_list">
-        <item>Generelt</item>
-    </string-array>
 
     <string-array name="Arealer_sublist">
         <item>cirkel</item>

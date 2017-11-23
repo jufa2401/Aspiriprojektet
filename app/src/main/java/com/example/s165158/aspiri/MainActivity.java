@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
 
         // get the listview
-        //expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
+//        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        //prepareListData();
+        prepareListData();
 
-        //Creating the list adapter from class
-        //listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
+//        Creating the list adapter from class
+//        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
 
         // setting list adapter
-        //expandableListView.setAdapter(listAdapter);
+//        expandableListView.setAdapter(listAdapter);
 
     }
     //    Tredottede menu initialiseres her
