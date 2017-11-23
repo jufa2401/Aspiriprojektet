@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
+//        prepareListData();
 
 //        Creating the list adapter from class
 //        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        expandableListView.setAdapter(listAdapter);
 
     }
+
     //    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

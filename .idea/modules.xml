@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Aspiriprojektet.iml" filepath="$PROJECT_DIR$/Aspiriprojektet.iml" />
-      <module fileurl="file://C:\Users\Justin\StudioProjects\Aspiriprojektet\Aspiriprojektet.iml" filepath="C:\Users\Justin\StudioProjects\Aspiriprojektet\Aspiriprojektet.iml" />
       <module fileurl="file://C:\Users\janus\AndroidStudioProjects\Aspiriprojektet\.idea\Aspiriprojektet.iml" filepath="C:\Users\janus\AndroidStudioProjects\Aspiriprojektet\.idea\Aspiriprojektet.iml" />
+      <module fileurl="file://C:\Users\Justin\StudioProjects\Aspiriprojektet\Aspiriprojektet.iml" filepath="C:\Users\Justin\StudioProjects\Aspiriprojektet\Aspiriprojektet.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

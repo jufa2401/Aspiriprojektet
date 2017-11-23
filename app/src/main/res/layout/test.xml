@@ -4,15 +4,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:auto="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <!--Spacer-->
         <View
@@ -25,22 +25,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Formula one: from xml with MathJax"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
             style="@style/subjectSpacerView" />
 
-        <io.github.kexanie.library.MathView
-            android:id="@+id/formula_one"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\)
-        and they are $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"
-            app:engine="MathJax">
-        </io.github.kexanie.library.MathView>
 
 
         <!--Second test-->
@@ -52,13 +43,6 @@
             android:text="Formula two: from Java String with KaTeX in javaclass"
             android:textStyle="bold"/>
 
-        <io.github.kexanie.library.MathView
-            android:id="@+id/formula_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
 
 
         <!--Third test-->
@@ -69,25 +53,6 @@
             android:text="Formula three: from Java String with KaTeX in xml"
             style="@style/subjectTextView"
             android:textStyle="bold"/>
-
-        <io.github.kexanie.library.MathView
-            android:id="@+id/formula_three"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/mathModeXMLTest1"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
-
-        <io.github.kexanie.library.MathView
-            android:id="@+id/formula_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_difference_3_formula"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
-
 
 
 
@@ -103,37 +68,19 @@
             android:textStyle="bold"
             android:paddingBottom="30dp"/>
 
+        <!--Header-->
+        <TextView
+            style="@style/subjectTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Title_Teori"
+            android:textSize="25sp" />
 
-        <!--<com.ms.square.android.expandabletextview.ExpandableTextView-->
-            <!--android:id="@+id/expand_text_view1"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/sample_subject_breadtext"-->
-            <!--expandableTextView:animDuration="200"-->
-            <!--expandableTextView:maxCollapsedLines="12">-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_subject"/>
 
-            <!--Header-->
-            <TextView
-                style="@style/subjectTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/Title_Teori"
-                android:textSize="25sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/sample_subject"/>
-
-            <!--<ImageButton-->
-                <!--android:id="@id/expand_collapse"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="right|bottom"-->
-                <!--android:background="@android:color/transparent"-->
-                <!--android:contentDescription="@string/empty_description"-->
-                <!--android:padding="16dp" />-->
-        <!--</com.ms.square.android.expandabletextview.ExpandableTextView>-->
 
         <!--Intro text-->
         <TextView
@@ -195,16 +142,6 @@
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_difference_2"/>
 
-        <!--Mathview til Differens intro-->
-        <io.github.kexanie.library.MathView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_difference_3_formula"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
-
-
 
 
         <!--Eksempel-->
@@ -226,23 +163,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_problem1_2"/>
 
-
-            <!--TODO find ud af hvordan man farver text og ændrer dens størrelse-->
-            <io.github.kexanie.library.MathView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/Kvartratsætninger_problem1_2_formula1_pt1"
-                engine="KaTeX"
-                >
-            </io.github.kexanie.library.MathView>
-
-            <io.github.kexanie.library.MathView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:text="@string/Kvartratsætninger_problem1_3_formula1_pt2"
-                engine="KaTeX"
-                >
-            </io.github.kexanie.library.MathView>
         </LinearLayout>
 
         <TextView
@@ -256,23 +176,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_problem1_5"/>
-
-        <io.github.kexanie.library.MathView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_problem1_6_formula2"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
-
-        <io.github.kexanie.library.MathView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_problem1_7_formula3"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
-
+ f
 
         <!--Second part-->
         <TextView
@@ -281,13 +185,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_problem1_8"/>
 
-        <io.github.kexanie.library.MathView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_problem1_9_formula4"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -295,13 +193,6 @@
             android:textStyle="italic"
             android:text="@string/Kvartratsætninger_problem1_10"/>
 
-        <io.github.kexanie.library.MathView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:text="@string/Kvartratsætninger_problem1_11_formula5"
-            engine="KaTeX"
-            >
-        </io.github.kexanie.library.MathView>
 
         <ImageView
             android:paddingTop="21dp"
@@ -313,7 +204,5 @@
             android:scaleType="fitCenter"
             android:src="@drawable/kvartratsaetninger_table4" />
 
-
     </LinearLayout>
-
 </ScrollView>
