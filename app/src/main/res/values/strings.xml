@@ -6,7 +6,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="back">Tilbage</string>
     <string name="help">Hjælp</string>
-    <string name="LoremIpsum_SampleText">lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</string>
 
     <!--Three dot-->
     <string name="three_dot_favorite">Favorit</string>
@@ -137,41 +136,116 @@
     <string name="action_photo">View photo</string>
 
 
-    <string-array name="Arealer_list">
+    <!--Array til navne i underpunkter for polynomier-->
+    <string-array name="polynomier_list">
         <item>Generelt</item>
+        <item>Andengradsfunktioner</item>
     </string-array>
+
+    !--Array til polynomier_list subtext-->
+    <string-array name="polynomier_sublist">
+        <item>om polynomier</item>\
+        <item>spændende_temp</item>
+    </string-array>
+
+    <!--Array til navne i underpunkter for statistik-->
+    <string-array name="statistik_list">
+        <item>Ikke-grupperede observationer</item>
+        <item>Grupperede observationer</item>
+    </string-array>
+
+    !--Array til polynomier_list subtext-->
+    <string-array name="statistik_sublist">
+        <item>de mest almindelige regler indenfor statistik</item>
+        <item>hyppighed, frekvens, kumuleret hyppighed og kumuleret frekvens</item>
+    </string-array>
+
+    !--Array til navne i underpunkter for differentialregning-->
+    <string-array name="diffirentialregning_list">
+        <item>Generelt</item>
+        <item>Differentiering af flere led</item>
+        <item>Førsteordensdifferentialligninger</item>
+    </string-array>
+
+    !--Array til differentialregning_list subtext-->
+    <string-array name="diffirentialregning_sublist">
+        <item>De 10 mest almindelige regler i differentialregning</item>
+        <item>Sammensatte funktioner</item>
+        <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
+    </string-array>
+
+
+    !--Array til navne i underpunkter for integralregning-->
+    <string-array name="integralregning_list">
+        <item>Integration af ét led</item>
+        <item>integration af flere led</item>
+    </string-array>
+
+    !--Array til integralregning_list subtext-->
+    <string-array name="integralregning_sublist">
+        <item>de 8 mest almindelige regler</item>
+        <item>sammensatte funktioner</item>
+    </string-array>
+
+
+    !--Logaritmer har ikke underpunkter til logaritmer-->
+
+
+    !--Array til navne i underpunkter for geometri-->
+    <string-array name="geometri_list">
+        <item>Retvinklede trekanter</item>
+        <item>Vilkårlige trekanter</item>
+        <item>Areal af en vilkårlig trekant</item>
+        <item>Sinus-relation</item>
+        <item>Cosinus-relation</item>
+    </string-array>
+
+    !--Array til geometri_list subtext-->
+    <string-array name="geometri_sublist">
+        <item>retvinklede trekanter</item>
+        <item>oversigt over hvilke muligheder der følger de forskellige trekantstilfælde</item>
+        <item>hvis du kender to sider og en vinkel i en vilkårlig trekant, kan du beregne arealet</item>
+        <item>kan anvendes til at bestemme en side eller en vinkel</item>
+        <item>kan også anvendes til at bestemme side eller vinkel</item>
+    </string-array>
+
+
+
     <!-- Geometry in the plane and vectors -->
 
     <string-array name="PlanGeometri_list">
-        <item>Generelt</item>
+        <item>Areal og område</item>
+        <item>Vektorer</item>
     </string-array>
 
     <string-array name="PlanGeometri_sublist">
-        <item>Arealer</item>
-        <item>Trekanter</item>
-    </string-array>
-    <!-- Geometry and vectors -->
-
-    <string-array name="GeometriVektor_list">
-        <item>Generelt</item>
+        <item> </item>
+        <item>vektorer i planen og rummet</item>
     </string-array>
 
-    <string-array name="GeometriVektor_sublist">
-        <item>Rumgeometri</item>
-    </string-array>
-
-    <!-- Strings for Area, circumference and volume -->
+    <!-- Romgeometri og vektorregning har ingen underpunkter-->
 
 
-    <string-array name="Arealer_sublist">
-        <item>cirkel</item>
+    <!-- Strings for areal, omkreds og rumfang -->
+    <string-array name="Arealer_omkreds_rumfang_list">
+        <item>Cirkel</item>
         <item>Trekant</item>
-        <item>Parralelogram</item>
+        <item>Parallelogram</item>
         <item>Trapez</item>
         <item>Kegle</item>
         <item>Kugle</item>
         <item>Cylinder</item>
+
     </string-array>
 
+    <string-array name="Arealer_sublist">
+        <item>relevante formler, når du arbejder med cirkler</item>
+        <item>relevante formler, når du arbejder med trekalter</item>
+        <item>relevante formler, når du arbejder med parallelogrammer</item>
+        <item>relevante formler, når du arbejder med trapezer</item>
+        <item>relevante formler, når du arbejde med kegler</item>
+        <item>relevante formler, når du arbejde med kugler</item>
+        <item>relevante formler, npr du arbejder med cylindere</item>
+    </string-array>
 
 </resources>
