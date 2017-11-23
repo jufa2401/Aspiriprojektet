@@ -1,5 +1,6 @@
 package com.example.s165158.aspiri;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,22 +17,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.Toast;
-
 
 import com.example.s165158.aspiri.test.TestFlipcard;
 import com.example.s165158.aspiri.test2.ListFragment;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
@@ -181,10 +173,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Tests
             case R.id.go_to_subject1:
+                Fragment mathviewTEST = new mathviewTEST();
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragmentindhold, mathviewTEST)
+                        .addToBackStack("back to subject from quiz")
 
-                Intent goToTest1 = new Intent(this, mathviewTEST.class);
-                startActivity(goToTest1);
-//                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                        .commit();
+
                 return true;
         }
 
