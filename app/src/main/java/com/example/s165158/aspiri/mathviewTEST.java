@@ -7,18 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ms.square.android.expandabletextview.ExpandableTextView;
-import com.nishant.math.MathView;
-
 /**
  * Created by jonas on 21/11/2017.
  */
 
 public class mathviewTEST extends Fragment {
-
-    MathView formula_two;
-    private ExpandableTextView expandableTextView1, expandableTextView2;
-
 
 
     //Remember to use \\( CONTENT \\) instead of $$ CONTENT $$ for inline formulas  /makes everything easier
@@ -32,12 +25,6 @@ public class mathviewTEST extends Fragment {
 //        setContentView(R.layout.test);
         View view = inflater.inflate(R.layout.test, container, false);
 
-        formula_two = (MathView) view.findViewById(R.id.formula_two);
-        formula_two.setText(tex);
-
-//        expandableTextView1 = (ExpandableTextView) view.findViewById(R.id.expand_text_view1);
-
-
         return view;
     }
 
@@ -46,6 +33,5 @@ public class mathviewTEST extends Fragment {
         super.onResume();
 
     }
-
 
 }

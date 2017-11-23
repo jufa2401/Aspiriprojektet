@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
+//        prepareListData();
 
 //        Creating the list adapter from class
 //        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
