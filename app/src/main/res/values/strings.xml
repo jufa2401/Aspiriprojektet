@@ -134,6 +134,8 @@
     <string name="card_back_description">Fadet selvfølgelig</string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
+    <string name="open_drawer">Opening drawer</string>
+    <string name="close_drawer">Closing drawer</string>
 
 
     <!--Array til navne i underpunkter for polynomier-->
@@ -208,7 +210,6 @@
         <item>kan anvendes til at bestemme en side eller en vinkel</item>
         <item>kan også anvendes til at bestemme side eller vinkel</item>
     </string-array>
-
 
 
     <!-- Geometry in the plane and vectors -->

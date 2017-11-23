@@ -10,6 +10,7 @@ public class MathViewTest extends AppCompatActivity {
 
     MathView mathView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

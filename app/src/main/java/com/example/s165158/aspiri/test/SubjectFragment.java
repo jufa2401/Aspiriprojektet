@@ -1,8 +1,12 @@
 package com.example.s165158.aspiri.test;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,13 +21,19 @@ import com.ms.square.android.expandabletextview.ExpandableTextView;
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
 import static com.example.s165158.aspiri.R.id.game_button;
 
+//import com.example.s165158.aspiri.test2.DrawerActivity;
+//import com.example.s165158.aspiri.test2.DrawerUtil;
+
 public class SubjectFragment extends Fragment  {
+    public static final String TAG = "SubjectFragment";
     private ExpandableTextView expandableTextView;
     private ImageView img;
     private TextView txt, title;
+    private AppCompatActivity mActivity;
     private LinearLayout gamebutton;
     private int listindex;
     private String subject_title;
+    private Toolbar toolbar;
 
     //    example strings
     String shortText = "Spil et spil til dette emne!";
@@ -49,9 +59,40 @@ public class SubjectFragment extends Fragment  {
             "\n";
 
 
+        @Override
+        public void onAttach(Context context) {
+            super.onAttach(context);
+            if (context instanceof Activity)
+                mActivity = (AppCompatActivity) context;
+
+        }
+
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+
+            setHasOptionsMenu(true);
+            // update the actionbar to show the up carat/affordance
+            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            setHasOptionsMenu(true);
+//            ActionBar actionBar = mActivity.getSupportActionBar();
+//            if (actionBar != null) {
+////                actionBar.setDisplayShowTitleEnabled(false);
+//                actionBar.setDisplayHomeAsUpEnabled(true);
+//
+//            }
+        }
+
+
+
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View rootView = inflater.inflate(R.layout.subject, container, false);
+
+        setHasOptionsMenu(true);
+
+
 
         expandableTextView = (ExpandableTextView) rootView.findViewById(R.id.expand_text_view);
         expandableTextView.setText(longText);
@@ -124,12 +165,16 @@ public class SubjectFragment extends Fragment  {
 
             }
         });
-        //        img1.setImageDrawable(R);
 
-//        TODO: Display backbutton instead of drawerbutton away from home.
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+           return rootView;
 
-        return rootView;
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
+        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
+
     }
 
 

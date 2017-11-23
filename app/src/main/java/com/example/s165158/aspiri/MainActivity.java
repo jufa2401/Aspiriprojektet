@@ -2,6 +2,7 @@ package com.example.s165158.aspiri;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,9 +13,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
@@ -31,11 +34,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ListFragment listFragment;
     Toolbar toolbar;
     DrawerLayout drawer;
-
+    ActionBarDrawerToggle mActionBarDrawerToggle;
+    private FragmentManager mFragmentManager;
     ExpandableListAdapter listAdapter;
     ExpandableListView expandableListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
+
 
     //On createmetode
     @Override
@@ -47,16 +52,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Drawer menu
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+        };
+
+
+        mActionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        drawer.addDrawerListener(mActionBarDrawerToggle);
+        mActionBarDrawerToggle.syncState();
+
+        mFragmentManager = getFragmentManager();
+
+        replaceFragment(new ListFragment(), getString(R.string.app_name), ListFragment.TAG);
 
         // get the listview
 //        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
@@ -71,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        expandableListView.setAdapter(listAdapter);
 
     }
+
     //    Tredottede menu initialiseres her
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -121,18 +153,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //        Top functions
             case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
                 Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
-                Log.d("AspiriApp","HoHome Button pressed");
+                Log.d("AspiriApp", "HoHome Button pressed");
                 return true;
 
             case R.id.drawer_store:
                 Intent goToStore = new Intent(Intent.ACTION_VIEW);
                 goToStore.setData(Uri.parse(getString(R.string.drawer_URL_ToTheStore)));
                 startActivity(goToStore);
-                Log.d("AspiriApp","Webstore pressed");
+                Log.d("AspiriApp", "Webstore pressed");
                 return true;
 
             case R.id.drawer_send_us_mail:
-                Intent sendUsMail= new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@man_at_blackboad_round.dk", null));
+                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@man_at_blackboad_round.dk", null));
                 sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
                 sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
                 startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
@@ -141,9 +173,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Goes to flipcards.
             case R.id.drawer_flipcards:
-                Intent goToFlipCards = new Intent(this,TestFlipcard.class);
+                Intent goToFlipCards = new Intent(this, TestFlipcard.class);
                 startActivity(goToFlipCards);
-                Log.d("AspiriApp","Flipcard_pressed");
+                Log.d("AspiriApp", "Flipcard_pressed");
                 return true;
 
             //        Maps Navigation
@@ -181,7 +213,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .addToBackStack("back to subject from quiz")
 
                         .commit();
+
                 drawer.closeDrawers();
+
 
                 return true;
 
@@ -192,29 +226,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    public void replaceFragment(Fragment fragment, String actionBarTitle, String tag) {
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        listFragment = new ListFragment();
-        // Insert the fragment by replacing any existing fragment
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.fragmentindhold, listFragment)
-                .commit();
+        if (mFragmentManager == null)
+            return;
 
-    }
-//    TODO: FIX HOME AS UP
-    @Override
-    public void onBackPressed() {
-        int count = getFragmentManager().getBackStackEntryCount();
-        if(count ==0){
-            super.onBackPressed();
-        } else {
-            getFragmentManager().popBackStack();
-        }
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag);
+        if (!tag.equals(ListFragment.TAG))
+            fragmentTransaction.addToBackStack(tag);
+        fragmentTransaction.commit();
+
+        setActionBarTitle(actionBarTitle);
     }
 
+    //    TODO: FIX HOME AS UP
 
 
 
@@ -264,6 +290,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         listDataChild.put(listDataHeader.get(1), Odense);
         listDataChild.put(listDataHeader.get(2), Aarhus);
         listDataChild.put(listDataHeader.get(3), Testeri);
+    }
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawers();
+            return;
+        }
+        super.onBackPressed();
+    }
+
+    public void setActionBarTitle(String actionBarTitle) {
+        if (!TextUtils.isEmpty(actionBarTitle))
+//            mTextViewActionBarTitle.setText(actionBarTitle);
+            setTitle(actionBarTitle);
+    }
+
+    public void setDrawerIndicatorEnabled(boolean value) {
+        if (mActionBarDrawerToggle != null) {
+            mActionBarDrawerToggle.setDrawerIndicatorEnabled(value);
+        }
+
     }
 }
 
