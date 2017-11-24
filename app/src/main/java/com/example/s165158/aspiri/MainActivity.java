@@ -14,15 +14,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.transition.Slide;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
-import com.example.s165158.aspiri.test2.ListFragment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -76,18 +78,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         };
 
-
-        mActionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-        drawer.addDrawerListener(mActionBarDrawerToggle);
-        mActionBarDrawerToggle.syncState();
-
+        setDrawerIndicatorEnabled(false);
         mFragmentManager = getFragmentManager();
-
         replaceFragment(new ListFragment(), ListFragment.TAG);
 
         // get the listview
@@ -230,14 +222,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void replaceFragment(Fragment fragment, String tag) {
-
         if (mFragmentManager == null)
             return;
 
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag);
-        if (!tag.equals(ListFragment.TAG))
+
+
+        if (!tag.equals(ListFragment.TAG)) {
             fragmentTransaction.addToBackStack(tag);
+            fragment.setEnterTransition(new Slide(Gravity.BOTTOM));
+            fragment.setExitTransition(new Slide(Gravity.TOP));
+
+//            fragmentTransaction.setCustomAnimations(R.animator.slide_in_left,R.animator.slide_out_right);
+
+        }
+        fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag);
         fragmentTransaction.commit();
     }
 
@@ -311,7 +310,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void setDrawerIndicatorEnabled(boolean value) {
         if (mActionBarDrawerToggle != null) {
             mActionBarDrawerToggle.setDrawerIndicatorEnabled(value);
+            if (value == false) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+                mActionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onBackPressed();
+                    }
+                });
+                drawer.addDrawerListener(mActionBarDrawerToggle);
+                mActionBarDrawerToggle.syncState();
+            }
         }
+    }
+
+    public void setDrawerAnimation() {
+
     }
 }
 

@@ -5,11 +5,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +31,7 @@ public class SubjectFragment extends Fragment  {
     private LinearLayout gamebutton;
     private int listindex;
     private String subject_title;
-    private Toolbar toolbar;
-    private ActionBarDrawerToggle mActionBarDrawerToggle;
-    private DrawerLayout drawer;
+
 
     //    example strings
     String shortText = "Spil et spil til dette emne!";
@@ -71,27 +65,6 @@ public class SubjectFragment extends Fragment  {
                 mActivity = (AppCompatActivity) context;
 
         }
-
-
-    @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-
-
-            // update the actionbar to show the up carat/affordance
-//            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-            setHasOptionsMenu(true);
-        ActionBar actionBar = mActivity.getSupportActionBar();
-        if (actionBar != null) {
-//              actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-
-        }
-        }
-
-
-
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View rootView = inflater.inflate(R.layout.subject, container, false);
@@ -175,7 +148,6 @@ public class SubjectFragment extends Fragment  {
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
         ((MainActivity) mActivity).setActionBarTitle(subject_title);
 
     }

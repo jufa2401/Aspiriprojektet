@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.test2;
+package com.example.s165158.aspiri.list_views;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
-import com.example.s165158.aspiri.SubListFragment;
 import com.example.s165158.aspiri.SubjectFragment;
 
 /**

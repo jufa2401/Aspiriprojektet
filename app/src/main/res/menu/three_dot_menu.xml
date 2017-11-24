@@ -81,7 +81,7 @@
         <item
             android:id="@+id/three_dot_settings"
             android:checkable="false"
-            android:icon="@color/black"
+            android:icon="@android:color/black"
             android:orderInCategory="100"
             android:title="@string/three_dot_settings"
             android:visible="true"

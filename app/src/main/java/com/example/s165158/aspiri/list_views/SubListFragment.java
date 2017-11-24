@@ -1,11 +1,10 @@
-package com.example.s165158.aspiri;
+package com.example.s165158.aspiri.list_views;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,7 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.test2.RecyclerListAdapter;
+import com.example.s165158.aspiri.MainActivity;
+import com.example.s165158.aspiri.R;
 
 //import android.widget.ListAdapter;
 
@@ -46,22 +46,7 @@ public class SubListFragment extends Fragment {
             mActivity = (AppCompatActivity) context;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
-
-        // update the actionbar to show the up carat/affordance
-//            mActivity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        setHasOptionsMenu(true);
-        ActionBar actionBar = mActivity.getSupportActionBar();
-        if (actionBar != null) {
-//              actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-
-        }
-    }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View rootView = inflater.inflate(R.layout.recycler_list, container, false);
