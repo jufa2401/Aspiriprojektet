@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
+import com.example.s165158.aspiri.SubListFragment;
 import com.example.s165158.aspiri.SubjectFragment;
 
 /**
@@ -72,6 +73,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         images.setImageResource(imageArray[position]);
 
         final SubjectFragment subjectFragment = new SubjectFragment();
+        final SubListFragment subListFragment = new SubListFragment();
         view.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -95,11 +97,22 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
 //                              Hvis vi vil have forskellige layouts til forskellige emner, skal koden ligge her!
                 subjectFragment.setArguments(bundle);
+                subListFragment.setArguments(bundle);
 
 
-                if (context instanceof Activity)
+                if (context instanceof Activity) {
                     mActivity = (AppCompatActivity) context;
-                ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
+                    int backstack = mActivity.getFragmentManager().getBackStackEntryCount();
+                    if (backstack == 0) {
+                        ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
+                    } else {
+                        ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
+                    }
+
+                }
+
+
+
 
             }
         });

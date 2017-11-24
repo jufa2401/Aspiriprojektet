@@ -63,6 +63,7 @@ public class SubjectFragment extends Fragment  {
             "\n";
 
 
+
     @Override
         public void onAttach(Context context) {
             super.onAttach(context);
@@ -94,8 +95,6 @@ public class SubjectFragment extends Fragment  {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View rootView = inflater.inflate(R.layout.subject, container, false);
-
-        setHasOptionsMenu(true);
 
 
         expandableTextView = rootView.findViewById(R.id.expand_text_view);
@@ -177,7 +176,7 @@ public class SubjectFragment extends Fragment  {
     public void onResume() {
         super.onResume();
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
-        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
+        ((MainActivity) mActivity).setActionBarTitle(subject_title);
 
     }
 
