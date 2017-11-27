@@ -3,7 +3,9 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,59 +24,29 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Formula one: from xml with MathJax"
             android:textStyle="bold" />
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            style="@style/subjectSpacerView" />
-
-
-
-        <!--Second test-->
-        <TextView
+        <katex.hourglass.in.mathlib.MathView
+            android:id="@+id/math_view_1"
+            app:setTextColor="@android:color/black"
+            app:setTextSize="12sp"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/subjectTextView"
-            android:paddingTop="50dp"
-            android:text="Formula two: from Java String with KaTeX in javaclass"
-            android:textStyle="bold"/>
-
-
-
-        <!--Third test-->
-        <TextView
-            android:paddingTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Formula three: from Java String with KaTeX in xml"
-            style="@style/subjectTextView"
-            android:textStyle="bold"/>
-
-
-
-        <!--Sådan kunne en side se ud-->
-        <TextView
-            android:paddingTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SÅDAN KUNNE EN SIDE SE UD"
-            android:textColor="@android:color/black"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:paddingBottom="30dp"/>
+            android:layout_height="wrap_content" />
 
         <!--Header-->
         <TextView
+            android:id="@+id/subject_fragment_title"
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Title_Teori"
+            android:textAllCaps="true"
+            android:textStyle="bold"
             android:textSize="25sp" />
-
+        <!--The subject-->
         <TextView
+            android:id="@+id/subject_fragment_subject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sample_subject"/>
@@ -82,6 +54,7 @@
 
         <!--Intro text-->
         <TextView
+            android:id="@+id/subject_fragment_intro"
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,68 +62,46 @@
 
         <!--Table 1-->
         <ImageView
+            android:id="@+id/subject_fragment_picture_1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             style="@style/subjectImageView"
             android:src="@drawable/kvartratsaetninger_table1" />
 
+
         <!--Sum på kvadrat-->
         <TextView
+            android:id="@+id/subject_fragment_text_following_picture_1"
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_sum_1"/>
 
-        <!--FOIL metoden-->
-        <TextView
-            style="@style/subjectTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_sum_2"/>
-
         <!--Table 2-->
         <ImageView
             android:paddingTop="10dp"
-            android:id="@+id/imageview_company_logo"
+            android:id="@+id/subject_fragment_picture_2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/kvartratsaetninger_table2" />
 
-        <!--Table 2 bottom-->
-        <ImageView
-            android:paddingBottom="10dp"
-            android:id="@+id/imageview_company_logo"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/kvartratsaetninger_table3" />
 
         <!--Differens-->
         <TextView
+            android:id="@+id/subject_fragment_text_following_picture_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_difference_1"/>
 
         <!--Differens 2-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_difference_2"/>
-
-
 
         <!--Eksempel-->
         <!--Begge regler kan bruges-->
-        <TextView
-            android:paddingTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_problem1_1"/>
 
         <!---->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -174,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Kvartratsætninger_problem1_5"/>
- f
+
 
         <!--Second part-->
         <TextView
@@ -203,4 +154,6 @@
             android:src="@drawable/kvartratsaetninger_table4" />
 
     </LinearLayout>
+
+
 </ScrollView>

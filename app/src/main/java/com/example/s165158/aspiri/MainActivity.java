@@ -14,9 +14,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.transition.Slide;
+import android.transition.Fade;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,19 +29,20 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
 
-    private ListFragment listFragment;
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private FragmentManager mFragmentManager;
     protected boolean isHomeAsUp = false;
-    ExpandableListAdapter listAdapter;
-    ExpandableListView expandableListView;
-    List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+    private ExpandableListAdapter listAdapter;
+    private ExpandableListView expandableListView;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
 
     //On createmetode
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
+        ButterKnife.bind(this);
         // Fanebladet
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -173,29 +173,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             //        Maps Navigation
-            case R.id.drawer_Kbh:
-                Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_KBH)));
-                startActivity(goToSigurdsGade);
-                Log.d("AspiriApp", "drawer_KBH pressed");
-                return true;
-
-            case R.id.drawer_Aarhus:
-                Intent goToAarhus = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Aarhus)));
-                startActivity(goToAarhus);
-                Log.d("AspiriApp", "drawer_Aarhus pressed");
-                return true;
-
-            case R.id.drawer_Odense:
-                Intent goToOdense = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Odense)));
-                startActivity(goToOdense);
-                Log.d("AspiriApp", "drawer_Odense pressed");
-                return true;
-
-            case R.id.drawer_HQ:
-                Intent goToFalonerAlle = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_HQ)));
-                startActivity(goToFalonerAlle);
-                Log.d("AspiriApp", "drawer_HQ pressed");
-                return true;
+//            case R.id.drawer_Kbh:
+//                Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_KBH)));
+//                startActivity(goToSigurdsGade);
+//                Log.d("AspiriApp", "drawer_KBH pressed");
+//                return true;
+//
+//            case R.id.drawer_Aarhus:
+//                Intent goToAarhus = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Aarhus)));
+//                startActivity(goToAarhus);
+//                Log.d("AspiriApp", "drawer_Aarhus pressed");
+//                return true;
+//
+//            case R.id.drawer_Odense:
+//                Intent goToOdense = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Odense)));
+//                startActivity(goToOdense);
+//                Log.d("AspiriApp", "drawer_Odense pressed");
+//                return true;
+//
+//            case R.id.drawer_HQ:
+//                Intent goToFalonerAlle = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_HQ)));
+//                startActivity(goToFalonerAlle);
+//                Log.d("AspiriApp", "drawer_HQ pressed");
+//                return true;
 
 
             //Tests
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragmentindhold, mathviewTEST)
-                        .addToBackStack("back to subject from quiz")
+                        .addToBackStack("back to subject_sketch_unused from quiz")
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
 
                         .commit();
@@ -230,8 +230,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (!tag.equals(ListFragment.TAG)) {
             fragmentTransaction.addToBackStack(tag);
-            fragment.setEnterTransition(new Slide(Gravity.BOTTOM));
-            fragment.setExitTransition(new Slide(Gravity.TOP));
+//            fragment.setEnterTransition(new Fade());
+            fragment.setExitTransition(new Fade());
 
 //            fragmentTransaction.setCustomAnimations(R.animator.slide_in_left,R.animator.slide_out_right);
 

@@ -13,6 +13,9 @@
     <string name="three_dot_settings">Indstillinger</string>
 
     <!--Hamburger menu-->
+    <string name="drawer_subjects">Emner</string>
+    <string name="drawer_other">Andet</string>
+    <string name="drawer_come_see_us">Besøg os</string>
     <string name="drawer_store">Åbner Butikken</string>
     <string name="drawer_home">Hjem</string>
     <string name="drawer_uy_Course">Køb Kurser</string>
@@ -61,19 +64,20 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Rentes Regning</item>
+        <item>Areal, omkreds og rumfang*</item>
+        <item>Rentesregning</item>
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
         <item>Polynomier</item>
-        <item>Lineær Eksponentiel og potenssammenænge</item>
+        <item>Lineær eksponentiel og potenssammenhænge</item>
         <item>Statistik</item>
         <item>Differentialregning</item>
         <item>Integralregning</item>
         <item>Logaritmer</item>
         <item>Geometri</item>
-        <item>Plangeometri med vektore</item>
-        <item>Rumgeometri med vektore</item>
-        <item>Areal omkreds og rumfang</item>
+        <item>Plangeometri med vektorer</item>
+        <item>Rumgeometri med vektorer</item>
+
     </string-array>
 
 

@@ -67,7 +67,7 @@ public class SubjectFragment extends Fragment  {
         }
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
-        View rootView = inflater.inflate(R.layout.subject, container, false);
+        View rootView = inflater.inflate(R.layout.subject_sketch_unused, container, false);
 
 
         expandableTextView = rootView.findViewById(R.id.expand_text_view);
@@ -134,7 +134,7 @@ public class SubjectFragment extends Fragment  {
                         .beginTransaction()
                         .setTransition(TRANSIT_FRAGMENT_OPEN)
                         .replace(R.id.fragmentindhold, quiz)
-                        .addToBackStack("back to subject from quiz")
+                        .addToBackStack("back to subject_sketch_unused from quiz")
 
                         .commit();
 

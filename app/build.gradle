@@ -25,6 +25,8 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
+
+apply plugin: 'com.jakewharton.butterknife'
 dependencies {
     implementation("com.mikepenz:materialdrawer:6.0.2@aar") {
         transitive = true
@@ -40,16 +42,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile "com.andkulikov:transitionseverywhere:1.7.7"
     compile 'com.android.support:appcompat-v7:27.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:27.0.1'
-    compile 'com.github.Nishant-Pathak:MathView:v1.1'
-    compile 'com.ms-square:expandableTextView:0.1.4'
-
-    compile 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     testCompile 'junit:junit:4.12'
+
+    compile 'in.hourglass.mathrender:katexmathview:1.0'
+    compile 'com.ms-square:expandableTextView:0.1.4'
+    compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
+
+
+
 
 
 }
