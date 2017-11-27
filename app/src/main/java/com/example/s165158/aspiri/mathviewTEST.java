@@ -53,7 +53,7 @@ public class mathviewTEST extends Fragment {
         //text_following_picture_1 = getResources().getStringArray(R.array.texts_following_picture_1);
         //text_following_picture_2 = getResources().getStringArray(R.array.texts_following_picture_2);
 
-
+// Her skal der reelt være en switch case for hvert eneste "super" overemne.
         textsBeforeExamples[0].setText(R.string.Title_Teori);
         textsBeforeExamples[1].setText(subject[listindex]);
         textsBeforeExamples[2].setText(intro[listindex]);
