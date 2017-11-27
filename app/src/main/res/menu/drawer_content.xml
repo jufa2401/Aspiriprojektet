@@ -4,10 +4,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/drawer_home"
-            android:icon="@drawable/drawer_home"
-            android:title="@string/drawer_home" />
-        <item
             android:id="@+id/drawer_store"
             android:icon="@drawable/ic_menu_store"
             android:title="@string/drawer_uy_Course" />
@@ -17,28 +13,25 @@
             android:icon="@drawable/drawer_send"
             android:title="@string/drawer_contact" />
 
-
-        <!--Camera, Gallery og Slideshow skal ud-->
-        <item
-            android:id="@+id/drawer_camera"
-            android:icon="@drawable/drawer_camera"
-            android:title="@string/drawer_camera" />
-        <item
-            android:id="@+id/drawer_gallery"
-            android:icon="@drawable/drawer_gallery"
-            android:title="@string/drawer_gallery" />
         <item
             android:id="@+id/drawer_flipcards"
             android:icon="@drawable/drawer_slideshow"
             android:title="@string/drawer_slideshow" />
-        <item
-            android:id="@+id/drawer_manage"
-            android:icon="@drawable/drawer_manage"
-            android:title="@string/drawer_tool" />
     </group>
 
+    <item android:title="@string/drawer_getInContact">
+        <menu>
+            <item
+                android:id="@+id/drawer_send_us_mail_1"
+                android:icon="@drawable/drawer_send"
+                android:title="@string/drawer_mail_tekniske_problemer"/>
+            <item
+                android:id="@+id/drawer_send_us_mail_2"
+                android:icon="@drawable/drawer_send"
+                android:title="@string/drawer_mail_forbedringer"/>
+        </menu>
+    </item>
 
-    <!--Underkategorier husk at rette id'er ! -->
     <item android:title="@string/drawer_we_are_here">
         <menu>
             <item
@@ -60,18 +53,12 @@
         </menu>
     </item>
 
-    <item android:title="test ting"/>
-
     <item android:title="@string/drawer_communicate">
         <menu>
             <item
                 android:id="@+id/go_to_subject1"
                 android:icon="@drawable/ic_game"
                 android:title="goToSubject1" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="@string/drawer_send"/>
         </menu>
     </item>
     <item android:title="@string/drawer_communicate">
@@ -83,31 +70,7 @@
             <item
                 android:id="@+id/drawer_send"
                 android:icon="@drawable/drawer_send"
-                android:title="Send" />
-        </menu>
-    </item>
-    <item android:title="@string/drawer_communicate">
-        <menu>
-            <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="Send" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="Send" />
-        </menu>
-    </item>
-    <item android:title="@string/drawer_communicate">
-        <menu>
-            <item
-                android:id="@+id/drawer_share"
-                android:icon="@drawable/drawer_share"
-                android:title="Send" />
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="Send" />
+                android:title="@string/drawer_send" />
         </menu>
     </item>
 

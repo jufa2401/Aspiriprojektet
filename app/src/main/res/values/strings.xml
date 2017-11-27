@@ -36,6 +36,9 @@
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
     <string name="drawer_contact">Kom i kontakt</string>
     <string name="drawer_communicate">REPLACE ME</string>
+    <string name="drawer_getInContact">kom i kontakt</string>
+    <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
+    <string name="drawer_mail_forbedringer">Idéer til forbedringer</string>
 
     <!--Mail-->
     <string name="mail_subject">Vedrørende Aspiri App Android</string>
@@ -136,6 +139,7 @@
     <string name="action_photo">View photo</string>
     <string name="open_drawer">Opening drawer</string>
     <string name="close_drawer">Closing drawer</string>
+
 
 
     <!--Array til navne i underpunkter for polynomier-->

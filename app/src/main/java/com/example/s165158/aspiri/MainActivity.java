@@ -140,15 +140,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
 
             //        Top functions
-            case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
-                if (mFragmentManager.getBackStackEntryCount() == 0) {
-                    drawer.closeDrawer(GravityCompat.START);
-                } else {
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
-                }
-                return true;
+//            case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
+//                if (mFragmentManager.getBackStackEntryCount() == 0) {
+//                    drawer.closeDrawer(GravityCompat.START);
+//                } else {
+//                    Intent intent = getIntent();
+//                    finish();
+//                    startActivity(intent);
+//                }
+//                return true;
 
             case R.id.drawer_store:
                 Intent goToStore = new Intent(Intent.ACTION_VIEW);
