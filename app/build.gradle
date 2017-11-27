@@ -36,6 +36,7 @@ dependencies {
     implementation "com.android.support:support-annotations:27.0.1"
     implementation "com.android.support:design:27.0.1"
     implementation 'com.android.support:support-v4:27.0.1'
+    implementation 'com.google.firebase:firebase-invites:11.0.4'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -50,6 +51,8 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     testCompile 'junit:junit:4.12'
-
+    apply plugin: 'com.google.gms.google-services'
 
 }
+
+apply plugin: 'com.google.gms.google-services'

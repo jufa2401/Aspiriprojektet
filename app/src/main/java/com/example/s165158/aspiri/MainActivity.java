@@ -25,6 +25,7 @@ import android.widget.Toast;
 
 import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
+import com.google.android.gms.appinvite.AppInviteInvitation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -206,13 +207,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .replace(R.id.fragmentindhold, mathviewTEST)
                         .addToBackStack("back to subject from quiz")
                         .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-
                         .commit();
-
                 drawer.closeDrawers();
+                return true;
 
+            case R.id.drawer_share:
 
                 return true;
+
+
 
         }
 
@@ -328,6 +331,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void setDrawerAnimation() {
 
     }
+
+
 }
 
 
