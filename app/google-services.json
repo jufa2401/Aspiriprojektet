@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "599927135824",
+    "firebase_url": "https://kl-formelsamling.firebaseio.com",
+    "project_id": "kl-formelsamling",
+    "storage_bucket": "kl-formelsamling.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599927135824:android:321cdcfc31cffe05",
+        "android_client_info": {
+          "package_name": "com.example.s165158.aspiri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599927135824-1bg5ilrrrdune93b0ik1ijuk8i6aohae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.s165158.aspiri",
+            "certificate_hash": "ab665096a12139fcfee3a1392af532875b1f6ac3"
+          }
+        },
+        {
+          "client_id": "599927135824-2e7fmpu6ltco7ueusu4943j353s3p4vl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaNrqEA-ugdJGqJ2wsBR-pkSUsMVeGiVE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599927135824-2e7fmpu6ltco7ueusu4943j353s3p4vl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
