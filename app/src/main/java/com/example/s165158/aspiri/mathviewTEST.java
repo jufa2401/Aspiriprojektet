@@ -22,6 +22,7 @@ import katex.hourglass.in.mathlib.MathView;
 public class mathviewTEST extends Fragment {
     private String[] subject, intro, text_following_picture_1, text_following_picture_2;
     private int listindex, oldindex;
+    private String title;
 
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metoder med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
@@ -48,17 +49,22 @@ public class mathviewTEST extends Fragment {
 //        Når vi skal udvide vores app til at undestøtte strings fra flere forskellige overemner, er vi nødt til at lave en switch case for hvert overemne.
         oldindex = args.getInt("oldindex");
 
+        title = getResources().getString(R.string.Title_Teori);
         subject = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
         // intro = getResources().getStringArray(R.array.introductionTexts);
         //text_following_picture_1 = getResources().getStringArray(R.array.texts_following_picture_1);
         //text_following_picture_2 = getResources().getStringArray(R.array.texts_following_picture_2);
 
-// Her skal der reelt være en switch case for hvert eneste "super" overemne.
-        textsBeforeExamples[0].setText(R.string.Title_Teori);
-        textsBeforeExamples[1].setText(subject[listindex]);
-        textsBeforeExamples[2].setText(intro[listindex]);
-        textsBeforeExamples[3].setText(text_following_picture_1[listindex]);
-        textsBeforeExamples[4].setText(text_following_picture_2[listindex]);
+// Her skal der være en switch case for hvert eneste "super" overemne.
+        switch (oldindex) {
+            case 0:
+                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex]);
+                break;
+            default:
+                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex]);
+                break;
+        }
+
 
 
 //      example mathview
@@ -68,6 +74,13 @@ public class mathviewTEST extends Fragment {
         return view;
     }
 
+    private void setTexts(String title, String subject, String intro, String text_following_picture_1, String text_following_picture_2) {
+        textsBeforeExamples[0].setText(title);
+        textsBeforeExamples[1].setText(subject);
+        textsBeforeExamples[2].setText(intro);
+        textsBeforeExamples[3].setText(text_following_picture_1);
+        textsBeforeExamples[4].setText(text_following_picture_2);
+    }
     @Override
     public void onResume() {
         super.onResume();
