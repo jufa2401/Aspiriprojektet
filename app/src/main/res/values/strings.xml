@@ -80,7 +80,9 @@
 
     </string-array>
 
-
+    <array name="arealer">
+        <item
+    </array>
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
         <item>Fremskrivning af indestående</item>\

@@ -21,7 +21,7 @@ import katex.hourglass.in.mathlib.MathView;
 
 public class mathviewTEST extends Fragment {
     private String[] subject, intro, text_following_picture_1, text_following_picture_2;
-    private int listindex;
+    private int listindex, oldindex;
 
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metoder med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
@@ -39,17 +39,14 @@ public class mathviewTEST extends Fragment {
     })
     TextView textsBeforeExamples[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
 
-
-
-
-
-
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View view = inflater.inflate(R.layout.test, container, false);
         ButterKnife.bind(this, view);   // Laver findViewById for alle mine erklæringer ovenfor med annotationen @BindView(s)
 
         Bundle args = getArguments();
         listindex = args.getInt("listindex");
+//        Når vi skal udvide vores app til at undestøtte strings fra flere forskellige overemner, er vi nødt til at lave en switch case for hvert overemne.
+        oldindex = args.getInt("oldindex");
 
         subject = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
         // intro = getResources().getStringArray(R.array.introductionTexts);

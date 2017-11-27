@@ -27,6 +27,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     private Integer[] imageArray;
     private Context context;
     private AppCompatActivity mActivity;
+    private int oldindex;
 
     public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
@@ -91,9 +92,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 //                Intent intent = new Intent(((Activity)context), DrawerActivityShowUp.class);
 //                intent.putExtra("bundle",bundle);
 
-
-
-
 //                              Hvis vi vil have forskellige layouts til forskellige emner, skal koden ligge her!
                 subjectFragment.setArguments(bundle);
                 subListFragment.setArguments(bundle);
@@ -103,16 +101,14 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                     mActivity = (AppCompatActivity) context;
                     int backstack = mActivity.getFragmentManager().getBackStackEntryCount();
                     if (backstack == 0) {
+                        oldindex = position;
                         ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
                     } else {
+                        bundle.putInt("oldindex", oldindex);
                         ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
                     }
 
                 }
-
-
-
-
             }
         });
     }

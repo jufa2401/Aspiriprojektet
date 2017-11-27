@@ -50,7 +50,6 @@ public class ListFragment extends Fragment {
         listtitle = rootView.findViewById(R.id.list_title);
         if (listtitle.getVisibility() == View.VISIBLE) {
             listtitle.setVisibility(View.INVISIBLE);
-
         }
 
         subjectListArray = getResources().getStringArray(R.array.subject_list);
