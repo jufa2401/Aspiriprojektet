@@ -21,13 +21,13 @@ import katex.hourglass.in.mathlib.MathView;
 
 public class mathviewTEST extends Fragment {
     private String[] subject, intro, text_following_picture_1, text_following_picture_2;
-
+    private int listindex;
 
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metoder med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
     @BindView(R.id.math_view_1)
-    private MathView mathView1;
-    private int listindex;
+    MathView mathView1;
+
 
     //    Alle TextViews forinden eksempler
     @BindViews({
@@ -37,7 +37,7 @@ public class mathviewTEST extends Fragment {
             R.id.subject_fragment_text_following_picture_1, //3
             R.id.subject_fragment_text_following_picture_2  //4
     })
-    private TextView textsBeforeExamples[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
+    TextView textsBeforeExamples[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
 
 
 
@@ -52,9 +52,9 @@ public class mathviewTEST extends Fragment {
         listindex = args.getInt("listindex");
 
         subject = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-        intro = getResources().getStringArray(R.array.introductionTexts);
-        text_following_picture_1 = getResources().getStringArray(R.array.texts_following_picture_1);
-        text_following_picture_2 = getResources().getStringArray(R.array.texts_following_picture_2);
+        // intro = getResources().getStringArray(R.array.introductionTexts);
+        //text_following_picture_1 = getResources().getStringArray(R.array.texts_following_picture_1);
+        //text_following_picture_2 = getResources().getStringArray(R.array.texts_following_picture_2);
 
 
         textsBeforeExamples[0].setText(R.string.Title_Teori);

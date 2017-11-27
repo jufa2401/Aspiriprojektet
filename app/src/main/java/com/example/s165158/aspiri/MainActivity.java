@@ -24,7 +24,6 @@ import android.widget.Toast;
 
 import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
-import com.google.android.gms.appinvite.AppInviteInvitation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
