@@ -293,6 +293,15 @@
         <item>text_following_picture2 kugler</item>
         <item>text_following_picture2 cylindere</item>
     </string-array>
+    <string-array name="text_above_picture_3">
+        <item>text_above_picture3 cirkler</item>
+        <item>text_above_picture3 trekanter</item>
+        <item>text_above_picture3 parallelogrammer</item>
+        <item>text_above_picture3 trapezer</item>
+        <item>text_above_picture3 kegler</item>
+        <item>text_above_picture3 kugler</item>
+        <item>text_above_picture3 cylindere</item>
+    </string-array>
     <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
     <string-array name="arealer_mathView1">
         <item>$$x=\\frac{1+y}{1+2z^2}$$</item>
