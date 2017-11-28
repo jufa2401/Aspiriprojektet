@@ -59,15 +59,7 @@
         </item>
     </group>
 
-    <!--Er her til test -->
-    <item android:title="@string/drawer_communicate">
-        <menu>
-            <item
-                android:id="@+id/go_to_subject1"
-                android:icon="@drawable/ic_game"
-                android:title="goToSubject1" />
-        </menu>
-    </item>
+
     <item android:title="@string/drawer_communicate">
         <menu>
             <item

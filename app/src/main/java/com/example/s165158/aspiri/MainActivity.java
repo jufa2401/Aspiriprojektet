@@ -199,16 +199,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             //Tests
-            case R.id.go_to_subject1:
-                Fragment mathviewTEST = new mathviewTEST();
-                getFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragmentindhold, mathviewTEST)
-                        .addToBackStack("back to subject_sketch_unused from quiz")
-                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-                        .commit();
-                drawer.closeDrawers();
-                return true;
+//            case R.id.go_to_subject1:
+//                Fragment mathviewTEST = new mathviewTEST();
+//                getFragmentManager()
+//                        .beginTransaction()
+//                        .replace(R.id.fragmentindhold, mathviewTEST)
+//                        .addToBackStack("back to subject_sketch_unused from quiz")
+//                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
+//                        .commit();
+//                drawer.closeDrawers();
+//                return true;
 
             case R.id.drawer_share:
 
