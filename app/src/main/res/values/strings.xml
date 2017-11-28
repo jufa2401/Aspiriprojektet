@@ -270,8 +270,8 @@
         <item>intro trekanter</item>
         <item>intro parallelogrammer</item>
         <item>intro trapezer</item>
-        <item>intro kegler</item>
-        <item>intro kugler</item>
+        <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
+        <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
         <item>intro cylindere</item>
     </string-array>
 
@@ -280,8 +280,8 @@
         <item>text_following_picture1 trekanter</item>
         <item>text_following_picture1 parallelogrammer</item>
         <item>text_following_picture1 trapezer</item>
-        <item>text_following_picture1 kegler</item>
-        <item>text_following_picture1 kugler</item>
+        <item>Her finder du relevante formler, når du arbejder med kegler:</item>
+        <item>Her finder du relevante formler, når du arbejder med kugler:</item>
         <item>text_following_picture1 cylindere</item>
     </string-array>
     <string-array name="arealer_text_following_picture_2">
@@ -289,8 +289,8 @@
         <item>text_following_picture2 trekanter</item>
         <item>text_following_picture2 parallelogrammer</item>
         <item>text_following_picture2 trapezer</item>
-        <item>text_following_picture2 kegler</item>
-        <item>text_following_picture2 kugler</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
         <item>text_following_picture2 cylindere</item>
     </string-array>
     <string-array name="text_above_picture_3">
@@ -298,8 +298,8 @@
         <item>text_above_picture3 trekanter</item>
         <item>text_above_picture3 parallelogrammer</item>
         <item>text_above_picture3 trapezer</item>
-        <item>text_above_picture3 kegler</item>
-        <item>text_above_picture3 kugler</item>
+        <item>0</item>
+        <item>0</item>
         <item>text_above_picture3 cylindere</item>
     </string-array>
     <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
@@ -308,8 +308,8 @@
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>0</item>
+        <item>0\</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
     <string-array name="arealer_mathView2">
@@ -317,8 +317,8 @@
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>0</item>
+        <item>0</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
     <string-array name="arealer_mathView3">
@@ -326,8 +326,8 @@
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>0</item>
+        <item>0</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
     <string-array name="arealer_mathView4">
@@ -335,8 +335,8 @@
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
-        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>0</item>
+        <item>0</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
     <string-array name="arealer_text_above_mathview1">
@@ -344,8 +344,8 @@
         <item>text_above_mathview1 trekanter</item>
         <item>text_above_mathview1 parallelogrammer</item>
         <item>text_above_mathview1 trapezer</item>
-        <item>text_above_mathview1 kegler</item>
-        <item>text_above_mathview1 kugler</item>
+        <item>0</item>
+        <item>0</item>
         <item>text_above_mathview1 cylindere</item>
     </string-array>
     <string-array name="arealer_text_above_mathview2">
@@ -353,8 +353,8 @@
         <item>text_above_mathview2 trekanter</item>
         <item>text_above_mathview2 parallelogrammer</item>
         <item>text_above_mathview2 trapezer</item>
-        <item>text_above_mathview2 kegler</item>
-        <item>text_above_mathview2 kugler</item>
+        <item>0</item>
+        <item>0</item>
         <item>text_above_mathview2 cylindere</item>
     </string-array>
     <string-array name="arealer_text_above_mathview3">
@@ -362,8 +362,8 @@
         <item>text_above_mathview3 trekanter</item>
         <item>text_above_mathview3 parallelogrammer</item>
         <item>text_above_mathview3 trapezer</item>
-        <item>text_above_mathview3 kegler</item>
-        <item>text_above_mathview3 kugler</item>
+        <item>0</item>
+        <item>0</item>
         <item>text_above_mathview3 cylindere</item>
     </string-array>
     <string-array name="arealer_text_above_mathview4">
@@ -371,8 +371,8 @@
         <item>text_above_mathview4 trekanter</item>
         <item>text_above_mathview4 parallelogrammer</item>
         <item>text_above_mathview4 trapezer</item>
-        <item>text_above_mathview4 kegler</item>
-        <item>text_above_mathview4 kugler</item>
+        <item>0</item>
+        <item>0</item>
         <item>text_above_mathview4 cylindere</item>
     </string-array>
 
