@@ -28,7 +28,7 @@ public class SubjectFragment extends Fragment  {
     private ImageView img;
     private TextView txt, title;
     private AppCompatActivity mActivity;
-    private LinearLayout gamebutton;
+    private LinearLayout gamebutton, gamebuttonlayout;
     private int listindex;
     private String subject_title;
 

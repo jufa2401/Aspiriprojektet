@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 import com.example.s165158.aspiri.SubjectFragment;
+import com.example.s165158.aspiri.mathviewTEST;
 
 /**
  * Created by s165158 on 08-11-2017.
@@ -72,7 +73,8 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         ImageView images = view.findViewById(R.id.listImageView);
         images.setImageResource(imageArray[position]);
 
-        final SubjectFragment subjectFragment = new SubjectFragment();
+        final mathviewTEST subjectFragment = new mathviewTEST();
+//        final SubjectFragment subjectFragment = new SubjectFragment();
         final SubListFragment subListFragment = new SubListFragment();
         view.setOnClickListener(new View.OnClickListener(){
             @Override

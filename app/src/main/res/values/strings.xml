@@ -80,9 +80,7 @@
 
     </string-array>
 
-    <array name="arealer">
-        <item
-    </array>
+
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
         <item>Fremskrivning af indestående</item>\
@@ -246,7 +244,7 @@
 
 
     <!-- Strings for areal, omkreds og rumfang -->
-    <string-array name="Arealer_omkreds_rumfang_list">
+    <string-array name="arealer_omkreds_rumfang_list">
         <item>Cirkel</item>
         <item>Trekant</item>
         <item>Parallelogram</item>
@@ -257,14 +255,80 @@
 
     </string-array>
 
-    <string-array name="Arealer_sublist">
+    <string-array name="arealer_sublist">
         <item>relevante formler, når du arbejder med cirkler</item>
-        <item>relevante formler, når du arbejder med trekalter</item>
+        <item>relevante formler, når du arbejder med trekanter</item>
         <item>relevante formler, når du arbejder med parallelogrammer</item>
         <item>relevante formler, når du arbejder med trapezer</item>
         <item>relevante formler, når du arbejde med kegler</item>
         <item>relevante formler, når du arbejde med kugler</item>
         <item>relevante formler, npr du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="arealer_introducerende_tekst">
+        <item>intro cirkler</item>
+        <item>intro trekanter</item>
+        <item>intro parallelogrammer</item>
+        <item>intro trapezer</item>
+        <item>intro kegler</item>
+        <item>intro kugler</item>
+        <item>intro cylindere</item>
+    </string-array>
+
+    <string-array name="arealer_text_following_picture_1">
+        <item>text_following_picture1 cirkler</item>
+        <item>text_following_picture1 trekanter</item>
+        <item>text_following_picture1 parallelogrammer</item>
+        <item>text_following_picture1 trapezer</item>
+        <item>text_following_picture1 kegler</item>
+        <item>text_following_picture1 kugler</item>
+        <item>text_following_picture1 cylindere</item>
+    </string-array>
+    <string-array name="arealer_text_following_picture_2">
+        <item>text_following_picture2 cirkler</item>
+        <item>text_following_picture2 trekanter</item>
+        <item>text_following_picture2 parallelogrammer</item>
+        <item>text_following_picture2 trapezer</item>
+        <item>text_following_picture2 kegler</item>
+        <item>text_following_picture2 kugler</item>
+        <item>text_following_picture2 cylindere</item>
+    </string-array>
+    <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
+    <string-array name="arealer_mathView1">
+        <item>$$x=\\frac{1+y}{1+2z^2}$$</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+    </string-array>
+    <string-array name="arealer_mathView2">
+        <item>$$x=\\frac{1+y}{1+2z^2}$$</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+    </string-array>
+    <string-array name="arealer_mathView3">
+        <item>$$x=\\frac{1+y}{1+2z^2}$$</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+    </string-array>
+    <string-array name="arealer_mathView4">
+        <item>$$x=\\frac{1+y}{1+2z^2}$$</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
+        <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
 
 </resources>

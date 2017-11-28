@@ -65,70 +65,70 @@ public class SubListFragment extends Fragment {
 
         switch (listindex) {
             case 0:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 1:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
 
                 break;
             case 2:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
 
                 break;
             case 3:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 4:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 5:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 6:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 7:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 8:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 9:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;
             case 10:
-                subjectListArray = getResources().getStringArray(R.array.Arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.Arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
                 break;

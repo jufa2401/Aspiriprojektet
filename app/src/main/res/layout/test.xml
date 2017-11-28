@@ -26,14 +26,6 @@
             android:layout_height="wrap_content"
             android:textStyle="bold" />
 
-        <katex.hourglass.in.mathlib.MathView
-            android:id="@+id/math_view_1"
-            app:setTextColor="@android:color/black"
-            app:setTextSize="12sp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
         <!--Header-->
         <TextView
             android:id="@+id/subject_fragment_title"
@@ -112,46 +104,116 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_problem1_2"/>
 
+            <katex.hourglass.in.mathlib.MathView
+                android:id="@+id/subject_fragment_math_view_1"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="@string/Kvartratsætninger_problem1_4" />
+
+            <katex.hourglass.in.mathlib.MathView
+                android:id="@+id/subject_fragment_math_view_2"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Kvartratsætninger_problem1_5" />
+
+            <katex.hourglass.in.mathlib.MathView
+                android:id="@+id/subject_fragment_math_view_3"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:text="@string/Kvartratsætninger_problem1_8" />
+
+            <katex.hourglass.in.mathlib.MathView
+                android:id="@+id/subject_fragment_math_view_4"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Kvartratsætninger_problem1_10"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/imageview_company_logo"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="21dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kvartratsaetninger_table4" />
+
         </LinearLayout>
 
-        <TextView
-            android:paddingTop="30dp"
+        <LinearLayout
+            android:id="@+id/subject_fragment_game_button_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_problem1_4"/>
-
-        <!--First part-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_problem1_5"/>
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:visibility="gone">
 
 
-        <!--Second part-->
-        <TextView
-            android:paddingTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_problem1_8"/>
+            <LinearLayout
+                android:id="@+id/subject_fragment_game_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/shadow"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="7dp">
 
 
+                <ImageView
+                    android:id="@+id/subject_fragment_game_thumb"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/empty_description" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="italic"
-            android:text="@string/Kvartratsætninger_problem1_10"/>
+
+                <TextView
+                    android:id="@+id/subject_fragment_game_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
 
 
-        <ImageView
-            android:paddingTop="21dp"
-            android:paddingBottom="10dp"
-            android:id="@+id/imageview_company_logo"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/kvartratsaetninger_table4" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
