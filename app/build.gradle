@@ -38,6 +38,7 @@ dependencies {
     implementation "com.android.support:support-annotations:27.0.1"
     implementation "com.android.support:design:27.0.1"
     implementation 'com.android.support:support-v4:27.0.1'
+    implementation 'com.google.firebase:firebase-invites:11.6.0'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -50,10 +51,10 @@ dependencies {
     compile 'in.hourglass.mathrender:katexmathview:1.0'
     compile 'com.ms-square:expandableTextView:0.1.4'
     compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+    compile 'com.google.firebase:firebase-invites:11.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
 
 
-
-
-
 }
+
+apply plugin: 'com.google.gms.google-services'

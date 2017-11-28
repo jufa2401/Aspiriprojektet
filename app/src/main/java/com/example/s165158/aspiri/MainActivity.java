@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -25,32 +24,46 @@ import android.widget.Toast;
 
 import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
+import com.google.android.gms.appinvite.AppInviteInvitation;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import butterknife.ButterKnife;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
 
+    //Fragment manager
+    private FragmentManager mFragmentManager;
+
+    //Toolbar
     private Toolbar toolbar;
+
+    //Drawer
     private DrawerLayout drawer;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-    private FragmentManager mFragmentManager;
     protected boolean isHomeAsUp = false;
+
+    //For the expandable list
     private ExpandableListAdapter listAdapter;
     private ExpandableListView expandableListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
 
+    //For Firebase
+    private static int REQUEST_INVITE = 0;
+    private static String TAG = MainActivity.class.getSimpleName();
 
     //On createmetode
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-//         Sætter orientation, da der foreløbig er bugs ved skærm rotation
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ButterKnife.bind(this);
         // Fanebladet
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -116,14 +129,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.three_dot_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                Toast.makeText(getApplicationContext(), "Yet to be implemented", Toast.LENGTH_SHORT).show();
+                showMessage("Yet to be implemented");
                 Log.d("AspiriApp", "action_settings pressed");
                 return true;
 
             case R.id.three_dot_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite..  .
-                Toast.makeText(getApplicationContext(), "Action Favorite is yet to be implemented", Toast.LENGTH_SHORT).show();
+                showMessage("Action Favorite is yet to be implemented");
                 Log.d("AspiriApp", "action_favorite pressed");
                 return true;
 
@@ -211,6 +224,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                return true;
 
             case R.id.drawer_share:
+
+                onInviteClicked();
+                showMessage("Drawer share was pressed");
 
                 return true;
 
@@ -331,7 +347,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    //Credit to firebase
+    private void onInviteClicked() {
+        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
+                .setMessage(getString(R.string.invitation_message))
+                .setDeepLink(Uri.parse(getString(R.string.invitation_deep_link)))
+                .setCallToActionText(getString(R.string.invitation_cta))
+                .build();
+        startActivityForResult(intent, REQUEST_INVITE);
+    }
 
+    //Method implemented from Firebase
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Log.d(TAG, "onActivityResult: requestCode=" + requestCode + ", resultCode=" + resultCode);
+
+        if (requestCode == REQUEST_INVITE) {
+            if (resultCode == RESULT_OK) {
+                // Get the invitation IDs of all sent messages
+                String[] ids = AppInviteInvitation.getInvitationIds(resultCode, data);
+                for (String id : ids) {
+                    Log.d(TAG, "onActivityResult: sent invitation " + id);
+                }
+            } else {
+                showMessage("Something Went Wrong");
+            }
+        }
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Log.d(TAG, "On Connection failed" + connectionResult);
+        showMessage("Something went wrong");
+    }
+
+    private void showMessage(String messageForToast) {
+        Log.d(TAG, "showMessage Methodwas called");
+        Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
+    }
 }
 
 
