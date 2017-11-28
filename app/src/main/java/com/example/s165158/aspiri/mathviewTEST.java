@@ -22,11 +22,12 @@ import katex.hourglass.in.mathlib.MathView;
  */
 
 public class mathviewTEST extends Fragment {
-    private String[] subject, intro, text_following_picture_1, text_following_picture_2, mathView1, mathView2, mathView3, mathView4;
+    private String[] subject, intro, text_following_picture_1, text_following_picture_2, mathView1, mathView2, mathView3, mathView4,
+            text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
     private int listindex, oldindex;
     private String title;
 
-    private int[] picture_1, picture_2;
+    private int[] picture_1, picture_2, picture_3;
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metoder med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
 
@@ -46,12 +47,17 @@ public class mathviewTEST extends Fragment {
             R.id.subject_fragment_subject,                  //1
             R.id.subject_fragment_intro,                    //2
             R.id.subject_fragment_text_following_picture_1, //3
-            R.id.subject_fragment_text_following_picture_2  //4
+            R.id.subject_fragment_text_following_picture_2,  //4
+            R.id.subject_text_above_picture_3,               //5
+            R.id.subject_fragment_text_above_mathview1,      //6
+            R.id.subject_fragment_text_above_mathview2,
+            R.id.subject_fragment_text_above_mathview3,
+            R.id.subject_fragment_text_above_mathview4
     })
-    TextView textsBeforeExamples[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
+    TextView textsViews[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
 
 
-    @BindViews({R.id.subject_fragment_picture_1, R.id.subject_fragment_picture_2})
+    @BindViews({R.id.subject_fragment_picture_1, R.id.subject_fragment_picture_2, R.id.subject_fragment_picture_3})
     ImageView subject_pictures[];
 
     //    Gamebutton pr. default er game_button layout med GONE visibility. Hvis der skal være en spilknap sætter man den med setVisibility .VISIBLE
@@ -87,14 +93,20 @@ public class mathviewTEST extends Fragment {
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
+                text_above_mathview_1 = getResources().getStringArray(R.array.arealer_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.arealer_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.arealer_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.arealer_text_above_mathview4);
 
 //               henter billeder
                 picture_1 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1};
                 picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1};
+                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1};
 
 //               Sætter alt
-                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex]);
-                setPictures(picture_1[listindex], picture_2[listindex]);
+                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex],
+                        text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
                 break;
             case 1:
@@ -116,7 +128,8 @@ public class mathviewTEST extends Fragment {
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
 
-                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex]);
+                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex],
+                        text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
                 break;
         }
 
@@ -131,14 +144,17 @@ public class mathviewTEST extends Fragment {
 
 
     //  Enkapslerende metoder
-    private void setTexts(String title, String subject, String intro, String text_following_picture_1, String text_following_picture_2) {
-        if (title != null) textsBeforeExamples[0].setText(title);
-        if (subject != null) textsBeforeExamples[1].setText(subject);
-        if (intro != null) textsBeforeExamples[2].setText(intro);
-        if (text_following_picture_1 != null)
-            textsBeforeExamples[3].setText(text_following_picture_1);
-        if (text_following_picture_2 != null)
-            textsBeforeExamples[4].setText(text_following_picture_2);
+    private void setTexts(String title, String subject, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_mathview_1, String text_above_mathview_2, String text_above_mathview_3, String text_above_mathview_4) {
+        if (title != null) textsViews[0].setText(title);
+        if (subject != null) textsViews[1].setText(subject);
+        if (intro != null) textsViews[2].setText(intro);
+        if (text_following_picture_1 != null) textsViews[3].setText(text_following_picture_1);
+        if (text_following_picture_2 != null) textsViews[4].setText(text_following_picture_2);
+        if (text_above_mathview_1 != null) textsViews[5].setText(text_above_mathview_1);
+        if (text_above_mathview_2 != null) textsViews[6].setText(text_above_mathview_2);
+        if (text_above_mathview_3 != null) textsViews[7].setText(text_above_mathview_3);
+        if (text_above_mathview_4 != null) textsViews[8].setText(text_above_mathview_4);
+
     }
 
     private void setMathViews(String mathView1, String mathView2, String mathView3, String mathView4) {
@@ -149,9 +165,10 @@ public class mathviewTEST extends Fragment {
 
     }
 
-    private void setPictures(int picture1, int picture2) {
+    private void setPictures(int picture1, int picture2, int picture3) {
         subject_pictures[0].setImageDrawable(getResources().getDrawable(picture1));
         subject_pictures[1].setImageDrawable(getResources().getDrawable(picture2));
+        subject_pictures[2].setImageDrawable(getResources().getDrawable(picture3));
     }
 
 

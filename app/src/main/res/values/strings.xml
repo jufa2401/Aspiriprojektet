@@ -330,5 +330,42 @@
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
         <item>"$$x=\\frac{1+y}{1+2z^2}$$"</item>
     </string-array>
+    <string-array name="arealer_text_above_mathview1">
+        <item>text_above_mathview1 cirkler</item>
+        <item>text_above_mathview1 trekanter</item>
+        <item>text_above_mathview1 parallelogrammer</item>
+        <item>text_above_mathview1 trapezer</item>
+        <item>text_above_mathview1 kegler</item>
+        <item>text_above_mathview1 kugler</item>
+        <item>text_above_mathview1 cylindere</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview2">
+        <item>text_above_mathview2 cirkler</item>
+        <item>text_above_mathview2 trekanter</item>
+        <item>text_above_mathview2 parallelogrammer</item>
+        <item>text_above_mathview2 trapezer</item>
+        <item>text_above_mathview2 kegler</item>
+        <item>text_above_mathview2 kugler</item>
+        <item>text_above_mathview2 cylindere</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview3">
+        <item>text_above_mathview3 cirkler</item>
+        <item>text_above_mathview3 trekanter</item>
+        <item>text_above_mathview3 parallelogrammer</item>
+        <item>text_above_mathview3 trapezer</item>
+        <item>text_above_mathview3 kegler</item>
+        <item>text_above_mathview3 kugler</item>
+        <item>text_above_mathview3 cylindere</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview4">
+        <item>text_above_mathview4 cirkler</item>
+        <item>text_above_mathview4 trekanter</item>
+        <item>text_above_mathview4 parallelogrammer</item>
+        <item>text_above_mathview4 trapezer</item>
+        <item>text_above_mathview4 kegler</item>
+        <item>text_above_mathview4 kugler</item>
+        <item>text_above_mathview4 cylindere</item>
+    </string-array>
+
 
 </resources>

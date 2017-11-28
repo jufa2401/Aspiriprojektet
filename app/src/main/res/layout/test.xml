@@ -100,9 +100,10 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/subject_fragment_text_above_mathview1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Kvartratsætninger_problem1_2"/>
+                android:text="@string/Kvartratsætninger_problem1_2" />
 
             <katex.hourglass.in.mathlib.MathView
                 android:id="@+id/subject_fragment_math_view_1"
@@ -113,6 +114,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/subject_fragment_text_above_mathview2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="30dp"
@@ -127,6 +129,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/subject_fragment_text_above_mathview3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_problem1_5" />
@@ -140,6 +143,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/subject_fragment_text_above_mathview4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="30dp"
@@ -154,13 +158,14 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/subject_text_above_picture_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Kvartratsætninger_problem1_10"
                 android:textStyle="italic" />
 
             <ImageView
-                android:id="@+id/imageview_company_logo"
+                android:id="@+id/subject_fragment_picture_3"
                 android:layout_width="match_parent"
                 android:layout_height="fill_parent"
                 android:adjustViewBounds="true"
