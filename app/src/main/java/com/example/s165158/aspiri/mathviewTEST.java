@@ -3,6 +3,7 @@ package com.example.s165158.aspiri;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ public class mathviewTEST extends Fragment {
             text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
     private int listindex, oldindex;
     private boolean anyMathviews = true;
+    private AppCompatActivity mActivity;
 
 
     private int[] picture_1, picture_2, picture_3;
@@ -74,12 +76,13 @@ public class mathviewTEST extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View view = inflater.inflate(R.layout.test, container, false);
         ButterKnife.bind(this, view);   // Laver findViewById for alle mine erklæringer ovenfor med annotationen @BindView(s)
-
+        mActivity = (AppCompatActivity) getActivity();
         Bundle args = getArguments();
 
         listindex = args.getInt("listindex");
 //        Når vi skal udvide vores app til at undestøtte strings fra flere forskellige overemner, er vi nødt til at lave en switch case for hvert overemne.
-        oldindex = args.getInt("oldindex");
+//        oldindex = args.getInt("oldindex");
+        oldindex = ((MainActivity) mActivity).getOldindex();
 // Her skal der være en switch case for hvert eneste "super" overemne.
         switch (oldindex) {
             case 0:
@@ -138,6 +141,12 @@ public class mathviewTEST extends Fragment {
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
+
+                text_above_mathview_1 = getResources().getStringArray(R.array.arealer_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.arealer_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.arealer_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.arealer_text_above_mathview4);
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
 
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],

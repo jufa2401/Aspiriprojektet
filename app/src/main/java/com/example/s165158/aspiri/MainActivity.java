@@ -43,6 +43,15 @@ import static com.example.s165158.aspiri.R.string.invitation_image_link;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
 
+    public int getOldindex() {
+        return oldindex;
+    }
+
+    public void setOldindex(int oldindex) {
+        this.oldindex = oldindex;
+    }
+
+    private int oldindex;
     //Fragment manager
     private FragmentManager mFragmentManager;
 
@@ -107,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
 
         // preparing list data
-        prepareListData();
+//        prepareListData();
 
 //        Creating the list adapter from class
 //        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);

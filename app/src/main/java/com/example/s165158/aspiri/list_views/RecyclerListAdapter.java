@@ -29,7 +29,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     private Integer[] imageArray;
     private Context context;
     private AppCompatActivity mActivity;
-    private int oldindex, ole;
+    private int oldindex;
 
     public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
@@ -104,7 +104,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                     mActivity = (AppCompatActivity) context;
                     int backstack = mActivity.getFragmentManager().getBackStackEntryCount();
                     if (backstack == 0) {
-                        oldindex = position;
+                        ((MainActivity) mActivity).setOldindex(position);
                         ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
                     } else {
                         bundle.putInt("oldindex", oldindex);

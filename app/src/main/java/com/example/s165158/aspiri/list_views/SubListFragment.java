@@ -71,8 +71,8 @@ public class SubListFragment extends Fragment {
                 };
                 break;
             case 1:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.diffirentialregning_list);
+                subtextListArray = getResources().getStringArray(R.array.diffirentialregning_sublist);
                 imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
                 };
 
