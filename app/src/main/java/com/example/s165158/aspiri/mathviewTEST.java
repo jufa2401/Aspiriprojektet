@@ -22,13 +22,13 @@ import katex.hourglass.in.mathlib.MathView;
  */
 
 public class mathviewTEST extends Fragment {
-    private String[] subject, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
+    private String[] title, subject, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
             text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
     private int listindex, oldindex;
-    private String title;
+
 
     private int[] picture_1, picture_2, picture_3;
-    //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metoder med findViewbyId og OnClick
+    //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
 
 
@@ -70,7 +70,7 @@ public class mathviewTEST extends Fragment {
     @BindView(R.id.subject_fragment_game_thumb)
     ImageView game_thumb;
 
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
         View view = inflater.inflate(R.layout.test, container, false);
         ButterKnife.bind(this, view);   // Laver findViewById for alle mine erklæringer ovenfor med annotationen @BindView(s)
 
@@ -88,7 +88,7 @@ public class mathviewTEST extends Fragment {
                 mathView3 = getResources().getStringArray(R.array.arealer_mathView3);
                 mathView4 = getResources().getStringArray(R.array.arealer_mathView4);
 //                Henter Resten af Stringsne
-                title = getResources().getString(R.string.Title_Teori);
+                title =  getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
@@ -102,12 +102,12 @@ public class mathviewTEST extends Fragment {
 
 
 //               henter billeder
-                picture_1 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
-                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.kvartratsaetninger_table1};
-                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, 0, 0, R.drawable.kvartratsaetninger_table1};
+                picture_1 = new int[]{R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
+                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1};
+                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, 0, 0, 0, 0, 0, 0};
 
 //               Sætter alt
-                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                setTexts(title[listindex], subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
@@ -127,21 +127,19 @@ public class mathviewTEST extends Fragment {
             case 11:
             case 12:
             default:
-                title = getResources().getString(R.string.sample_subject);
+                title =  getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
 
-                setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                setTexts(title[listindex], subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
                 break;
         }
 
 
-
 //      example mathview
-
 
 
         return view;
