@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.1'
@@ -26,8 +27,6 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
-
-apply plugin: 'com.jakewharton.butterknife'
 dependencies {
 
     implementation("com.mikepenz:materialdrawer:6.0.2@aar") {
@@ -67,9 +66,9 @@ dependencies {
     compile 'com.google.firebase:firebase-invites:11.6.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
 
-
 }
 
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.jakewharton.butterknife'
