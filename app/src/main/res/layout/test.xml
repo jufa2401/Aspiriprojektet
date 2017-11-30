@@ -21,10 +21,6 @@
             style="@style/subjectSpacerView" />
 
         <!--First test-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold" />
 
         <!--Header-->
         <TextView
@@ -37,11 +33,6 @@
             android:textStyle="bold"
             android:textSize="25sp" />
         <!--The subject-->
-        <TextView
-            android:id="@+id/subject_fragment_subject"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sample_subject"/>
 
 
         <!--Intro text-->

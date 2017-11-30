@@ -266,8 +266,8 @@
     <string-array name="arealer_introducerende_tekst">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
+        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer:</item>
+        <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
         <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
         <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
         <item>En cylinder er ligesom en kegle og en kugle en
@@ -279,8 +279,8 @@ beregnes.</item>
     <string-array name="arealer_text_following_picture_1">
         <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
         <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
-        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer</item>
-        <item>Her finder du de relavante formler, når du arbejder med trapezer</item>
+        <item>0</item>
+        <item>0</item>
         <item>Her finder du de relevante formler, når du arbejder med kegler:</item>
         <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
         <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
@@ -304,41 +304,41 @@ beregnes.</item>
         <item>0</item>
     </string-array>
     <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
-    <string-array name="arealer_mathView1">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+    <string-array name="example_mathView1">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
-    <string-array name="arealer_mathView2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+    <string-array name="example_mathView2">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
-    <string-array name="arealer_mathView3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+    <string-array name="example_mathView3">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
-    <string-array name="arealer_mathView4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+    <string-array name="example_mathView4">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
     <string-array name="arealer_text_above_mathview1">
         <item>0</item>

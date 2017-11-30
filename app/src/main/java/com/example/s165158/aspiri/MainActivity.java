@@ -22,7 +22,6 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-
 import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
 import com.google.android.gms.appinvite.AppInviteInvitation;
@@ -399,7 +398,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         showMessage("Something went wrong");
     }
 
-    private void showMessage(String messageForToast) {
+    public void showMessage(String messageForToast) {
         Log.d(TAG, "showMessage Methodwas called");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }

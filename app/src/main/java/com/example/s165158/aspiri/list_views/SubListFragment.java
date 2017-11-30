@@ -133,10 +133,22 @@ public class SubListFragment extends Fragment {
                 };
                 break;
             case 11:
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                };
                 break;
             case 12:
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                };
                 break;
             case 13:
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                };
                 break;
             case 14:
                 break;

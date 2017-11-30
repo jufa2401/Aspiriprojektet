@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,13 +29,14 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     private Integer[] imageArray;
     private Context context;
     private AppCompatActivity mActivity;
-    private int oldindex;
+    private int oldindex, ole;
 
     public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
         this.subtextListArray = subtextListArray;
         this.imageArray = imageArray;
         this.context = context;
+
 
     }
 
@@ -74,7 +76,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         images.setImageResource(imageArray[position]);
 
         final mathviewTEST subjectFragment = new mathviewTEST();
-//        final SubjectFragment subjectFragment = new SubjectFragment();
         final SubListFragment subListFragment = new SubListFragment();
         view.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -117,7 +118,15 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
     @Override
     public int getItemCount() {
-        return subjectListArray.length;
+        try {
+            return subjectListArray.length;
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            Log.d("ArrayIndexOutOfBounds", "look at the switch-case in sublistfragment or listfragment");
+            ((MainActivity) mActivity).showMessage("Error generating list-element. Contact appdeveloper");
+            return 0;
+        }
+
+
 
     }
 }

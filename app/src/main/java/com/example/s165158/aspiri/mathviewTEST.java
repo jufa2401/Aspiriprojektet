@@ -22,9 +22,10 @@ import katex.hourglass.in.mathlib.MathView;
  */
 
 public class mathviewTEST extends Fragment {
-    private String[] title, subject, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
+    private String[] title, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
             text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
     private int listindex, oldindex;
+    private boolean anyMathviews = true;
 
 
     private int[] picture_1, picture_2, picture_3;
@@ -43,13 +44,13 @@ public class mathviewTEST extends Fragment {
 
     //    Alle TextViews forinden eksempler
     @BindViews({
-            R.id.subject_fragment_title,                    //0
-            R.id.subject_fragment_subject,                  //1
-            R.id.subject_fragment_intro,                    //2
-            R.id.subject_fragment_text_following_picture_1, //3
-            R.id.subject_fragment_text_following_picture_2,  //4
-            R.id.subject_text_above_picture_3,               //5
-            R.id.subject_fragment_text_above_mathview1,      //6
+            R.id.subject_fragment_title,
+//            R.id.subject_fragment_subject,
+            R.id.subject_fragment_intro,
+            R.id.subject_fragment_text_following_picture_1,
+            R.id.subject_fragment_text_following_picture_2,
+            R.id.subject_text_above_picture_3,
+            R.id.subject_fragment_text_above_mathview1,
             R.id.subject_fragment_text_above_mathview2,
             R.id.subject_fragment_text_above_mathview3,
             R.id.subject_fragment_text_above_mathview4
@@ -82,14 +83,14 @@ public class mathviewTEST extends Fragment {
 // Her skal der være en switch case for hvert eneste "super" overemne.
         switch (oldindex) {
             case 0:
-                //              Henter MathView Strings
-                mathView1 = getResources().getStringArray(R.array.arealer_mathView1);
-                mathView2 = getResources().getStringArray(R.array.arealer_mathView2);
-                mathView3 = getResources().getStringArray(R.array.arealer_mathView3);
-                mathView4 = getResources().getStringArray(R.array.arealer_mathView4);
+                //              Henter MathView Strings bruges ikke i Arealer (case 0)
+//                mathView1 = getResources().getStringArray(R.array.arealer_mathView1);
+//                mathView2 = getResources().getStringArray(R.array.arealer_mathView2);
+//                mathView3 = getResources().getStringArray(R.array.arealer_mathView3);
+//                mathView4 = getResources().getStringArray(R.array.arealer_mathView4);
 //                Henter Resten af Stringsne
                 title =  getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
-                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+//                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
@@ -102,15 +103,15 @@ public class mathviewTEST extends Fragment {
 
 
 //               henter billeder
-                picture_1 = new int[]{R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
-                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1};
+                picture_1 = new int[]{R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.parallelogram_table1, R.drawable.trapez_table1, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
+                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, 0, 0, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.kvartratsaetninger_table1};
                 picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, 0, 0, 0, 0, 0, 0};
 
 //               Sætter alt
-                setTexts(title[listindex], subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
-                setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
+//                setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
                 break;
             //
 
@@ -127,14 +128,21 @@ public class mathviewTEST extends Fragment {
             case 11:
             case 12:
             default:
+                //              Henter MathView Strings bruges ikke i Arealer (case 0)
+                mathView1 = getResources().getStringArray(R.array.example_mathView1);
+                mathView2 = getResources().getStringArray(R.array.example_mathView2);
+                mathView3 = getResources().getStringArray(R.array.example_mathView3);
+                mathView4 = getResources().getStringArray(R.array.example_mathView4);
                 title =  getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
-                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+//                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
+                setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
 
-                setTexts(title[listindex], subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+                setPictures(0, 0, 0);
                 break;
         }
 
@@ -147,40 +155,38 @@ public class mathviewTEST extends Fragment {
 
 
     //  Enkapslerende metoder
-    private void setTexts(String title, String subject, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3, String text_above_mathview_1, String text_above_mathview_2, String text_above_mathview_3, String text_above_mathview_4) {
+    private void setTexts(String title, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3, String text_above_mathview_1, String text_above_mathview_2, String text_above_mathview_3, String text_above_mathview_4) {
         if (!title.equals("0")) textsViews[0].setText(title);
         else textsViews[0].setVisibility(View.GONE);
-        if (!subject.equals("0")) textsViews[1].setText(subject);
+        if (!intro.equals("0")) textsViews[1].setText(intro);
         else textsViews[1].setVisibility(View.GONE);
-        if (!intro.equals("0")) textsViews[2].setText(intro);
+        if (!text_following_picture_1.equals("0")) textsViews[2].setText(text_following_picture_1);
         else textsViews[2].setVisibility(View.GONE);
-        if (!text_following_picture_1.equals("0")) textsViews[3].setText(text_following_picture_1);
+        if (!text_following_picture_2.equals("0")) textsViews[3].setText(text_following_picture_2);
         else textsViews[3].setVisibility(View.GONE);
-        if (!text_following_picture_2.equals("0")) textsViews[4].setText(text_following_picture_2);
+        if (!text_above_picture_3.equals("0")) textsViews[4].setText(text_above_picture_3);
         else textsViews[4].setVisibility(View.GONE);
-        if (!text_above_picture_3.equals("0")) textsViews[5].setText(text_above_picture_3);
+        if (!text_above_mathview_1.equals("0")) textsViews[5].setText(text_above_mathview_1);
         else textsViews[5].setVisibility(View.GONE);
-        if (!text_above_mathview_1.equals("0")) textsViews[6].setText(text_above_mathview_1);
+        if (!text_above_mathview_2.equals("0")) textsViews[6].setText(text_above_mathview_2);
         else textsViews[6].setVisibility(View.GONE);
-        if (!text_above_mathview_2.equals("0")) textsViews[7].setText(text_above_mathview_2);
+        if (!text_above_mathview_3.equals("0")) textsViews[7].setText(text_above_mathview_3);
         else textsViews[7].setVisibility(View.GONE);
-        if (!text_above_mathview_3.equals("0")) textsViews[8].setText(text_above_mathview_3);
+        if (!text_above_mathview_4.equals("0")) textsViews[8].setText(text_above_mathview_4);
         else textsViews[8].setVisibility(View.GONE);
-        if (!text_above_mathview_4.equals("0")) textsViews[9].setText(text_above_mathview_4);
-        else textsViews[9].setVisibility(View.GONE);
 
     }
 
+    //    not used for case 0
     private void setMathViews(String mathView1, String mathView2, String mathView3, String mathView4) {
         if (!mathView1.equals("0")) mathViews[0].setDisplayText(mathView1);
         else mathViews[0].setVisibility(View.GONE);
         if (!mathView2.equals("0")) mathViews[1].setDisplayText(mathView2);
-        else mathViews[0].setVisibility(View.GONE);
+        else mathViews[1].setVisibility(View.GONE);
         if (!mathView3.equals("0")) mathViews[2].setDisplayText(mathView3);
-        else mathViews[0].setVisibility(View.GONE);
+        else mathViews[3].setVisibility(View.GONE);
         if (!mathView4.equals("0")) mathViews[3].setDisplayText(mathView4);
-        else mathViews[0].setVisibility(View.GONE);
-
+        else mathViews[3].setVisibility(View.GONE);
     }
 
     private void setPictures(int picture1, int picture2, int picture3) {
