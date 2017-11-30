@@ -12,7 +12,10 @@
 
         <!-- Main -->
         <activity android:name=".MainActivity">
+
             <meta-data
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden"
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="MainActivity" />
 
