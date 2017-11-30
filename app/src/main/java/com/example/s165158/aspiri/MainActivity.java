@@ -22,11 +22,15 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+
 import com.example.s165158.aspiri.list_views.ListFragment;
 import com.example.s165158.aspiri.test.TestFlipcard;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //For Firebase
     private static int REQUEST_INVITE = 0;
     private static String TAG = MainActivity.class.getSimpleName();
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     //On createmetode
     @Override
@@ -109,6 +114,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // setting list adapter
 //        expandableListView.setAdapter(listAdapter);
 
+
+        //For Firebase
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
     }
 
     //    Tredottede menu initialiseres her
@@ -226,6 +234,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                return true;
 
             case R.id.drawer_share:
+
+                Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+                myTrace.start();
 
                 onInviteClicked();
                 showMessage("Drawer share was pressed");
