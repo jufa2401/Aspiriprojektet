@@ -29,7 +29,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     private Integer[] imageArray;
     private Context context;
     private AppCompatActivity mActivity;
-    private int oldindex, ole;
 
     public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
