@@ -101,10 +101,10 @@ public class mathviewTEST extends Fragment {
                 text_above_mathview_4 = getResources().getStringArray(R.array.arealer_text_above_mathview4);
 
 
-////               henter billeder
-//                picture_1 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
-//                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.kvartratsaetninger_table1};
-//                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, 0, 0, R.drawable.kvartratsaetninger_table1};
+//               henter billeder
+                picture_1 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
+                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.kvartratsaetninger_table1};
+                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, 0, 0, R.drawable.kvartratsaetninger_table1};
 
 //               Sætter alt
                 setTexts(title, subject[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
