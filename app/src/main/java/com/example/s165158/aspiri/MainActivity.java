@@ -43,15 +43,8 @@ import static com.example.s165158.aspiri.R.string.invitation_image_link;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
 
-    public int getOldindex() {
-        return oldindex;
-    }
-
-    public void setOldindex(int oldindex) {
-        this.oldindex = oldindex;
-    }
-
     private int oldindex;
+
     //Fragment manager
     private FragmentManager mFragmentManager;
 
@@ -415,6 +408,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void showMessage(String messageForToast) {
         Log.d(TAG, "showMessage Methodwas called");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
+    }
+
+    public int getOldindex() {
+        return oldindex;
+    }
+
+    public void setOldindex(int oldindex) {
+        this.oldindex = oldindex;
     }
 }
 
