@@ -40,6 +40,8 @@ import android.widget.TextView;
 
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
+import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.Trace;
 
 /**
  * Demonstrates a "card-flip" animation using custom fragment transactions ({@link
@@ -70,6 +72,10 @@ public class TestFlipcard extends Activity
         clickfrag = (ImageView)findViewById(R.id.card);
 
 
+        Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+        myTrace.start();
+
+
         if (savedInstanceState == null) {
             // If there is no saved instance state, add a fragment representing the
             // front of the card to this activity. If there is saved instance state,
@@ -85,6 +91,8 @@ public class TestFlipcard extends Activity
         // Monitor back stack changes to ensure the action bar shows the appropriate
         // button (either "photo" or "info") .
         getFragmentManager().addOnBackStackChangedListener(this);
+
+        myTrace.stop();
     }
 
     @Override

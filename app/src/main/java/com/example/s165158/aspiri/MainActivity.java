@@ -30,6 +30,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.perf.FirebasePerformance;
+import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
 
 import java.util.ArrayList;
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //On createmetode
     @Override
+    @AddTrace(name = "onCreateTrace", enabled = true)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
@@ -241,6 +243,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 onInviteClicked();
                 showMessage("Drawer share was pressed");
 
+                myTrace.stop();
                 return true;
 
 
