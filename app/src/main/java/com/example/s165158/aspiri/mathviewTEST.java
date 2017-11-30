@@ -103,9 +103,9 @@ public class mathviewTEST extends Fragment {
 
 
 //               henter billeder
-                picture_1 = new int[]{R.drawable.kegle_ting_man_skal_beregne, R.drawable.kegle_ting_man_skal_beregne, R.drawable.parallelogram_table1, R.drawable.trapez_table1, R.drawable.kegle_ting_man_skal_beregne, R.drawable.kugle_ting_man_skal_beregne, R.drawable.kvartratsaetninger_table1};
-                picture_2 = new int[]{R.drawable.kvartratsaetninger_table1, R.drawable.kvartratsaetninger_table1, 0, 0, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.kvartratsaetninger_table1};
-                picture_3 = new int[]{R.drawable.kvartratsaetninger_table1, 0, 0, 0, 0, 0, 0};
+                picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
+                picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
+                picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
 
 //               Sætter alt
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],

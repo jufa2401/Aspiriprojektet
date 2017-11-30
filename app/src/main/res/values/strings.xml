@@ -151,7 +151,6 @@
     <string name="close_drawer">Closing drawer</string>
 
 
-
     <!--Array til navne i underpunkter for polynomier-->
     <string-array name="polynomier_list">
         <item>Generelt</item>
@@ -260,7 +259,7 @@
         <item>relevante formler, når du arbejder med trapezer</item>
         <item>relevante formler, når du arbejde med kegler</item>
         <item>relevante formler, når du arbejde med kugler</item>
-        <item>relevante formler, npr du arbejder med cylindere</item>
+        <item>relevante formler, når du arbejder med cylindere</item>
     </string-array>
 
     <string-array name="arealer_introducerende_tekst">
@@ -270,11 +269,9 @@
         <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
         <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
         <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
-        <item>En cylinder er ligesom en kegle og en kugle en
-rumgeometrisk figur, hvilket betyder at den er
-tredimensionel. Det er derfor følgende der skal
-beregnes.</item>
+        <item>En cylinder er ligesom en kegle og en kugle en rumgeometrisk figur, hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
     </string-array>
+
 
     <string-array name="arealer_text_following_picture_1">
         <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
