@@ -34,6 +34,8 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 
+import static com.example.s165158.aspiri.R.string.invitation_image_link;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
 
@@ -353,6 +355,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .setMessage(getString(R.string.invitation_message))
                 .setDeepLink(Uri.parse(getString(R.string.invitation_deep_link)))
                 .setCallToActionText(getString(R.string.invitation_cta))
+                .setCustomImage(Uri.parse(getString(invitation_image_link)))
                 .build();
         startActivityForResult(intent, REQUEST_INVITE);
     }

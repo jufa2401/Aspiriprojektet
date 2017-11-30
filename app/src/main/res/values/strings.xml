@@ -373,13 +373,13 @@
         <item>0</item>
         <item>text_above_mathview4 cylindere</item>
     </string-array>
-    
-    <!--Firebase-->
-    <string name="invitation_deep_link">https://bd763.app.goo.gl/naxz</string>
-    <string name="invitation_title">Den her app er bare rigtigt god</string>
-    <string name="invitation_message">invitation_message_test</string>
-    <string name="invitation_cta">Installer Mig!</string>
 
+    <!--Firebase-->
+    <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri&amp;afl=https://karakterloeft.aspiri.dk/Formelsamling.aspx</string>
+    <string name="invitation_title">Den her app er bare rigtigt god</string>
+    <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
+    <string name="invitation_cta">Installer Mig!</string>
+    <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
 
 
 </resources>
