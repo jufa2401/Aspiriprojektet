@@ -106,7 +106,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                         ((MainActivity) mActivity).setOldindex(position);
                         ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
                     } else {
-                        bundle.putInt("oldindex", oldindex);
+//                        bundle.putInt("oldindex", oldindex);
                         ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
                     }
 
