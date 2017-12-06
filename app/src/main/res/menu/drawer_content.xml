@@ -11,7 +11,15 @@
 
     <group android:checkableBehavior="single">
         <item android:title="@string/drawer_subjects">
+
             <!--Bør alle være "collapsible"-->
+
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/drawer_other">
+            <!--Bør være collapsible-->
             <menu>
                 <item
                     android:id="@+id/drawer_send_us_mail_2"
@@ -31,31 +39,6 @@
                     android:id="@+id/drawer_quiz"
                     android:icon="@drawable/ic_game"
                     android:title="@string/drawer_quiz" />
-                <item
-                    android:id="@+id/drawer_send_us_mail"
-                    android:icon="@drawable/drawer_send"
-                    android:title="@string/drawer_contact" />
-            </menu>
-        </item>
-    </group>
-
-    <group android:checkableBehavior="single">
-        <item android:title="@string/drawer_other">
-            <!--Bør være collapsible-->
-            <menu>
-                <item
-                    android:id="@+id/drawer_send_us_mail_2"
-                    android:icon="@drawable/drawer_send"
-                    android:title="@string/drawer_mail_forbedringer" />
-                <item
-                    android:id="@+id/drawer_store"
-                    android:icon="@drawable/ic_menu_store"
-                    android:title="@string/drawer_uy_Course" />
-
-                <item
-                    android:id="@+id/drawer_flipcards"
-                    android:icon="@drawable/drawer_slideshow"
-                    android:title="@string/drawer_slideshow" />
                 <item
                     android:id="@+id/drawer_send_us_mail"
                     android:icon="@drawable/drawer_send"

@@ -105,7 +105,7 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 app:setTextColor="@android:color/black"
-                app:setTextSize="12sp" />
+                app:setTextSize="20sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview2"
@@ -121,7 +121,7 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 app:setTextColor="@android:color/black"
-                app:setTextSize="12sp" />
+                app:setTextSize="20sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview3"
@@ -136,7 +136,7 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 app:setTextColor="@android:color/black"
-                app:setTextSize="12sp" />
+                app:setTextSize="20sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview4"
@@ -152,7 +152,7 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 app:setTextColor="@android:color/black"
-                app:setTextSize="12sp" />
+                app:setTextSize="20sp" />
 
             <TextView
                 android:id="@+id/subject_text_above_picture_3"

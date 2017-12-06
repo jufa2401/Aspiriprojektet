@@ -207,6 +207,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.drawer_quiz:
                 TestMultipleChoiceActivity fragment = new TestMultipleChoiceActivity();
                 replaceFragment(fragment, "he");
+                drawer.closeDrawer(GravityCompat.START);
                 return true;
 
             //        Maps Navigation

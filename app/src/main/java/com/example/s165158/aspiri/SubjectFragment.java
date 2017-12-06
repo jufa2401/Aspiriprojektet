@@ -138,10 +138,7 @@ public class SubjectFragment extends Fragment {
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
 
-                text_above_mathview_1 = getResources().getStringArray(R.array.arealer_text_above_mathview1);
-                text_above_mathview_2 = getResources().getStringArray(R.array.arealer_text_above_mathview2);
-                text_above_mathview_3 = getResources().getStringArray(R.array.arealer_text_above_mathview3);
-                text_above_mathview_4 = getResources().getStringArray(R.array.arealer_text_above_mathview4);
+
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
 
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
@@ -164,7 +161,7 @@ public class SubjectFragment extends Fragment {
     //  Enkapslerende metoder
     private void setTexts(String title, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3, String text_above_mathview_1, String text_above_mathview_2, String text_above_mathview_3, String text_above_mathview_4) {
         if (title != null) {
-            if (!title.equals("0"))
+            if (!title.equals("0"))     //Man kan ikke lave .equals på et null objekt, så der tjekkes først om objektet er null
                 textsViews[0].setText(title);
             textsViews[0].setVisibility(View.VISIBLE);
         }
@@ -238,6 +235,7 @@ public class SubjectFragment extends Fragment {
     }
 
     private void setPictures(int picture1, int picture2, int picture3) {
+
         if (picture1 != 0)
             subject_pictures[0].setImageDrawable(getResources().getDrawable(picture1));
         subject_pictures[0].setVisibility(View.VISIBLE);
