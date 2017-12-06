@@ -43,6 +43,7 @@
     <string name="drawer_getInContact">kom i kontakt</string>
     <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
     <string name="drawer_mail_forbedringer">Idéer til forbedringer</string>
+    <string name="drawer_quiz">Quiz</string>
 
     <!--Mail-->
     <string name="mail_subject">Vedrørende Aspiri App Android</string>
