@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.list_views;
+package com.example.s165158.aspiri.list_view;
 
 import android.app.Activity;
 import android.app.Fragment;

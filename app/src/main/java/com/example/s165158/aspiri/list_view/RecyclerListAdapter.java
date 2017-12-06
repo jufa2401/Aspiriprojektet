@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.list_views;
+package com.example.s165158.aspiri.list_view;
 
 import android.app.Activity;
 import android.app.FragmentManager;
@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 import com.example.s165158.aspiri.SubjectFragment;
-import com.example.s165158.aspiri.mathviewTEST;
+import com.example.s165158.aspiri.test.ExpandableTextViewExample;
 
 /**
  * Created by s165158 on 08-11-2017.
@@ -74,7 +74,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         ImageView images = view.findViewById(R.id.listImageView);
         images.setImageResource(imageArray[position]);
 
-        final mathviewTEST subjectFragment = new mathviewTEST();
+        final SubjectFragment subjectFragment = new SubjectFragment();
         final SubListFragment subListFragment = new SubListFragment();
         view.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -86,7 +86,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 
 
                 FragmentManager manager = ((Activity)context).getFragmentManager();
-//              bundle til at oveføre det indtrykkede index til SubjectFragment
+//              bundle til at oveføre det indtrykkede index til ExpandableTextViewExample
                 final Bundle bundle = new Bundle();
                 bundle.putInt("listindex",position);
                 bundle.putString("title",subjectListArray[position]);
@@ -107,7 +107,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                         ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
                     } else {
 //                        bundle.putInt("oldindex", oldindex);
-                        ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
+                        ((MainActivity) mActivity).replaceFragment(subjectFragment, ExpandableTextViewExample.TAG);
                     }
 
                 }

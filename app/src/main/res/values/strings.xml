@@ -14,6 +14,7 @@
 
     <!--Hamburger menu-->
     <string name="drawer_subjects">Emner</string>
+    <string name="drawer_firebase">Firebase</string>
     <string name="drawer_other">Andet</string>
     <string name="drawer_come_see_us">Besøg os</string>
     <string name="drawer_store">Åbner Butikken</string>

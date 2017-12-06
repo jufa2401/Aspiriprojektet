@@ -22,8 +22,10 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.example.s165158.aspiri.list_views.ListFragment;
-import com.example.s165158.aspiri.test.TestFlipcard;
+import com.example.s165158.aspiri.games.TestFlipcard;
+import com.example.s165158.aspiri.games.TestMultipleChoiceActivity;
+import com.example.s165158.aspiri.list_view.ListFragment;
+import com.example.s165158.aspiri.test.ExpandableListAdapter;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -202,6 +204,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(goToFlipCards);
                 Log.d("AspiriApp", "Flipcard_pressed");
                 return true;
+            case R.id.drawer_quiz:
+                TestMultipleChoiceActivity fragment = new TestMultipleChoiceActivity();
+                replaceFragment(fragment, "he");
+                return true;
 
             //        Maps Navigation
 //            case R.id.drawer_Kbh:
@@ -231,10 +237,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Tests
 //            case R.id.go_to_subject1:
-//                Fragment mathviewTEST = new mathviewTEST();
+//                Fragment SubjectFragment = new SubjectFragment();
 //                getFragmentManager()
 //                        .beginTransaction()
-//                        .replace(R.id.fragmentindhold, mathviewTEST)
+//                        .replace(R.id.fragmentindhold, SubjectFragment)
 //                        .addToBackStack("back to subject_sketch_unused from quiz")
 //                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
 //                        .commit();

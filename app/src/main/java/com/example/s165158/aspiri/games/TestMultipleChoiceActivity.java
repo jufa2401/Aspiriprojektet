@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.test;
+package com.example.s165158.aspiri.games;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -28,19 +28,18 @@ public class TestMultipleChoiceActivity extends Fragment {
         View view = inflater.inflate(R.layout.multiple_choice_quiz, container, false);
 
 
-
-        question = (TextView) view.findViewById(R.id.question_text);
+        question = view.findViewById(R.id.question_text);
         question.setText(questiontxt);
 
-        answer1 = (TextView)view.findViewById(R.id.option1_text);
-        answer2 =(TextView)view.findViewById(R.id.option2_text);
-        answer3 =(TextView)view.findViewById(R.id.option3_text);
-        answer4 =(TextView)view.findViewById(R.id.option4_text);
+        answer1 = view.findViewById(R.id.option1_text);
+        answer2 = view.findViewById(R.id.option2_text);
+        answer3 = view.findViewById(R.id.option3_text);
+        answer4 = view.findViewById(R.id.option4_text);
 
-        img1 = (ImageView)view.findViewById(R.id.option1_thumb);
-        img2 = (ImageView)view.findViewById(R.id.option2_thumb);
-        img3 = (ImageView)view.findViewById(R.id.option3_thumb);
-        img4 = (ImageView)view.findViewById(R.id.option4_thumb);
+        img1 = view.findViewById(R.id.option1_thumb);
+        img2 = view.findViewById(R.id.option2_thumb);
+        img3 = view.findViewById(R.id.option3_thumb);
+        img4 = view.findViewById(R.id.option4_thumb);
 
         answer1.setText(answertxt);
         answer2.setText(answertxt);
@@ -54,8 +53,7 @@ public class TestMultipleChoiceActivity extends Fragment {
         img4.setImageResource(R.drawable.ic_game);
 
 
-
-        answerbutton1 = (LinearLayout) view.findViewById(R.id.option1_button);
+        answerbutton1 = view.findViewById(R.id.option1_button);
         answerbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +61,7 @@ public class TestMultipleChoiceActivity extends Fragment {
 
             }
         });
-        answerbutton2 = (LinearLayout) view.findViewById(R.id.option2_button);
+        answerbutton2 = view.findViewById(R.id.option2_button);
         answerbutton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,7 +69,7 @@ public class TestMultipleChoiceActivity extends Fragment {
 
             }
         });
-        answerbutton3 = (LinearLayout) view.findViewById(R.id.option3_button);
+        answerbutton3 = view.findViewById(R.id.option3_button);
         answerbutton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +77,7 @@ public class TestMultipleChoiceActivity extends Fragment {
 
             }
         });
-        answerbutton4 = (LinearLayout) view.findViewById(R.id.option4_button);
+        answerbutton4 = view.findViewById(R.id.option4_button);
         answerbutton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

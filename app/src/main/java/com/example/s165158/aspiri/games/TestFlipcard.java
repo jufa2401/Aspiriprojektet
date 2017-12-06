@@ -14,31 +14,21 @@
  * limitations under the License.
  */
 
-package com.example.s165158.aspiri.test;
+package com.example.s165158.aspiri.games;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentContainer;
 import android.app.FragmentManager;
-import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
@@ -69,7 +59,7 @@ public class TestFlipcard extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
-        clickfrag = (ImageView)findViewById(R.id.card);
+        clickfrag = findViewById(R.id.card);
 
 
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");

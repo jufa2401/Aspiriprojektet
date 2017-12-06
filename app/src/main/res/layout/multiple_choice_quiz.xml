@@ -7,6 +7,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context="com.example.s165158.aspiri.MainActivity">
@@ -28,7 +30,7 @@
         <ImageView
             android:id="@+id/quiz_image"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="121dp"
             android:contentDescription="@string/empty_description"
             android:scaleType="centerCrop"
             android:src="@drawable/aspiri_tab_icon" />
@@ -36,7 +38,7 @@
         <TextView
             android:id="@+id/question_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1.0"

@@ -24,8 +24,13 @@
 
                 <item
                     android:id="@+id/drawer_flipcards"
-                    android:icon="@drawable/drawer_slideshow"
+                    android:icon="@drawable/ic_game"
                     android:title="@string/drawer_slideshow" />
+
+                <item
+                    android:id="@+id/drawer_quiz"
+                    android:icon="@drawable/ic_game"
+                    android:title="@string/drawer_send" />
                 <item
                     android:id="@+id/drawer_send_us_mail"
                     android:icon="@drawable/drawer_send"
@@ -60,16 +65,13 @@
     </group>
 
 
-    <item android:title="@string/drawer_communicate">
+    <item android:title="@string/drawer_firebase">
         <menu>
             <item
                 android:id="@+id/drawer_share"
                 android:icon="@drawable/drawer_share"
                 android:title="@string/drawer_share"/>
-            <item
-                android:id="@+id/drawer_send"
-                android:icon="@drawable/drawer_send"
-                android:title="@string/drawer_send" />
+
         </menu>
     </item>
 

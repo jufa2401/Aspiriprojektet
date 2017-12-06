@@ -28,10 +28,10 @@
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Title_Teori"
             android:textAllCaps="true"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:textSize="25sp" />
+            android:visibility="gone" />
         <!--The subject-->
 
 
@@ -41,15 +41,16 @@
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_intro"/>
+            android:visibility="gone" />
 
         <!--Table 1-->
         <ImageView
             android:id="@+id/subject_fragment_picture_1"
+            style="@style/subjectImageView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            style="@style/subjectImageView"
-            android:src="@drawable/kvartratsaetninger_table1" />
+            android:src="@drawable/kvartratsaetninger_table1"
+            android:visibility="gone" />
 
 
         <!--Sum på kvadrat-->
@@ -58,17 +59,18 @@
             style="@style/subjectTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_sum_1"/>
+            android:visibility="gone" />
 
         <!--Table 2-->
         <ImageView
-            android:paddingTop="10dp"
             android:id="@+id/subject_fragment_picture_2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:adjustViewBounds="true"
+            android:paddingTop="10dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/kvartratsaetninger_table2" />
+            android:src="@drawable/kvartratsaetninger_table2"
+            android:visibility="gone" />
 
 
         <!--Differens-->
@@ -76,7 +78,7 @@
             android:id="@+id/subject_fragment_text_following_picture_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Kvartratsætninger_difference_1"/>
+            android:visibility="gone" />
 
         <!--Differens 2-->
 
@@ -94,66 +96,70 @@
                 android:id="@+id/subject_fragment_text_above_mathview1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Kvartratsætninger_problem1_2" />
+                android:visibility="gone" />
 
             <katex.hourglass.in.mathlib.MathView
                 android:id="@+id/subject_fragment_math_view_1"
-                app:setTextColor="@android:color/black"
-                app:setTextSize="12sp"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="30dp"
-                android:text="@string/Kvartratsætninger_problem1_4" />
+                android:visibility="gone" />
 
             <katex.hourglass.in.mathlib.MathView
                 android:id="@+id/subject_fragment_math_view_2"
-                app:setTextColor="@android:color/black"
-                app:setTextSize="12sp"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Kvartratsætninger_problem1_5" />
+                android:visibility="gone" />
 
             <katex.hourglass.in.mathlib.MathView
                 android:id="@+id/subject_fragment_math_view_3"
-                app:setTextColor="@android:color/black"
-                app:setTextSize="12sp"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp" />
 
             <TextView
                 android:id="@+id/subject_fragment_text_above_mathview4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="30dp"
-                android:text="@string/Kvartratsætninger_problem1_8" />
+                android:visibility="gone" />
 
             <katex.hourglass.in.mathlib.MathView
                 android:id="@+id/subject_fragment_math_view_4"
-                app:setTextColor="@android:color/black"
-                app:setTextSize="12sp"
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:setTextColor="@android:color/black"
+                app:setTextSize="12sp" />
 
             <TextView
                 android:id="@+id/subject_text_above_picture_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Kvartratsætninger_problem1_10"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/subject_fragment_picture_3"
@@ -163,7 +169,7 @@
                 android:paddingBottom="10dp"
                 android:paddingTop="21dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/kvartratsaetninger_table4" />
+                android:visibility="gone" />
 
         </LinearLayout>
 

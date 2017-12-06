@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri;
+package com.example.s165158.aspiri.test;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import com.example.s165158.aspiri.R;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,17 +16,6 @@ import java.util.List;
 /**
  * Created by jonas on 21/11/2017.
  */
-
-import java.util.HashMap;
-import java.util.List;
-
-import android.content.Context;
-import android.graphics.Typeface;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
-import android.widget.TextView;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
@@ -63,7 +54,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.drawer_list_item, null);
         }
 
-        TextView txtListChild = (TextView) convertView
+        TextView txtListChild = convertView
                 .findViewById(R.id.lblListItem);
 
         txtListChild.setText(childText);
@@ -101,7 +92,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.drawer_list_group, null);
         }
 
-        TextView lblListHeader = (TextView) convertView
+        TextView lblListHeader = convertView
                 .findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
