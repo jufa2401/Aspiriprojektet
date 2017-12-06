@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 import com.example.s165158.aspiri.SubjectFragment;
-import com.example.s165158.aspiri.test.ExpandableTextViewExample;
 
 /**
  * Created by s165158 on 08-11-2017.
@@ -107,7 +106,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                         ((MainActivity) mActivity).replaceFragment(subListFragment, SubListFragment.TAG);
                     } else {
 //                        bundle.putInt("oldindex", oldindex);
-                        ((MainActivity) mActivity).replaceFragment(subjectFragment, ExpandableTextViewExample.TAG);
+                        ((MainActivity) mActivity).replaceFragment(subjectFragment, SubjectFragment.TAG);
                     }
 
                 }

@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import katex.hourglass.in.mathlib.MathView;
  */
 
 public class SubjectFragment extends Fragment {
+    public static final String TAG = "SubjectFragment";
     private String[] title, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
             text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
 
@@ -109,7 +111,7 @@ public class SubjectFragment extends Fragment {
                         null, null, null, null
                 );
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
-//                setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
             //
 
@@ -149,11 +151,6 @@ public class SubjectFragment extends Fragment {
                 //                setPictures(0, 0, 0);
                 break;
         }
-
-
-//      example mathview
-
-
         return view;
     }
 
@@ -235,7 +232,6 @@ public class SubjectFragment extends Fragment {
     }
 
     private void setPictures(int picture1, int picture2, int picture3) {
-
         if (picture1 != 0)
             subject_pictures[0].setImageDrawable(getResources().getDrawable(picture1));
         subject_pictures[0].setVisibility(View.VISIBLE);

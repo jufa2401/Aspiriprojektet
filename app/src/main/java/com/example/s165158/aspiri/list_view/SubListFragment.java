@@ -173,7 +173,7 @@ public class SubListFragment extends Fragment {
     public void onResume() {
         super.onResume();
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
-        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
+//        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
     }
 }
 

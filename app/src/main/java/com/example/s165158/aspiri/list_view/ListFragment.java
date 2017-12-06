@@ -72,7 +72,7 @@ public class ListFragment extends Fragment {
     public void onResume() {
         super.onResume();
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(true);
-        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
+//        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
     }
 }
 
