@@ -76,7 +76,7 @@ public class SubjectFragment extends Fragment {
     ImageView game_thumb;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
-        View view = inflater.inflate(R.layout.test, container, false);
+        View view = inflater.inflate(R.layout.subject_fragment, container, false);
         ButterKnife.bind(this, view);   // Laver findViewById for alle mine erklæringer ovenfor med annotationen @BindView(s)
         mActivity = (AppCompatActivity) getActivity();
         Bundle args = getArguments();
@@ -89,12 +89,7 @@ public class SubjectFragment extends Fragment {
 // Her skal der være en switch case for hvert eneste "super" overemne.
         switch (oldindex) {
             case 0:
-                //              Henter MathView Strings bruges ikke i Arealer (case 0)
-//                mathView1 = getResources().getStringArray(R.array.arealer_mathView1);
-//                mathView2 = getResources().getStringArray(R.array.arealer_mathView2);
-//                mathView3 = getResources().getStringArray(R.array.arealer_mathView3);
-//                mathView4 = getResources().getStringArray(R.array.arealer_mathView4);
-//                Henter Resten af Stringsne
+//                Henter  af Strings
                 title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
 //                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
@@ -102,10 +97,6 @@ public class SubjectFragment extends Fragment {
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
 
-//                text_above_mathview_1 = getResources().getStringArray(R.array.arealer_text_above_mathview1);
-//                text_above_mathview_2 = getResources().getStringArray(R.array.arealer_text_above_mathview2);
-//                text_above_mathview_3 = getResources().getStringArray(R.array.arealer_text_above_mathview3);
-//                text_above_mathview_4 = getResources().getStringArray(R.array.arealer_text_above_mathview4);
 
 
 //               henter billeder
@@ -113,7 +104,7 @@ public class SubjectFragment extends Fragment {
                 picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
                 picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
 
-//               Sætter alt
+//               Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         null, null, null, null
                 );
@@ -154,9 +145,10 @@ public class SubjectFragment extends Fragment {
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
 
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+                        null, null, null, null);
 
-//                No need to set pictures as int array by default are initialized to 0
+
+                //                No need to set pictures as int array by default are initialized to 0
                 //                setPictures(0, 0, 0);
                 break;
         }
