@@ -27,7 +27,7 @@
         </activity>
 
         <!-- Test activiy 2 -->
-        <activity android:name=".games.TestFlipcard">
+        <activity android:name=".games.FlipcardActivity">
         </activity>
 
     </application>

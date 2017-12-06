@@ -22,8 +22,8 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.example.s165158.aspiri.games.TestFlipcard;
-import com.example.s165158.aspiri.games.TestMultipleChoiceActivity;
+import com.example.s165158.aspiri.games.FlipcardActivity;
+import com.example.s165158.aspiri.games.MultipleChoiceFragment;
 import com.example.s165158.aspiri.list_view.ListFragment;
 import com.example.s165158.aspiri.test.ExpandableListAdapter;
 import com.google.android.gms.appinvite.AppInviteInvitation;
@@ -200,12 +200,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             //Goes to flipcards.
             case R.id.drawer_flipcards:
-                Intent goToFlipCards = new Intent(this, TestFlipcard.class);
+                Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
                 startActivity(goToFlipCards);
                 Log.d("AspiriApp", "Flipcard_pressed");
                 return true;
             case R.id.drawer_quiz:
-                TestMultipleChoiceActivity fragment = new TestMultipleChoiceActivity();
+                MultipleChoiceFragment fragment = new MultipleChoiceFragment();
                 replaceFragment(fragment, "he");
                 drawer.closeDrawer(GravityCompat.START);
                 return true;

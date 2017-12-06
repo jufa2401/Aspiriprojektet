@@ -21,7 +21,7 @@ import butterknife.BindViews;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class TestMultipleChoiceActivity extends Fragment {
+public class MultipleChoiceFragment extends Fragment {
 
     @BindView(R.id.question_text)
     TextView question;

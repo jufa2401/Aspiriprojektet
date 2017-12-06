@@ -41,7 +41,7 @@ import com.google.firebase.perf.metrics.Trace;
  * front of the card out and the back of the card in. The reverse animation is played when the user
  * presses the system Back button or the "photo" action bar button.</p>
  */
-public class TestFlipcard extends Activity
+public class FlipcardActivity extends Activity
         implements FragmentManager.OnBackStackChangedListener {
     /**
      * A handler object, used for deferring UI operations.

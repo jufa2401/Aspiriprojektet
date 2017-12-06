@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
-import com.example.s165158.aspiri.games.TestMultipleChoiceActivity;
+import com.example.s165158.aspiri.games.MultipleChoiceFragment;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
@@ -128,7 +128,7 @@ public class ExpandableTextViewExample extends Fragment {
         gamebutton.setOnClickListener(new View.OnClickListener() {
 
 
-            TestMultipleChoiceActivity quiz = new TestMultipleChoiceActivity();
+            MultipleChoiceFragment quiz = new MultipleChoiceFragment();
 
             @Override
             public void onClick(View v) {
