@@ -26,10 +26,9 @@ import katex.hourglass.in.mathlib.MathView;
 public class SubjectFragment extends Fragment {
     public static final String TAG = "SubjectFragment";
     private String[] title, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
-            text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;
+            text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;  // These strings are not set for Arealer nor the default layout, however they could be useful later in other subjects
 
     private int listindex, oldindex;
-    private boolean anyMathviews = true;
     private AppCompatActivity mActivity;
 
 
@@ -38,10 +37,8 @@ public class SubjectFragment extends Fragment {
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
 
-
     //    Alle MathViews
-    @BindViews({
-            R.id.subject_fragment_math_view_1,              //1
+    @BindViews({R.id.subject_fragment_math_view_1,          //1
             R.id.subject_fragment_math_view_2,              //2
             R.id.subject_fragment_math_view_3,              //3
             R.id.subject_fragment_math_view_4               //4
@@ -83,7 +80,6 @@ public class SubjectFragment extends Fragment {
         mActivity = (AppCompatActivity) getActivity();
         Bundle args = getArguments();
 
-
         listindex = args.getInt("listindex");
 //        Når vi skal udvide vores app til at undestøtte strings fra flere forskellige overemner, er vi nødt til at lave en switch case for hvert overemne.
 //        oldindex = args.getInt("oldindex");
@@ -99,8 +95,6 @@ public class SubjectFragment extends Fragment {
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
 
-
-
 //               henter billeder
                 picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
                 picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
@@ -113,7 +107,6 @@ public class SubjectFragment extends Fragment {
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
-            //
 
             case 1:
             case 2:

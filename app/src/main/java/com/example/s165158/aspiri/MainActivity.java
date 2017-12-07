@@ -19,13 +19,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.example.s165158.aspiri.games.FlipcardActivity;
 import com.example.s165158.aspiri.games.MultipleChoiceFragment;
 import com.example.s165158.aspiri.list_view.ListFragment;
-import com.example.s165158.aspiri.test.ExpandableListAdapter;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -34,35 +32,22 @@ import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.example.s165158.aspiri.R.string.invitation_image_link;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
-
     private int oldindex;
-
-    //Fragment manager
     private FragmentManager mFragmentManager;
-
-    //Toolbar
-    private Toolbar toolbar;
-
-    //Drawer
-    private DrawerLayout drawer;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawer;
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-    protected boolean isHomeAsUp = false;
-
-    //For the expandable list
-    private ExpandableListAdapter listAdapter;
-    private ExpandableListView expandableListView;
-    private List<String> listDataHeader;
-    private HashMap<String, List<String>> listDataChild;
 
     //For Firebase
     private static int REQUEST_INVITE = 0;
@@ -77,17 +62,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.main_activity);
         ButterKnife.bind(this);
         // Fanebladet
-        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //Drawer menu
-        drawer = findViewById(R.id.drawer_layout);
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
@@ -106,19 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setDrawerIndicatorEnabled(false);
         mFragmentManager = getFragmentManager();
         replaceFragment(new ListFragment(), ListFragment.TAG);
-
-        // get the listview
-//        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
-
-        // preparing list data
-//        prepareListData();
-
-//        Creating the list adapter from class
-//        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
-
-        // setting list adapter
-//        expandableListView.setAdapter(listAdapter);
-
 
         //For Firebase
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
@@ -210,44 +173,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
 
-            //        Maps Navigation
-//            case R.id.drawer_Kbh:
-//                Intent goToSigurdsGade = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_KBH)));
-//                startActivity(goToSigurdsGade);
-//                Log.d("AspiriApp", "drawer_KBH pressed");
-//                return true;
-//
-//            case R.id.drawer_Aarhus:
-//                Intent goToAarhus = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Aarhus)));
-//                startActivity(goToAarhus);
-//                Log.d("AspiriApp", "drawer_Aarhus pressed");
-//                return true;
-//
-//            case R.id.drawer_Odense:
-//                Intent goToOdense = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_Odense)));
-//                startActivity(goToOdense);
-//                Log.d("AspiriApp", "drawer_Odense pressed");
-//                return true;
-//
-//            case R.id.drawer_HQ:
-//                Intent goToFalonerAlle = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.drawer_URL_HQ)));
-//                startActivity(goToFalonerAlle);
-//                Log.d("AspiriApp", "drawer_HQ pressed");
-//                return true;
-
-
-            //Tests
-//            case R.id.go_to_subject1:
-//                Fragment SubjectFragment = new SubjectFragment();
-//                getFragmentManager()
-//                        .beginTransaction()
-//                        .replace(R.id.fragmentindhold, SubjectFragment)
-//                        .addToBackStack("back to subject_sketch_unused from quiz")
-//                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out)
-//                        .commit();
-//                drawer.closeDrawers();
-//                return true;
-
             case R.id.drawer_share:
 
                 Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
@@ -258,12 +183,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 myTrace.stop();
                 return true;
-
-
-
         }
 
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -286,58 +207,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag);
         fragmentTransaction.commit();
     }
-
     //    TODO: FIX HOME AS UP
-
-
-    private void prepareListData() {
-        listDataHeader = new ArrayList<>();
-        listDataChild = new HashMap<String, List<String>>();
-
-        // Adding child data
-        listDataHeader.add("København");
-        listDataHeader.add("Odense");
-        listDataHeader.add("Aarhus");
-        listDataHeader.add("Testeri");
-
-        // Adding child data
-        List<String> København = new ArrayList<String>();
-        København.add("The Shawshank Redemption");
-        København.add("The Godfather");
-        København.add("The Godfather: Part II");
-        København.add("Pulp Fiction");
-        København.add("The Good, the Bad and the Ugly");
-        København.add("The Dark Knight");
-        København.add("12 Angry Men");
-
-        List<String> Odense = new ArrayList<String>();
-        Odense.add("The Conjuring");
-        Odense.add("Despicable Me 2");
-        Odense.add("Turbo");
-        Odense.add("Grown Ups 2");
-        Odense.add("Red 2");
-        Odense.add("The Wolverine");
-
-        List<String> Aarhus = new ArrayList<String>();
-        Aarhus.add("2 Guns");
-        Aarhus.add("The Smurfs 2");
-        Aarhus.add("The Spectacular Now");
-        Aarhus.add("The Canyons");
-        Aarhus.add("Europa Report");
-
-        List<String> Testeri = new ArrayList<String>();
-        Testeri.add("noget 1");
-        Testeri.add("noget 2");
-        Testeri.add("noget 3");
-        Testeri.add("noget 4");
-
-        // Header, Child data
-        listDataChild.put(listDataHeader.get(0), København);
-        listDataChild.put(listDataHeader.get(1), Odense);
-        listDataChild.put(listDataHeader.get(2), Aarhus);
-        listDataChild.put(listDataHeader.get(3), Testeri);
-    }
-
 
     @Override
     public void onBackPressed() {
@@ -372,7 +242,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-
     //Credit to firebase
     private void onInviteClicked() {
         Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
@@ -383,7 +252,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .build();
         startActivityForResult(intent, REQUEST_INVITE);
     }
-
     //Method implemented from Firebase
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

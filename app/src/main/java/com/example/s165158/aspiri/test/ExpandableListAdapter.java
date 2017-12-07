@@ -6,10 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.example.s165158.aspiri.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -23,6 +25,14 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
+
+
+    //    FROM MAIN ACITIVTY
+    //For the expandable list
+    private ExpandableListAdapter listAdapter;
+    private ExpandableListView expandableListView;
+    private List<String> listDataHeader;
+    private HashMap<String, List<String>> listDataChild;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -108,5 +118,68 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
+    }
+
+    //  From main activity
+    private void prepareListData() {
+        listDataHeader = new ArrayList<>();
+        listDataChild = new HashMap<String, List<String>>();
+
+        // Adding child data
+        listDataHeader.add("København");
+        listDataHeader.add("Odense");
+        listDataHeader.add("Aarhus");
+        listDataHeader.add("Testeri");
+
+        // Adding child data
+        List<String> København = new ArrayList<String>();
+        København.add("The Shawshank Redemption");
+        København.add("The Godfather");
+        København.add("The Godfather: Part II");
+        København.add("Pulp Fiction");
+        København.add("The Good, the Bad and the Ugly");
+        København.add("The Dark Knight");
+        København.add("12 Angry Men");
+
+        List<String> Odense = new ArrayList<String>();
+        Odense.add("The Conjuring");
+        Odense.add("Despicable Me 2");
+        Odense.add("Turbo");
+        Odense.add("Grown Ups 2");
+        Odense.add("Red 2");
+        Odense.add("The Wolverine");
+
+        List<String> Aarhus = new ArrayList<String>();
+        Aarhus.add("2 Guns");
+        Aarhus.add("The Smurfs 2");
+        Aarhus.add("The Spectacular Now");
+        Aarhus.add("The Canyons");
+        Aarhus.add("Europa Report");
+
+        List<String> Testeri = new ArrayList<String>();
+        Testeri.add("noget 1");
+        Testeri.add("noget 2");
+        Testeri.add("noget 3");
+        Testeri.add("noget 4");
+
+        // Header, Child data
+        listDataChild.put(listDataHeader.get(0), København);
+        listDataChild.put(listDataHeader.get(1), Odense);
+        listDataChild.put(listDataHeader.get(2), Aarhus);
+        listDataChild.put(listDataHeader.get(3), Testeri);
+
+
+//        From MainActivity onCreate
+        // get the listview
+//        expandableListView = (ExpandableListView) findViewById(R.id.lvExp);
+
+        // preparing list data
+//        prepareListData();
+
+//        Creating the list adapter from class
+//        listAdapter = new ExpandableListAdapter(getApplicationContext(), listDataHeader, listDataChild);
+
+        // setting list adapter
+//        expandableListView.setAdapter(listAdapter);
     }
 }

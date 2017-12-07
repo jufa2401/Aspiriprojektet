@@ -1,7 +1,6 @@
 package com.example.s165158.aspiri.list_view;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -83,8 +82,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                     mListener.onClick(position);
                 }
 
-
-                FragmentManager manager = ((Activity)context).getFragmentManager();
 //              bundle til at oveføre det indtrykkede index til ExpandableTextViewExample
                 final Bundle bundle = new Bundle();
                 bundle.putInt("listindex",position);

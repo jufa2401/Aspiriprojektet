@@ -16,6 +16,9 @@ import android.widget.TextView;
 import com.example.s165158.aspiri.MainActivity;
 import com.example.s165158.aspiri.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 //import android.widget.ListAdapter;
 
 
@@ -27,10 +30,12 @@ public class ListFragment extends Fragment {
 
     public static final String TAG = "ListFragment";
     private String[] subjectListArray,subtextListArray;
+    @BindView(R.id.listRecyclerView)
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     Activity mActivity;
-    private TextView listtitle;
+    @BindView(R.id.list_title)
+    TextView listtitle;
 
     //Skal laves om!
     Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
@@ -45,9 +50,9 @@ public class ListFragment extends Fragment {
     }
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View rootView = inflater.inflate(R.layout.recycler_list, container, false);
-        recyclerView = rootView.findViewById(R.id.listRecyclerView);
+        ButterKnife.bind(this, rootView);
 
-        listtitle = rootView.findViewById(R.id.list_title);
+//        For telling the user where he is, not necessary on first list
         if (listtitle.getVisibility() == View.VISIBLE) {
             listtitle.setVisibility(View.INVISIBLE);
         }
