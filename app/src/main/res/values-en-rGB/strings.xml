@@ -13,6 +13,10 @@
     <string name="three_dot_settings">Indstillinger</string>
 
     <!--Hamburger menu-->
+    <string name="drawer_subjects">Emner</string>
+    <string name="drawer_firebase">Firebase</string>
+    <string name="drawer_other">Andet</string>
+    <string name="drawer_come_see_us">Besøg os</string>
     <string name="drawer_store">Åbner Butikken</string>
     <string name="drawer_home">Hjem</string>
     <string name="drawer_uy_Course">Køb Kurser</string>
@@ -35,7 +39,11 @@
     <string name="drawer_URL_Odense">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
     <string name="drawer_contact">Kom i kontakt</string>
-
+    <string name="drawer_communicate">REPLACE ME</string>
+    <string name="drawer_getInContact">kom i kontakt</string>
+    <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
+    <string name="drawer_mail_forbedringer">Idéer til forbedringer</string>
+    <string name="drawer_quiz">Quiz</string>
 
     <!--Mail-->
     <string name="mail_subject">Vedrørende Aspiri App Android</string>
@@ -58,43 +66,39 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>ENGLISH 1 Trigonometri</item>
-        <item>ENGLISH 2 Rentes Regning</item>
-        <item>ENGLISH 3 Kvatratsætninger</item>
-        <item>ENGLISH 4 Potensregneregler</item>
-        <item>ENGLISH 5 Polynomier</item>
-        <item>ENGLISH 6 Lineær Eksponentiel og potenssammenænge</item>
-        <item>ENGLISH 7 Statistik</item>
-        <item>ENGLISH 8 Differentialregning</item>
-        <item>ENGLISH 9 Geometri</item>
-        <item>ENGLISH 10 Plangeometri med vektore</item>
-        <item>ENGLISH 11 Rumgeometri med vektore</item>
-        <item>ENGLISH 12 Areal omkreds og rumfang</item>
-        <item>ENGLISH 13 Placeholder</item>
-        <item>ENGLISH 14 Placeholder</item>
-        <item>ENGLISH 15 Placeholder</item>
-        <item>ENGLISH 16 Placeholder</item>
+        <item>Areal, omkreds og rumfang*</item>
+        <item>Rentesregning</item>
+        <item>Kvadratsætningerne</item>
+        <item>Potensregneregler</item>
+        <item>Polynomier</item>
+        <item>Lineær eksponentiel og potenssammenhænge</item>
+        <item>Statistik</item>
+        <item>Differentialregning</item>
+        <item>Integralregning</item>
+        <item>Logaritmer</item>
+        <item>Geometri</item>
+        <item>Plangeometri med vektorer</item>
+        <item>Rumgeometri med vektorer</item>
+
     </string-array>
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
-        <item>1Her lærer du om Sin, Cos og Tan</item>\
-        <item>2Dette afsnit kan bruges til din bank</item>
-        <item>3Placeholder</item>
-        <item>4Placeholder</item>
+        <item>Fremskrivning af indestående</item>\
+        <item>Spar massere af tid, hvis du lærer disse uden ad</item>
+        <item>I hvilken rækkefølge skal man gøre hvad?</item>
+        <item>Toppunkter, nulpunkter og stigning</item>
         <item>5Placeholder</item>
-        <item>6Placeholder</item>
-        <item>7Placeholder</item>
-        <item>8Placeholder</item>
-        <item>9Placeholder</item>
-        <item>10Placeholder</item>
-        <item>11Placeholder</item>
-        <item>12Placeholder</item>
-        <item>13Placeholder</item>
-        <item>14Placeholder</item>
-        <item>15Placeholder</item>
-        <item>16Placeholder</item>
+        <item>Sammenhæng mellem data, NulHypotese</item>
+        <item>f\'(x) er din ven</item>
+        <item>F(x) er også din ven</item>
+        <item>Transformering af udtryk</item>
+        <item>Trekanter, Firkanter og Cirkler</item>
+        <item>Størrelser i plan</item>
+        <item>Størrelser i Rum</item>
+        <item>Andre Arealer</item>
+
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
@@ -130,6 +134,12 @@
     <string name="Kvartratsætninger_problem1_10">Husk at der grundet minustegn for an den ene parantes skiftes fortegn på alle bogstaver og tal i den efterfølgende parantes</string>
     <string name="Kvartratsætninger_problem1_11_formula5"> \\( -(a + 2b) * (a + b) = (-a -2b) * (a + b) = -a^2 - ab - 2b^2 = -a^2 - 3ab - 2b^2 \\)</string>
 
+
+    <!--Geometri-->
+    <string name="Geometri_Paralellogram_1">Et paralellogram er en firkant, hvor alle sider er paralelle med den modstående side, og alle modstående sider har den samme vinkel. \n Hvis alle siderne er lige lange, kaldes det også en rombe</string>
+    <string name="Geometri_Paralellogram_2">Her finder du relevante formler, når du arbejder med parallelogrammer:</string>
+    <string name="Geometri_Trapez_1">Til forskel fra et paralellogram, så er en trapez en firkant hvor blot to af siderne er parallelle.</string>
+    <string name="Geometri_Trapez_2">Her finder du relevante formler, når du arbejder med trapezer:</string>
     <!-- Strings related to Settings -->
 
 
@@ -139,6 +149,239 @@
     <string name="card_back_description">Fadet selvfølgelig</string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
-    <string name="drawer_communicate">REPLACE ME</string>
+    <string name="open_drawer">Opening drawer</string>
+    <string name="close_drawer">Closing drawer</string>
+
+
+    <!--Array til navne i underpunkter for polynomier-->
+    <string-array name="polynomier_list">
+        <item>Generelt</item>
+        <item>Andengradsfunktioner</item>
+    </string-array>
+
+    !--Array til polynomier_list subtext-->
+    <string-array name="polynomier_sublist">
+        <item>om polynomier</item>\
+        <item>spændende_temp</item>
+    </string-array>
+
+    <!--Array til navne i underpunkter for statistik-->
+    <string-array name="statistik_list">
+        <item>Ikke-grupperede observationer</item>
+        <item>Grupperede observationer</item>
+    </string-array>
+
+    !--Array til polynomier_list subtext-->
+    <string-array name="statistik_sublist">
+        <item>de mest almindelige regler indenfor statistik</item>
+        <item>hyppighed, frekvens, kumuleret hyppighed og kumuleret frekvens</item>
+    </string-array>
+
+    !--Array til navne i underpunkter for differentialregning-->
+    <string-array name="diffirentialregning_list">
+        <item>Generelt</item>
+        <item>Differentiering af flere led</item>
+        <item>Førsteordensdifferentialligninger</item>
+    </string-array>
+
+    !--Array til differentialregning_list subtext-->
+    <string-array name="diffirentialregning_sublist">
+        <item>De 10 mest almindelige regler i differentialregning</item>
+        <item>Sammensatte funktioner</item>
+        <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
+    </string-array>
+
+
+    !--Array til navne i underpunkter for integralregning-->
+    <string-array name="integralregning_list">
+        <item>Integration af ét led</item>
+        <item>integration af flere led</item>
+    </string-array>
+
+    !--Array til integralregning_list subtext-->
+    <string-array name="integralregning_sublist">
+        <item>de 8 mest almindelige regler</item>
+        <item>sammensatte funktioner</item>
+    </string-array>
+
+
+    !--Logaritmer har ikke underpunkter til logaritmer-->
+
+
+    !--Array til navne i underpunkter for geometri-->
+    <string-array name="geometri_list">
+        <item>Retvinklede trekanter</item>
+        <item>Vilkårlige trekanter</item>
+        <item>Areal af en vilkårlig trekant</item>
+        <item>Sinus-relation</item>
+        <item>Cosinus-relation</item>
+    </string-array>
+
+    !--Array til geometri_list subtext-->
+    <string-array name="geometri_sublist">
+        <item>retvinklede trekanter</item>
+        <item>oversigt over hvilke muligheder der følger de forskellige trekantstilfælde</item>
+        <item>hvis du kender to sider og en vinkel i en vilkårlig trekant, kan du beregne arealet</item>
+        <item>kan anvendes til at bestemme en side eller en vinkel</item>
+        <item>kan også anvendes til at bestemme side eller vinkel</item>
+    </string-array>
+
+
+    <!-- Geometry in the plane and vectors -->
+
+    <string-array name="PlanGeometri_list">
+        <item>Areal og område</item>
+        <item>Vektorer</item>
+    </string-array>
+
+    <string-array name="PlanGeometri_sublist">
+        <item> </item>
+        <item>vektorer i planen og rummet</item>
+    </string-array>
+
+    <!-- Romgeometri og vektorregning har ingen underpunkter-->
+
+
+    <!-- Strings for areal, omkreds og rumfang -->
+    <string-array name="arealer_omkreds_rumfang_list">
+        <item>Cirkel</item>
+        <item>Trekant</item>
+        <item>Parallelogram</item>
+        <item>Trapez</item>
+        <item>Kegle</item>
+        <item>Kugle</item>
+        <item>Cylinder</item>
+
+    </string-array>
+
+    <string-array name="arealer_sublist">
+        <item>relevante formler, når du arbejder med cirkler</item>
+        <item>relevante formler, når du arbejder med trekanter</item>
+        <item>relevante formler, når du arbejder med parallelogrammer</item>
+        <item>relevante formler, når du arbejder med trapezer</item>
+        <item>relevante formler, når du arbejde med kegler</item>
+        <item>relevante formler, når du arbejde med kugler</item>
+        <item>relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="arealer_introducerende_tekst">
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer:</item>
+        <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
+        <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
+        <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+        <item>En cylinder er ligesom en kegle og en kugle en rumgeometrisk figur, hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+    </string-array>
+
+
+    <string-array name="arealer_text_following_picture_1">
+        <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
+        <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relevante formler, når du arbejder med kegler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+    <string-array name="arealer_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="text_above_picture_3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
+    <string-array name="example_mathView1">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+    <string-array name="example_mathView2">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+    <string-array name="example_mathView3">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+    <string-array name="example_mathView4">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="arealer_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <!--Firebase-->
+    <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri&amp;afl=https://karakterloeft.aspiri.dk/Formelsamling.aspx</string>
+    <string name="invitation_title">Den her app er bare rigtigt god</string>
+    <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
+    <string name="invitation_cta">Installer Mig!</string>
+    <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
+
 
 </resources>
