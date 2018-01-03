@@ -116,7 +116,7 @@
 
 
             <LinearLayout
-                android:id="@+id/game_button"
+                android:id="@+id/game_button2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
@@ -128,14 +128,14 @@
 
 
                 <ImageView
-                    android:id="@+id/game_thumb"
+                    android:id="@+id/game_thumb2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:contentDescription="@string/empty_description" />
 
 
                 <TextView
-                    android:id="@+id/game_text"
+                    android:id="@+id/game_text2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

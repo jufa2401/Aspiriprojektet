@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.test;
+package com.aspiri.karakterloeft.test;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -13,13 +13,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
-import com.example.s165158.aspiri.R;
-import com.example.s165158.aspiri.games.MultipleChoiceFragment;
+import com.aspiri.karakterloeft.MainActivity;
+import com.aspiri.karakterloeft.R;
+import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 import static android.app.FragmentTransaction.TRANSIT_FRAGMENT_OPEN;
-import static com.example.s165158.aspiri.R.id.game_button;
+import static com.aspiri.karakterloeft.R.id.game_button;
 
 //import com.example.s165158.aspiri.test2.DrawerActivity;
 //import com.example.s165158.aspiri.test2.DrawerUtil;

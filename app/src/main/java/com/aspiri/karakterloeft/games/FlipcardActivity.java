@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.s165158.aspiri.games;
+package com.aspiri.karakterloeft.games;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -29,7 +29,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.s165158.aspiri.R;
+import com.aspiri.karakterloeft.R;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
 

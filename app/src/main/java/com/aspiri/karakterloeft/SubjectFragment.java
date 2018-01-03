@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri;
+package com.aspiri.karakterloeft;
 
 import android.app.Fragment;
 import android.os.Bundle;

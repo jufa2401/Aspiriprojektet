@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.test;
+package com.aspiri.karakterloeft.test;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -9,7 +9,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.R;
+import com.aspiri.karakterloeft.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.games;
+package com.aspiri.karakterloeft.games;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
-import com.example.s165158.aspiri.R;
+import com.aspiri.karakterloeft.MainActivity;
+import com.aspiri.karakterloeft.R;
 
 import butterknife.BindView;
 import butterknife.BindViews;

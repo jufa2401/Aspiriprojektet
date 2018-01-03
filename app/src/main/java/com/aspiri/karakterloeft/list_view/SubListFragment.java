@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.list_view;
+package com.aspiri.karakterloeft.list_view;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
-import com.example.s165158.aspiri.R;
+import com.aspiri.karakterloeft.MainActivity;
+import com.aspiri.karakterloeft.R;
 
 //import android.widget.ListAdapter;
 
@@ -172,8 +172,10 @@ public class SubListFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
+        if (mActivity instanceof MainActivity) {
+            ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
 //        ((MainActivity) mActivity).setActionBarTitle(getString(R.string.app_name));
+        }
     }
 }
 

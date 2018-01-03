@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri.list_view;
+package com.aspiri.karakterloeft.list_view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.s165158.aspiri.MainActivity;
-import com.example.s165158.aspiri.R;
-import com.example.s165158.aspiri.SubjectFragment;
+import com.aspiri.karakterloeft.MainActivity;
+import com.aspiri.karakterloeft.R;
+import com.aspiri.karakterloeft.SubjectFragment;
 
 /**
  * Created by s165158 on 08-11-2017.
@@ -33,8 +33,6 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         this.subtextListArray = subtextListArray;
         this.imageArray = imageArray;
         this.context = context;
-
-
     }
 
 
@@ -91,7 +89,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
 //                intent.putExtra("bundle",bundle);
 
 //                              Hvis vi vil have forskellige layouts til forskellige emner, skal koden ligge her!
-                subjectFragment.setArguments(bundle);
+                subjectFragment.setArguments(bundle);       // Overvej hvorvidt det er korrekt at erkl;re subjectFragment og subListFragment final
                 subListFragment.setArguments(bundle);
 
 

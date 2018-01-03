@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:599927135824:android:321cdcfc31cffe05",
         "android_client_info": {
-          "package_name": "com.example.s165158.aspiri"
+          "package_name": "com.aspiri.karakterloeft"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "599927135824-ufadi637bdurcntrccm2dku7fe1tb24o.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.s165158.aspiri",
+            "package_name": "com.aspiri.karakterloeft",
             "certificate_hash": "a3a49f572df0694491530210560fe1157a40cd3b"
           }
         },
@@ -26,7 +26,7 @@
           "client_id": "599927135824-1bg5ilrrrdune93b0ik1ijuk8i6aohae.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.s165158.aspiri",
+            "package_name": "com.aspiri.karakterloeft",
             "certificate_hash": "ab665096a12139fcfee3a1392af532875b1f6ac3"
           }
         },

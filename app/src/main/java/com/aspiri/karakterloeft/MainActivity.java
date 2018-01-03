@@ -1,4 +1,4 @@
-package com.example.s165158.aspiri;
+package com.aspiri.karakterloeft;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -21,9 +21,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.s165158.aspiri.games.FlipcardActivity;
-import com.example.s165158.aspiri.games.MultipleChoiceFragment;
-import com.example.s165158.aspiri.list_view.ListFragment;
+import com.aspiri.karakterloeft.games.FlipcardActivity;
+import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
+import com.aspiri.karakterloeft.list_view.ListFragment;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -35,7 +35,7 @@ import com.google.firebase.perf.metrics.Trace;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.example.s165158.aspiri.R.string.invitation_image_link;
+import static com.aspiri.karakterloeft.R.string.invitation_image_link;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
