@@ -19,8 +19,10 @@ package com.aspiri.karakterloeft.games;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,8 +32,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.aspiri.karakterloeft.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
+import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+
+import static com.aspiri.karakterloeft.SubjectFragment.TAG;
 
 /**
  * Demonstrates a "card-flip" animation using custom fragment transactions ({@link
@@ -83,6 +91,34 @@ public class FlipcardActivity extends Activity
         getFragmentManager().addOnBackStackChangedListener(this);
 
         myTrace.stop();
+
+        //Firebase Deeplinks
+        FirebaseDynamicLinks.getInstance()
+                .getDynamicLink(getIntent())
+                .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
+                    @Override
+                    public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
+                        // Get deep link from result (may be null if no link is found)
+                        Uri deepLink = null;
+                        if (pendingDynamicLinkData != null) {
+                            deepLink = pendingDynamicLinkData.getLink();
+                        }
+
+
+                        // Handle the deep link. For example, open the linked
+                        // content, or apply promotional credit to the user's
+                        // account.
+                        // ...
+
+                        // ...
+                    }
+                })
+                .addOnFailureListener(this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("AspiriApp", "getDynamicLink:onFailure", e);
+                    }
+                });
     }
 
     @Override

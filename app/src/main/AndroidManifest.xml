@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aspiri.karakterloeft">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/aspiri"
@@ -9,6 +10,7 @@
         android:roundIcon="@mipmap/aspiri"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
 
         <!-- Main -->
         <activity android:name=".MainActivity">
@@ -20,9 +22,16 @@
                 android:value="MainActivity" />
 
             <intent-filter>
+                <!-- Usermade -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- Firebase -->
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="yoursite.example.com" android:scheme="http"/>
+                <data android:host="yoursite.example.com" android:scheme="https"/>
             </intent-filter>
         </activity>
 
@@ -30,6 +39,7 @@
         <activity android:name=".games.FlipcardActivity">
         </activity>
 
-    </application>
 
+
+    </application>
 </manifest>
