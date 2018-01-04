@@ -109,23 +109,50 @@ public class SubjectFragment extends Fragment {
                 break;
 
             case 1:
+                // Title and intro
+                title = getResources().getStringArray(R.array.RentesRegning_title);
+                intro = getResources().getStringArray(R.array.RentesRegning_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.RentesRegning_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.RentesRegning_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.RentesRegning_above_picture_3);
+
+                // Actual Pictures
+                picture_1 = new int[]{0,0,0,0,0,0};
+                picture_2 = new int[]{0,0,0,0,0,0};
+                picture_3 = new int[]{0,0,0,0,0,0};
+
+                // Assigning Pictures and texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                        null, null, null, null);
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
 
             case 2:
+                // Title and intro
                 title = getResources().getStringArray(R.array.kvadratætningerne_title);
                 intro = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
+
+                // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.kvadratsætningerne_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.kvadratsætningerne_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.kvadratsætningerne_above_picture_3);
 
+                // Actual Pictures
                 picture_1 = new int[]{0,0,0};
                 picture_2 = new int[]{0,0,0};
                 picture_3 = new int[]{0,0,0};
 
+                // Assigning Pictures and texts
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        null, null, null, null
-                );
+                        null, null, null, null);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
 

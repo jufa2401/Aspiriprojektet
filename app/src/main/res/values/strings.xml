@@ -396,7 +396,8 @@
     </string-array>
 
     <string-array name="kvadratsætningerne_introTekst">
-        <item>(a+b)^2</item>
+        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
+        <item>test</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
     </string-array>
@@ -441,6 +442,147 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
+    </string-array>
+
+
+    <!--Potensregneregler-->
+    <string-array name="potensregneregler_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="v_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="potensregneregler_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+
+
+    <!--Rentesregning-->
+    <string-array name="RentesRegning_title">
+        <item>Slubeløet S</item>
+        <item>Renten R</item>
+        <item>Antel Terminer, n</item>
+        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Kapital efter n terminer</item>
+        <item>Procent (rente) i kort (r) og lang periode (R)</item>
+
+    </string-array>
+
+    <string-array name="RentesRegning_introTekst">
+        <item>Formel 1</item>
+        <item>Formel 2</item>
+        <item>Formel 3</item>
+        <item>Formel 4</item>
+        <item>Formel 5</item>
+        <item>Formel 6</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="RentesRegning_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview1">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview2">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview3">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview4">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
     </string-array>
 
 

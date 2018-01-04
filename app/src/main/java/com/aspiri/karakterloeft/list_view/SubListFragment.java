@@ -68,16 +68,13 @@ public class SubListFragment extends Fragment {
             case 0:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
-                };
+                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle};
                 break;
 
 //                Rentesregning
             case 1:
-                subjectListArray = getResources().getStringArray(R.array.diffirentialregning_list);
-                subtextListArray = getResources().getStringArray(R.array.diffirentialregning_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
-                };
+                subjectListArray = getResources().getStringArray(R.array.RentesRegning_title);
+                subtextListArray = getResources().getStringArray(R.array.RentesRegning_introTekst);
                 break;
 
 //                Kvadratsaetninger
