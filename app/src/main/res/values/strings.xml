@@ -73,7 +73,7 @@
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
         <item>Polynomier</item>
-        <item>Lineær eksponentiel og potenssammenhænge</item>
+        <item>Lineær, eksponentiel og potenssammenhænge</item>
         <item>Statistik</item>
         <item>Differentialregning</item>
         <item>Integralregning</item>
@@ -87,11 +87,12 @@
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
+        <item>Andre Arealer</item>
         <item>Fremskrivning af indestående</item>\
         <item>Spar massere af tid, hvis du lærer disse uden ad</item>
         <item>I hvilken rækkefølge skal man gøre hvad?</item>
         <item>Toppunkter, nulpunkter og stigning</item>
-        <item>5Placeholder</item>
+        <item>Vækst og sammenhænge</item>
         <item>Sammenhæng mellem data, NulHypotese</item>
         <item>f\'(x) er din ven</item>
         <item>F(x) er også din ven</item>
@@ -99,7 +100,6 @@
         <item>Trekanter, Firkanter og Cirkler</item>
         <item>Størrelser i plan</item>
         <item>Størrelser i Rum</item>
-        <item>Andre Arealer</item>
 
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>

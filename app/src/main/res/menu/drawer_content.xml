@@ -10,7 +10,8 @@
     </group>
 
     <group android:checkableBehavior="single">
-        <item android:title="@string/drawer_subjects">
+        <item android:title="@string/drawer_subjects"
+            android:icon="@drawable/drawer_gallery">
 
             <!--Bør alle være "collapsible"-->
 
@@ -43,6 +44,11 @@
                     android:id="@+id/drawer_send_us_mail"
                     android:icon="@drawable/drawer_send"
                     android:title="@string/drawer_contact" />
+                <item
+                    android:id="@+id/drawer_kontakt_test"
+                    android:icon="@drawable/drawer_send"
+                    android:title="Test FB kontakt">
+                </item>
             </menu>
         </item>
     </group>

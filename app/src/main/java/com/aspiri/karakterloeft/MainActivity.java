@@ -3,6 +3,7 @@ package com.aspiri.karakterloeft;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.ContentUris;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -108,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         }
 
                        //TODO Handle the code
-                        showMessage("Test");
 
                     }
                 })
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             case R.id.drawer_send_us_mail:
-                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@man_at_blackboad_round.dk", null));
+                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
                 sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
                 sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
                 startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
@@ -200,6 +200,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 replaceFragment(fragment, "he");
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
+
+
+            // Tester FB bot til KL, laver seperat knap til test.
+            // Senere skal denne (hvis fungerende) benyttes et andet sted.
+            case R.id.drawer_kontakt_test:
+                String uri = "fb://messaging/1137012216344735";
+                Intent contactFacebookBot = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(contactFacebookBot);
+             Log.d("AspiriApp", "Facebook_konakt_pressed");
+             return true;
+
 
             case R.id.drawer_share:
 
