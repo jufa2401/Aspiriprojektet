@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         }
 
                        //TODO Handle the code
+                        showMessage("Test");
 
                     }
                 })

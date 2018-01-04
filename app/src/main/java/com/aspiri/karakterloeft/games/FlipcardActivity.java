@@ -30,7 +30,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.aspiri.karakterloeft.MainActivity;
 import com.aspiri.karakterloeft.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -104,13 +106,8 @@ public class FlipcardActivity extends Activity
                             deepLink = pendingDynamicLinkData.getLink();
                         }
 
+                      showMessage("test2");
 
-                        // Handle the deep link. For example, open the linked
-                        // content, or apply promotional credit to the user's
-                        // account.
-                        // ...
-
-                        // ...
                     }
                 })
                 .addOnFailureListener(this, new OnFailureListener() {
@@ -236,5 +233,10 @@ public class FlipcardActivity extends Activity
                                  Bundle savedInstanceState) {
             return inflater.inflate(R.layout.fragment_card_back, container, false);
         }
+    }
+
+    public void showMessage(String messageForToast) {
+        Log.d(TAG, "showMessage Methodwas called");
+        Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
 }
