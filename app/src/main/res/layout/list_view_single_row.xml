@@ -13,9 +13,13 @@
     <ImageView
         android:id="@+id/listImageView"
         android:clickable="false"
-        android:layout_width="wrap_content"
+        android:layout_width="48dp"
         android:layout_height="48dp"
-        app:srcCompat="@drawable/trig" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/titlelist_triangle" />
 
     <!--Title and subtitle-->
     <LinearLayout

@@ -88,7 +88,7 @@ public class SubjectFragment extends Fragment {
         switch (oldindex) {
             case 0:
 //                Henter  af Strings
-                title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
 //                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
@@ -111,6 +111,9 @@ public class SubjectFragment extends Fragment {
             case 1:
             case 2:
             case 3:
+                    title = getResources().getStringArray(R.array.kvadratætningerne_title);
+                    intro = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
+
             case 4:
             case 5:
             case 6:
@@ -126,7 +129,7 @@ public class SubjectFragment extends Fragment {
                 mathView2 = getResources().getStringArray(R.array.example_mathView2);
                 mathView3 = getResources().getStringArray(R.array.example_mathView3);
                 mathView4 = getResources().getStringArray(R.array.example_mathView4);
-                title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
 //                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);

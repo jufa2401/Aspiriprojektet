@@ -35,7 +35,7 @@ public class SubListFragment extends Fragment {
     private TextView listtitle_TextView;
 
     //Skal laves om!
-    Integer[] imageArray = {R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+    Integer[] imageArray = {R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
     };
 
     @Override
@@ -64,90 +64,115 @@ public class SubListFragment extends Fragment {
 
 
         switch (listindex) {
+//                 areal omkreds og rumfang
             case 0:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Rentesregning
             case 1:
                 subjectListArray = getResources().getStringArray(R.array.diffirentialregning_list);
                 subtextListArray = getResources().getStringArray(R.array.diffirentialregning_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
-
                 break;
+
+//                Kvadratsaetninger
             case 2:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
+                break;
 
-                break;
+//                Potensregneregler
             case 3:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Polynomier
             case 4:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Linærer og eksponentiel og potenssammenhænge
             case 5:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Statistik
             case 6:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Differentialregning
             case 7:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                subjectListArray = getResources().getStringArray(R.array.diffirentialregning_list);
+                subtextListArray = getResources().getStringArray(R.array.diffirentialregning_sublist);
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Intergralregning
             case 8:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Logaritmer
             case 9:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Geometri
             case 10:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Vektore i Plan
             case 11:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                Vektore i Rum
             case 12:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
+
+//                ????
             case 13:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig, R.drawable.trig
+                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
             case 14:
