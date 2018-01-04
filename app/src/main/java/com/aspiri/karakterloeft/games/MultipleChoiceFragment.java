@@ -3,6 +3,7 @@ package com.aspiri.karakterloeft.games;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -31,35 +32,35 @@ public class MultipleChoiceFragment extends Fragment {
     ImageView optionThumbs[];
     @BindViews({R.id.option1_button, R.id.option2_button, R.id.option3_button, R.id.option4_button})
     LinearLayout optionButtons[];
-    private String trueanswer;
+    private String trueanswer = "4";
 
     @OnClick(R.id.option1_button)
     void onOption1Click() {
-
+        answerPressed(0);
     }
 
     @OnClick(R.id.option2_button)
     void onOption2Click() {
-
+        answerPressed(1);
     }
 
     @OnClick(R.id.option3_button)
     void onOption3Click() {
-
+        answerPressed(2);
     }
 
     @OnClick(R.id.option4_button)
     void onClickOption4() {
-
+        answerPressed(3);
     }
 
     AppCompatActivity mActivity;
 
     LinearLayout answerbutton1,answerbutton2,answerbutton3,answerbutton4;
 
-    String[] answertxt = {"4", "4", "4", "4"};
+    String[] answertxt = {"4", "12", "16", "24"};
     String questiontxt = "Hvad er kvadratroden af 16";
-    boolean solution;
+
 
     @Override
     public void onAttach(Context context) {
@@ -95,12 +96,13 @@ public class MultipleChoiceFragment extends Fragment {
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
     }
 
-    private void answerPressed(boolean value, int optionindex) {
-        if (answertxt[optionindex] == trueanswer)
+    private void answerPressed(int optionindex) {
+        if (answertxt[optionindex].equals(trueanswer)) {
+            optionButtons[optionindex].setBackgroundColor(Color.GREEN);
+        } else {
+            optionButtons[optionindex].setBackgroundColor(Color.RED);
+        }
 
-            if (value == false) {
-
-            }
     }
 }
 
