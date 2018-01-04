@@ -12,6 +12,8 @@
     <string name="three_dot_exit">Afslut</string>
     <string name="three_dot_settings">Indstillinger</string>
 
+
+
     <!--Hamburger menu-->
     <string name="drawer_subjects">Emner</string>
     <string name="drawer_firebase">Firebase</string>
@@ -71,7 +73,7 @@
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
         <item>Polynomier</item>
-        <item>Lineær eksponentiel og potenssammenhænge</item>
+        <item>Lineær, eksponentiel og potenssammenhænge</item>
         <item>Statistik</item>
         <item>Differentialregning</item>
         <item>Integralregning</item>
@@ -85,11 +87,12 @@
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
+        <item>Andre Arealer</item>
         <item>Fremskrivning af indestående</item>\
         <item>Spar massere af tid, hvis du lærer disse uden ad</item>
         <item>I hvilken rækkefølge skal man gøre hvad?</item>
         <item>Toppunkter, nulpunkter og stigning</item>
-        <item>5Placeholder</item>
+        <item>Vækst og sammenhænge</item>
         <item>Sammenhæng mellem data, NulHypotese</item>
         <item>f\'(x) er din ven</item>
         <item>F(x) er også din ven</item>
@@ -97,7 +100,6 @@
         <item>Trekanter, Firkanter og Cirkler</item>
         <item>Størrelser i plan</item>
         <item>Størrelser i Rum</item>
-        <item>Andre Arealer</item>
 
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
@@ -243,7 +245,7 @@
 
 
     <!-- Strings for areal, omkreds og rumfang -->
-    <string-array name="arealer_omkreds_rumfang_list">
+    <string-array name="arealer_omkreds_rumfang_title">
         <item>Cirkel</item>
         <item>Trekant</item>
         <item>Parallelogram</item>
@@ -284,6 +286,7 @@
         <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
         <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
     </string-array>
+
     <string-array name="arealer_text_following_picture_2">
         <item>0</item>
         <item>0</item>
@@ -293,6 +296,7 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
     <string-array name="text_above_picture_3">
         <item>0</item>
         <item>0</item>
@@ -302,6 +306,7 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
     <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
     <string-array name="example_mathView1">
         <item>$x=\frac{1+y}{1+2z^2}$</item>
@@ -312,6 +317,7 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
+
     <string-array name="example_mathView2">
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
@@ -321,6 +327,7 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
+
     <string-array name="example_mathView3">
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
@@ -330,6 +337,7 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
+
     <string-array name="example_mathView4">
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
@@ -339,6 +347,7 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
+
     <string-array name="arealer_text_above_mathview1">
         <item>0</item>
         <item>0</item>
@@ -348,6 +357,7 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
     <string-array name="arealer_text_above_mathview2">
         <item>0</item>
         <item>0</item>
@@ -357,6 +367,7 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
     <string-array name="arealer_text_above_mathview3">
         <item>0</item>
         <item>0</item>
@@ -366,6 +377,7 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
     <string-array name="arealer_text_above_mathview4">
         <item>0</item>
         <item>0</item>
@@ -375,6 +387,62 @@
         <item>0</item>
         <item>0</item>
     </string-array>
+
+    <!--Kvadratsætninger-->
+    <string-array name="kvadratætningerne_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
 
     <!--Firebase-->
     <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri&amp;afl=https://karakterloeft.aspiri.dk/Formelsamling.aspx</string>

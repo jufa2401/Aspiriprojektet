@@ -401,6 +401,47 @@
         <item>(a+b) * (a-b)</item>
     </string-array>
 
+    <string-array name="kvadratsætningerne_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
 
 
     <!--Firebase-->

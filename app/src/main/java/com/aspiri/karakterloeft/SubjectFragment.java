@@ -109,20 +109,56 @@ public class SubjectFragment extends Fragment {
                 break;
 
             case 1:
+                break;
+
             case 2:
+                title = getResources().getStringArray(R.array.kvadratætningerne_title);
+                intro = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
+                text_following_picture_1 = getResources().getStringArray(R.array.kvadratsætningerne_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.kvadratsætningerne_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.kvadratsætningerne_above_picture_3);
+
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
+                        null, null, null, null
+                );
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+                break;
+
             case 3:
-                    title = getResources().getStringArray(R.array.kvadratætningerne_title);
-                    intro = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
+                break;
 
             case 4:
+                break;
+
             case 5:
+                break;
+
             case 6:
+                break;
+
             case 7:
+                break;
+
             case 8:
+                break;
+
             case 9:
+                break;
+
             case 10:
+                break;
+
             case 11:
+                break;
+
             case 12:
+                break;
+
             default:
                 //              Henter MathView Strings bruges ikke i Arealer (case 0)
                 mathView1 = getResources().getStringArray(R.array.example_mathView1);
@@ -141,10 +177,6 @@ public class SubjectFragment extends Fragment {
 
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
                         null, null, null, null);
-
-
-                //                No need to set pictures as int array by default are initialized to 0
-                //                setPictures(0, 0, 0);
                 break;
         }
         return view;
@@ -228,12 +260,14 @@ public class SubjectFragment extends Fragment {
     }
 
     private void setPictures(int picture1, int picture2, int picture3) {
-        if (picture1 != 0)
+        if (picture1 != 0) {
             subject_pictures[0].setImageDrawable(getResources().getDrawable(picture1));
-        subject_pictures[0].setVisibility(View.VISIBLE);
-        if (picture2 != 0)
+            subject_pictures[0].setVisibility(View.VISIBLE);
+        }
+        if (picture2 != 0) {
             subject_pictures[1].setImageDrawable(getResources().getDrawable(picture2));
-        subject_pictures[1].setVisibility(View.VISIBLE);
+            subject_pictures[1].setVisibility(View.VISIBLE);
+        }
         if (picture3 != 0) {
             subject_pictures[2].setImageDrawable(getResources().getDrawable(picture3));
             subject_pictures[2].setVisibility(View.VISIBLE);

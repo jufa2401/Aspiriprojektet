@@ -82,8 +82,8 @@ public class SubListFragment extends Fragment {
 
 //                Kvadratsaetninger
             case 2:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                subjectListArray = getResources().getStringArray(R.array.kvadratætningerne_title);
+                subtextListArray = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
                 imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
                 };
                 break;
