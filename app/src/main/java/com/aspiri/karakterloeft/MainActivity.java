@@ -31,6 +31,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.appinvite.FirebaseAppInvite;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.google.firebase.perf.FirebasePerformance;
@@ -53,10 +54,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @BindView(R.id.nav_view)
     NavigationView navigationView;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-
     //For Firebase
-    private static int REQUEST_INVITE = 0;
     private static String TAG = MainActivity.class.getSimpleName();
+    private static int REQUEST_INVITE = 0;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     //On createmetode
@@ -101,15 +101,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .getDynamicLink(getIntent())
                 .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
                     @Override
-                    public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
+                    public void onSuccess(PendingDynamicLinkData data) {
                         // Get deep link from result (may be null if no link is found)
-                        Uri deepLink = null;
-                        if (pendingDynamicLinkData != null) {
-                            deepLink = pendingDynamicLinkData.getLink();
+/**                        Uri deepLink = null;
+                        if (data != null) {
+                            deepLink = Data.getLink();
+**/
+                        if(data == null){
+                            Log.d("Inv data","getInvitation: no data");
+                            return;
+                    }
+                    // Get the deep link
+                    Uri deepLink = data.getLink();
+
+                        //Extract invite
+                        FirebaseAppInvite invite = FirebaseAppInvite.getInvitation(data);
+                        if(invite != null){
+                            String invitationId = invite.getInvitationId();
                         }
 
-                       //TODO Handle the code
+                        // Handle the deep link
+                        // [Start exclude???]
+                        Log.d("link ","deepLink: " + deepLink);
+                        if (deepLink != null){
+                            Intent intent = new Intent(Intent.ACTION_VIEW);
+                            intent.setPackage(getPackageName());
+                            intent.setData(deepLink);
 
+                            startActivity(intent);
+                        }
                     }
                 })
                 .addOnFailureListener(this, new OnFailureListener() {
@@ -295,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d(TAG, "onActivityResult: requestCode=" + requestCode + ", resultCode=" + resultCode);
+        Log.d(TAG, "onActivityResult: requestCode= " + requestCode + ", resultCode= " + resultCode);
 
         if (requestCode == REQUEST_INVITE) {
             if (resultCode == RESULT_OK) {
@@ -305,7 +325,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Log.d(TAG, "onActivityResult: sent invitation " + id);
                 }
             } else {
-                showMessage("Something Went Wrong");
+                showMessage("Error, no invitation sent");
             }
         }
     }
@@ -313,7 +333,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.d(TAG, "On Connection failed" + connectionResult);
-        showMessage("Something went wrong");
+        showMessage("Error OnconnectionFailed");
     }
 
     public void showMessage(String messageForToast) {
