@@ -68,7 +68,7 @@ public class SubListFragment extends Fragment {
             case 0:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_percent256, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle};
+                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle};
                 break;
 
 //                Rentesregning
@@ -81,7 +81,9 @@ public class SubListFragment extends Fragment {
                         R.drawable.subject_rente_time256,
                         R.drawable.subject_rente_singlemoney256,
                         R.drawable.subject_rente_piggie256,
-                        R.drawable.subject_rente_squiggily256};
+                        R.drawable.subject_rente_squiggily256
+
+                };
                 break;
 
 //                Kvadratsaetninger
@@ -158,24 +160,37 @@ public class SubListFragment extends Fragment {
 
 //                Vektorer i Plan
             case 11:
-                subjectListArray = getResources().getStringArray(R.array.VektorGeometri_list_title);
-                subtextListArray = getResources().getStringArray(R.array.VektorGeometri_sublist);
-
-                break;
-
-//                Vektorer i Rum
-            case 12:
-                subjectListArray = getResources().getStringArray(R.array.VektorGeometri_list_title);
-                subtextListArray = getResources().getStringArray(R.array.VektorGeometri_sublist);
-
-                break;
-
-//                ????
-            case 13:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
+                subjectListArray = getResources().getStringArray(R.array.RumGeometri_list_title);
+                subtextListArray = getResources().getStringArray(R.array.RumGeometri_sublist);
+                imageArray = new Integer[]{
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle
                 };
+                break;
+
+//
+            case 12:
+
+
+                break;
+
+//
+            case 13:
+
                 break;
             case 14:
                 break;

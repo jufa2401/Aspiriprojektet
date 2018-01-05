@@ -109,13 +109,7 @@
     <string name="ReviewProblems_Title">Opgaveeksempel:</string>
     <string name="mathModeXMLTest1">When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \\pm \\sqrt{b^2 - 4ac} \\over 2a}.$$</string>
 
-    <!--Geometri-->
-    <string name="Geometri_Paralellogram_1">Et paralellogram er en firkant, hvor alle sider er paralelle med den modstående side, og alle modstående sider har den samme vinkel. \n Hvis alle siderne er lige lange, kaldes det også en rombe</string>
-    <string name="Geometri_Paralellogram_2">Her finder du relevante formler, når du arbejder med parallelogrammer:</string>
-    <string name="Geometri_Trapez_1">Til forskel fra et paralellogram, så er en trapez en firkant hvor blot to af siderne er parallelle.</string>
-    <string name="Geometri_Trapez_2">Her finder du relevante formler, når du arbejder med trapezer:</string>
     <!-- Strings related to Settings -->
-
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
     <string name="description_image_1">Lasagne</string>
@@ -125,6 +119,243 @@
     <string name="action_photo">View photo</string>
     <string name="open_drawer">Opening drawer</string>
     <string name="close_drawer">Closing drawer</string>
+
+    <!--Her begynder emnelisten-->
+    <!--Arealer-->
+
+    <!--Rentesregning-->
+    <string-array name="RentesRegning_list_title">
+        <item>Slubeløet S</item>
+        <item>Renten R</item>
+        <item>Antel Terminer, n</item>
+        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Kapital efter n terminer</item>
+        <item>Procent (rente) i kort (r) og lang periode (R)</item>
+
+    </string-array>
+
+    <string-array name="RentesRegning_list_introTekst">
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
+    </string-array>
+
+    <string-array name="RentesRegning_title">
+        <item>Slubeløet S</item>
+        <item>Renten R</item>
+        <item>Antel Terminer, n</item>
+        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
+        <item>Kapital efter n terminer</item>
+        <item>Procent (rente) i kort (r) og lang periode (R)</item>
+
+    </string-array>
+
+    <string-array name="RentesRegning_introTekst">
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="RentesRegning_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview1">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview2">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview3">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_text_above_mathview4">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+    </string-array>
+
+    <string-array name="RentesRegning_mathview1">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{3+x}{30+40z^99}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+
+    <string-array name="RentesRegning_mathview2">
+        <item>$2+2=4-1=3$</item>
+        <item>$x=\frac{3+x}{30+40z^99}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+
+    <!--Kvadratsætninger-->
+
+    <string-array name="kvadratætningerne_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_introTekst">
+        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
+        <item>test</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="kvadratsætningerne_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <!--Potensregneregler-->
+    <string-array name="potensregneregler_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="v_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="potensregneregler_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="potensregneregler_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+
 
 
     <!--Array til navne i underpunkter for polynomier-->
@@ -138,6 +369,7 @@
         <item>om polynomier</item>\
         <item>spændende_temp</item>
     </string-array>
+    <!--Polynomier og potenser-->
 
     <!--Array til navne i underpunkter for statistik-->
     <string-array name="statistik_list">
@@ -200,19 +432,121 @@
         <item>kan også anvendes til at bestemme side eller vinkel</item>
     </string-array>
 
+    <!--Statistik-->
+    <!--Differentiale regning-->
+    <!--Inegraleregning-->
+    <!--Logaritmer-->
+
+    <!--Geometri-->
+    <string name="Geometri_Paralellogram_1">Et paralellogram er en firkant, hvor alle sider er paralelle med den modstående side, og alle modstående sider har den samme vinkel. \n Hvis alle siderne er lige lange, kaldes det også en rombe</string>
+    <string name="Geometri_Paralellogram_2">Her finder du relevante formler, når du arbejder med parallelogrammer:</string>
+    <string name="Geometri_Trapez_1">Til forskel fra et paralellogram, så er en trapez en firkant hvor blot to af siderne er parallelle.</string>
+    <string name="Geometri_Trapez_2">Her finder du relevante formler, når du arbejder med trapezer:</string>
+
+    <!----><!---->
 
     <!-- Geometry in the plane and vectors -->
-    <string-array name="PlanGeometri_list">
-        <item>Areal og område</item>
+    <string-array name="RumGeometri_list_title">
         <item>Vektorer</item>
+        <item>Areal, Vinkler og afstande</item>
+    </string-array>
+    <string-array name="RumGeometri_list">
+        <item>Vektorer</item>
+        <item>Areal, Vinkler og afstande</item>
     </string-array>
 
-    <string-array name="PlanGeometri_sublist">
-        <item> </item>
+    <string-array name="RumGeometri_sublist">
+        <item>vektorer i planen og rummet</item>
         <item>vektorer i planen og rummet</item>
     </string-array>
+    <string-array name="RumGeometri_introducerende_tekst">
+        <item>Her finder du de relavante formler, når du arbejder med Vektorer</item>
+        <item>Her finder du de relavante formler, når du arbejder med Areal,Vinkler og Afstand i rum og plan</item>
 
-    <!-- Romgeometri og vektorregning har ingen underpunkter-->
+    </string-array>
+
+
+    <string-array name="RumGeometri_text_following_picture_1">
+        <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
+        <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
+
+    </string-array>
+
+    <string-array name="RumGeometri_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="RumGeometri_text_above_picture_3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+
+    <string-array name="RumGeometri_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="RumGeometri_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="RumGeometri_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="RumGeometri_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+        <string-array name="RumGeometri_mathView1">
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+        </string-array>
+        <string-array name="RumGeometri_mathView2">
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+        </string-array>
+        <string-array name="RumGeometri_mathView3">
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+        </string-array>
+        <string-array name="RumGeometri_mathView4">
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+            <item>$x=\frac{1+y}{1+2z^2}$</item>
+        </string-array>
+
+
+
+    <!-- Rumgeometri og vektorregning har ingen underpunkter-->
 
 
     <!-- Strings for areal, omkreds og rumfang -->
@@ -359,238 +693,13 @@
         <item>0</item>
     </string-array>
 
-    <string-array name="kvadratætningerne_title">
-        <item>Første kvadratsætning</item>
-        <item>Anden kvadratsætning </item>
-        <item>Tredje kvadratsætning</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_introTekst">
-        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
-        <item>test</item>
-        <item>(a-b)^2</item>
-        <item>(a+b) * (a-b)</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_following_picture_1">
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 12</item>
-        <item>Tekst efter billede 13</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_following_picture_2">
-        <item>Tekst efter billede21</item>
-        <item>Tekst efter billede22</item>
-        <item>Tekst efter billede23</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_above_picture_3">
-        <item>Tekst efter billede31</item>
-        <item>Tekst efter billede32</item>
-        <item>Tekst efter billede33</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview1">
-        <item>Tekst over MV 11</item>
-        <item>Tekst over MV 12</item>
-        <item>Tekst over MV 13</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-
-    <!--Potensregneregler-->
-    <string-array name="potensregneregler_title">
-        <item>Første kvadratsætning</item>
-        <item>Anden kvadratsætning </item>
-        <item>Tredje kvadratsætning</item>
-    </string-array>
-
-    <string-array name="v_introTekst">
-        <item>(a+b)^2</item>
-        <item>(a-b)^2</item>
-        <item>(a+b) * (a-b)</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_following_picture_1">
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 12</item>
-        <item>Tekst efter billede 13</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_following_picture_2">
-        <item>Tekst efter billede21</item>
-        <item>Tekst efter billede22</item>
-        <item>Tekst efter billede23</item>
-    </string-array>
-
-    <string-array name="potensregneregler_above_picture_3">
-        <item>Tekst efter billede31</item>
-        <item>Tekst efter billede32</item>
-        <item>Tekst efter billede33</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview1">
-        <item>Tekst over MV 11</item>
-        <item>Tekst over MV 12</item>
-        <item>Tekst over MV 13</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
 
 
 
-    <!--Rentesregning-->
-    <string-array name="RentesRegning_list_title">
-        <item>Slubeløet S</item>
-        <item>Renten R</item>
-        <item>Antel Terminer, n</item>
-        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
-        <item>Kapital efter n terminer</item>
-        <item>Procent (rente) i kort (r) og lang periode (R)</item>
 
-    </string-array>
 
-    <string-array name="RentesRegning_list_introTekst">
-        <item>S=K_0*(1+r)</item>
-        <item>r=S/K_0-1</item>
-        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
-        <item>K_0 = K_n / (1+r)^n</item>
-        <item>K_n = K_0 *(1+r)^n</item>
-        <item>1 + R = (1+r)^n </item>
-    </string-array>
 
-    <string-array name="RentesRegning_title">
-        <item>Slubeløet S</item>
-        <item>Renten R</item>
-        <item>Antel Terminer, n</item>
-        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
-        <item>Kapital efter n terminer</item>
-        <item>Procent (rente) i kort (r) og lang periode (R)</item>
 
-    </string-array>
-
-    <string-array name="RentesRegning_introTekst">
-        <item>S=K_0*(1+r)</item>
-        <item>r=S/K_0-1</item>
-        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
-        <item>K_0 = K_n / (1+r)^n</item>
-        <item>K_n = K_0 *(1+r)^n</item>
-        <item>1 + R = (1+r)^n </item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_following_picture_1">
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 12</item>
-        <item>Tekst efter billede 13</item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_following_picture_2">
-        <item>Tekst efter billede21</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede22</item>
-        <item>Tekst efter billede23</item>
-    </string-array>
-
-    <string-array name="RentesRegning_above_picture_3">
-        <item>Tekst efter billede31</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede32</item>
-        <item>Tekst efter billede33</item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_above_mathview1">
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_above_mathview2">
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_above_mathview3">
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-    </string-array>
-
-    <string-array name="RentesRegning_text_above_mathview4">
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-    </string-array>
-
-    <string-array name="RentesRegning_mathview1">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{3+x}{30+40z^99}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
-
-    <string-array name="RentesRegning_mathview2">
-        <item>$2+2=4-1=3$</item>
-        <item>$x=\frac{3+x}{30+40z^99}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
 
     <!--Firebase-->
     <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri[&amp;amv=23][&amp;afl=https://Google.com]</string>
