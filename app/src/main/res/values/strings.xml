@@ -66,7 +66,7 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Areal, omkreds og rumfang*</item>
+        <item>Areal, omkreds og rumfang</item>
         <item>Rentesregning</item>
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
@@ -484,31 +484,31 @@
     </string-array>
 
     <string-array name="RentesRegning_list_introTekst">
-        <item>Formel 1</item>
-        <item>Formel 2</item>
-        <item>Formel 3</item>
-        <item>Formel 4</item>
-        <item>Formel 5</item>
-        <item>Formel 6</item>
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
     </string-array>
 
     <string-array name="RentesRegning_title">
         <item>Slubeløet S</item>
         <item>Renten R</item>
         <item>Antel Terminer, n</item>
-        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
         <item>Kapital efter n terminer</item>
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
 
     </string-array>
 
     <string-array name="RentesRegning_introTekst">
-        <item>Formel 1</item>
-        <item>Formel 2</item>
-        <item>Formel 3</item>
-        <item>Formel 4</item>
-        <item>Formel 5</item>
-        <item>Formel 6</item>
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
     </string-array>
 
     <string-array name="RentesRegning_text_following_picture_1">

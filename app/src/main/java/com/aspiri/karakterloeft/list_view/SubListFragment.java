@@ -68,13 +68,20 @@ public class SubListFragment extends Fragment {
             case 0:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle};
+                imageArray = new Integer[]{R.drawable.titlelist_circle512, R.drawable.titlelist_percent256, R.drawable.titlelist_triangle256, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle};
                 break;
 
 //                Rentesregning
             case 1:
                 subjectListArray = getResources().getStringArray(R.array.RentesRegning_title);
                 subtextListArray = getResources().getStringArray(R.array.RentesRegning_introTekst);
+                imageArray = new Integer[]{
+                        R.drawable.subject_rente_money256,
+                        R.drawable.subject_rente_percent256,
+                        R.drawable.subject_rente_time256,
+                        R.drawable.subject_rente_singlemoney256,
+                        R.drawable.subject_rente_piggie256,
+                        R.drawable.subject_rente_squiggily256};
                 break;
 
 //                Kvadratsaetninger
