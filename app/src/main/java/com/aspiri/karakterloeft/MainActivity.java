@@ -5,6 +5,8 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.ContentUris;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -225,11 +227,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // Tester FB bot til KL, laver seperat knap til test.
             // Senere skal denne (hvis fungerende) benyttes et andet sted.
             case R.id.drawer_kontakt_test:
-                String uri = "fb://messaging/1137012216344735";
-                Intent contactFacebookBot = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(contactFacebookBot);
-             Log.d("AspiriApp", "Facebook_konakt_pressed");
-             return true;
+
+                try {
+                    ApplicationInfo info = getPackageManager().
+                            getApplicationInfo("com.facebook.katana", 0);
+                    String uri = "fb://messaging/1137012216344735";
+                    Intent contactFacebookBot = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                    startActivity(contactFacebookBot);
+                    return true;
+                } catch (PackageManager.NameNotFoundException e) {
+                    showMessage("Facebook ikke installeret");
+                    return true;
+                }
+
 
 
             case R.id.drawer_share:
