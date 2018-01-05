@@ -52,10 +52,8 @@ public class ListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.recycler_list, container, false);
         ButterKnife.bind(this, rootView);
 
-//        For telling the user where he is, not necessary on first list
-        if (listtitle.getVisibility() == View.VISIBLE) {
-            listtitle.setVisibility(View.INVISIBLE);
-        }
+        //Title list is not relevant here, but needed for the view
+        listtitle.setHeight(0);
 
         subjectListArray = getResources().getStringArray(R.array.subject_list);
         subtextListArray = getResources().getStringArray(R.array.subtext_list);
