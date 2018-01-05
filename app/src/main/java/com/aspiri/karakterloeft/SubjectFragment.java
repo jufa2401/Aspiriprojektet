@@ -34,6 +34,8 @@ public class SubjectFragment extends Fragment {
 
     private int[] picture_1, picture_2, picture_3;
 
+
+    // TODO VI, VI, VI, VI, VI, VI Bruger butterknife. Det ser smart ud.
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
     // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
 
@@ -48,7 +50,6 @@ public class SubjectFragment extends Fragment {
     //    Alle TextViews forinden eksempler
     @BindViews({
             R.id.subject_fragment_title,
-//            R.id.subject_fragment_subject,
             R.id.subject_fragment_intro,
             R.id.subject_fragment_text_following_picture_1,
             R.id.subject_fragment_text_following_picture_2,
@@ -85,6 +86,7 @@ public class SubjectFragment extends Fragment {
 //        oldindex = args.getInt("oldindex");
         oldindex = ((MainActivity) mActivity).getOldindex();
 // Her skal der være en switch case for hvert eneste "super" overemne.
+
         switch (oldindex) {
 //Areal og rumfang
             case 0:
@@ -94,7 +96,7 @@ public class SubjectFragment extends Fragment {
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
-                text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
+                text_above_picture_3 = getResources().getStringArray(R.array.example_text_above_picture_3);
 
 //               henter billeder
                 picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
@@ -106,12 +108,12 @@ public class SubjectFragment extends Fragment {
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
+
 // Rentesregning
             case 1:
                 // Title and intro
                 title = getResources().getStringArray(R.array.RentesRegning_title);
                 intro = getResources().getStringArray(R.array.RentesRegning_introTekst);
-
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.RentesRegning_text_following_picture_1);
@@ -135,7 +137,6 @@ public class SubjectFragment extends Fragment {
                 text_above_mathview_3 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview3);
                 text_above_mathview_4 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview4);
 
-
                 // Setting Texts
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
@@ -145,8 +146,6 @@ public class SubjectFragment extends Fragment {
 
                 //Setting Mathviews
                 setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
-
-                //Setting Text Above Mathviews
 
                 // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
@@ -163,18 +162,38 @@ public class SubjectFragment extends Fragment {
                 text_following_picture_2 = getResources().getStringArray(R.array.kvadratsætningerne_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.kvadratsætningerne_above_picture_3);
 
-                // Actual Pictures
+                // Pictures
                 picture_1 = new int[]{0,0,0};
                 picture_2 = new int[]{0,0,0};
                 picture_3 = new int[]{0,0,0};
 
-                // Assigning Pictures and texts
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.kvadratsætningerne_mathView1);
+                mathView2 = getResources().getStringArray(R.array.kvadratsætningerne_mathView2);
+                mathView3 = getResources().getStringArray(R.array.kvadratsætningerne_mathView3);
+                mathView4 = getResources().getStringArray(R.array.kvadratsætningerne_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview4);
+
+
+                // Setting Texts
                 setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
 
                 // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
+
 //Potensregneregler
             case 3:
                 break;
@@ -182,7 +201,8 @@ public class SubjectFragment extends Fragment {
 //Polynomier
             case 4:
                 break;
-//Line;r, eksponentiel og potenssammenh;nge
+
+//Lineær, eksponentiel og potenssammenhænge
 
             case 5:
                 break;
