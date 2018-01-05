@@ -690,6 +690,8 @@
     <string name="kontakt_via_facebook">Kontakt via Facebook</string>
     <string name="question_1_sandsynlighed">Hvad er sandsynligheden for at slå to seksere, når der kastes med to terninger?</string>
     <string name="card_questionmark_the_questionmark">\?</string>
+    <string name="drawer_header_nav_picture">top af draver header navigation</string>
+    <string name="icon_list_view">emne icon på listview</string>
 
 
 </resources>

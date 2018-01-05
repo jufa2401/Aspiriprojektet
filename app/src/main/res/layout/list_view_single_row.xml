@@ -12,6 +12,7 @@
     <!--Listen indeholder som følgende-->
     <ImageView
         android:id="@+id/listImageView"
+        android:contentDescription="@string/icon_list_view"
         android:clickable="false"
         android:layout_width="48dp"
         android:layout_height="48dp"
