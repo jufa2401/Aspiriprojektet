@@ -209,7 +209,12 @@
 
     <string-array name="PlanGeometri_sublist">
         <item> </item>
-        <item>vektorer i planen og rummet</item>
+        <item>Relevante formler når du arbejder med vektorer i planen og rummet</item>
+    </string-array>
+    <string-array name="PlanGeometri_og_Vektorregning_title">
+        <item>Skæring i rummet</item>
+        <item>Vinkler i rummet</item>
+        <item>Afstande i rummet</item>
     </string-array>
 
     <!-- Romgeometri og vektorregning har ingen underpunkter-->
@@ -232,8 +237,8 @@
         <item>relevante formler, når du arbejder med trekanter</item>
         <item>relevante formler, når du arbejder med parallelogrammer</item>
         <item>relevante formler, når du arbejder med trapezer</item>
-        <item>relevante formler, når du arbejde med kegler</item>
-        <item>relevante formler, når du arbejde med kugler</item>
+        <item>relevante formler, når du arbejder med kegler</item>
+        <item>relevante formler, når du arbejder med kugler</item>
         <item>relevante formler, når du arbejder med cylindere</item>
     </string-array>
 
