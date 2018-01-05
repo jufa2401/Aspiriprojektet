@@ -13,7 +13,6 @@
     <string name="three_dot_settings">Indstillinger</string>
 
 
-
     <!--Hamburger menu-->
     <string name="drawer_subjects">Emner</string>
     <string name="drawer_firebase">Firebase</string>
@@ -58,7 +57,6 @@
     <string name="title_activity_subject1">subject1</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_subject2">Subject2</string>
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="subject_picture_description">Andengradsligninger</string>
     <string name="sample_subject">Andengradsligning</string>
@@ -81,8 +79,8 @@
         <item>Geometri</item>
         <item>Plangeometri med vektorer</item>
         <item>Rumgeometri med vektorer</item>
-
     </string-array>
+
 
 
     <!--Array til navne i underoverskrifter-->
@@ -104,38 +102,12 @@
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
-
-    <!--Fag-->
     <!--General-->
     <string name="Title_Teori">Teori:</string>
     <string name="Title_ReviewProblems">Opgaver:</string>
     <string name="Title_Solutions">Løsningner:</string>
     <string name="ReviewProblems_Title">Opgaveeksempel:</string>
-
     <string name="mathModeXMLTest1">When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \\pm \\sqrt{b^2 - 4ac} \\over 2a}.$$</string>
-
-
-    <!--Kvadratsætninger-->
-    <string name="Kvartratsætninger_intro">Kvadratsætningerne bliver brugt til at omskrive ligninger så de kan anvendes til faktorisering. De bruges normalt ikke til decideret udregning, men kun til at omskrive ligninger, derfor er det også vigtigt, at kende dem så man kan gennemskue, hvornår de skal bruges. De tre kendte kvadratsætninger får du her:</string>
-    <string name="Kvartratsætninger_sum_1">I nogle sammenhænge kan man få brug for at kunne udregne en formel eller omskrive en ligning, som indeholder kvadratet på en sum.</string>
-    <string name="Kvartratsætninger_sum_2">I Amerika bruger man ofte "FOIL" metoden, som står for "First Outer Inner Last". Dette er rækkefølgen med hvilken man skal gange leddene i paranteser sammen. Se blot her:</string>
-    <string name="Kvartratsætninger_difference_Title">Kvadratet På En Differens</string>
-    <string name="Kvartratsætninger_difference_1">I andre tilfælde kan man have brug for at udregne en formel, eller omskrive en ligning, som indeholder kvadratet på en differens.</string>
-    <string name="Kvartratsætninger_difference_2">Differensen udregnes på samme måde som en sum, man trækker blot leddene fra hinandne. Det ser ud som følger:</string>
-    <string name="Kvartratsætninger_difference_3_formula">\\( (a - 2b)^2 = (a - 2b) * (a - 2b) = a^2 + a * b \\)</string>
-    <string name="Kvartratsætninger_problem1_1">Du kan komme ud for at to regler bliver sat sammen i én opgave, som vanskeliggører løsningen</string>
-    <string name="Kvartratsætninger_problem1_2">Reducer udtrykket:</string>
-    <string name="Kvartratsætninger_problem1_2_formula1_pt1">\\((a + 2b)^2 \\)</string>
-    <string name="Kvartratsætninger_problem1_3_formula1_pt2">\\( - (a + 2b) * (a + b)\\)</string>
-    <string name="Kvartratsætninger_problem1_4">Sætning 1 og 3 kan bruges på hver sit led</string>
-    <string name="Kvartratsætninger_problem1_5">Sådan løses den første del af udtrykket:</string>
-    <string name="Kvartratsætninger_problem1_6_formula2">\\((a + 2b)^2\\) </string>
-    <string name="Kvartratsætninger_problem1_7_formula3"> \\( (a + 2b)^2 = (a + 2b) * (a + 2b) = a^2 + 4ab + 4b^2 \\)</string>
-    <string name="Kvartratsætninger_problem1_8">Sådan løses den anden del af udtrykket: </string>
-    <string name="Kvartratsætninger_problem1_9_formula4">\\(-(a + 2b) * (a + b) \\)</string>
-    <string name="Kvartratsætninger_problem1_10">Husk at der grundet minustegn for an den ene parantes skiftes fortegn på alle bogstaver og tal i den efterfølgende parantes</string>
-    <string name="Kvartratsætninger_problem1_11_formula5"> \\( -(a + 2b) * (a + b) = (-a -2b) * (a + b) = -a^2 - ab - 2b^2 = -a^2 - 3ab - 2b^2 \\)</string>
-
 
     <!--Geometri-->
     <string name="Geometri_Paralellogram_1">Et paralellogram er en firkant, hvor alle sider er paralelle med den modstående side, og alle modstående sider har den samme vinkel. \n Hvis alle siderne er lige lange, kaldes det også en rombe</string>
@@ -230,7 +202,6 @@
 
 
     <!-- Geometry in the plane and vectors -->
-
     <string-array name="PlanGeometri_list">
         <item>Areal og område</item>
         <item>Vektorer</item>
@@ -388,7 +359,6 @@
         <item>0</item>
     </string-array>
 
-    <!--Kvadratsætninger-->
     <string-array name="kvadratætningerne_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
@@ -503,6 +473,25 @@
 
 
     <!--Rentesregning-->
+    <string-array name="RentesRegning_list_title">
+        <item>Slubeløet S</item>
+        <item>Renten R</item>
+        <item>Antel Terminer, n</item>
+        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Kapital efter n terminer</item>
+        <item>Procent (rente) i kort (r) og lang periode (R)</item>
+
+    </string-array>
+
+    <string-array name="RentesRegning_list_introTekst">
+        <item>Formel 1</item>
+        <item>Formel 2</item>
+        <item>Formel 3</item>
+        <item>Formel 4</item>
+        <item>Formel 5</item>
+        <item>Formel 6</item>
+    </string-array>
+
     <string-array name="RentesRegning_title">
         <item>Slubeløet S</item>
         <item>Renten R</item>
@@ -585,9 +574,26 @@
         <item>Tekst over MV</item>
     </string-array>
 
+    <string-array name="RentesRegning_mathview1">
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{3+x}{30+40z^99}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
+
+    <string-array name="RentesRegning_mathview2">
+        <item>$2+2=4-1=3$</item>
+        <item>$x=\frac{3+x}{30+40z^99}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+        <item>$x=\frac{1+y}{1+2z^2}$</item>
+    </string-array>
 
     <!--Firebase-->
-    <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri&amp;afl=https://karakterloeft.aspiri.dk/Formelsamling.aspx</string>
+    <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri[&amp;amv=23][&amp;afl=https://Google.com]</string>
     <string name="invitation_title">Den her app er bare rigtigt god</string>
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
     <string name="invitation_cta">Installer Mig!</string>

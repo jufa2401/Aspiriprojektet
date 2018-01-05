@@ -86,6 +86,7 @@ public class SubjectFragment extends Fragment {
         oldindex = ((MainActivity) mActivity).getOldindex();
 // Her skal der være en switch case for hvert eneste "super" overemne.
         switch (oldindex) {
+//Areal og rumfang
             case 0:
 //                Henter  af Strings
                 title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
@@ -101,17 +102,16 @@ public class SubjectFragment extends Fragment {
                 picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
 
 //               Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        null, null, null, null
-                );
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
-
+// Rentesregning
             case 1:
                 // Title and intro
                 title = getResources().getStringArray(R.array.RentesRegning_title);
                 intro = getResources().getStringArray(R.array.RentesRegning_introTekst);
+
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.RentesRegning_text_following_picture_1);
@@ -123,15 +123,36 @@ public class SubjectFragment extends Fragment {
                 picture_2 = new int[]{0,0,0,0,0,0};
                 picture_3 = new int[]{0,0,0,0,0,0};
 
-                // Assigning Pictures and texts
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        null, null, null, null);
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.RentesRegning_mathview1);
+                mathView2 = getResources().getStringArray(R.array.RentesRegning_mathview1);
+                mathView3 = getResources().getStringArray(R.array.RentesRegning_mathview1);
+                mathView4 = getResources().getStringArray(R.array.RentesRegning_mathview1);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.RentesRegning_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                //Setting Text Above Mathviews
 
                 // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
 
+//Kvadratsætningerne
             case 2:
                 // Title and intro
                 title = getResources().getStringArray(R.array.kvadratætningerne_title);
@@ -148,41 +169,49 @@ public class SubjectFragment extends Fragment {
                 picture_3 = new int[]{0,0,0};
 
                 // Assigning Pictures and texts
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        null, null, null, null);
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
 
                 // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
-
+//Potensregneregler
             case 3:
                 break;
 
+//Polynomier
             case 4:
                 break;
+//Line;r, eksponentiel og potenssammenh;nge
 
             case 5:
                 break;
 
+//Statistkik
             case 6:
                 break;
 
+//Differentialregning
             case 7:
                 break;
 
+//Integralregning
             case 8:
                 break;
 
+//Logaritmer
             case 9:
                 break;
 
+//Geometri
             case 10:
                 break;
 
+// Plangeometri med Vektorer
             case 11:
                 break;
 
+//Rumgeometri med vektorer
             case 12:
                 break;
 
@@ -202,8 +231,9 @@ public class SubjectFragment extends Fragment {
 
                 setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
 
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex],
-                        null, null, null, null);
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex],text_above_mathview_2[listindex],text_above_mathview_3[listindex],text_above_mathview_4[listindex]);
+
                 break;
         }
         return view;
@@ -211,7 +241,7 @@ public class SubjectFragment extends Fragment {
 
 
     //  Enkapslerende metoder
-    private void setTexts(String title, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3, String text_above_mathview_1, String text_above_mathview_2, String text_above_mathview_3, String text_above_mathview_4) {
+    private void setTexts(String title, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3) {
         if (title != null) {
             if (!title.equals("0"))     //Man kan ikke lave .equals på et null objekt, så der tjekkes først om objektet er null
                 textsViews[0].setText(title);
@@ -239,9 +269,13 @@ public class SubjectFragment extends Fragment {
             textsViews[4].setVisibility(View.VISIBLE);
 
         }
+    }
+
+    //Setting the text above Mathviews
+    private void setTextAboveMathviews(String text_above_mathview1, String text_above_mathview_2,  String text_above_mathview_3, String text_above_mathview_4) {
         if (text_above_mathview_1 != null) {
             if (!text_above_mathview_1.equals("0"))
-                textsViews[5].setText(text_above_mathview_1);
+                textsViews[5].setText(text_above_mathview1);
             textsViews[5].setVisibility(View.VISIBLE);
         }
         if (text_above_mathview_2 != null) {
@@ -259,7 +293,6 @@ public class SubjectFragment extends Fragment {
                 textsViews[8].setText(text_above_mathview_4);
             textsViews[8].setVisibility(View.VISIBLE);
         }
-
     }
 
     //    not used for case 0

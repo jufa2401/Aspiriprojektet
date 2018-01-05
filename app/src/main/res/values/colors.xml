@@ -13,7 +13,7 @@
     <color name="item_text_color">#050505</color>
 
     <!--Solid colors-->
-    <color name="red">#ff0000</color>
+    <color name="red">#ff0000</color>f
     <color name="blue">#0000ff</color>
     <color name="arrow_color">@android:color/white</color>
 </resources>
