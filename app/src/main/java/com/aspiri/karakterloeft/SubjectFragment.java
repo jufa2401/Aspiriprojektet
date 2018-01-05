@@ -209,10 +209,67 @@ public class SubjectFragment extends Fragment {
 
 // Plangeometri med Vektorer
             case 11:
+                title = getResources().getStringArray(R.array.VektorGeometri_list);
+                intro = getResources().getStringArray(R.array.VektorGeometri_sublist);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.VektorGeometri_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.VektorGeometri_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.VektorGeometri_above_picture_3);
+
+                // Actual Pictures
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.VektorGeometri_mathview1);
+                mathView2 = getResources().getStringArray(R.array.VektorGeometri_mathview2);
+                mathView3 = getResources().getStringArray(R.array.VektorGeometri_mathview1);
+                mathView4 = getResources().getStringArray(R.array.VektorGeometri_mathview2);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview4);
+                // Assigning Pictures and texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Rumgeometri med vektorer
-            case 12:
+            case 12: // Title and intro
+                title = getResources().getStringArray(R.array.VektorGeometri_list);
+                intro = getResources().getStringArray(R.array.VektorGeometri_sublist);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.VektorGeometri_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.VektorGeometri_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.VektorGeometri_above_picture_3);
+
+                // Actual Pictures
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.VektorGeometri_mathview1);
+                mathView2 = getResources().getStringArray(R.array.VektorGeometri_mathview2);
+                mathView3 = getResources().getStringArray(R.array.VektorGeometri_mathview1);
+                mathView4 = getResources().getStringArray(R.array.VektorGeometri_mathview2);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.VektorGeometri_text_above_mathview4);
+                // Assigning Pictures and texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
                 break;
 
             default:

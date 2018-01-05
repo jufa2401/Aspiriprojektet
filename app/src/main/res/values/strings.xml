@@ -192,6 +192,8 @@
     </string-array>
 
     !--Array til geometri_list subtext-->
+
+
     <string-array name="geometri_sublist">
         <item>retvinklede trekanter</item>
         <item>oversigt over hvilke muligheder der følger de forskellige trekantstilfælde</item>
@@ -202,22 +204,76 @@
 
 
     <!-- Geometry in the plane and vectors -->
-    <string-array name="PlanGeometri_list">
-        <item>Areal og område</item>
-        <item>Vektorer</item>
+    <string-array name="VektorGeometri_list_title">
+        <item>Rumgeometri og vektorregning</item>
+        <item>Plangeometri og vektorregning</item>
     </string-array>
 
-    <string-array name="PlanGeometri_sublist">
-        <item> </item>
+    <string-array name="VektorGeometri_list">
+        <item>Rumgeometri og vektorregning</item>
+        <item>Plangeometri og vektorregning</item>
+    </string-array>
+
+    <string-array name="VektorGeometri_sublist">
+        <item>Relevante formler når du arbejder med arealer i planen og rummet</item>
         <item>Relevante formler når du arbejder med vektorer i planen og rummet</item>
     </string-array>
-    <string-array name="PlanGeometri_og_Vektorregning_title">
-        <item>Skæring i rummet</item>
-        <item>Vinkler i rummet</item>
-        <item>Afstande i rummet</item>
+    <string-array name="VektorGeometri_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 11</item>
+
     </string-array>
 
-    <!-- Romgeometri og vektorregning har ingen underpunkter-->
+    <string-array name="VektorGeometri_text_following_picture_2">
+        <item>Tekst efter billede 21</item>
+        <item>Tekst efter billede 11</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_above_picture_3">
+        <item>Tekst efter billede 31</item>
+        <item>Tekst efter billede 11</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_text_above_mathview1">
+        <item>Tekst over KV</item>
+        <item>Tekst over KV</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_text_above_mathview2">
+        <item>Tekst over LV</item>
+        <item>Tekst over LV</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_text_above_mathview3">
+        <item>Tekst over MV</item>
+        <item>Tekst over MV</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_text_above_mathview4">
+        <item>Tekst over NV</item>
+        <item>Tekst over NV</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_mathview1">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="VektorGeometri_mathview2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+
+    <!-- Rumgeometri og vektorregning har ingen underpunkter-->
 
 
     <!-- Strings for areal, omkreds og rumfang -->
@@ -498,10 +554,10 @@
     </string-array>
 
     <string-array name="RentesRegning_title">
-        <item>Slubeløet S</item>
+        <item>Slutbeløet S</item>
         <item>Renten R</item>
-        <item>Antel Terminer, n</item>
-        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Antal Terminer, n</item>
+        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
         <item>Kapital efter n terminer</item>
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
 

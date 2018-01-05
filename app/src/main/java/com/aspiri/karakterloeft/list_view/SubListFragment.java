@@ -149,20 +149,18 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Vektore i Plan
+//                Vektorer i Plan
             case 11:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
-                };
+                subjectListArray = getResources().getStringArray(R.array.VektorGeometri_list_title);
+                subtextListArray = getResources().getStringArray(R.array.VektorGeometri_sublist);
+
                 break;
 
-//                Vektore i Rum
+//                Vektorer i Rum
             case 12:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
-                };
+                subjectListArray = getResources().getStringArray(R.array.VektorGeometri_list_title);
+                subtextListArray = getResources().getStringArray(R.array.VektorGeometri_sublist);
+
                 break;
 
 //                ????
