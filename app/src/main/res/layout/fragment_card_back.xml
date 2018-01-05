@@ -21,23 +21,29 @@
     android:orientation="vertical"
     android:background="#24C6AE"
     android:padding="16dp"
-    android:gravity="bottom">
+    android:gravity="center">
 
-    <TextView android:id="@android:id/text1"
+    <TextView
+        android:id="@android:id/text1"
         style="?android:textAppearanceLarge"
-        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/card_back_title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#fff"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/card_back_title" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-    <TextView style="?android:textAppearanceSmall"
-        android:textAllCaps="true"
-        android:textColor="#80ffffff"
-        android:textStyle="bold"
-        android:lineSpacingMultiplier="1.2"
+    <TextView
+        style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/card_back_description" />
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/card_back_description"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#80ffffff"
+        android:textStyle="bold" />
 
 </LinearLayout>

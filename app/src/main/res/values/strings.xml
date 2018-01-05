@@ -112,9 +112,9 @@
     <!-- Strings related to Settings -->
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
-    <string name="description_image_1">Lasagne</string>
-    <string name="card_back_title">Hvad er best ved lasagne?</string>
-    <string name="card_back_description">Fadet selvfølgelig</string>
+    <string name="description_image_1">Questionmark</string>
+    <string name="card_back_title">Sandsynligheden er 1/36</string>
+    <string name="card_back_description">Begrundelsen til ovenstående svar, er som følger. \nDer er 1/6 sandsynlighed for at slå én sekser, 1/6 * 1/6 = 1/36</string>
     <string name="action_info">Photo info</string>
     <string name="action_photo">View photo</string>
     <string name="open_drawer">Opening drawer</string>
@@ -688,6 +688,8 @@
     <string name="invitation_cta">Installer Mig!</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
     <string name="kontakt_via_facebook">Kontakt via Facebook</string>
+    <string name="question_1_sandsynlighed">Hvad er sandsynligheden for at slå to seksere, når der kastes med to terninger?</string>
+    <string name="card_questionmark_the_questionmark">\?</string>
 
 
 </resources>
