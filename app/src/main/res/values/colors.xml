@@ -16,5 +16,8 @@
     <color name="red">#ff0000</color>f
     <color name="blue">#0000ff</color>
     <color name="arrow_color">@android:color/white</color>
+
+    <!--Gul baggrund til teksten-->
+    <color name="background_Yellow">#FFEBD4</color>
 </resources>
 

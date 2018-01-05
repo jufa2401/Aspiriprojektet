@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background_Yellow">
 
     <TextView
         android:id="@+id/list_title"
@@ -24,7 +25,8 @@
         android:layout_height="match_parent"
         android:background="@color/md_grey_50"
         android:clipToPadding="false"
-        tools:context=".fragments.ListFragment">
+        tools:context=".fragments.ListFragment"
+        android:backgroundTint="@color/background_Yellow">
 
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>
