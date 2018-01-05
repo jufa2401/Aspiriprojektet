@@ -30,6 +30,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.MainActivity;
@@ -56,7 +57,7 @@ public class FlipcardActivity extends Activity
     /**
      * A handler object, used for deferring UI operations.
      */
-    public ImageView clickfrag;
+    public LinearLayout clickfrag;
 
     private Handler mHandler = new Handler();
 
@@ -106,7 +107,7 @@ public class FlipcardActivity extends Activity
                             deepLink = pendingDynamicLinkData.getLink();
                         }
 
-                      showMessage("test2");
+                    //  showMessage("test2");
 
                     }
                 })
@@ -123,8 +124,8 @@ public class FlipcardActivity extends Activity
 
         int action = MotionEventCompat.getActionMasked(event);
         switch (action){
-            case (MotionEvent.ACTION_DOWN) :
-                Log.d("Aspiri app","Action was DOWN");
+            case(MotionEvent.ACTION_DOWN):
+                Log.d("Flipcard", "ACTION_DOWN");
                 flipCard();
                 return true;
 //            case (MotionEvent.ACTION_MOVE) :
@@ -236,7 +237,7 @@ public class FlipcardActivity extends Activity
     }
 
     public void showMessage(String messageForToast) {
-        Log.d(TAG, "showMessage Methodwas called");
+        Log.d(TAG, "showMessage Method was called");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
 }
