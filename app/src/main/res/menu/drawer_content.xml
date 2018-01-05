@@ -47,7 +47,7 @@
                 <item
                     android:id="@+id/drawer_kontakt_test"
                     android:icon="@drawable/drawer_send"
-                    android:title="Test FB kontakt">
+                    android:title="@string/kontakt_via_facebook">
                 </item>
             </menu>
         </item>

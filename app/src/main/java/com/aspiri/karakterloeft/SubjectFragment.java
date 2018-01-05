@@ -48,7 +48,6 @@ public class SubjectFragment extends Fragment {
     //    Alle TextViews forinden eksempler
     @BindViews({
             R.id.subject_fragment_title,
-//            R.id.subject_fragment_subject,
             R.id.subject_fragment_intro,
             R.id.subject_fragment_text_following_picture_1,
             R.id.subject_fragment_text_following_picture_2,
@@ -85,28 +84,31 @@ public class SubjectFragment extends Fragment {
 //        oldindex = args.getInt("oldindex");
         oldindex = ((MainActivity) mActivity).getOldindex();
 // Her skal der være en switch case for hvert eneste "super" overemne.
+
+
         switch (oldindex) {
-//Areal og rumfang
             case 0:
-//                Henter  af Strings
+
+                // Henter  af Strings
                 title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-//                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
                 intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
                 text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
                 text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
                 text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
 
-//               henter billeder
+                //henter billeder
                 picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
                 picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
                 picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
 
-//               Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                //Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
+                setTitleAndIntro(title[listindex], intro[listindex]);
+                setTextsFollowingPictures(text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
                 break;
-// Rentesregning
+
+            // Rentesregning
             case 1:
                 // Title and intro
                 title = getResources().getStringArray(R.array.RentesRegning_title);
@@ -137,7 +139,8 @@ public class SubjectFragment extends Fragment {
 
 
                 // Setting Texts
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTitleAndIntro(title[listindex], intro[listindex]);
+                setTextsFollowingPictures(text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
 
                 // Setting Pictures
@@ -145,8 +148,6 @@ public class SubjectFragment extends Fragment {
 
                 //Setting Mathviews
                 setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
-
-                //Setting Text Above Mathviews
 
                 // Log calls
                 Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
@@ -169,7 +170,8 @@ public class SubjectFragment extends Fragment {
                 picture_3 = new int[]{0,0,0};
 
                 // Assigning Pictures and texts
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTitleAndIntro(title[listindex], intro[listindex]);
+                setTextsFollowingPictures(text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
                 setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
 
                 // Log calls
@@ -286,10 +288,11 @@ public class SubjectFragment extends Fragment {
                 text_above_picture_3 = getResources().getStringArray(R.array.text_above_picture_3);
 
 
-                setMathViews(mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
-
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
-                setTextAboveMathviews(text_above_mathview_1[listindex],text_above_mathview_2[listindex],text_above_mathview_3[listindex],text_above_mathview_4[listindex]);
+                //Set everything
+                setTitleAndIntro            (title[listindex], intro[listindex]);
+                setMathViews                (mathView1[listindex], mathView2[listindex], mathView3[listindex], mathView4[listindex]);
+                setTextsFollowingPictures   (text_following_picture_1[listindex],text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews       (text_above_mathview_1[listindex],text_above_mathview_2[listindex],text_above_mathview_3[listindex],text_above_mathview_4[listindex]);
 
                 break;
         }
@@ -298,7 +301,7 @@ public class SubjectFragment extends Fragment {
 
 
     //  Enkapslerende metoder
-    private void setTexts(String title, String intro, String text_following_picture_1, String text_following_picture_2, String text_above_picture_3) {
+    private void setTitleAndIntro(String title, String intro) {
         if (title != null) {
             if (!title.equals("0"))     //Man kan ikke lave .equals på et null objekt, så der tjekkes først om objektet er null
                 textsViews[0].setText(title);
@@ -309,6 +312,9 @@ public class SubjectFragment extends Fragment {
                 textsViews[1].setText(intro);
             textsViews[1].setVisibility(View.VISIBLE);
         }
+    }
+
+    private void setTextsFollowingPictures(String text_following_picture_1, String text_following_picture_2, String text_above_picture_3) {
         if (text_following_picture_1 != null) {
             if (!text_following_picture_1.equals("0"))
                 textsViews[2].setText(text_following_picture_1);
@@ -318,13 +324,11 @@ public class SubjectFragment extends Fragment {
             if (!text_following_picture_2.equals("0"))
                 textsViews[3].setText(text_following_picture_2);
             textsViews[3].setVisibility(View.VISIBLE);
-
         }
         if (text_above_picture_3 != null) {
             if (!text_above_picture_3.equals("0"))
                 textsViews[4].setText(text_above_picture_3);
             textsViews[4].setVisibility(View.VISIBLE);
-
         }
     }
 
@@ -352,7 +356,7 @@ public class SubjectFragment extends Fragment {
         }
     }
 
-    //    not used for case 0
+    //Set MathViews
     private void setMathViews(String mathView1, String mathView2, String mathView3, String mathView4) {
         if (mathView1 != null) {
             if (!mathView1.equals("0"))
@@ -376,6 +380,7 @@ public class SubjectFragment extends Fragment {
         }
     }
 
+    //Set Pictures
     private void setPictures(int picture1, int picture2, int picture3) {
         if (picture1 != 0) {
             subject_pictures[0].setImageDrawable(getResources().getDrawable(picture1));

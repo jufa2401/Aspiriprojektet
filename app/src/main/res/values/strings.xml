@@ -39,7 +39,7 @@
     <string name="drawer_URL_Aarhus">https://www.google.dk/maps/place/VIA+University+College+-+Campus+Aarhus+C/@56.1560488,10.1880261,17z/data=!3m1!4b1!4m5!3m4!1s0x464c3fec300c1d71:0x357ff97e45c9d66a!8m2!3d56.1560488!4d10.1902148</string>
     <string name="drawer_URL_Odense">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_contact">Kom i kontakt</string>
+    <string name="drawer_contact">Kontakt via mail</string>
     <string name="drawer_communicate">REPLACE ME</string>
     <string name="drawer_getInContact">kom i kontakt</string>
     <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
@@ -66,7 +66,7 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Areal, omkreds og rumfang*</item>
+        <item>Areal, omkreds og rumfang</item>
         <item>Rentesregning</item>
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
@@ -192,8 +192,6 @@
     </string-array>
 
     !--Array til geometri_list subtext-->
-
-
     <string-array name="geometri_sublist">
         <item>retvinklede trekanter</item>
         <item>oversigt over hvilke muligheder der følger de forskellige trekantstilfælde</item>
@@ -204,76 +202,17 @@
 
 
     <!-- Geometry in the plane and vectors -->
-    <string-array name="VektorGeometri_list_title">
-        <item>Rumgeometri og vektorregning</item>
-        <item>Plangeometri og vektorregning</item>
+    <string-array name="PlanGeometri_list">
+        <item>Areal og område</item>
+        <item>Vektorer</item>
     </string-array>
 
-    <string-array name="VektorGeometri_list">
-        <item>Rumgeometri og vektorregning</item>
-        <item>Plangeometri og vektorregning</item>
+    <string-array name="PlanGeometri_sublist">
+        <item> </item>
+        <item>vektorer i planen og rummet</item>
     </string-array>
 
-    <string-array name="VektorGeometri_sublist">
-        <item>Relevante formler når du arbejder med arealer i planen og rummet</item>
-        <item>Relevante formler når du arbejder med vektorer i planen og rummet</item>
-    </string-array>
-    <string-array name="VektorGeometri_text_following_picture_1">
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 11</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_text_following_picture_2">
-        <item>Tekst efter billede 21</item>
-        <item>Tekst efter billede 11</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_above_picture_3">
-        <item>Tekst efter billede 31</item>
-        <item>Tekst efter billede 11</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_text_above_mathview1">
-        <item>Tekst over KV</item>
-        <item>Tekst over KV</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_text_above_mathview2">
-        <item>Tekst over LV</item>
-        <item>Tekst over LV</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_text_above_mathview3">
-        <item>Tekst over MV</item>
-        <item>Tekst over MV</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_text_above_mathview4">
-        <item>Tekst over NV</item>
-        <item>Tekst over NV</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_mathview1">
-        <item>0</item>
-        <item>0</item>
-
-    </string-array>
-
-    <string-array name="VektorGeometri_mathview2">
-        <item>0</item>
-        <item>0</item>
-
-    </string-array>
-
-
-    <!-- Rumgeometri og vektorregning har ingen underpunkter-->
+    <!-- Romgeometri og vektorregning har ingen underpunkter-->
 
 
     <!-- Strings for areal, omkreds og rumfang -->
@@ -293,8 +232,8 @@
         <item>relevante formler, når du arbejder med trekanter</item>
         <item>relevante formler, når du arbejder med parallelogrammer</item>
         <item>relevante formler, når du arbejder med trapezer</item>
-        <item>relevante formler, når du arbejder med kegler</item>
-        <item>relevante formler, når du arbejder med kugler</item>
+        <item>relevante formler, når du arbejde med kegler</item>
+        <item>relevante formler, når du arbejde med kugler</item>
         <item>relevante formler, når du arbejder med cylindere</item>
     </string-array>
 
@@ -545,18 +484,18 @@
     </string-array>
 
     <string-array name="RentesRegning_list_introTekst">
-        <item>Formel 1</item>
-        <item>Formel 2</item>
-        <item>Formel 3</item>
-        <item>Formel 4</item>
-        <item>Formel 5</item>
-        <item>Formel 6</item>
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
     </string-array>
 
     <string-array name="RentesRegning_title">
-        <item>Slutbeløet S</item>
+        <item>Slubeløet S</item>
         <item>Renten R</item>
-        <item>Antal Terminer, n</item>
+        <item>Antel Terminer, n</item>
         <item>Begyndelsesbeløbet, k0 efter n terminer</item>
         <item>Kapital efter n terminer</item>
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
@@ -564,12 +503,12 @@
     </string-array>
 
     <string-array name="RentesRegning_introTekst">
-        <item>Formel 1</item>
-        <item>Formel 2</item>
-        <item>Formel 3</item>
-        <item>Formel 4</item>
-        <item>Formel 5</item>
-        <item>Formel 6</item>
+        <item>S=K_0*(1+r)</item>
+        <item>r=S/K_0-1</item>
+        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
+        <item>K_0 = K_n / (1+r)^n</item>
+        <item>K_n = K_0 *(1+r)^n</item>
+        <item>1 + R = (1+r)^n </item>
     </string-array>
 
     <string-array name="RentesRegning_text_following_picture_1">
@@ -659,6 +598,7 @@
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
     <string name="invitation_cta">Installer Mig!</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
+    <string name="kontakt_via_facebook">Kontakt via Facebook</string>
 
 
 </resources>
