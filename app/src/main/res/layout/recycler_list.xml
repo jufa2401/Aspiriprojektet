@@ -2,14 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/list_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="@color/primary_dark"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        />
 
     <android.support.v7.widget.RecyclerView
         android:layout_below="@+id/list_title"
@@ -18,12 +23,7 @@
         android:layout_height="match_parent"
         android:background="@android:color/white"
         android:clipToPadding="false"
-
         tools:context=".fragments.ListFragment">
 
     </android.support.v7.widget.RecyclerView>
-
-
-
-
 </RelativeLayout>
