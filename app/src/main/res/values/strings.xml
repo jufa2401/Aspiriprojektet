@@ -66,38 +66,37 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Areal, omkreds og rumfang</item>
-        <item>Geometri</item>
         <item>Rentesregning</item>
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
         <item>Polynomier</item>
-        <item>Lineær, eksponentiel og potenssammenhænge</item>
+        <item>Lineær, eksponentiel og potens</item>
         <item>Statistik</item>
         <item>Differentialregning</item>
         <item>Integralregning</item>
         <item>Logaritmer</item>
+        <item>Geometri</item>
         <item>Plangeometri med vektorer</item>
         <item>Rumgeometri med vektorer</item>
+        <item>Areal, omkreds og rumfang</item>
     </string-array>
-
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
-        <item>Andre Arealer</item>
-        <item>Trekanter, Firkanter og Cirkler</item>
-        <item>Fremskrivning af indestående</item>
-        <item>Spar massere af tid, hvis du lærer disse uden ad</item>
-        <item>I hvilken rækkefølge skal man gøre hvad?</item>
-        <item>Toppunkter, nulpunkter og stigning</item>
-        <item>Vækst og sammenhænge</item>
-        <item>Sammenhæng mellem data, NulHypotese</item>
-        <item>f\'(x) er din ven</item>
-        <item>F(x) er også din ven</item>
-        <item>Transformering af udtryk</item>
-        <item>Størrelser i plan</item>
-        <item>Størrelser i Rum</item>
+        <item>Renter, terminer og start/slutbeløb.</item>
+        <item>Omskrivningsregler.</item>
+        <item>Regneregler for potensfunktioner.</item>
+        <item>Nulpunkt og toppunkt.</item>
+        <item>Lineær oog eksponentiel vækst.</item>
+        <item>Frekvens, hyppighed og obs.</item>
+        <item>Afledte funktioner.</item>
+        <item>Integraler af et/flere led.</item>
+        <item>Regning med logaritmer.</item>
+        <item>Cirkler, *kanter og Cos/Sin relationer.</item>
+        <item>Størrelser i plan.</item>
+        <item>Størrelser i Rum.</item>
+        <item>kegler, kugler og cylindre m.m.</item>
 
     </string-array>
     <string name="title_activity_settings_from_activity_gallery">Settings2</string>
@@ -175,112 +174,22 @@
     <!--*******************************************************************************************************************-->
 
 
-    <!-- Strings for areal, omkreds og rumfang -->
-    <string-array name="arealer_omkreds_rumfang_title">
-        <item>Cirkel</item>
-        <item>Trekant</item>
-        <item>Parallelogram</item>
-        <item>Trapez</item>
-        <item>Kegle</item>
-        <item>Kugle</item>
-        <item>Cylinder</item>
-    </string-array>
 
-    <string-array name="arealer_sublist">
-        <item>relevante formler, når du arbejder med cirkler</item>
-        <item>relevante formler, når du arbejder med trekanter</item>
-        <item>relevante formler, når du arbejder med parallelogrammer</item>
-        <item>relevante formler, når du arbejder med trapezer</item>
-        <item>relevante formler, når du arbejde med kegler</item>
-        <item>relevante formler, når du arbejde med kugler</item>
-        <item>relevante formler, når du arbejder med cylindere</item>
-    </string-array>
 
-    <string-array name="arealer_introducerende_tekst">
-        <item>0</item>
-        <item>0</item>
-        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer:</item>
-        <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
-        <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
-        <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
-        <item>En cylinder er ligesom en kegle og en kugle en rumgeometrisk figur, hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
-    </string-array>
-
-    <string-array name="arealer_text_following_picture_1">
-        <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
-        <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
-        <item>0</item>
-        <item>0</item>
-        <item>Her finder du de relevante formler, når du arbejder med kegler:</item>
-        <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
-        <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
-    </string-array>
-
-    <string-array name="arealer_text_following_picture_2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview1">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
     <!--*******************************************************************************************************************-->
-
-
     <!--Rentesregning-->
     <string-array name="RentesRegning_list_title">
-        <item>Slubeløet S</item>
+        <item>Slubeløbet S LIST</item>
         <item>Renten R</item>
-        <item>Antel Terminer, n</item>
-        <item>Begyndelsesbelæbet, k0 efter n terminer</item>
+        <item>Antal Terminer, n</item>
+        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
         <item>Kapital efter n terminer</item>
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
 
     </string-array>
 
     <string-array name="RentesRegning_list_introTekst">
-        <item>S=K_0*(1+r)</item>
+        <item>S=K_0*(1+r) LIST</item>
         <item>r=S/K_0-1</item>
         <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
         <item>K_0 = K_n / (1+r)^n</item>
@@ -389,80 +298,92 @@
     <!--*******************************************************************************************************************-->
 
     <!--Kvadratsætninger-->
-    <string-array name="kvadratætningerne_title">
+    <string-array name="Kvadratsætningerne_list_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_introTekst">
+    <string-array name="Kvadratsætningerne_list_introTekst">
         <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
         <item>test</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
     </string-array>
+    <string-array name="Kvadratsætningerne_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
 
-    <string-array name="kvadratsætningerne_text_following_picture_1">
+    <string-array name="Kvadratsætningerne_introTekst">
+        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
+    <string-array name="Kvadratsætningerne_text_following_picture_1">
         <item>Tekst efter billede 11</item>
         <item>Tekst efter billede 12</item>
         <item>Tekst efter billede 13</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_following_picture_2">
+    <string-array name="Kvadratsætningerne_text_following_picture_2">
         <item>Tekst efter billede21</item>
         <item>Tekst efter billede22</item>
         <item>Tekst efter billede23</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_above_picture_3">
+    <string-array name="Kvadratsætningerne_above_picture_3">
         <item>Tekst efter billede31</item>
         <item>Tekst efter billede32</item>
         <item>Tekst efter billede33</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_above_mathview1">
+    <string-array name="Kvadratsætningerne_text_above_mathview1">
         <item>KvatSæt MV txt 11</item>
         <item>KvatSæt MV txt 12</item>
         <item>KvatSæt MV txt 13</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_above_mathview2">
+    <string-array name="Kvadratsætningerne_text_above_mathview2">
         <item>KvatSæt MV txt 21</item>
         <item>KvatSæt MV txt 22</item>
         <item>KvatSæt MV txt 23</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_above_mathview3">
+    <string-array name="Kvadratsætningerne_text_above_mathview3">
         <item>KvatSæt MV txt 31</item>
         <item>KvatSæt MV txt 32</item>
         <item>KvatSæt MV txt 33</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_above_mathview4">
+    <string-array name="Kvadratsætningerne_text_above_mathview4">
         <item>KvatSæt MV txt 41</item>
         <item>KvatSæt MV txt 42</item>
         <item>KvatSæt MV txt 43</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_mathView1">
+    <string-array name="Kvadratsætningerne_mathView1">
         <item>$MV=11$</item>
         <item>$MV=12$</item>
         <item>$MV=13$</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_mathView2">
+    <string-array name="Kvadratsætningerne_mathView2">
         <item>$MV=21$</item>
         <item>$MV=22$</item>
         <item>$MV=23$</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_mathView3">
+    <string-array name="Kvadratsætningerne_mathView3">
         <item>$MV=31$</item>
         <item>$MV=32$</item>
         <item>$MV=33$</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_mathView4">
+    <string-array name="Kvadratsætningerne_mathView4">
         <item>$MV=41$</item>
         <item>$MV=42$</item>
         <item>$MV=43$</item>
@@ -471,115 +392,539 @@
 
 
     <!--Potensregneregler-->
-    <string-array name="potensregneregler_title">
+    <string-array name="Potensregneregler_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="v_introTekst">
+    <string-array name="Potensregneregler_introTekst">
         <item>(a+b)^2</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_following_picture_1">
+    <string-array name="Potensregneregler_text_following_picture_1">
         <item>Tekst efter billede 11</item>
         <item>Tekst efter billede 12</item>
         <item>Tekst efter billede 13</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_following_picture_2">
+    <string-array name="Potensregneregler_text_following_picture_2">
         <item>Tekst efter billede21</item>
         <item>Tekst efter billede22</item>
         <item>Tekst efter billede23</item>
     </string-array>
 
-    <string-array name="potensregneregler_above_picture_3">
+    <string-array name="Potensregneregler_above_picture_3">
         <item>Tekst efter billede31</item>
         <item>Tekst efter billede32</item>
         <item>Tekst efter billede33</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_above_mathview1">
+    <string-array name="Potensregneregler_text_above_mathview1">
         <item>Tekst over MV 11</item>
         <item>Tekst over MV 12</item>
         <item>Tekst over MV 13</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_above_mathview2">
+    <string-array name="Potensregneregler_text_above_mathview2">
         <item>0</item>
         <item>0</item>
         <item>0</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_above_mathview3">
+    <string-array name="Potensregneregler_text_above_mathview3">
         <item>0</item>
         <item>0</item>
         <item>0</item>
     </string-array>
 
-    <string-array name="potensregneregler_text_above_mathview4">
+    <string-array name="Potensregneregler_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="Potensregneregler_mathView1">
+        <item>$MV=11$</item>
+        <item>$MV=12$</item>
+        <item>$MV=13$</item>
+    </string-array>
+
+    <string-array name="Potensregneregler_mathView2">
+        <item>$MV=21$</item>
+        <item>$MV=22$</item>
+        <item>$MV=23$</item>
+    </string-array>
+
+    <string-array name="Potensregneregler_mathView3">
+        <item>$MV=31$</item>
+        <item>$MV=32$</item>
+        <item>$MV=33$</item>
+    </string-array>
+
+    <string-array name="Potensregneregler_mathView4">
+        <item>$MV=41$</item>
+        <item>$MV=42$</item>
+        <item>$MV=43$</item>
+    </string-array>
+
+    <!--*******************************************************************************************************************-->
+
+    <!--Polynomier -->
+    <string-array name="Polynomier_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="Polynomier_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Polynomier_list">
+        <item>Generelt</item>
+        <item>Andengradsfunktioner</item>
+    </string-array>
+    <string-array name="Polynomier_sublist">
+        <item>om polynomier</item>\
+        <item>spændende_temp</item>
+    </string-array>
+    <!--*******************************************************************************************************************-->
+
+    <!--lineær, eksponentiel og potens-->
+
+    <string-array name="Lineær_eksponentiel_potensregning_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="Lineær_eksponentiel_potensregning_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Lineær_eksponentiel_potensregning_list">
+        <item>Generelt</item>
+        <item>Andengradsfunktioner</item>
+    </string-array>
+    <string-array name="Lineær_eksponentiel_potensregning_sublist">
+        <item>om polynomier</item>\
+        <item>spændende_temp</item>
+    </string-array>
+    <string-array name="Lineær_eksponentiel_potensregning_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
     </string-array>
     <!--*******************************************************************************************************************-->
 
+    <!--Statistik-->
+    <string-array name="Statistik_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
 
-    <!--Array til navne i underpunkter for polynomier-->
-    <string-array name="polynomier_list">
+    <string-array name="Statistik_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Statistik_list">
         <item>Generelt</item>
         <item>Andengradsfunktioner</item>
     </string-array>
-
-    !--Array til polynomier_list subtext-->
-    <string-array name="polynomier_sublist">
-        <item>om polynomier</item>\
-        <item>spændende_temp</item>
-    </string-array>
-    <!--Polynomier og potenser-->
-
-    <!--Array til navne i underpunkter for statistik-->
-    <string-array name="statistik_list">
-        <item>Ikke-grupperede observationer</item>
-        <item>Grupperede observationer</item>
-    </string-array>
-
-    !--Array til polynomier_list subtext-->
-    <string-array name="statistik_sublist">
+    <string-array name="Statistik_sublist">
         <item>de mest almindelige regler indenfor statistik</item>
         <item>hyppighed, frekvens, kumuleret hyppighed og kumuleret frekvens</item>
     </string-array>
+    <string-array name="Statistik_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
 
-    !--Array til navne i underpunkter for differentialregning-->
-    <string-array name="diffirentialregning_list">
+    <string-array name="Statistik_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Statistik_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Statistik_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Statistik_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <!--*******************************************************************************************************************-->
+
+    <!--diffirentialregning-->
+    <string-array name="Diffirentialregning_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="Diffirentialregning_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Diffirentialregning_list">
         <item>Generelt</item>
         <item>Differentiering af flere led</item>
         <item>Førsteordensdifferentialligninger</item>
     </string-array>
-
     !--Array til differentialregning_list subtext-->
-    <string-array name="diffirentialregning_sublist">
+    <string-array name="Diffirentialregning_sublist">
         <item>De 10 mest almindelige regler i differentialregning</item>
         <item>Sammensatte funktioner</item>
         <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
     </string-array>
 
+    <string-array name="Diffirentialregning_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
 
-    !--Array til navne i underpunkter for integralregning-->
-    <string-array name="integralregning_list">
-        <item>Integration af ét led</item>
-        <item>integration af flere led</item>
+    </string-array>
+    <string-array name="Diffirentialregning_text_above_picture_3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+    <string-array name="Diffirentialregning_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+
     </string-array>
 
-    !--Array til integralregning_list subtext-->
-    <string-array name="integralregning_sublist">
-        <item>de 8 mest almindelige regler</item>
-        <item>sammensatte funktioner</item>
+    <string-array name="Diffirentialregning_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Diffirentialregning_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Diffirentialregning_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <!--*******************************************************************************************************************-->
+
+    <!--Integralregninig-->
+
+    <string-array name="Integralregning_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="Integralregning_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Integralregning_list">
+        <item>Generelt</item>
+        <item>Differentiering af flere led</item>
+        <item>Førsteordensdifferentialligninger</item>
+    </string-array>
+    !--Array til differentialregning_list subtext-->
+    <string-array name="Integralregning_sublist">
+        <item>De 10 mest almindelige regler i differentialregning</item>
+        <item>Sammensatte funktioner</item>
+        <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
+    </string-array>
+
+    <string-array name="Integralregning_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+    <string-array name="Integralregning_text_above_picture_3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+    <string-array name="Integralregning_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Integralregning_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Integralregning_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Integralregning_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+
     </string-array>
 
 
+
+    <!--*******************************************************************************************************************-->
+
+    <!-- Logaritmer -->
+
+    <string-array name="Logaritmer_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+
+    <string-array name="Logaritmer_introTekst">
+        <item>(a+b)^2</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+    <string-array name="Logaritmer_list">
+        <item>Generelt</item>
+        <item>Differentiering af flere led</item>
+        <item>Førsteordensdifferentialligninger</item>
+    </string-array>
+    !--Array til differentialregning_list subtext-->
+    <string-array name="Logaritmer_sublist">
+        <item>De 10 mest almindelige regler i differentialregning</item>
+        <item>Sammensatte funktioner</item>
+        <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
+    </string-array>
+
+    <string-array name="Logaritmer_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+    <string-array name="Logaritmer_text_above_picture_3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+    <string-array name="Logaritmer_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Logaritmer_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Logaritmer_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+    <string-array name="Logaritmer_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+
+    </string-array>
+
+
+
+
+    <!--*******************************************************************************************************************-->
+    <!--Geometri-->
+    <string-array name="Geometri_list_title">
+        <item>Slubeløbet S</item>
+        <item>Renten R</item>
+        <item>Antal Terminer, n</item>
+        <item>Begyndelsesbeløbet, k0 efter n terminer</item>
+        <item>Kapital efter n terminer</item>
+        <item>Procent (rente) i kort (r) og lang periode (R)</item>
+
+    </string-array>
+    <string-array name="Geometri_title">
+        <item>Cirkel</item>
+        <item>Trekant</item>
+        <item>Parallelogram</item>
+        <item>Trapez</item>
+        <item>Kegle</item>
+        <item>Kugle</item>
+        <item>Cylinder</item>
+    </string-array>
+
+    <string-array name="Geometri_sublist">
+        <item>relevante formler, når du arbejder med cirkler</item>
+        <item>relevante formler, når du arbejder med trekanter</item>
+        <item>relevante formler, når du arbejder med parallelogrammer</item>
+        <item>relevante formler, når du arbejder med trapezer</item>
+        <item>relevante formler, når du arbejde med kegler</item>
+        <item>relevante formler, når du arbejde med kugler</item>
+        <item>relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="Geometri_introducerende_tekst">
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer:</item>
+        <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
+        <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
+        <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+        <item>En cylinder er ligesom en kegle og en kugle en rumgeometrisk figur, hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+    </string-array>
+
+    <string-array name="Geometri_text_following_picture_1">
+        <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
+        <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relevante formler, når du arbejder med kegler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="Geometri_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Geometri_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Geometri_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Geometri_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Geometri_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+
+    <!--*******************************************************************************************************************-->
     <!-- Geometry in the plane and vectors -->
     <string-array name="RumGeometri_list_title">
         <item>Vektorer</item>
@@ -680,8 +1025,103 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
 
+    <!--*******************************************************************************************************************-->
+
+    <!-- Strings for areal, omkreds og rumfang -->
+    <string-array name="arealer_omkreds_rumfang_title">
+        <item>Cirkel</item>
+        <item>Trekant</item>
+        <item>Parallelogram</item>
+        <item>Trapez</item>
+        <item>Kegle</item>
+        <item>Kugle</item>
+        <item>Cylinder</item>
+    </string-array>
+
+    <string-array name="arealer_sublist">
+        <item>relevante formler, når du arbejder med cirkler</item>
+        <item>relevante formler, når du arbejder med trekanter</item>
+        <item>relevante formler, når du arbejder med parallelogrammer</item>
+        <item>relevante formler, når du arbejder med trapezer</item>
+        <item>relevante formler, når du arbejde med kegler</item>
+        <item>relevante formler, når du arbejde med kugler</item>
+        <item>relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="arealer_introducerende_tekst">
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relavante formler, når du arbejder med parallelogrammer:</item>
+        <item>Her finder du de relavante formler, når du arbejder med trapezer:</item>
+        <item>En kegle er en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes:</item>
+        <item>En kugle er ligesom en kegle en rumgeometrisk figur hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+        <item>En cylinder er ligesom en kegle og en kugle en rumgeometrisk figur, hvilket betyder at den er tredimensionel. Det er derfor følgende der skal beregnes.</item>
+    </string-array>
+
+    <string-array name="arealer_text_following_picture_1">
+        <item>Her finder du de relavante formler, når du arbejder med cirkler</item>
+        <item>Her finder du de relavante formler, når du arbejder med trekanter</item>
+        <item>0</item>
+        <item>0</item>
+        <item>Her finder du de relevante formler, når du arbejder med kegler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med kugler:</item>
+        <item>Her finder du de relevante formler, når du arbejder med cylindere</item>
+    </string-array>
+
+    <string-array name="arealer_text_following_picture_2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="arealer_text_above_mathview1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="arealer_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="arealer_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="arealer_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <!--*******************************************************************************************************************-->
+
 
     <!--Firebase-->
+
     <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri[&amp;amv=23][&amp;afl=https://Google.com]</string>
     <string name="invitation_title">Den her app er bare rigtigt god</string>
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>

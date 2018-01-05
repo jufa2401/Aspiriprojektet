@@ -88,29 +88,8 @@ public class SubjectFragment extends Fragment {
 // Her skal der være en switch case for hvert eneste "super" overemne.
 
         switch (oldindex) {
-//Areal og rumfang
-            case 0:
-//                Henter  af Strings
-                title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-//                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
-                intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
-                text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
-                text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
-                text_above_picture_3 = getResources().getStringArray(R.array.example_text_above_picture_3);
-
-//               henter billeder
-                picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
-                picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
-                picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
-
-//               Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
-                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
-                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
-                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
-                break;
-
 // Rentesregning
-            case 1:
+            case 0:
                 // Title and intro
                 title = getResources().getStringArray(R.array.RentesRegning_title);
                 intro = getResources().getStringArray(R.array.RentesRegning_introTekst);
@@ -152,7 +131,7 @@ public class SubjectFragment extends Fragment {
                 break;
 
 //Kvadratsætningerne
-            case 2:
+            case 1:
                 // Title and intro
                 title = getResources().getStringArray(R.array.kvadratætningerne_title);
                 intro = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
@@ -195,40 +174,81 @@ public class SubjectFragment extends Fragment {
                 break;
 
 //Potensregneregler
-            case 3:
+            case 2:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Polynomier
-            case 4:
+            case 3:
                 break;
 
 //Lineær, eksponentiel og potenssammenhænge
 
-            case 5:
+            case 4:
                 break;
 
 //Statistkik
-            case 6:
+            case 5:
                 break;
 
 //Differentialregning
-            case 7:
+            case 6:
                 break;
 
 //Integralregning
-            case 8:
+            case 7:
                 break;
 
 //Logaritmer
-            case 9:
+            case 8:
                 break;
 
 //Geometri
-            case 10:
+            case 9:
                 break;
 
 // Plangeometri med Vektorer
-            case 11:
+            case 10:
                 title = getResources().getStringArray(R.array.RumGeometri_list_title);
                 intro = getResources().getStringArray(R.array.RumGeometri_list);
 
@@ -262,8 +282,27 @@ public class SubjectFragment extends Fragment {
                 break;
 
 //Rumgeometri med vektorer
-            case 12:
+            case 11:
                 break;
+            case 12:
+            //                Henter  af Strings
+            title = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
+//                subject = getResources().getStringArray(R.array.arealer_omkreds_rumfang_list);
+            intro = getResources().getStringArray(R.array.arealer_introducerende_tekst);
+            text_following_picture_1 = getResources().getStringArray(R.array.arealer_text_following_picture_1);
+            text_following_picture_2 = getResources().getStringArray(R.array.arealer_text_following_picture_2);
+            text_above_picture_3 = getResources().getStringArray(R.array.example_text_above_picture_3);
+
+//               henter billeder
+            picture_1 = new int[]{R.drawable.cirkeldef, R.drawable.trekantdef, R.drawable.paradef, R.drawable.trapezdef, R.drawable.kegledef, R.drawable.kugledef, R.drawable.cylledef};
+            picture_2 = new int[]{R.drawable.cirkel1, R.drawable.trekant1, R.drawable.paralellogram1, R.drawable.trapez1, R.drawable.kegleformler, R.drawable.kugleformler, R.drawable.cylle1};
+            picture_3 = new int[]{R.drawable.cirkel2, 0, 0, 0, 0, 0, 0};
+
+//               Sætter alt, der er ingen MathViews på noget indeks for nogen af emnerne i arealer, derfor null.
+            setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+            setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+            Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+            break;
         }
         return view;
     }

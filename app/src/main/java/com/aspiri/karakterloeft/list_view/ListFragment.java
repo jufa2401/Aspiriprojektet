@@ -37,10 +37,8 @@ public class ListFragment extends Fragment {
     @BindView(R.id.list_title)
     TextView listtitle;
 
-    //Skal laves om!
+    //Skal laves om! jeg har rodet med den 05 /01 - mikkel
     Integer[] imageArray = {
-            R.drawable.titlelist_area_circomference_and_volume256,
-            R.drawable.titlelist_protractor280,
             R.drawable.titlelist_percent256,
             R.drawable.titlelist_x_squared256,
             R.drawable.titlelist_x_tothepowerof_y256,
@@ -50,8 +48,10 @@ public class ListFragment extends Fragment {
             R.drawable.titlelist_f_ding_x280,
             R.drawable.titlelist_integral256,
             R.drawable.titlelist_log280,
+            R.drawable.titlelist_protractor280,
             R.drawable.titlelist_arrows_in256,
             R.drawable.titlelist_arrows_out256,
+            R.drawable.titlelist_area_circomference_and_volume256,
     };
 
     @Override
