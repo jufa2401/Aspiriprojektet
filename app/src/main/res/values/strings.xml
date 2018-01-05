@@ -67,6 +67,7 @@
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
         <item>Areal, omkreds og rumfang</item>
+        <item>Geometri</item>
         <item>Rentesregning</item>
         <item>Kvadratsætningerne</item>
         <item>Potensregneregler</item>
@@ -76,7 +77,6 @@
         <item>Differentialregning</item>
         <item>Integralregning</item>
         <item>Logaritmer</item>
-        <item>Geometri</item>
         <item>Plangeometri med vektorer</item>
         <item>Rumgeometri med vektorer</item>
     </string-array>
@@ -86,7 +86,8 @@
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
         <item>Andre Arealer</item>
-        <item>Fremskrivning af indestående</item>\
+        <item>Trekanter, Firkanter og Cirkler</item>
+        <item>Fremskrivning af indestående</item>
         <item>Spar massere af tid, hvis du lærer disse uden ad</item>
         <item>I hvilken rækkefølge skal man gøre hvad?</item>
         <item>Toppunkter, nulpunkter og stigning</item>
@@ -95,7 +96,6 @@
         <item>f\'(x) er din ven</item>
         <item>F(x) er også din ven</item>
         <item>Transformering af udtryk</item>
-        <item>Trekanter, Firkanter og Cirkler</item>
         <item>Størrelser i plan</item>
         <item>Størrelser i Rum</item>
 

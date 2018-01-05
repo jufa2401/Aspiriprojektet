@@ -78,33 +78,7 @@ public class SubListFragment extends Fragment {
                         R.drawable.subject_area_c_v_cylinder231x256};
                 break;
 
-//                Rentesregning
             case 1:
-                subjectListArray = getResources().getStringArray(R.array.RentesRegning_title);
-                subtextListArray = getResources().getStringArray(R.array.RentesRegning_introTekst);
-                imageArray = new Integer[]{
-                        R.drawable.subject_rente_money256,
-                        R.drawable.subject_rente_percent256,
-                        R.drawable.subject_rente_time256,
-                        R.drawable.subject_rente_singlemoney256,
-                        R.drawable.subject_rente_piggie256,
-                        R.drawable.subject_rente_squiggily256
-                };
-                break;
-
-//                Kvadratsaetninger
-            case 2:
-                subjectListArray = getResources().getStringArray(R.array.kvadratætningerne_title);
-                subtextListArray = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
-                imageArray = new Integer[]{
-                        R.drawable.subject_square_rules_1_256,
-                        R.drawable.subject_square_rules_2_256,
-                        R.drawable.subject_square_rules_3_256,
-                };
-                break;
-
-//                Potensregneregler
-            case 3:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
                 imageArray = new Integer[]{
@@ -118,7 +92,32 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Polynomier
+//                Rentesregning
+            case 2:
+                subjectListArray = getResources().getStringArray(R.array.RentesRegning_title);
+                subtextListArray = getResources().getStringArray(R.array.RentesRegning_introTekst);
+                imageArray = new Integer[]{
+                        R.drawable.subject_rente_money256,
+                        R.drawable.subject_rente_percent256,
+                        R.drawable.subject_rente_time256,
+                        R.drawable.subject_rente_singlemoney256,
+                        R.drawable.subject_rente_piggie256,
+                        R.drawable.subject_rente_squiggily256
+                };
+                break;
+
+//                Kvadratsaetninger
+            case 3:
+                subjectListArray = getResources().getStringArray(R.array.kvadratætningerne_title);
+                subtextListArray = getResources().getStringArray(R.array.kvadratsætningerne_introTekst);
+                imageArray = new Integer[]{
+                        R.drawable.subject_square_rules_1_256,
+                        R.drawable.subject_square_rules_2_256,
+                        R.drawable.subject_square_rules_3_256,
+                };
+                break;
+
+//                Potensregneregler
             case 4:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
@@ -133,7 +132,7 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Linærer og eksponentiel og potenssammenhænge
+//                Polynomier
             case 5:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
@@ -148,7 +147,7 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Statistik
+//                Linærer og eksponentiel og potenssammenhænge
             case 6:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
@@ -163,8 +162,23 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Differentialregning
+//                Statistik
             case 7:
+                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
+                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
+                imageArray = new Integer[]{
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                        R.drawable.titlelist_triangle,
+                };
+                break;
+
+//                Differentialregning
+            case 8:
                 subjectListArray = getResources().getStringArray(R.array.diffirentialregning_list);
                 subtextListArray = getResources().getStringArray(R.array.diffirentialregning_sublist);
                 imageArray = new Integer[]{
@@ -179,21 +193,6 @@ public class SubListFragment extends Fragment {
                 break;
 
 //                Intergralregning
-            case 8:
-                subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
-                subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
-                imageArray = new Integer[]{
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                        R.drawable.titlelist_triangle,
-                };
-                break;
-
-//                Logaritmer
             case 9:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
@@ -208,7 +207,7 @@ public class SubListFragment extends Fragment {
                 };
                 break;
 
-//                Geometri
+//                Logaritmer
             case 10:
                 subjectListArray = getResources().getStringArray(R.array.arealer_omkreds_rumfang_title);
                 subtextListArray = getResources().getStringArray(R.array.arealer_sublist);
@@ -222,6 +221,8 @@ public class SubListFragment extends Fragment {
                         R.drawable.titlelist_triangle,
                 };
                 break;
+
+//                Geometri
 
 //                Vektorer i Plan
             case 11:

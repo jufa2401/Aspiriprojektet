@@ -40,6 +40,7 @@ public class ListFragment extends Fragment {
     //Skal laves om!
     Integer[] imageArray = {
             R.drawable.titlelist_area_circomference_and_volume256,
+            R.drawable.titlelist_protractor280,
             R.drawable.titlelist_percent256,
             R.drawable.titlelist_x_squared256,
             R.drawable.titlelist_x_tothepowerof_y256,
@@ -49,7 +50,6 @@ public class ListFragment extends Fragment {
             R.drawable.titlelist_f_ding_x280,
             R.drawable.titlelist_integral256,
             R.drawable.titlelist_log280,
-            R.drawable.titlelist_protractor280,
             R.drawable.titlelist_arrows_in256,
             R.drawable.titlelist_arrows_out256,
     };
