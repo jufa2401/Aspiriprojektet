@@ -491,6 +491,73 @@
         <item>om polynomier</item>\
         <item>spændende_temp</item>
     </string-array>
+
+    <string-array name="Polynomier_text_following_picture_1">
+        <item>Tekst efter billede 11</item>
+        <item>Tekst efter billede 12</item>
+        <item>Tekst efter billede 13</item>
+    </string-array>
+
+    <string-array name="Polynomier_text_following_picture_2">
+        <item>Tekst efter billede21</item>
+        <item>Tekst efter billede22</item>
+        <item>Tekst efter billede23</item>
+    </string-array>
+
+    <string-array name="Polynomier_above_picture_3">
+        <item>Tekst efter billede31</item>
+        <item>Tekst efter billede32</item>
+        <item>Tekst efter billede33</item>
+    </string-array>
+
+    <string-array name="Polynomier_text_above_mathview1">
+        <item>Tekst over MV 11</item>
+        <item>Tekst over MV 12</item>
+        <item>Tekst over MV 13</item>
+    </string-array>
+
+    <string-array name="Polynomier_text_above_mathview2">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Polynomier_text_above_mathview3">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="Polynomier_text_above_mathview4">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="Polynomier_mathView1">
+        <item>$MV=11$</item>
+        <item>$MV=12$</item>
+        <item>$MV=13$</item>
+    </string-array>
+
+    <string-array name="Polynomier_mathView2">
+        <item>$MV=21$</item>
+        <item>$MV=22$</item>
+        <item>$MV=23$</item>
+    </string-array>
+
+    <string-array name="Polynomier_mathView3">
+        <item>$MV=31$</item>
+        <item>$MV=32$</item>
+        <item>$MV=33$</item>
+    </string-array>
+
+    <string-array name="Polynomier_mathView4">
+        <item>$MV=41$</item>
+        <item>$MV=42$</item>
+        <item>$MV=43$</item>
+    </string-array>
+
+
     <!--*******************************************************************************************************************-->
 
     <!--lineær, eksponentiel og potens-->
@@ -514,6 +581,15 @@
         <item>om polynomier</item>\
         <item>spændende_temp</item>
     </string-array>
+    <string-array name="Lineær_eksponentiel_potensregning_text_following_picture_1">
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
     <string-array name="Lineær_eksponentiel_potensregning_text_following_picture_2">
         <item>0</item>
         <item>0</item>
@@ -527,41 +603,25 @@
     <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview1">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview2">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview3">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Lineær_eksponentiel_potensregning_text_above_mathview4">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
     <!--*******************************************************************************************************************-->
 
@@ -598,41 +658,25 @@
     <string-array name="Statistik_text_above_mathview1">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Statistik_text_above_mathview2">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Statistik_text_above_mathview3">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <string-array name="Statistik_text_above_mathview4">
         <item>0</item>
         <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
+
     </string-array>
 
     <!--*******************************************************************************************************************-->

@@ -220,31 +220,318 @@ public class SubjectFragment extends Fragment {
 
 //Polynomier
             case 3:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Polynomier_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Polynomier_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Polynomier_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Polynomier_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Polynomier_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Polynomier_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Polynomier_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Polynomier_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Polynomier_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Polynomier_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Polynomier_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Polynomier_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Lineær, eksponentiel og potenssammenhænge
 
             case 4:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_title);
+                intro = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_text_following_picture_2);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Statistkik
             case 5:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Differentialregning
             case 6:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Integralregning
             case 7:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Logaritmer
             case 8:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 //Geometri
             case 9:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
 
 // Plangeometri med Vektorer
@@ -283,6 +570,47 @@ public class SubjectFragment extends Fragment {
 
 //Rumgeometri med vektorer
             case 11:
+                // Title and intro
+                title = getResources().getStringArray(R.array.Potensregneregler_title);
+                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+
+                // Text after pictures
+                text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
+                text_following_picture_2 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_2);
+                text_above_picture_3 = getResources().getStringArray(R.array.Potensregneregler_above_picture_3);
+
+                // Pictures
+                picture_1 = new int[]{0,0,0};
+                picture_2 = new int[]{0,0,0};
+                picture_3 = new int[]{0,0,0};
+
+                //Mathviews
+                mathView1 = getResources().getStringArray(R.array.Potensregneregler_mathView1);
+                mathView2 = getResources().getStringArray(R.array.Potensregneregler_mathView2);
+                mathView3 = getResources().getStringArray(R.array.Potensregneregler_mathView3);
+                mathView4 = getResources().getStringArray(R.array.Potensregneregler_mathView4);
+
+                //Text above mathview
+                text_above_mathview_1 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview1);
+                text_above_mathview_2 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview2);
+                text_above_mathview_3 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview3);
+                text_above_mathview_4 = getResources().getStringArray(R.array.Potensregneregler_text_above_mathview4);
+
+
+                // Setting Texts
+                setTexts(title[listindex], intro[listindex], text_following_picture_1[listindex], text_following_picture_2[listindex], text_above_picture_3[listindex]);
+                setTextAboveMathviews(text_above_mathview_1[listindex], text_above_mathview_2[listindex], text_above_mathview_3[listindex], text_above_mathview_4[listindex]);
+
+                // Setting Pictures
+                setPictures(picture_1[listindex], picture_2[listindex], picture_3[listindex]);
+
+                //Setting Mathviews
+                setMathViews(mathView1[listindex],mathView2[listindex],mathView3[listindex],mathView4[listindex]);
+
+                // Log calls
+                Log.d("entered_subject", "You're in: " + SubjectFragment.TAG + "\nYou're on " + title[listindex] + " @listindex: " + listindex + " from @oldindex: " + oldindex);
+
+
                 break;
             case 12:
             //                Henter  af Strings
