@@ -280,8 +280,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (!tag.equals(ListFragment.TAG)) {
             fragmentTransaction
                     .addToBackStack(tag)
-
-                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right);
+                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left, R.animator.slide_out_right, R.animator.slide_in_right);
 //            fragment.setEnterTransition(new Fade());
 //            fragmentTransaction.setCustomAnimations(R.animator.slide_in_left,R.animator.slide_out_right);
         }
