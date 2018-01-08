@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    android:background="@color/background_Yellow"
 
     android:orientation="horizontal">
 

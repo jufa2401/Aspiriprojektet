@@ -16,11 +16,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.transition.Fade;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.games.FlipcardActivity;
@@ -38,6 +39,9 @@ import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
+
+import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -60,6 +64,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static int REQUEST_INVITE = 0;
     private FirebaseAnalytics mFirebaseAnalytics;
 
+    // test
+    private List<String> mExpandableListTitle;
+    private String[] items;
+    ExpandableListAdapter mExpandableListAdapter;
+
+    //     Der er problemer med ExpandableListView ikke adapteren!
+    @BindView(R.id.navList)
+    ExpandableListView mExpandableListView;
+
+
+    private Map<String, List<String>> mExpandableListData;
+
+
     //On createmetode
     @Override
     @AddTrace(name = "onCreateTrace", enabled = true)
@@ -72,18 +89,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
 
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-            }
+        // sets mActionBarDrawerToggle
+//        mExpandableListData = ExpandableListDataSource.getData(this);
+//        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
+//        // Add drawer items requires ExpandableListTitle and ExpandableListData to be initialized.
+//        addDrawerItems();
+        setupDrawer();
 
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-            }
-        };
+        //mExpandableListView.setAdapter(mExpandableListAdapter);
 
         setDrawerIndicatorEnabled(false);
         mFragmentManager = getFragmentManager();
@@ -263,17 +277,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
 
-
         if (!tag.equals(ListFragment.TAG)) {
-            fragmentTransaction.addToBackStack(tag);
+            fragmentTransaction
+                    .addToBackStack(tag)
+
+                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_right);
 //            fragment.setEnterTransition(new Fade());
-            fragment.setExitTransition(new Fade());
-
 //            fragmentTransaction.setCustomAnimations(R.animator.slide_in_left,R.animator.slide_out_right);
-
         }
-        fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag);
-        fragmentTransaction.commit();
+
+        fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag).commit();
     }
     //    TODO: FIX HOME AS UP
 
@@ -310,6 +323,76 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    private void setupDrawer() {
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+
+            /** Called when a drawer has settled in a completely open state. */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle(R.string.find_way);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /** Called when a drawer has settled in a completely closed state. */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(R.string.app_name);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+    }
+
+// EXPERIMENTAL CODE THAT DID NOT WORK!
+//        private void initItems() {
+//        items = getResources().getStringArray(R.array.subject_list);
+//    }
+//
+//    private void addDrawerItems() {
+//        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
+//        mExpandableListView.setAdapter(mExpandableListAdapter);
+//        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//            @Override
+//            public void onGroupExpand(int groupPosition) {
+//                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
+//            }
+//        });
+//
+//        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+//            @Override
+//            public void onGroupCollapse(int groupPosition) {
+//                getSupportActionBar().setTitle(R.string.drawer_subjects);
+//            }
+//        });
+//
+//        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//            @Override
+//            public boolean onChildClick(ExpandableListView parent, View v,
+//                                        int groupPosition, int childPosition, long id) {
+//                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
+//                        .get(childPosition).toString();
+//                getSupportActionBar().setTitle(selectedItem);
+//
+//                if (items[0].equals(mExpandableListTitle.get(groupPosition))) {
+//                    // Navigation Logic
+//                } else if (items[1].equals(mExpandableListTitle.get(groupPosition))) {
+//                  // Navigation logic
+//                } else if (items[2].equals(mExpandableListTitle.get(groupPosition))) {
+//                    // Navigation logic
+//                } else if (items[3].equals(mExpandableListTitle.get(groupPosition))) {
+//                   // Navigation logic
+//                } else if (items[4].equals(mExpandableListTitle.get(groupPosition))) {
+//                   // NavigationLogic
+//                } else {
+//                    throw new IllegalArgumentException("Not supported fragment type");
+//                }
+//
+//                drawer.closeDrawer(GravityCompat.START);
+//                return false;
+//            }
+//        });
+//    }
+
+
     //Credit to firebase
     private void onInviteClicked() {
         Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
@@ -338,6 +421,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
     }
+
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
