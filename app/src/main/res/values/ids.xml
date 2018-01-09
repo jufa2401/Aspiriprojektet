@@ -28,4 +28,8 @@
     <item name="action_next" type="id" />
     <item name="action_flip" type="id" />
 
+    <!-- Test af contacts -->
+    <item name="recycler_left" type="id"/>
+    <item name="recycler_right" type="id"/>
+
 </resources>

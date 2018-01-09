@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aspiri.karakterloeft">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/aspiri"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/aspiri"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace ="android:label">
 
         <!-- Main -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".games.flipcards.DemoActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:configChanges="orientation|keyboardHidden"
                 android:screenOrientation="portrait"
-                android:value="MainActivity" />
+                android:value=".games.flipcards.DemoActivity" />
 
             <intent-filter>
 

@@ -21,10 +21,17 @@ android {
     }
     productFlavors {
     }
+    //For at kører java version 8 - og at kunne bruge contacts (flipcard menu)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 repositories {
     maven { url 'https://jitpack.io' }
     maven { url 'https://maven.fabric.io/public' }
+    jcenter()
 }
 
 dependencies {
@@ -68,8 +75,21 @@ dependencies {
     compile 'com.google.firebase:firebase-invites:11.6.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
 
-}
 
+    compile 'com.github.yalantis:multi-selection:v0.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.0@aar'
+    compile 'io.reactivex:rxjava:1.2.1'
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.firebase.firebase-perf'

@@ -55,7 +55,7 @@ public class FlipcardActivity extends Activity
     /**
      * A handler object, used for deferring UI operations.
      */
-    public LinearLayout clickfrag;
+    private LinearLayout clickfrag;
 
     private Handler mHandler = new Handler();
 

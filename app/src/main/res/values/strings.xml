@@ -1176,4 +1176,17 @@
     <string name="drawer_item_settings">settings</string>
 
 
+
+    <!-- Test med contacts -->
+    <string name="activity_title">Choose contacts</string>
+    <string name="nothing_selected">Please select someone… :\'(</string>
+    <string name="permission_rationale">Please give contacts permissions for the demo. Note: this app has no internet permission.</string>
+    <string name="allow">allow</string>
+
+    <plurals name="you_selected_x_songs">
+        <item quantity="one">You selected %d contact!</item>
+        <item quantity="other">You selected %d contacts!</item>
+    </plurals>
+
+
 </resources>

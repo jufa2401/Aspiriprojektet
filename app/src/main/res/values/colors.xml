@@ -19,5 +19,6 @@
 
     <!--Gul baggrund til teksten-->
     <color name="background_Yellow">#FFEBD4</color>
+    <color name="black">#161618</color>
 </resources>
 
