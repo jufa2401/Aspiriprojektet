@@ -29,7 +29,7 @@
                 <item
                     android:id="@+id/drawer_store"
                     android:icon="@drawable/ic_menu_store"
-                    android:title="@string/drawer_uy_Course" />
+                    android:title="@string/drawer_buy_Course" />
 
                 <item
                     android:id="@+id/drawer_flipcards"

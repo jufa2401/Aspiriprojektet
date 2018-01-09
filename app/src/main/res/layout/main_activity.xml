@@ -9,44 +9,35 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <LinearLayout android:id="@+id/activity_controller"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-
-    <!-- Side navigation drawer UI -->
-    <!--<ExpandableListView-->
-    <!--android:id="@+id/navList"-->
-    <!--android:layout_width="@dimen/material_drawer_width"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_gravity="left|start"-->
-    <!--android:background="@color/md_white_1000"-->
-    <!--android:divider="@color/material_drawer_divider"-->
-    <!--android:dividerHeight="@dimen/nav_header_vertical_spacing"-->
-    <!--android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"/>-->
     <include
         layout="@layout/toolbar_top"
         android:id="@+id/includedtoolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <!--Side navigation drawer UI -->
+    <!--<ExpandableListView-->
+        <!--android:id="@+id/navList"-->
+        <!--android:layout_width="@dimen/material_drawer_width"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="left|start"-->
+        <!--android:background="@color/md_white_1000"-->
+        <!--android:divider="@color/material_drawer_divider"-->
+        <!--android:dividerHeight="@dimen/nav_header_vertical_spacing"-->
+        <!--android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"/>-->
 
-    <!--Her sættes farve for navigation viewet-->
+    Her sættes farve for navigation viewet
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/drawer_header_navigation"
+
+
         app:itemIconTint="@color/item_icon_color"
-        app:itemTextColor="@color/item_text_color"
-        app:menu="@menu/drawer_content" >
+        app:itemTextColor="@color/item_text_color">
+        <!--app:menu="@menu/drawer_content" >-->
 
         <include
             layout="@layout/ex_list"
@@ -56,3 +47,7 @@
 
 
 </android.support.v4.widget.DrawerLayout>
+
+
+
+

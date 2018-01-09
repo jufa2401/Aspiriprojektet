@@ -32,8 +32,8 @@ public class SubjectFragment extends Fragment {
     private AppCompatActivity mActivity;
 
 
-    private int[] picture_1, picture_2, picture_3;
 
+    private int[] picture_1, picture_2, picture_3;
 
     // TODO VI, VI, VI, VI, VI, VI Bruger butterknife. Det ser smart ud.
     //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
@@ -76,9 +76,15 @@ public class SubjectFragment extends Fragment {
     ImageView game_thumb;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
+
+
+
         View view = inflater.inflate(R.layout.subject_fragment, container, false);
         ButterKnife.bind(this, view);   // Laver findViewById for alle mine erklæringer ovenfor med annotationen @BindView(s)
         mActivity = (AppCompatActivity) getActivity();
+        ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
+
+
         Bundle args = getArguments();
 
         listindex = args.getInt("listindex");
