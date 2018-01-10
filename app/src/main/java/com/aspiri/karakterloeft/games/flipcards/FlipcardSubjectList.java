@@ -2,6 +2,7 @@ package com.aspiri.karakterloeft.games.flipcards;
 
 import android.Manifest;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 
 import com.aspiri.karakterloeft.R;
 import com.aspiri.karakterloeft.games.Contact;
+import com.aspiri.karakterloeft.games.FlipcardActivity;
 import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
 import com.yalantis.multiselection.lib.MultiSelect;
@@ -131,7 +133,11 @@ public class FlipcardSubjectList extends AppCompatActivity {
                             selectedCount, selectedCount);
                     mMultiSelect.showSelectedPage();
                     //TODO: Handler som læser elementerne fra items og sender dem videdre til en ny evt expandable list:
-                    //TODO: Tal med Nasser omkring farverne til flipcards_subject_list.
+                    // Der er lavet et midlertidigt intent som går fra flipcard select til et default flipkort.
+                    Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
+                    startActivity(goToFlipCards);
+                    Log.d("AspiriApp", "Flipcard_pressed");
+
                     Log.d(" Valgte emner: ", items.toString());
                 }
                 Snackbar.make(toolbar, msg, Snackbar.LENGTH_LONG).show();
