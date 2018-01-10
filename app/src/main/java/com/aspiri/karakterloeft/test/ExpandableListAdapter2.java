@@ -18,7 +18,9 @@ public class ExpandableListAdapter2 extends BaseExpandableListAdapter {
     private Context mContext;
     private List<String> mExpandableListTitle;
     private Map<String, List<String>> mExpandableListDetail;
+
     private LayoutInflater mLayoutInflater;
+
 
     public ExpandableListAdapter2(Context context, List<String> expandableListTitle,
                                   Map<String, List<String>> expandableListDetail) {
@@ -77,12 +79,16 @@ public class ExpandableListAdapter2 extends BaseExpandableListAdapter {
     public View getGroupView(int listPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String listTitle = (String) getGroup(listPosition);
+
+
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.list_group, null);
         }
+
+
         TextView listTitleTextView = convertView
                 .findViewById(R.id.listTitle);
-        listTitleTextView.setTypeface(null, Typeface.BOLD);
+        listTitleTextView.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
         return convertView;
     }

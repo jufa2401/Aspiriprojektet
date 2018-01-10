@@ -13,19 +13,20 @@
         android:textSize="17sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
-        android:background="@color/md_grey_50"
+        android:background="@android:color/white"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
         />
-
+<!--Colors might be off, had to be changed due to removal of library-->
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/list_title"
         android:id="@+id/listRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/md_grey_50"
+        android:layout_below="@+id/list_title"
+        android:background="@android:color/white"
         android:clipToPadding="false"
-        tools:context=".fragments.ListFragment">
+        tools:context=".fragments.ListFragment"
+        tools:listitem="@layout/list_view_single_row">
 
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

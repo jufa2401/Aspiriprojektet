@@ -1,5 +1,7 @@
 package com.aspiri.karakterloeft.games;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
@@ -10,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -61,7 +65,6 @@ public class MultipleChoiceFragment extends Fragment {
     String[] answertxt = {"4", "12", "16", "24"};
     String questiontxt = "Hvad er kvadratroden af 16";
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -87,6 +90,7 @@ public class MultipleChoiceFragment extends Fragment {
         optionThumbs[2].setImageResource(R.drawable.ic_game);
         optionThumbs[3].setImageResource(R.drawable.ic_game);
 
+
         return view;
     }
 
@@ -98,9 +102,22 @@ public class MultipleChoiceFragment extends Fragment {
 
     private void answerPressed(int optionindex) {
         if (answertxt[optionindex].equals(trueanswer)) {
-            optionButtons[optionindex].setBackgroundColor(Color.GREEN);
+            optionButtons[optionindex].setBackgroundColor(0xa6ed82);
+//            ObjectAnimator colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
+//                    new ArgbEvaluator(), Color.argb(255,33,150,44), 0xa6ed82);
+//            colorFade.setDuration(1000);
+//            colorFade.start();
+
+
         } else {
-            optionButtons[optionindex].setBackgroundColor(Color.RED);
+            optionButtons[optionindex].setBackgroundColor(0xf91400);
+            ObjectAnimator colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
+                    new ArgbEvaluator(), Color.argb(255,193,37,23), 0xf91400);
+            colorFade.setDuration(1000);
+            colorFade.start();
+
+
+//            optionButtons[optionindex].animate();
         }
 
     }
