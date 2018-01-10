@@ -31,13 +31,16 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     private static final String COL5 = "choice4";
     private static final String COL6 = "answer";
     String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COL1 + " TEXT" + COL2 + " TEXT, " + COL3 + " TEXT, " + COL4 + " TEXT" + COL5 + " TEXT" + COL6 + " TEXT)";
+            + COL1 + " TEXT, " + COL2 + " TEXT, " + COL3 + " TEXT, " + COL4 + " TEXT, " + COL5 + " TEXT, " + COL6 + " TEXT)";
+
+
     public MultipleChoiceDataBaseHelper(Context context) {
         super(context, TABLE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        Log.d(createTable, "createtable");
         db.execSQL(createTable);
 
     }
@@ -60,10 +63,12 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         Log.d(TAG, "addData: Adding " + question.getChoice(0) + " to " + TABLE_NAME);
         contentValues.put(COL3, question.getChoice(1));
         Log.d(TAG, "addData: Adding " + question.getChoice(1) + " to " + TABLE_NAME);
-        contentValues.put(COL3, question.getChoice(2));
+        contentValues.put(COL4, question.getChoice(2));
         Log.d(TAG, "addData: Adding " + question.getChoice(2) + " to " + TABLE_NAME);
-        contentValues.put(COL3, question.getChoice(3));
+        contentValues.put(COL5, question.getChoice(3));
         Log.d(TAG, "addData: Adding " + question.getChoice(3) + " to " + TABLE_NAME);
+        contentValues.put(COL6, question.getAnswer());
+        Log.d(TAG, "addData: Adding " + question.getAnswer() + " to " + TABLE_NAME);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
         //if data as inserted incorrectly it will return -1
@@ -92,6 +97,8 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         values.put(COL6, question.getAnswer());
         // insert row in question table
         long insert = db.insert(TABLE_NAME, null, values);
+        String strLong = Long.toString(insert);
+        Log.d(strLong, "LONG Output");
         return insert;
     }
 

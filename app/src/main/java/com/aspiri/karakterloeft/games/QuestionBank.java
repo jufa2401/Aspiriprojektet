@@ -41,12 +41,13 @@ public class QuestionBank {
     public void initQuestions(Context context) {
         myDataBaseHelper = new MultipleChoiceDataBaseHelper(context);
         list = myDataBaseHelper.getAllQuestionsList();//get questions/choices/answers from database
-
+        String[] q1 = new String[]{"$$ y=a \\cdot x+b $$", "$$ y=a\\frac{x}{a} $$", "$$ y=a\\frac{a}{x} $$", "$$ y=e^x $$"};
+        String[] q2 = new String[]{"JVM", "Gradle", "Dalvik", "HAXM"};
         if (list.isEmpty()) {//if list is empty, populate database with default questions/choices/answers
             myDataBaseHelper.addInitialQuestion(new Question("Hvad er formlen for en ret linje",
-                    new String[]{"$$ y=a \\cdot x+b $$", "$$ y=a\\frac{x}{a} $$", "$$ y=a\\frac{a}{x} $$", "$$ y=e^x $$"}, "$$ y=a \\cdot x+b $$"));
+                    q1, q1[0]));
             myDataBaseHelper.addInitialQuestion(new Question("2. What is the name of build toolkit for Android Studio?",
-                    new String[]{"JVM", "Gradle", "Dalvik", "HAXM"}, "Gradle"));
+                    q2, q2[1]));
             myDataBaseHelper.addInitialQuestion(new Question("3. What widget can replace any use of radio buttons?",
                     new String[]{"Toggle Button", "Spinner", "Switch Button", "ImageButton"}, "Spinner"));
             myDataBaseHelper.addInitialQuestion(new Question("4. What is a widget in Android app?",
