@@ -19,5 +19,8 @@
 
     <!--Gul baggrund til teksten-->
     <color name="background_Yellow">#FFEBD4</color>
+
+    <color name="answer_correct">#a6ed82</color>
+    <color name="answer_wrong">#db6464</color>
 </resources>
 

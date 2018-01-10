@@ -1,5 +1,7 @@
 package com.aspiri.karakterloeft.games;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
@@ -10,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,6 +28,7 @@ import butterknife.OnClick;
 
 public class MultipleChoiceFragment extends Fragment {
 
+    public static final String TAG = "MultipleChoiceFragment";
     @BindView(R.id.question_text)
     TextView question;
     @BindViews({R.id.option1_text, R.id.option2_text, R.id.option3_text, R.id.option4_text})
@@ -61,7 +66,6 @@ public class MultipleChoiceFragment extends Fragment {
     String[] answertxt = {"4", "12", "16", "24"};
     String questiontxt = "Hvad er kvadratroden af 16";
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -87,6 +91,7 @@ public class MultipleChoiceFragment extends Fragment {
         optionThumbs[2].setImageResource(R.drawable.ic_game);
         optionThumbs[3].setImageResource(R.drawable.ic_game);
 
+
         return view;
     }
 
@@ -97,10 +102,27 @@ public class MultipleChoiceFragment extends Fragment {
     }
 
     private void answerPressed(int optionindex) {
+        int correct = getResources().getColor(R.color.answer_correct,null);
+        int wrong = getResources().getColor(R.color.answer_wrong,null);
         if (answertxt[optionindex].equals(trueanswer)) {
+
             optionButtons[optionindex].setBackgroundColor(Color.GREEN);
+
+            ObjectAnimator colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
+                    new ArgbEvaluator(), Color.argb(255,33,150,44), correct);
+            colorFade.setDuration(1000);
+            colorFade.start();
+
+
         } else {
-            optionButtons[optionindex].setBackgroundColor(Color.RED);
+            optionButtons[optionindex].setBackgroundColor(0xf91400);
+            ObjectAnimator colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
+                    new ArgbEvaluator(), Color.argb(255,193,37,23), wrong);
+            colorFade.setDuration(1000);
+            colorFade.start();
+
+
+//            optionButtons[optionindex].animate();
         }
 
     }

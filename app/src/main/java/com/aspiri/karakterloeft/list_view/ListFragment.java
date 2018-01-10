@@ -77,7 +77,6 @@ public class ListFragment extends Fragment {
         RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(getActivity(),subjectListArray,subtextListArray,imageArray);
         recyclerView.setAdapter(recyclerListAdapter);
 
-
         return rootView;
 
 

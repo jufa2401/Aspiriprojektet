@@ -19,13 +19,14 @@
         />
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/list_title"
         android:id="@+id/listRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/list_title"
         android:background="@color/md_grey_50"
         android:clipToPadding="false"
-        tools:context=".fragments.ListFragment">
+        tools:context=".fragments.ListFragment"
+        tools:listitem="@layout/list_view_single_row">
 
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>
