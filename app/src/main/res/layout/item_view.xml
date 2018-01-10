@@ -7,6 +7,7 @@
     android:padding="8dp"
     android:background="@drawable/item_background"
     >
+    <!-- android:background="@drawable/item_background"-->
 
     <ImageView
         android:id="@id/yal_ms_avatar"
@@ -27,6 +28,5 @@
         android:textColor="@android:color/white"
         android:layout_centerVertical="true"
         />
-
 
 </RelativeLayout>

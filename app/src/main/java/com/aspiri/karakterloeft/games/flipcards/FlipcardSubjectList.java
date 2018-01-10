@@ -26,19 +26,20 @@ import java.util.List;
 /**
  * Created by Artem Kholodnyi on 9/3/16.
  */
-public class DemoActivity extends AppCompatActivity {
+public class FlipcardSubjectList extends AppCompatActivity {
 
     private MultiSelect<Contact> mMultiSelect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.aspiri.karakterloeft.R.layout.activity_main);
+        setContentView(com.aspiri.karakterloeft.R.layout.flipcard_subject_list);
         setUpToolbar((Toolbar) findViewById(R.id.toolbar));
 
         askPermissions();
     }
 
+    //TODO: skal ændres så det er kameraet der spørges om lov til, med henblik på at kunne tage billder af grafer, til egne flipcards.
     private void askPermissions() {
         RxPermissions.getInstance(this)
                 .request(Manifest.permission.READ_CONTACTS)
@@ -126,9 +127,12 @@ public class DemoActivity extends AppCompatActivity {
                     msg = getString(R.string.nothing_selected);
                     mMultiSelect.showNotSelectedPage();
                 } else {
-                    msg = getResources().getQuantityString(R.plurals.you_selected_x_songs,
+                    msg = getResources().getQuantityString(R.plurals.you_selected_x_subjects,
                             selectedCount, selectedCount);
                     mMultiSelect.showSelectedPage();
+                    //TODO: Handler som læser elementerne fra items og sender dem videdre til en ny evt expandable list:
+                    //TODO: Tal med Nasser omkring farverne til flipcards_subject_list.
+                    Log.d(" Valgte emner: ", items.toString());
                 }
                 Snackbar.make(toolbar, msg, Snackbar.LENGTH_LONG).show();
                 return true;

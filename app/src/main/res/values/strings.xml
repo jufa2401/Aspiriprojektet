@@ -1178,14 +1178,14 @@
 
 
     <!-- Test med contacts -->
-    <string name="activity_title">Choose contacts</string>
-    <string name="nothing_selected">Please select someone… :\'(</string>
-    <string name="permission_rationale">Please give contacts permissions for the demo. Note: this app has no internet permission.</string>
-    <string name="allow">allow</string>
+    <string name="activity_title">Vælg emner</string>
+    <string name="nothing_selected">Vælg emner for at forsætte</string>
+    <string name="permission_rationale">Giv tilladelse til at appen må benytte kameraet, dette benyttes til selvlavede flipcards</string>
+    <string name="allow">tillad</string>
 
-    <plurals name="you_selected_x_songs">
-        <item quantity="one">You selected %d contact!</item>
-        <item quantity="other">You selected %d contacts!</item>
+    <plurals name="you_selected_x_subjects">
+        <item quantity="one">Du valgte %d emne!</item>
+        <item quantity="other">Du valgte %d emner!</item>
     </plurals>
 
 

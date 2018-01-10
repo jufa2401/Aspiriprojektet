@@ -20,5 +20,10 @@
     <!--Gul baggrund til teksten-->
     <color name="background_Yellow">#FFEBD4</color>
     <color name="black">#161618</color>
+
+    <color name="navyblue">#07477b</color>
+    <color name="darkblue">#0D3D54</color>
+    <color name="darkdarkerblue">#0a2e40</color>
+
 </resources>
 

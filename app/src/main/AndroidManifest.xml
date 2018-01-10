@@ -15,12 +15,12 @@
         tools:replace ="android:label">
 
         <!-- Main -->
-        <activity android:name=".games.flipcards.DemoActivity">
+        <activity android:name=".games.flipcards.FlipcardSubjectList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:configChanges="orientation|keyboardHidden"
                 android:screenOrientation="portrait"
-                android:value=".games.flipcards.DemoActivity" />
+                android:value=".games.flipcards.FlipcardSubjectList" />
 
             <intent-filter>
 
