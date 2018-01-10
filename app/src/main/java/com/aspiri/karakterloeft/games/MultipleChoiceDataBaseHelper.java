@@ -20,7 +20,7 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DatabaseHelper";
 
-    private static final String TABLE_QUESTION = "QuestionBank";
+
 
 
     private static final String TABLE_NAME = "quiz_table";
@@ -30,17 +30,16 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     private static final String COL4 = "choice3";
     private static final String COL5 = "choice4";
     private static final String COL6 = "answer";
-
-
+    String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + COL1 + " TEXT" + COL2 + " TEXT, " + COL3 + " TEXT, " + COL4 + " TEXT" + COL5 + " TEXT" + COL6 + " TEXT)";
     public MultipleChoiceDataBaseHelper(Context context) {
         super(context, TABLE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COL1 + " TEXT" + COL2 + " TEXT, " + COL3 + " TEXT, " + COL4 + " TEXT" + COL5 + " TEXT" + COL6 + " TEXT)";
         db.execSQL(createTable);
+
     }
 
     @Override
@@ -92,7 +91,7 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         values.put(COL5, question.getChoice(3));
         values.put(COL6, question.getAnswer());
         // insert row in question table
-        long insert = db.insert(TABLE_QUESTION, null, values);
+        long insert = db.insert(TABLE_NAME, null, values);
         return insert;
     }
 
@@ -102,7 +101,7 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
      */
     public List<Question> getAllQuestionsList() {
         List<Question> questionArrayList = new ArrayList<>();
-        String selectQuery = "SELECT  * FROM " + TABLE_QUESTION;
+        String selectQuery = "SELECT * FROM " + "'" + TABLE_NAME + "'";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
@@ -138,3 +137,4 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         return questionArrayList;
     }
 }
+

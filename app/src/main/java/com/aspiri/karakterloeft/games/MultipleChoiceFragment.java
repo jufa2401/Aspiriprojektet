@@ -82,7 +82,7 @@ public class MultipleChoiceFragment extends Fragment {
         ButterKnife.bind(this, view);
 
 
-        questionBank.initQuestions(getContext());
+        questionBank.initQuestions(mActivity.getApplicationContext());
 
 
 //        question.setText(questiontxt);
