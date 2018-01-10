@@ -6,14 +6,14 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,7 +37,16 @@ public class MultipleChoiceFragment extends Fragment {
     ImageView optionThumbs[];
     @BindViews({R.id.option1_button, R.id.option2_button, R.id.option3_button, R.id.option4_button})
     LinearLayout optionButtons[];
+    @BindView(R.id.status_text)
+    TextView statustekst;
+    AppCompatActivity mActivity;
+    MultipleChoiceDataBaseHelper dataBaseHelper = new MultipleChoiceDataBaseHelper(((MainActivity) mActivity));
+    LinearLayout answerbutton1, answerbutton2, answerbutton3, answerbutton4;
+    String[] answertxt = {"4", "12", "16", "24"};
+    String questiontxt = "Hvad er kvadratroden af 16";
+    QuestionBank questionBank = new QuestionBank();
     private String trueanswer = "4";
+    private int mQuestionNumber = 0;
 
     @OnClick(R.id.option1_button)
     void onOption1Click() {
@@ -59,13 +68,6 @@ public class MultipleChoiceFragment extends Fragment {
         answerPressed(3);
     }
 
-    AppCompatActivity mActivity;
-
-    LinearLayout answerbutton1,answerbutton2,answerbutton3,answerbutton4;
-
-    String[] answertxt = {"4", "12", "16", "24"};
-    String questiontxt = "Hvad er kvadratroden af 16";
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -79,21 +81,26 @@ public class MultipleChoiceFragment extends Fragment {
         View view = inflater.inflate(R.layout.multiple_choice_quiz, container, false);
         ButterKnife.bind(this, view);
 
-        question.setText(questiontxt);
 
-        optionTexts[0].setText(answertxt[0]);
-        optionTexts[1].setText(answertxt[1]);
-        optionTexts[2].setText(answertxt[2]);
-        optionTexts[3].setText(answertxt[3]);
+        questionBank.initQuestions(getContext());
 
-        optionThumbs[0].setImageResource(R.drawable.ic_game);
-        optionThumbs[1].setImageResource(R.drawable.ic_game);
-        optionThumbs[2].setImageResource(R.drawable.ic_game);
-        optionThumbs[3].setImageResource(R.drawable.ic_game);
+
+//        question.setText(questiontxt);
+//
+//        optionTexts[0].setText(answertxt[0]);
+//        optionTexts[1].setText(answertxt[1]);
+//        optionTexts[2].setText(answertxt[2]);
+//        optionTexts[3].setText(answertxt[3]);
+//
+//        optionThumbs[0].setImageResource(R.drawable.ic_game);
+//        optionThumbs[1].setImageResource(R.drawable.ic_game);
+//        optionThumbs[2].setImageResource(R.drawable.ic_game);
+//        optionThumbs[3].setImageResource(R.drawable.ic_game);
 
 
         return view;
     }
+
 
     @Override
     public void onResume() {
@@ -102,8 +109,14 @@ public class MultipleChoiceFragment extends Fragment {
     }
 
     private void answerPressed(int optionindex) {
-        int correct = getResources().getColor(R.color.answer_correct,null);
-        int wrong = getResources().getColor(R.color.answer_wrong,null);
+        int correct, wrong;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            correct = getResources().getColor(R.color.answer_correct, null);
+            wrong = getResources().getColor(R.color.answer_wrong, null);
+        } else {
+            correct = getResources().getColor(R.color.answer_correct);      // Tager hensyn til gamle API er
+            wrong = getResources().getColor(R.color.answer_wrong);
+        }
         if (answertxt[optionindex].equals(trueanswer)) {
 
             optionButtons[optionindex].setBackgroundColor(Color.GREEN);
@@ -113,6 +126,22 @@ public class MultipleChoiceFragment extends Fragment {
             colorFade.setDuration(1000);
             colorFade.start();
 
+            optionButtons[0].setClickable(false);
+            optionButtons[1].setClickable(false);
+            optionButtons[2].setClickable(false);
+            optionButtons[3].setClickable(false);
+            statustekst.setText(R.string.correct_choice);
+
+            ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
+
+            getView().setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+
+                    newQuestion();
+                    return false;
+                }
+            });
 
         } else {
             optionButtons[optionindex].setBackgroundColor(0xf91400);
@@ -121,9 +150,38 @@ public class MultipleChoiceFragment extends Fragment {
             colorFade.setDuration(1000);
             colorFade.start();
 
+            optionButtons[optionindex].setClickable(false);
+            statustekst.setText(R.string.wrong_choice);
 
 //            optionButtons[optionindex].animate();
         }
+
+    }
+
+    private void newQuestion() {
+
+        if (mQuestionNumber < questionBank.getLength()) {
+
+
+            question.setText(questionBank.getQuestion(mQuestionNumber));
+
+            optionTexts[0].setText(questionBank.getChoice(mQuestionNumber, 1));
+            optionTexts[1].setText(questionBank.getChoice(mQuestionNumber, 2));
+            optionTexts[2].setText(questionBank.getChoice(mQuestionNumber, 3));
+            optionTexts[3].setText(questionBank.getChoice(mQuestionNumber, 4));
+            trueanswer = questionBank.getCorrectAnswer(mQuestionNumber);
+            mQuestionNumber++;
+
+            optionButtons[0].setClickable(true);
+            optionButtons[1].setClickable(true);
+            optionButtons[2].setClickable(true);
+            optionButtons[3].setClickable(true);
+        } else {
+            ((MainActivity) mActivity).showMessage("That was the last question");
+            MultipleChoiceFragment f = new MultipleChoiceFragment();
+            ((MainActivity) mActivity).replaceFragment(f, MultipleChoiceFragment.TAG);
+        }
+
 
     }
 }
