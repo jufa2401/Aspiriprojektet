@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -185,6 +186,7 @@ public class MultipleChoiceFragment extends Fragment {
 
     private void mathViewPressed(int optionindex) {
         int correct, wrong;
+        String[] option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             correct = getResources().getColor(R.color.answer_correct, null);
             wrong = getResources().getColor(R.color.answer_wrong, null);
@@ -192,7 +194,7 @@ public class MultipleChoiceFragment extends Fragment {
             correct = getResources().getColor(R.color.answer_correct);      // Tager hensyn til gamle API er
             wrong = getResources().getColor(R.color.answer_wrong);
         }
-        if (optionTexts[optionindex].getText().equals(trueanswer)) {
+        if (option[optionindex].equals(trueanswer)) {
 
             mathViews[optionindex].setBackgroundColor(Color.GREEN);
 
@@ -201,10 +203,10 @@ public class MultipleChoiceFragment extends Fragment {
             colorFade.setDuration(1000);
             colorFade.start();
 
-            mathViews[0].setClickable(false);
-            mathViews[1].setClickable(false);
-            mathViews[2].setClickable(false);
-            mathViews[3].setClickable(false);
+            checkBoxes[0].setClickable(false);
+            checkBoxes[1].setClickable(false);
+            checkBoxes[2].setClickable(false);
+            checkBoxes[3].setClickable(false);
             statustekst.setText(R.string.correct_choice);
 
             ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
@@ -254,29 +256,31 @@ public class MultipleChoiceFragment extends Fragment {
                 for (int i = 0; i < 4; i++) {
                     optionTexts[i].setText(option[i]);
                     optionButtons[i].setClickable(true);
+
+                    mathViews[i].setVisibility(View.GONE);
+                    Log.d("mathview at" + i + "visibility GONE", "mathview at" + i + "visibility GONE");
+                    checkBoxes[i].setVisibility(View.GONE);
+
                     if (optionButtons[i].getVisibility() == View.GONE) {
                         optionButtons[i].setVisibility(View.VISIBLE);
+                        Log.d("optionbutton visib at " + i, "optionbuttons at" + i + "Visibility visible");
                     }
-                    if (mathViews[i].getVisibility() == View.VISIBLE) {
-                        mathViews[i].setVisibility(View.GONE);
-                        checkBoxes[i].setVisibility(View.GONE);
 
-                    }
                 }
                 mQuestionNumber++;
+                Log.d("mQuestionNumber value: " + mQuestionNumber, "mQuestionNumber value: " + mQuestionNumber);
 
 
             }
 
 
-        }
-        if (mQuestionNumber >= questionBank.getLength()) {
+        } else {
             ((MainActivity) mActivity).showMessage("That was the last question");
             MultipleChoiceFragment f = new MultipleChoiceFragment();
             ((MainActivity) mActivity).replaceFragment(f, MultipleChoiceFragment.TAG);
         }
 
-
     }
 }
+
 
