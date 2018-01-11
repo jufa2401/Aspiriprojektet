@@ -17,24 +17,21 @@
         android:layout_height="match_parent" />
 
 
-    Her sættes farve for navigation viewet
+    <!--Her sættes farve for navigation viewet-->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
 
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/drawer_header_navigation"
-        app:itemIconTint="@color/item_icon_color"
-        app:itemTextColor="@color/item_text_color"
-        app:menu="@menu/drawer_content">
+        android:layout_gravity="start">
 
 
+        <include
+            layout="@layout/ex_list"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
     </android.support.design.widget.NavigationView>
-    <!--<include-->
-    <!--layout="@layout/ex_list"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_width="match_parent" />-->
+
 
 </android.support.v4.widget.DrawerLayout>
 

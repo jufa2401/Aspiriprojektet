@@ -21,11 +21,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.games.FlipcardActivity;
 import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
 import com.aspiri.karakterloeft.list_view.ListFragment;
+import com.aspiri.karakterloeft.test.ExpandableListAdapter2;
 import com.aspiri.karakterloeft.test.ExpandableListDataSource;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
@@ -49,7 +51,7 @@ import butterknife.ButterKnife;
 
 import static com.aspiri.karakterloeft.R.string.invitation_image_link;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
     private final static String MESSAGE = "MESSAGE";
     //For Firebase
     private static String TAG = MainActivity.class.getSimpleName();
@@ -69,9 +71,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private List<String> mExpandableListTitle;
     private String[] items;
 
-    //     Der er problemer med ExpandableListView ikke adapteren!
-//    @BindView(R.id.navList)
-//    ExpandableListView mExpandableListView;
+//         Der er problemer med ExpandableListView ikke adapteren!
+    @BindView(R.id.navList)
+    ExpandableListView mExpandableListView;
     private Map<String, List<String>> mExpandableListData;
 
 
@@ -85,14 +87,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         // Fanebladet
         setSupportActionBar(toolbar);
 
-        navigationView.setNavigationItemSelectedListener(this);
+//        navigationView.setNavigationItemSelectedListener(this);
 
 
         // sets mActionBarDrawerToggle
         mExpandableListData = ExpandableListDataSource.getData(this);
         mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
 //        // Add drawer items requires ExpandableListTitle and ExpandableListData to be initialized.
-//        addDrawerItems();
+        addDrawerItems();
         setupDrawer();
 
         //mExpandableListView.setAdapter(mExpandableListAdapter);
@@ -192,83 +194,83 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     //     On click for de forskellige optioner i drawer.
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-
-            //        Top functions
-            case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
-                if (mFragmentManager.getBackStackEntryCount() == 0) {
-                    drawer.closeDrawer(GravityCompat.START);
-                } else {
-                    Intent intent = getIntent();
-                    finish();
-                    startActivity(intent);
-                }
-                return true;
-
-            case R.id.drawer_store:
-                Intent goToStore = new Intent(Intent.ACTION_VIEW);
-                goToStore.setData(Uri.parse(getString(R.string.drawer_URL_ToTheStore)));
-                startActivity(goToStore);
-                Log.d("AspiriApp", "Webstore pressed");
-                return true;
-
-            case R.id.drawer_send_us_mail:
-                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
-                sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
-                sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
-                startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
-                Log.d("AspiriApp", "Mail_icon pressed");
-                return true;
-
-            //Goes to flipcards.
-            case R.id.drawer_flipcards:
-                Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
-                startActivity(goToFlipCards);
-                Log.d("AspiriApp", "Flipcard_pressed");
-                return true;
-            case R.id.drawer_quiz:
-                MultipleChoiceFragment fragment = new MultipleChoiceFragment();
-                getFragmentManager().beginTransaction().addToBackStack("quiz from drawer")
-                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, R.animator.slide_out_right, R.animator.slide_in_right).replace(R.id.fragmentindhold, fragment)
-                        .commit();
-                drawer.closeDrawer(GravityCompat.START);
-                return true;
-
-
-            // Tester FB bot til KL, laver seperat knap til test.
-            // Senere skal denne (hvis fungerende) benyttes et andet sted.
-            case R.id.drawer_kontakt_test:
-
-                try {
-                    ApplicationInfo info = getPackageManager().
-                            getApplicationInfo("com.facebook.katana", 0);
-                    String uri = "fb://messaging/1137012216344735";
-                    Intent contactFacebookBot = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                    startActivity(contactFacebookBot);
-                    return true;
-                } catch (PackageManager.NameNotFoundException e) {
-                    showMessage("Facebook ikke installeret");
-                    return true;
-                }
-
-
-            case R.id.drawer_share:
-
-                Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
-                myTrace.start();
-
-                onInviteClicked();
-                showMessage("Drawer share was pressed");
-
-                myTrace.stop();
-                return true;
-        }
-
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()) {
+//
+//            //        Top functions
+//            case R.id.drawer_home:  // SKAL LUKKE DRAWEREN UDEN AT BRUGERN TRÆKKER DEN IND
+//                if (mFragmentManager.getBackStackEntryCount() == 0) {
+//                    drawer.closeDrawer(GravityCompat.START);
+//                } else {
+//                    Intent intent = getIntent();
+//                    finish();
+//                    startActivity(intent);
+//                }
+//                return true;
+//
+//            case R.id.drawer_store:
+//                Intent goToStore = new Intent(Intent.ACTION_VIEW);
+//                goToStore.setData(Uri.parse(getString(R.string.drawer_URL_ToTheStore)));
+//                startActivity(goToStore);
+//                Log.d("AspiriApp", "Webstore pressed");
+//                return true;
+//
+//            case R.id.drawer_send_us_mail:
+//                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
+//                sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
+//                sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
+//                startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
+//                Log.d("AspiriApp", "Mail_icon pressed");
+//                return true;
+//
+//            //Goes to flipcards.
+//            case R.id.drawer_flipcards:
+//                Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
+//                startActivity(goToFlipCards);
+//                Log.d("AspiriApp", "Flipcard_pressed");
+//                return true;
+//            case R.id.drawer_quiz:
+//                MultipleChoiceFragment fragment = new MultipleChoiceFragment();
+//                getFragmentManager().beginTransaction().addToBackStack("quiz from drawer")
+//                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, R.animator.slide_out_right, R.animator.slide_in_right).replace(R.id.fragmentindhold, fragment)
+//                        .commit();
+//                drawer.closeDrawer(GravityCompat.START);
+//                return true;
+//
+//
+//            // Tester FB bot til KL, laver seperat knap til test.
+//            // Senere skal denne (hvis fungerende) benyttes et andet sted.
+//            case R.id.drawer_kontakt_test:
+//
+//                try {
+//                    ApplicationInfo info = getPackageManager().
+//                            getApplicationInfo("com.facebook.katana", 0);
+//                    String uri = "fb://messaging/1137012216344735";
+//                    Intent contactFacebookBot = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+//                    startActivity(contactFacebookBot);
+//                    return true;
+//                } catch (PackageManager.NameNotFoundException e) {
+//                    showMessage("Facebook ikke installeret");
+//                    return true;
+//                }
+//
+//
+//            case R.id.drawer_share:
+//
+//                Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
+//                myTrace.start();
+//
+//                onInviteClicked();
+//                showMessage("Drawer share was pressed");
+//
+//                myTrace.stop();
+//                return true;
+//        }
+//
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
 
     public void replaceFragment(Fragment fragment, String tag) {
         if (mFragmentManager == null)
@@ -344,45 +346,45 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         private void initItems() {
         items = getResources().getStringArray(R.array.subject_list);
     }
-//
-//    private void addDrawerItems() {
-//        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
-//        mExpandableListView.setAdapter(mExpandableListAdapter);
-//        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-//            @Override
-//            public void onGroupExpand(int groupPosition) {
-//                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
-//            }
-//        });
-//
-//        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-//            @Override
-//            public void onGroupCollapse(int groupPosition) {
-//                getSupportActionBar().setTitle(R.string.drawer_subjects);
-//            }
-//        });
-//
-//        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-//            @Override
-//            public boolean onChildClick(ExpandableListView parent, View v,
-//                                        int groupPosition, int childPosition, long id) {
-//                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
-//                        .get(childPosition).toString();
-//                getSupportActionBar().setTitle(selectedItem);
-//
-//                final Bundle bundle = new Bundle();
-//                SubjectFragment subjectFragment = new SubjectFragment();
-//                setOldindex(groupPosition);
-//                bundle.putInt("listindex",childPosition);
-//
-//                subjectFragment.setArguments(bundle);
-//                replaceFragment(subjectFragment, SubjectFragment.TAG);
-//
-//                drawer.closeDrawer(GravityCompat.START);
-//                return false;
-//            }
-//        });
-//    }
+
+    private void addDrawerItems() {
+        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
+        mExpandableListView.setAdapter(mExpandableListAdapter);
+        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            @Override
+            public void onGroupExpand(int groupPosition) {
+                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
+            }
+        });
+
+        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+                getSupportActionBar().setTitle(R.string.drawer_subjects);
+            }
+        });
+
+        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
+                        .get(childPosition).toString();
+                getSupportActionBar().setTitle(selectedItem);
+
+                final Bundle bundle = new Bundle();
+                SubjectFragment subjectFragment = new SubjectFragment();
+                setOldindex(groupPosition);
+                bundle.putInt("listindex",childPosition);
+
+                subjectFragment.setArguments(bundle);
+                replaceFragment(subjectFragment, SubjectFragment.TAG);
+
+                drawer.closeDrawer(GravityCompat.START);
+                return false;
+            }
+        });
+    }
 
 
     //Credit to firebase

@@ -61,7 +61,9 @@ dependencies {
     compile 'com.android.support:design:27.0.1'
     testCompile 'junit:junit:4.12'
 
-
+    compile 'com.squareup.retrofit2:retrofit:2.+'
+    compile 'com.squareup.retrofit2:converter-gson:2.+'
+    compile 'com.squareup.picasso:picasso:2.+'
     compile 'in.hourglass.mathrender:katexmathview:1.0'
     compile 'com.ms-square:expandableTextView:0.1.4'
     compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'

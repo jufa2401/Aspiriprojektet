@@ -64,12 +64,15 @@ public class FlipcardActivity extends Activity
      */
     private boolean mShowingBack = false;
 
+    FlipcardBank flipcardBank = new FlipcardBank();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
         clickfrag = findViewById(R.id.card);
 
+        flipcardBank.initQuestions(getApplicationContext());
 
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
         myTrace.start();

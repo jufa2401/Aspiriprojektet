@@ -42,13 +42,7 @@
 
         <!-- Test activiy 2 -->
         <activity android:name=".games.FlipcardActivity"></activity>
-        <activity android:name=".test.TestinglayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
-        </activity>
     </application>
 
 </manifest>
