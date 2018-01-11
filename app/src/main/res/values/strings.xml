@@ -1187,6 +1187,8 @@
     <string name="nothing_selected">Vælg emner for at forsætte</string>
     <string name="permission_rationale">Giv tilladelse til at appen må benytte kameraet, dette benyttes til selvlavede flipcards</string>
     <string name="allow">tillad</string>
+    <string name="flipcar_button_previous">Forrige kort</string>
+    <string name="flipcard_button_next">Næste kort</string>
 
     <plurals name="you_selected_x_subjects">
         <item quantity="one">Du valgte %d emne!</item>

@@ -15,12 +15,12 @@
         tools:replace ="android:label">
 
         <!-- Main -->
-        <activity android:name=".games.flipcards.FlipcardSubjectList">
+        <activity android:name=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:configChanges="orientation|keyboardHidden"
                 android:screenOrientation="portrait"
-                android:value=".games.flipcards.FlipcardSubjectList" />
+                android:value=".MainActivity" />
 
             <intent-filter>
 
@@ -46,13 +46,8 @@
 
         <!-- Test activiy 2 -->
         <activity android:name=".games.FlipcardActivity"></activity>
-        <activity android:name=".test.TestinglayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".games.flipcards.FlipcardSubjectList"></activity>
 
-        </activity>
     </application>
 
 </manifest>

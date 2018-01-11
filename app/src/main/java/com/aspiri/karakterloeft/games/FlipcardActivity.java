@@ -63,12 +63,15 @@ public class FlipcardActivity extends Activity
      * Whether or not we're showing the back of the card (otherwise showing the front).
      */
     private boolean mShowingBack = false;
+    private Fragment flipCardButtonFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
         clickfrag = findViewById(R.id.card);
+
+        flipCardButtonFragment = new FlipCardButtonFragment();
 
 
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
@@ -82,6 +85,7 @@ public class FlipcardActivity extends Activity
             getFragmentManager()
                     .beginTransaction()
                     .add(R.id.container, new CardFrontFragment())
+                    .add(R.id.button_container, flipCardButtonFragment)
                     .commit();
         } else {
             mShowingBack = (getFragmentManager().getBackStackEntryCount() > 0);
@@ -125,6 +129,7 @@ public class FlipcardActivity extends Activity
             case(MotionEvent.ACTION_DOWN):
                 Log.d("Flipcard", "ACTION_DOWN");
                 flipCard();
+
                 return true;
 //            case (MotionEvent.ACTION_MOVE) :
 //                Log.d("Aspiri app","Action was MOVE");

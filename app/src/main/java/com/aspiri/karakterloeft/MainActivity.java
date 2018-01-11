@@ -224,8 +224,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
             //Goes to flipcards.
             case R.id.drawer_flipcards:
-                Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
-                startActivity(goToFlipCards);
+                Intent goToFlipCardsSelection = new Intent(this, com.aspiri.karakterloeft.games.flipcards.FlipcardSubjectList.class);
+                startActivity(goToFlipCardsSelection);
                 Log.d("AspiriApp", "Flipcard_pressed");
                 return true;
             case R.id.drawer_quiz:
@@ -389,9 +389,9 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private void onInviteClicked() {
         Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.invitation_title))
                 .setMessage(getString(R.string.invitation_message))
-                .setDeepLink(Uri.parse(getString(R.string.invitation_deep_link)))
+                .setDeepLink(Uri.parse("https://bd763.app.goo.gl/zgxL"))
                 .setCallToActionText(getString(R.string.invitation_cta))
-                .setCustomImage(Uri.parse(getString(invitation_image_link)))
+//                .setCustomImage(Uri.parse(getString(invitation_image_link)))
                 .build();
         startActivityForResult(intent, REQUEST_INVITE);
     }
