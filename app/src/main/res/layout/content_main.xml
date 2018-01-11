@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+    android:fitsSystemWindows="true">
 
 
     <!-- Created for MainActivity -->
+    <!-- Created for MainActivity -->
+
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/fragmentindhold"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize"
-        tools:context="com.example.s165158.aspiri.MainActivity"
-        tools:showIn="@layout/toolbar_top"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.s165158.aspiri.MainActivity"
+        tools:showIn="@layout/toolbar_top">
 
     </FrameLayout>
+
 
 </android.support.constraint.ConstraintLayout>

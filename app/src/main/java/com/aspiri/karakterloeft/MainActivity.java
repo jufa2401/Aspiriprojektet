@@ -21,12 +21,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.games.FlipcardActivity;
 import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
 import com.aspiri.karakterloeft.list_view.ListFragment;
+import com.aspiri.karakterloeft.test.ExpandableListDataSource;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -40,6 +40,7 @@ import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -48,32 +49,29 @@ import butterknife.ButterKnife;
 
 import static com.aspiri.karakterloeft.R.string.invitation_image_link;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
-    private int oldindex;
-    private FragmentManager mFragmentManager;
+    //For Firebase
+    private static String TAG = MainActivity.class.getSimpleName();
+    private static int REQUEST_INVITE = 0;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     @BindView(R.id.nav_view)
     NavigationView navigationView;
+    ExpandableListAdapter mExpandableListAdapter;
+    private int oldindex;
+    private FragmentManager mFragmentManager;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
-    //For Firebase
-    private static String TAG = MainActivity.class.getSimpleName();
-    private static int REQUEST_INVITE = 0;
     private FirebaseAnalytics mFirebaseAnalytics;
-
     // test
     private List<String> mExpandableListTitle;
     private String[] items;
-    ExpandableListAdapter mExpandableListAdapter;
 
     //     Der er problemer med ExpandableListView ikke adapteren!
-    @BindView(R.id.navList)
-    ExpandableListView mExpandableListView;
-
-
+//    @BindView(R.id.navList)
+//    ExpandableListView mExpandableListView;
     private Map<String, List<String>> mExpandableListData;
 
 
@@ -91,8 +89,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         // sets mActionBarDrawerToggle
-//        mExpandableListData = ExpandableListDataSource.getData(this);
-//        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
+        mExpandableListData = ExpandableListDataSource.getData(this);
+        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
 //        // Add drawer items requires ExpandableListTitle and ExpandableListData to be initialized.
 //        addDrawerItems();
         setupDrawer();
@@ -193,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    // On click for de forskellige optioner i drawer.
+    //     On click for de forskellige optioner i drawer.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -232,7 +230,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             case R.id.drawer_quiz:
                 MultipleChoiceFragment fragment = new MultipleChoiceFragment();
-                replaceFragment(fragment, "he");
+                getFragmentManager().beginTransaction().addToBackStack("quiz from drawer")
+                        .setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out, R.animator.slide_out_right, R.animator.slide_in_right).replace(R.id.fragmentindhold, fragment)
+                        .commit();
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
 
@@ -252,7 +252,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     showMessage("Facebook ikke installeret");
                     return true;
                 }
-
 
 
             case R.id.drawer_share:
@@ -342,9 +341,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 // EXPERIMENTAL CODE THAT DID NOT WORK!
-//        private void initItems() {
-//        items = getResources().getStringArray(R.array.subject_list);
-//    }
+        private void initItems() {
+        items = getResources().getStringArray(R.array.subject_list);
+    }
 //
 //    private void addDrawerItems() {
 //        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
@@ -371,19 +370,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                        .get(childPosition).toString();
 //                getSupportActionBar().setTitle(selectedItem);
 //
-//                if (items[0].equals(mExpandableListTitle.get(groupPosition))) {
-//                    // Navigation Logic
-//                } else if (items[1].equals(mExpandableListTitle.get(groupPosition))) {
-//                  // Navigation logic
-//                } else if (items[2].equals(mExpandableListTitle.get(groupPosition))) {
-//                    // Navigation logic
-//                } else if (items[3].equals(mExpandableListTitle.get(groupPosition))) {
-//                   // Navigation logic
-//                } else if (items[4].equals(mExpandableListTitle.get(groupPosition))) {
-//                   // NavigationLogic
-//                } else {
-//                    throw new IllegalArgumentException("Not supported fragment type");
-//                }
+//                final Bundle bundle = new Bundle();
+//                SubjectFragment subjectFragment = new SubjectFragment();
+//                setOldindex(groupPosition);
+//                bundle.putInt("listindex",childPosition);
+//
+//                subjectFragment.setArguments(bundle);
+//                replaceFragment(subjectFragment, SubjectFragment.TAG);
 //
 //                drawer.closeDrawer(GravityCompat.START);
 //                return false;
@@ -439,6 +432,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void setOldindex(int oldindex) {
         this.oldindex = oldindex;
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
 

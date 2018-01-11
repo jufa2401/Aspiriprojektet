@@ -1174,6 +1174,11 @@
     <string name="find_way">Find rundt</string>
     <string name="drawer_item_home">home</string>
     <string name="drawer_item_settings">settings</string>
+    <string name="flipcard">Flipcards</string>
+    <string name="multiple_choice">Multiple Choice</string>
+    <string name="presstostart">Vælg én mulighed</string>
+    <string name="correct_choice">Flot! Du svarede korrekt.</string>
+    <string name="wrong_choice">Øv, du svarede forkert. Prøv igen</string>
 
 
 
