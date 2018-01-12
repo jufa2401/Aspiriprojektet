@@ -70,6 +70,7 @@ public class FlipcardActivity extends Activity
         setContentView(R.layout.activity_card_flip);
         clickfrag = findViewById(R.id.card);
 
+
         flipcardBank.initFlipcards(getApplicationContext());
 
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");

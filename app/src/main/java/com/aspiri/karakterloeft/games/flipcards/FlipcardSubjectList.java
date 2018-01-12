@@ -38,6 +38,9 @@ public class FlipcardSubjectList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.aspiri.karakterloeft.R.layout.flipcard_subject_list);
+        ArrayList<String> front = getIntent().getStringArrayListExtra("front");
+        ArrayList<String> back = getIntent().getStringArrayListExtra("back");
+
 
 
         setUpToolbar((Toolbar) findViewById(R.id.toolbar));
