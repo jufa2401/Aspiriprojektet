@@ -182,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             case R.id.three_dot_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite..  .
+                replaceFragment(new MultipleChoiceFragment(),MultipleChoiceFragment.TAG);
                 showMessage("Action Favorite is yet to be implemented");
                 Log.d("AspiriApp", "action_favorite pressed");
                 return true;
