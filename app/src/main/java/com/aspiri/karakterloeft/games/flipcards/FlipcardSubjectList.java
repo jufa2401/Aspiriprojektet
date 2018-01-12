@@ -118,16 +118,20 @@ public class FlipcardSubjectList extends AppCompatActivity {
                     //TODO: Handler som læser elementerne fra items og sender dem videdre til en ny evt expandable list:
                     // Der er lavet et midlertidigt intent som går fra flipcard select til et default flipkort.
 
-
+                    ArrayList<String> front = new ArrayList<String>();
+                    ArrayList<String> back = new ArrayList<String>();
                     for (int b = 0; b <= items.size(); b++) {
                         Flipcard flipcard1 = items.get(b);
-
+                        front.add(flipcard1.getFront());
+                        back.add(flipcard1.getBack());
                     }
 
 
-
+//                    TODO: FIX THIS SHIIT
                     Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
-                    goToFlipCards.putStringArrayListExtra("item", (ArrayList<String>) items);
+                    goToFlipCards.putStringArrayListExtra("front", front);
+                    goToFlipCards.putStringArrayListExtra("back", back);
+                    //                    goToFlipCards.putStringArrayListExtra("item", (<String>) items);
                     startActivity(goToFlipCards);
                     Log.d("AspiriApp", "Flipcard_pressed");
 
