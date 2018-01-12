@@ -6,19 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.games.Contact;
+import com.aspiri.karakterloeft.games.Flipcard;
 import com.yalantis.multiselection.lib.adapter.BaseLeftAdapter;
+
+//import com.aspiri.karakterloeft.games.Contact;
 
 
 /**
  * Created by Artem Kholodnyi on 9/3/16.
  */
-public class LeftAdapter extends BaseLeftAdapter<Contact, ViewHolder> {
+public class LeftAdapter extends BaseLeftAdapter<Flipcard, ViewHolder> {
 
     private final Callback callback;
 
     public LeftAdapter(Callback callback) {
-        super(Contact.class);
+        super(Flipcard.class);
         this.callback = callback;
     }
 

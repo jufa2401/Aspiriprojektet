@@ -7,11 +7,11 @@ import android.view.View;
 /**
  * Created by Artem Kholodnyi on 9/6/16.
  */
-public class TracksItemDecorator extends RecyclerView.ItemDecoration {
+public class FlipcardItemDecorator extends RecyclerView.ItemDecoration {
 
     private int size;
 
-    public TracksItemDecorator(int size) {
+    public FlipcardItemDecorator(int size) {
         this.size = size;
     }
 

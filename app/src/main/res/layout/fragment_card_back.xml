@@ -18,10 +18,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primary"
-    android:padding="16dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <TextView
         android:id="@android:id/text1"
@@ -45,5 +45,11 @@
         android:textAllCaps="false"
         android:textColor="#80ffffff"
         android:textStyle="bold" />
+
+    <katex.hourglass.in.mathlib.MathView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"></katex.hourglass.in.mathlib.MathView>
 
 </LinearLayout>

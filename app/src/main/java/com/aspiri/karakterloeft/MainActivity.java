@@ -20,15 +20,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ExpandableListAdapter;
-import android.widget.ExpandableListView;
 import android.widget.Toast;
 
-import com.aspiri.karakterloeft.games.FlipcardActivity;
 import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
 import com.aspiri.karakterloeft.list_view.ListFragment;
-import com.aspiri.karakterloeft.test.ExpandableListAdapter2;
-import com.aspiri.karakterloeft.test.ExpandableListDataSource;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -42,16 +37,12 @@ import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.AddTrace;
 import com.google.firebase.perf.metrics.Trace;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.aspiri.karakterloeft.R.string.invitation_image_link;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, NavigationView.OnNavigationItemSelectedListener {
     private final static String MESSAGE = "MESSAGE";
     //For Firebase
     private static String TAG = MainActivity.class.getSimpleName();
@@ -62,19 +53,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     DrawerLayout drawer;
     @BindView(R.id.nav_view)
     NavigationView navigationView;
-    ExpandableListAdapter mExpandableListAdapter;
+    //    ExpandableListAdapter mExpandableListAdapter;
     private int oldindex;
     private FragmentManager mFragmentManager;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private FirebaseAnalytics mFirebaseAnalytics;
     // test
-    private List<String> mExpandableListTitle;
-    private String[] items;
+//    private List<String> mExpandableListTitle;
+//    private String[] items;
 
 //         Der er problemer med ExpandableListView ikke adapteren!
-    @BindView(R.id.navList)
-    ExpandableListView mExpandableListView;
-    private Map<String, List<String>> mExpandableListData;
+//    @BindView(R.id.navList)
+//    ExpandableListView mExpandableListView;
+//    private Map<String, List<String>> mExpandableListData;
 
 
     //On createmetode
@@ -87,14 +78,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         // Fanebladet
         setSupportActionBar(toolbar);
 
-//        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
         // sets mActionBarDrawerToggle
-        mExpandableListData = ExpandableListDataSource.getData(this);
-        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
+//        mExpandableListData = ExpandableListDataSource.getData(this);
+//        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
 //        // Add drawer items requires ExpandableListTitle and ExpandableListData to be initialized.
-        addDrawerItems();
+        //addDrawerItems();
         setupDrawer();
 
         //mExpandableListView.setAdapter(mExpandableListAdapter);
@@ -342,10 +333,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         };
     }
 
-// EXPERIMENTAL CODE THAT DID NOT WORK!
-        private void initItems() {
-        items = getResources().getStringArray(R.array.subject_list);
-    }
+//// EXPERIMENTAL CODE THAT DID NOT WORK!
+//        private void initItems() {
+//        items = getResources().getStringArray(R.array.subject_list);
+////    }
 //
 //    private void addDrawerItems() {
 //        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);

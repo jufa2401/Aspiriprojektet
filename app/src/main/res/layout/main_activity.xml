@@ -21,15 +21,18 @@
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-
         android:layout_height="match_parent"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header_navigation"
+        app:itemIconTint="@color/item_icon_color"
+        app:itemTextColor="@color/item_text_color"
+        app:menu="@menu/drawer_content">
 
 
-        <include
-            layout="@layout/ex_list"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent" />
+        <!--<include-->
+        <!--layout="@layout/ex_list"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent" />-->
     </android.support.design.widget.NavigationView>
 
 

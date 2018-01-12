@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.graphics.Bitmap;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -16,14 +15,11 @@ import java.util.List;
  * Created by Justin on 10/01/2018.
  */
 
-class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
+public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
 
 
+    public static final String DB_NAME = "KL_db";
     private static final String TAG = "DatabaseHelper";
-
-
-
-
     private static final String TABLE_NAME_1 = "quiz_table";
     private static final String COL1_1 = "question";
     private static final String COL2_1 = "choice1";
@@ -32,17 +28,19 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     private static final String COL5_1 = "choice4";
     private static final String COL6_1 = "answer";
     private static final String TABLE_NAME_2 = "flipcard_table";
-    private static final String COL1_2 = "front";
-    private static final String COL2_2 = "back";
-    private static final String COL3_2 = "photo";
+    private static final String COL1_2 = "category";
+    private static final String COL2_2 = "front";
+    private static final String COL3_2 = "back";
+    private static final String COL4_2 = "photo";
     String createTableMultipleChoice = "CREATE TABLE " + TABLE_NAME_1 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL1_1 + " TEXT, " + COL2_1 + " TEXT, " + COL3_1 + " TEXT, " + COL4_1 + " TEXT, " + COL5_1 + " TEXT, " + COL6_1 + " TEXT)";
     String createTableFlipcard =  "CREATE TABLE " + TABLE_NAME_2 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COL1_2 + " TEXT, " + COL2_2 + " TEXT, " + COL3_2 + " TEXT)";
+            + COL1_2 + " TEXT, " + COL2_2 + " TEXT, " + COL3_2 + " TEXT, " + COL4_2 + " TEXT)";
 
     public MultipleChoiceDataBaseHelper(Context context) {
-        super(context, TABLE_NAME_1, null, 1);
+        super(context, DB_NAME, null, 1);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -86,16 +84,20 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     public boolean addDataFlipCard(Flipcard flipcard){
         SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL1_1, flipcard.getFront());
+        ContentValues contentValues1 = new ContentValues();
+        contentValues1.put(COL1_2, flipcard.getCategory());
+        Log.d(TAG, "addDataQuestion: Adding " + flipcard.getCategory() + " to " + TABLE_NAME_2);
+
+        contentValues1.put(COL2_2, flipcard.getFront());
+        Log.d(TAG, "addDataQuestion: Adding " + flipcard.getFront() + " to " + TABLE_NAME_2);
+
+        contentValues1.put(COL3_2, flipcard.getBack());
         Log.d(TAG, "addDataQuestion: Adding " + flipcard.getBack() + " to " + TABLE_NAME_2);
-        contentValues.put(COL2_1, flipcard.getBack());
-        Log.d(TAG, "addDataQuestion: Adding " + flipcard.getBack() + " to " + TABLE_NAME_2);
-        contentValues.put(COL3_1,flipcard.getPhoto());
+        contentValues1.put(COL4_2, flipcard.getPhoto());
         Log.d(TAG, "addDataQuestion: Adding " + flipcard.getPhoto() + " to " + TABLE_NAME_2);
 
 
-        long result = db.insert(TABLE_NAME_2, null, contentValues);
+        long result = db.insert(TABLE_NAME_2, null, contentValues1);
         //if data as inserted incorrectly it will return -1
         Log.d("result was", result + "");
         return result != -1;
@@ -131,9 +133,10 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         // Creating content values
         ContentValues values = new ContentValues();
-        values.put(COL1_2, flipcard.getFront());
-        values.put(COL2_2, flipcard.getBack());
-        values.put(COL3_2, flipcard.getPhoto());
+        values.put(COL1_2, flipcard.getCategory());
+        values.put(COL2_2, flipcard.getFront());
+        values.put(COL3_2, flipcard.getBack());
+        values.put(COL4_2, flipcard.getPhoto());
 
         // insert row in question table
         long insert = db.insert(TABLE_NAME_2, null, values);
@@ -192,19 +195,24 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
-
+        Flipcard flipcard = new Flipcard();
         // looping through all records and adding to the list
         if (c.moveToFirst()) {
             do {
-                Flipcard flipcard = new Flipcard();
+                int id = c.getInt(c.getColumnIndex("ID"));
+                flipcard.setId(id);
 
-                String frontText = c.getString(c.getColumnIndex(COL1_2));
+                String category = c.getString(c.getColumnIndex(COL1_2));
+                flipcard.setCategory(category);
+
+                String frontText = c.getString(c.getColumnIndex(COL2_2));
                 flipcard.setFront(frontText);
 
-                String backText = c.getString(c.getColumnIndex(COL2_2));
+                String backText = c.getString(c.getColumnIndex(COL3_2));
                 flipcard.setBack(backText);
 
-                String photo = c.getString(c.getColumnIndex(COL3_2));
+                String photo = c.getString(c.getColumnIndex(COL4_2));
+                flipcard.setPhoto(photo);
 
                 // adding to Questions list
                 flipcardArrayList.add(flipcard);
@@ -213,6 +221,17 @@ class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         }
         return flipcardArrayList;
     }
+
+//    public int getID(){
+//        String selectQuery = "SELECT * FROM " + "'" + TABLE_NAME_2 + "'";
+//
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor c = db.rawQuery(selectQuery, null);
+//        int id =  c.getInt(c.getColumnIndex("ID"));;
+//
+//        return id;
+//    }
+
 
 }
 

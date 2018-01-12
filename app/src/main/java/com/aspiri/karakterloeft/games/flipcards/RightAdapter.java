@@ -5,15 +5,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.games.Contact;
+import com.aspiri.karakterloeft.games.Flipcard;
 import com.yalantis.multiselection.lib.adapter.BaseRightAdapter;
 
 import org.jetbrains.annotations.NotNull;
 
+//import com.aspiri.karakterloeft.games.Contact;
+
 /**
  * Created by Artem Kholodnyi on 9/6/16.
  */
-public class RightAdapter extends BaseRightAdapter<Contact, ViewHolder> {
+public class RightAdapter extends BaseRightAdapter<Flipcard, ViewHolder> {
 
     private final Callback callback;
 

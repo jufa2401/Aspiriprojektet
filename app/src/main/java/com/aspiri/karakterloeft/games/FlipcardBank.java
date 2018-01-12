@@ -5,6 +5,7 @@ package com.aspiri.karakterloeft.games;
  */
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,9 @@ public class FlipcardBank {
         return list.size();
     }
 
+    public String getCategory(int a) {
+        return list.get(a).getCategory();
+    }
     // method returns question from list based on list index
     public String getFront(int a) { return list.get(a).getFront(); }
 
@@ -30,24 +34,25 @@ public class FlipcardBank {
     public String getPhoto(int a){return list.get(a).getPhoto();}
 
 
-
-    public void initQuestions(Context context) {
+    public void initFlipcards(Context context) {
         myDataBaseHelper = new MultipleChoiceDataBaseHelper(context);
         list = myDataBaseHelper.getAllFlipcardsList();//get questions/choices/answers from database
-        String[] q1 = new String[]{"$$ y=a \\cdot x+b $$", "$$ y=a\\frac{x}{a} $$", "$$ y=a\\frac{a}{x} $$", "$$ y=e^x $$"};
-        String[] q2 = new String[]{"JVM", "Gradle", "Dalvik", "HAXM"};
-        if (list.isEmpty()) {//if list is empty, populate database with default questions/choices/answers
-            myDataBaseHelper.addInitialFlipcard(new Flipcard("Hvad er formlen for en ret linje",
-                    "sdsds", "dsas"));
-            myDataBaseHelper.addInitialFlipcard(new Flipcard("2. What is the name of build toolkit for Android Studio?",
-                    "sds", "sdsdsd"));
-            myDataBaseHelper.addInitialFlipcard(new Flipcard("sdasd","sdssaa","dsasad"));
+        String q1 = "$$ y=a \\cdot x+b $$";
 
-            myDataBaseHelper.addInitialFlipcard(new Flipcard("4. What is a widget in Android app?","hheh","sdsdsd"));
+        if (list.isEmpty()) {//if list is empty, populate database with default questions/choices/answers
+            myDataBaseHelper.addInitialFlipcard(new Flipcard("ret linje", "Hvad er formlen for en ret linje",
+                    q1, "RET LINJE PHOTO"));
+            myDataBaseHelper.addInitialFlipcard(new Flipcard("Rentes Regning", "Renter FRONT",
+                    "sds", "sdsdsd"));
+            myDataBaseHelper.addInitialFlipcard(new Flipcard("Geometri", "Geometri FRONT", "Geometri BACK", "Geometri PHOTO"));
+
+            myDataBaseHelper.addInitialFlipcard(new Flipcard("Areal", "AREAL FRONT", "AREAL BACK", "AREAÆ PHOTO"));
 
             list = myDataBaseHelper.getAllFlipcardsList();//get list from database again
+            Log.d("Init database", list.toString());
 
         }
     }
+
 
 }

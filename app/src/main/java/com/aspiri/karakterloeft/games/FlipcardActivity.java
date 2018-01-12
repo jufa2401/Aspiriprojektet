@@ -52,20 +52,17 @@ import static com.aspiri.karakterloeft.SubjectFragment.TAG;
  */
 public class FlipcardActivity extends Activity
         implements FragmentManager.OnBackStackChangedListener {
+    FlipcardBank flipcardBank = new FlipcardBank();
     /**
      * A handler object, used for deferring UI operations.
      */
     private LinearLayout clickfrag;
-
     private Handler mHandler = new Handler();
-
     /**
      * Whether or not we're showing the back of the card (otherwise showing the front).
      */
     private boolean mShowingBack = false;
-    private Fragment flipCardButtonFragment;
-
-    FlipcardBank flipcardBank = new FlipcardBank();
+    private Fragment flipCardButtonFragment = new FlipCardButtonFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +70,7 @@ public class FlipcardActivity extends Activity
         setContentView(R.layout.activity_card_flip);
         clickfrag = findViewById(R.id.card);
 
-        flipcardBank.initQuestions(getApplicationContext());
+        flipcardBank.initFlipcards(getApplicationContext());
 
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
         myTrace.start();
@@ -168,6 +165,11 @@ public class FlipcardActivity extends Activity
         // Create and commit a new fragment transaction that adds the fragment for the back of
         // the card, uses custom animations, and is part of the fragment manager's back stack.
 
+        CardBackFragment cardBack = new CardBackFragment();
+        Bundle cardBackBundle = new Bundle();
+//        cardBackBundle.putString("front",front);
+//        cardBackBundle.putString("back",back);
+        cardBack.setArguments(cardBackBundle);
         getFragmentManager()
                 .beginTransaction()
 
@@ -182,7 +184,9 @@ public class FlipcardActivity extends Activity
                 // Replace any fragments currently in the container view with a fragment
                 // representing the next page (indicated by the just-incremented currentPage
                 // variable).
-                .replace(R.id.container, new CardBackFragment())
+
+
+                .replace(R.id.container, cardBack)
 
                 // Add this transaction to the back stack, allowing users to press Back
                 // to get to the front of the card.
@@ -210,6 +214,10 @@ public class FlipcardActivity extends Activity
         invalidateOptionsMenu();
     }
 
+    public void showMessage(String messageForToast) {
+        Log.d(TAG, "showMessage Method was called");
+        Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
+    }
 
     /**
      * A fragment representing the front of the card.
@@ -217,6 +225,7 @@ public class FlipcardActivity extends Activity
     public static class CardFrontFragment extends Fragment {
         public CardFrontFragment() {
         }
+
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -237,10 +246,5 @@ public class FlipcardActivity extends Activity
                                  Bundle savedInstanceState) {
             return inflater.inflate(R.layout.fragment_card_back, container, false);
         }
-    }
-
-    public void showMessage(String messageForToast) {
-        Log.d(TAG, "showMessage Method was called");
-        Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
 }
