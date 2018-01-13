@@ -19,26 +19,32 @@ package com.aspiri.karakterloeft.games;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.R;
+import com.aspiri.karakterloeft.list_view.ListFragment;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
 import com.google.firebase.perf.FirebasePerformance;
 import com.google.firebase.perf.metrics.Trace;
+
+import java.util.ArrayList;
 
 import static com.aspiri.karakterloeft.SubjectFragment.TAG;
 
@@ -50,7 +56,7 @@ import static com.aspiri.karakterloeft.SubjectFragment.TAG;
  * front of the card out and the back of the card in. The reverse animation is played when the user
  * presses the system Back button or the "photo" action bar button.</p>
  */
-public class FlipcardActivity extends Activity
+public class FlipcardActivity extends AppCompatActivity
         implements FragmentManager.OnBackStackChangedListener {
     FlipcardBank flipcardBank = new FlipcardBank();
     /**
@@ -62,17 +68,31 @@ public class FlipcardActivity extends Activity
      * Whether or not we're showing the back of the card (otherwise showing the front).
      */
     private boolean mShowingBack = false;
-    private Fragment flipCardButtonFragment = new FlipCardButtonFragment();
+    private Fragment flipCardButtonFragment = new FlipcardButtonFragment();
+
+    ArrayList<String> front;
+    ArrayList<String> back;
+
+    private int currentCardIndex = 0;
+    private int cardStackSize;
+    private FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
-        clickfrag = findViewById(R.id.card);
+        clickfrag = (LinearLayout) findViewById(R.id.card);
 
+         front = getIntent().getStringArrayListExtra("front");
+         back = getIntent().getStringArrayListExtra("back");
 
+            setCardStackSize(front.size());
+         Bundle b = new Bundle();
+        b.putStringArrayList("front",front);
+        b.putStringArrayList("back",back);
         flipcardBank.initFlipcards(getApplicationContext());
-
+        CardFrontFragment frontFragment = new CardFrontFragment();
+        frontFragment.setArguments(b);
         Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
         myTrace.start();
 
@@ -81,9 +101,9 @@ public class FlipcardActivity extends Activity
             // If there is no saved instance state, add a fragment representing the
             // front of the card to this activity. If there is saved instance state,
             // this fragment will have already been added to the activity.
-            getFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.container, new CardFrontFragment())
+            mFragmentManager = getFragmentManager();
+                    mFragmentManager.beginTransaction()
+                    .add(R.id.container, frontFragment)
                     .add(R.id.button_container, flipCardButtonFragment)
                     .commit();
         } else {
@@ -128,7 +148,9 @@ public class FlipcardActivity extends Activity
             case(MotionEvent.ACTION_DOWN):
                 Log.d("Flipcard", "ACTION_DOWN");
                 flipCard();
-                return true;
+                break;
+
+
 //            case (MotionEvent.ACTION_MOVE) :
 //                Log.d("Aspiri app","Action was MOVE");
 //                flipCard();
@@ -148,8 +170,8 @@ public class FlipcardActivity extends Activity
 //                return true;
             default :
                 return super.onTouchEvent(event);
-            }
-        }
+            }return true;
+         }
 
 
 
@@ -168,8 +190,8 @@ public class FlipcardActivity extends Activity
 
         CardBackFragment cardBack = new CardBackFragment();
         Bundle cardBackBundle = new Bundle();
-//        cardBackBundle.putString("front",front);
-//        cardBackBundle.putString("back",back);
+        cardBackBundle.putStringArrayList("front",front);
+        cardBackBundle.putStringArrayList("back",back);
         cardBack.setArguments(cardBackBundle);
         getFragmentManager()
                 .beginTransaction()
@@ -219,33 +241,55 @@ public class FlipcardActivity extends Activity
         Log.d(TAG, "showMessage Method was called");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
+    public void nextFlipCard(Fragment fragment, String tag) {
+        if (mFragmentManager == null)
+            return;
+
+        if(mShowingBack){
+            flipCard();
+        }
+
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+
+        Bundle bundle = new Bundle();
+        bundle.putStringArrayList("front",front);
+        bundle.putStringArrayList("back",back);
+        if(back == null){
+            throw new NullPointerException("back object is null");
+
+
+        }
+        fragment.setArguments(bundle);
+
+
+            fragmentTransaction
+                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left, R.animator.slide_out_right, R.animator.slide_in_right);
+
+        fragmentTransaction.replace(R.id.container, fragment, tag).commit();
+    }
+    public int getCurrentCardIndex() {
+        return currentCardIndex;
+    }
+
+    public void countUpCurrentCardIndex() {
+        this.currentCardIndex++;
+    }
+    public void countDownCurrentCardIndex() {
+        this.currentCardIndex--;
+    }
+
+    public int getCardStackSize() {
+        return cardStackSize;
+    }
+
+    public void setCardStackSize(int cardStackSize) {
+        this.cardStackSize = cardStackSize;
+    }
+}
 
     /**
      * A fragment representing the front of the card.
      */
-    public static class CardFrontFragment extends Fragment {
-        public CardFrontFragment() {
-        }
 
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_card_front, container, false);
-        }
-    }
 
-    /**
-     * A fragment representing the back of the card.
-     */
-    public static class CardBackFragment extends Fragment {
-        public CardBackFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_card_back, container, false);
-        }
-    }
-}

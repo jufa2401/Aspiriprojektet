@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 //                bundle.putInt("listindex",childPosition);
 //
 //                subjectFragment.setArguments(bundle);
-//                replaceFragment(subjectFragment, SubjectFragment.TAG);
+//                nextFlipCard(subjectFragment, SubjectFragment.TAG);
 //
 //                drawer.closeDrawer(GravityCompat.START);
 //                return false;

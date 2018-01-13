@@ -195,10 +195,11 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);
-        Flipcard flipcard = new Flipcard();
+
         // looping through all records and adding to the list
         if (c.moveToFirst()) {
             do {
+                Flipcard flipcard = new Flipcard();
                 int id = c.getInt(c.getColumnIndex("ID"));
                 flipcard.setId(id);
 

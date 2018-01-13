@@ -18,6 +18,7 @@ import com.aspiri.karakterloeft.games.MultipleChoiceDataBaseHelper;
 import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
+import com.tbruyelle.rxpermissions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ import java.util.List;
 //import com.aspiri.karakterloeft.games.Contact;
 
 /**
- * Created by Artem Kholodnyi on 9/3/16.
+ * Csreated by Artem Kholodnyi on 9/3/16.
  */
 public class FlipcardSubjectList extends AppCompatActivity {
 
@@ -123,7 +124,7 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
                     ArrayList<String> front = new ArrayList<String>();
                     ArrayList<String> back = new ArrayList<String>();
-                    for (int b = 0; b <= items.size(); b++) {
+                    for (int b = 0; b < items.size(); b++) {
                         Flipcard flipcard1 = items.get(b);
                         front.add(flipcard1.getFront());
                         back.add(flipcard1.getBack());

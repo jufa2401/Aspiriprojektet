@@ -43,7 +43,7 @@ public class FlipcardBank {
             myDataBaseHelper.addInitialFlipcard(new Flipcard("ret linje", "Hvad er formlen for en ret linje",
                     q1, "RET LINJE PHOTO"));
             myDataBaseHelper.addInitialFlipcard(new Flipcard("Rentes Regning", "Renter FRONT",
-                    "sds", "sdsdsd"));
+                    "RenterBACK", "RenterPhoto"));
             myDataBaseHelper.addInitialFlipcard(new Flipcard("Geometri", "Geometri FRONT", "Geometri BACK", "Geometri PHOTO"));
 
             myDataBaseHelper.addInitialFlipcard(new Flipcard("Areal", "AREAL FRONT", "AREAL BACK", "AREAÆ PHOTO"));
