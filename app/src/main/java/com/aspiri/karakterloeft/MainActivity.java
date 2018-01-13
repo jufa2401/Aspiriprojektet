@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     //For Firebase
     private static String TAG = MainActivity.class.getSimpleName();
     private static int REQUEST_INVITE = 0;
-    @BindView(R.id.toolbar)
+    @BindView(R.id.toolbarFLIP)
     Toolbar toolbar;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;

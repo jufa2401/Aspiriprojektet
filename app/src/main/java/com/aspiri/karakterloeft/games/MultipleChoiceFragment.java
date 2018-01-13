@@ -53,6 +53,7 @@ public class MultipleChoiceFragment extends Fragment {
     QuestionBank questionBank = new QuestionBank();
     private String trueanswer;
     private int mQuestionNumber = 0;
+    private String[] option;
 
     @OnClick(R.id.option1_button)
     void onOption1Click() {
@@ -101,6 +102,8 @@ public class MultipleChoiceFragment extends Fragment {
         if (context instanceof Activity)
             mActivity = (AppCompatActivity) context;
     }
+
+    ObjectAnimator colorFade;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
@@ -157,22 +160,26 @@ public class MultipleChoiceFragment extends Fragment {
 
             ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
 
-            getView().setOnTouchListener(new View.OnTouchListener() {
+            if(getView()!=null) {
+                getView().setClickable(true);
+                getView().setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        newQuestion();
+                        for (int i = 0; i < 4; i++) {
 
-                @Override
-                public boolean onTouch(View view, MotionEvent motionEvent) {
-                    newQuestion();
-                    for (int i = 0; i < 4; i++) {
-                        optionButtons[i].setBackground(getResources().getDrawable(R.drawable.shadow));
+                            optionButtons[i].setBackground(getResources().getDrawable(R.drawable.shadow));
+                        }
+                        statustekst.setText(R.string.presstostart);
+
                     }
-                    statustekst.setText(R.string.presstostart);
-                    return false;
-                }
-            });
-
+                });
+            }
         } else {
-            optionButtons[optionindex].setBackgroundColor(0xf91400);
-            ObjectAnimator colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
+            if(optionButtons[optionindex].getDrawingCacheBackgroundColor()!=0xf91400) {
+                optionButtons[optionindex].setBackgroundColor(0xf91400);
+            }
+            colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
                     new ArgbEvaluator(), Color.argb(255,193,37,23), wrong);
             colorFade.setDuration(1000);
             colorFade.start();
@@ -186,7 +193,6 @@ public class MultipleChoiceFragment extends Fragment {
 
     private void mathViewPressed(int optionindex) {
         int correct, wrong;
-        String[] option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             correct = getResources().getColor(R.color.answer_correct, null);
             wrong = getResources().getColor(R.color.answer_wrong, null);
@@ -211,19 +217,19 @@ public class MultipleChoiceFragment extends Fragment {
 
             ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
 
-            getView().setOnTouchListener(new View.OnTouchListener() {
 
+            if(getView()!=null) {
+                getView().setOnClickListener(new View.OnClickListener() {
                 @Override
-                public boolean onTouch(View view, MotionEvent motionEvent) {
+                public void onClick(View view) {
                     newQuestion();
                     for (int i = 0; i < 4; i++) {
-                        mathViews[i].setBackgroundColor(getResources().getColor(R.color.md_white_1000));
+                        mathViews[i].setBackgroundColor(Color.WHITE);
                     }
                     statustekst.setText(R.string.presstostart);
-                    return false;
                 }
             });
-
+            }
         } else {
             mathViews[optionindex].setBackgroundColor(0xf91400);
             ObjectAnimator colorFade = ObjectAnimator.ofObject(mathViews[optionindex], "backgroundColor",
@@ -238,49 +244,77 @@ public class MultipleChoiceFragment extends Fragment {
         }
     }
     private void newQuestion() {
-        String[] option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
+        option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
         if (mQuestionNumber < questionBank.getLength()) {
             question.setText(questionBank.getQuestion(mQuestionNumber));
             trueanswer = questionBank.getCorrectAnswer(mQuestionNumber);
 
-            if (option[0].contains("$$")) {
+            if (shouldUseMathViews()) {
                 for (int i = 0; i < 4; i++) {
+                    optionButtons[i].setClickable(false);
                     optionButtons[i].setVisibility(View.GONE);
                     mathViews[i].setDisplayText(option[i]);
-                    mathViews[i].setVisibility(View.VISIBLE);
-                    checkBoxes[i].setVisibility(View.VISIBLE);
-
+                    if(mathViews[i].getVisibility()!=View.VISIBLE) {
+                        mathViews[i].setVisibility(View.VISIBLE);
+                    }
+                    if(checkBoxes[i].getVisibility()!=View.VISIBLE) {
+                        checkBoxes[i].setVisibility(View.VISIBLE);
+                        checkBoxes[i].setClickable(true);
+                    }
                 }
             }
-            if (!option[0].contains("$$")) {
+            if (!shouldUseMathViews()) {
                 for (int i = 0; i < 4; i++) {
-                    optionTexts[i].setText(option[i]);
-                    optionButtons[i].setClickable(true);
-
-                    mathViews[i].setVisibility(View.GONE);
-                    Log.d("mathview at" + i + "visibility GONE", "mathview at" + i + "visibility GONE");
-                    checkBoxes[i].setVisibility(View.GONE);
+                    if(mathViews[i].getVisibility() == View.VISIBLE){
+                        mathViews[i].setClickable(false);
+                        mathViews[i].setVisibility(View.GONE);
+                        checkBoxes[i].setClickable(false);
+                        checkBoxes[i].setVisibility(View.GONE);
+                    }
 
                     if (optionButtons[i].getVisibility() == View.GONE) {
                         optionButtons[i].setVisibility(View.VISIBLE);
+                        optionButtons[i].setClickable(true);
                         Log.d("optionbutton visib at " + i, "optionbuttons at" + i + "Visibility visible");
                     }
 
+                    optionTexts[i].setText(option[i]);
+
                 }
-                mQuestionNumber++;
-                Log.d("mQuestionNumber value: " + mQuestionNumber, "mQuestionNumber value: " + mQuestionNumber);
+
 
 
             }
+            mQuestionNumber++;
+            Log.d("mQuestionNumber value: " + mQuestionNumber, "mQuestionNumber value: " + mQuestionNumber);
 
-
-        } else {
+        } if(optionsNull()) {
             ((MainActivity) mActivity).showMessage("That was the last question");
             MultipleChoiceFragment f = new MultipleChoiceFragment();
             ((MainActivity) mActivity).replaceFragment(f, MultipleChoiceFragment.TAG);
         }
 
     }
+    public boolean shouldUseMathViews(){
+        if(option[0].contains("$$")){ return true;}
+        return false;
+    }
+    public boolean optionsNull(){
+        if(option[0]==null){
+            return true;
+        }
+        else if(option[1]==null){
+            return true;
+        }
+        else if(option[2]==null){
+            return true;
+        }
+        else if (option[3]==null){
+            return true;
+        }
+        return false;
+    }
+
 }
 
 

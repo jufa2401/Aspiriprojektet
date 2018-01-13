@@ -68,6 +68,7 @@ public class FlipcardActivity extends AppCompatActivity
      * Whether or not we're showing the back of the card (otherwise showing the front).
      */
     private boolean mShowingBack = false;
+
     private Fragment flipCardButtonFragment = new FlipcardButtonFragment();
 
     ArrayList<String> front;

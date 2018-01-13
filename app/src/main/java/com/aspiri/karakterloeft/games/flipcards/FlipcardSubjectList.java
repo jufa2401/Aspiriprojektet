@@ -18,7 +18,6 @@ import com.aspiri.karakterloeft.games.MultipleChoiceDataBaseHelper;
 import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
-import com.tbruyelle.rxpermissions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +43,7 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
 
 
-        setUpToolbar((Toolbar) findViewById(R.id.toolbar));
+        setUpToolbar((Toolbar) findViewById(R.id.toolbarFLIP));
         askPermissions();
 
 
@@ -79,7 +78,9 @@ public class FlipcardSubjectList extends AppCompatActivity {
         MultiSelectBuilder<Flipcard> builder = new MultiSelectBuilder<>(Flipcard.class)
                 .withContext(this)
                 .mountOn((ViewGroup) findViewById(R.id.mount_point))
-                .withSidebarWidth(46 + 8 * 2); // ImageView width with paddings
+                .withSidebarWidth(100 + 8 * 2)
+                ; // ImageView width with paddings
+
 
         setUpAdapters(builder, flipcards);
         mMultiSelect = builder.build();

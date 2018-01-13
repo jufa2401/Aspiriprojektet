@@ -66,10 +66,10 @@
 
     <LinearLayout
         android:id="@+id/option1_button"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:background="@drawable/shadow"
         android:foreground="?android:attr/selectableItemBackground"
         android:orientation="horizontal"
@@ -131,10 +131,10 @@
 
     <LinearLayout
         android:id="@+id/option2_button"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/shadow"
         android:foreground="?android:attr/selectableItemBackground"
@@ -198,10 +198,10 @@
 
     <LinearLayout
         android:id="@+id/option3_button"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/shadow"
         android:foreground="?android:attr/selectableItemBackground"
@@ -265,10 +265,10 @@
 
     <LinearLayout
         android:id="@+id/option4_button"
-        android:layout_width="360dp"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/shadow"
         android:foreground="?android:attr/selectableItemBackground"
