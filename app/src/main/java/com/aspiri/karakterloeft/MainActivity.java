@@ -3,7 +3,9 @@ package com.aspiri.karakterloeft;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -221,10 +223,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             case R.id.drawer_send_us_mail:
-                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
-                sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
-                sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
-                startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
+                SharedPreferences prefs = this.getSharedPreferences("com.aspiri.karakterloeft", Context.    MODE_PRIVATE);
+                String mailToSend = prefs.getString("mail_default_msg","test");
+
+                Intent SendUsMail= new Intent(Intent.ACTION_SEND);
+                SendUsMail.setType("message/rfc822");
+                SendUsMail.putExtra(Intent.EXTRA_EMAIL, new String[]{"jm@aspiri.dk","na@aspiri.dk"});
+                SendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.title_mail_header);
+                SendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_default_msg));
+                startActivity(Intent.createChooser(SendUsMail, getResources().getString(R.string.choose_email_client)));
+
+
                 Log.d("AspiriApp", "Mail_icon pressed");
                 return true;
 
