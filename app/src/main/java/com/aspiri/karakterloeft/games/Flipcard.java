@@ -13,6 +13,7 @@ public class Flipcard implements Comparable<Flipcard>, Serializable {
     private String category;
     private String front;
     private String back;
+    private String backExplanation;
     private String photo;
 
 
@@ -20,10 +21,11 @@ public class Flipcard implements Comparable<Flipcard>, Serializable {
 
     }
 
-    public Flipcard(String category, String front, String back, String photo) {
+    public Flipcard(String category, String front, String back, String backExplanation, String photo) {
         this.category = category;
         this.front = front;
         this.back = back;
+        this.backExplanation = backExplanation;
         this.photo = photo;
 
     }
@@ -62,6 +64,12 @@ public class Flipcard implements Comparable<Flipcard>, Serializable {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getBackExplanation() { return backExplanation; }
+
+    public void setBackExplanation(String backExplanation) {
+        this.backExplanation = backExplanation;
     }
 
     @Override

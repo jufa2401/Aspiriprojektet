@@ -10,7 +10,6 @@ import com.yalantis.multiselection.lib.adapter.BaseRightAdapter;
 
 import org.jetbrains.annotations.NotNull;
 
-//import com.aspiri.karakterloeft.games.Contact;
 
 /**
  * Created by Artem Kholodnyi on 9/6/16.

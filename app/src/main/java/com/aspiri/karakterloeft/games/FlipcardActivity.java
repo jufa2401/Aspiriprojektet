@@ -73,6 +73,7 @@ public class FlipcardActivity extends AppCompatActivity
 
     ArrayList<String> front;
     ArrayList<String> back;
+    ArrayList<String> backExplanation;
 
     private int currentCardIndex = 0;
     private int cardStackSize;
@@ -86,11 +87,13 @@ public class FlipcardActivity extends AppCompatActivity
 
          front = getIntent().getStringArrayListExtra("front");
          back = getIntent().getStringArrayListExtra("back");
+         backExplanation = getIntent().getStringArrayListExtra("backExplanation");
 
             setCardStackSize(front.size());
          Bundle b = new Bundle();
         b.putStringArrayList("front",front);
         b.putStringArrayList("back",back);
+        b.putStringArrayList("back_explanation", backExplanation);
         flipcardBank.initFlipcards(getApplicationContext());
         CardFrontFragment frontFragment = new CardFrontFragment();
         frontFragment.setArguments(b);
@@ -193,6 +196,7 @@ public class FlipcardActivity extends AppCompatActivity
         Bundle cardBackBundle = new Bundle();
         cardBackBundle.putStringArrayList("front",front);
         cardBackBundle.putStringArrayList("back",back);
+        cardBackBundle.putStringArrayList("backExplanation", backExplanation);
         cardBack.setArguments(cardBackBundle);
         getFragmentManager()
                 .beginTransaction()
@@ -255,6 +259,7 @@ public class FlipcardActivity extends AppCompatActivity
         Bundle bundle = new Bundle();
         bundle.putStringArrayList("front",front);
         bundle.putStringArrayList("back",back);
+        bundle.putStringArrayList("backExplanation",backExplanation);
         if(back == null){
             throw new NullPointerException("back object is null");
 

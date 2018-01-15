@@ -1,14 +1,19 @@
 package com.aspiri.karakterloeft.games.flipcards;
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.aspiri.karakterloeft.R;
 import com.aspiri.karakterloeft.games.Flipcard;
@@ -19,6 +24,7 @@ import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,6 +115,37 @@ public class FlipcardSubjectList extends AppCompatActivity {
         toolbar.inflateMenu(R.menu.menu);
         toolbar.setNavigationIcon(R.drawable.ic_back);
         toolbar.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.create_card){
+                // If the create card icon is pressed:
+                //TODO: Prøv om det kan lade sig gøre, at få det til at fungere med alertDialog, hvis ikke kan der laves et fragment til textinput.
+                ContextThemeWrapper ctw = new ContextThemeWrapper(this, R.style.Theme_dialog_create_flipcard);
+                AlertDialog.Builder alert = new AlertDialog.Builder(ctw);
+                alert.setTitle("Lav dit eget flipcard");
+                alert.setMessage("Indtast titlen på kategorien");
+                final EditText inputCatagory = new EditText(this);
+
+
+                alert.setView(inputCatagory);
+
+
+                alert.setPositiveButton("Bekræft", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //What ever you want to do with the value
+//                        Editable question = inputQuestion.getText();
+                        Editable catagory = inputCatagory.getText();
+                        Log.d("Editable value: ", catagory.toString());
+
+                    }
+                });
+
+                alert.setNegativeButton("Annuller", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // what ever you want to do with No option.
+                    }
+                });
+
+                alert.show();
+            }
             if (item.getItemId() == R.id.select) {
                 List<Flipcard> items = mMultiSelect.getSelectedItems();
                 final int selectedCount = items.size();
@@ -125,17 +162,19 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
                     ArrayList<String> front = new ArrayList<String>();
                     ArrayList<String> back = new ArrayList<String>();
+                    ArrayList<String> backExplalation = new ArrayList<>();
                     for (int b = 0; b < items.size(); b++) {
                         Flipcard flipcard1 = items.get(b);
                         front.add(flipcard1.getFront());
                         back.add(flipcard1.getBack());
+                        backExplalation.add(flipcard1.getBackExplanation());
                     }
 
 
-//                    TODO: FIX THIS SHIIT
                     Intent goToFlipCards = new Intent(this, FlipcardActivity.class);
                     goToFlipCards.putStringArrayListExtra("front", front);
                     goToFlipCards.putStringArrayListExtra("back", back);
+                    goToFlipCards.putStringArrayListExtra("backExplanation", backExplalation);
                     //                    goToFlipCards.putStringArrayListExtra("item", (<String>) items);
                     startActivity(goToFlipCards);
                     Log.d("AspiriApp", "Flipcard_pressed");

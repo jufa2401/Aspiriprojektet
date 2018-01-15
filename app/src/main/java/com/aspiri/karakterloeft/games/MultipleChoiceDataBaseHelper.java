@@ -30,12 +30,13 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME_2 = "flipcard_table";
     private static final String COL1_2 = "category";
     private static final String COL2_2 = "front";
-    private static final String COL3_2 = "back";
-    private static final String COL4_2 = "photo";
+    private static final String COL3_2 = "back_title";
+    private static final String COL4_2 = "back_explanation";
+    private static final String COL5_2 = "photo";
     String createTableMultipleChoice = "CREATE TABLE " + TABLE_NAME_1 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL1_1 + " TEXT, " + COL2_1 + " TEXT, " + COL3_1 + " TEXT, " + COL4_1 + " TEXT, " + COL5_1 + " TEXT, " + COL6_1 + " TEXT)";
     String createTableFlipcard =  "CREATE TABLE " + TABLE_NAME_2 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COL1_2 + " TEXT, " + COL2_2 + " TEXT, " + COL3_2 + " TEXT, " + COL4_2 + " TEXT)";
+            + COL1_2 + " TEXT, " + COL2_2 + " TEXT, " + COL3_2 + " TEXT, " + COL4_2 + " TEXT, " + COL5_2 + " TEXT)";
 
     public MultipleChoiceDataBaseHelper(Context context) {
         super(context, DB_NAME, null, 1);
@@ -93,7 +94,11 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
 
         contentValues1.put(COL3_2, flipcard.getBack());
         Log.d(TAG, "addDataQuestion: Adding " + flipcard.getBack() + " to " + TABLE_NAME_2);
-        contentValues1.put(COL4_2, flipcard.getPhoto());
+
+        contentValues1.put(COL4_2, flipcard.getBackExplanation());
+        Log.d(TAG, "addDataQuestion: Adding " + flipcard.getBackExplanation() + " to " + TABLE_NAME_2);
+
+        contentValues1.put(COL5_2, flipcard.getPhoto());
         Log.d(TAG, "addDataQuestion: Adding " + flipcard.getPhoto() + " to " + TABLE_NAME_2);
 
 
@@ -136,7 +141,8 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
         values.put(COL1_2, flipcard.getCategory());
         values.put(COL2_2, flipcard.getFront());
         values.put(COL3_2, flipcard.getBack());
-        values.put(COL4_2, flipcard.getPhoto());
+        values.put(COL4_2, flipcard.getBackExplanation());
+        values.put(COL5_2, flipcard.getPhoto());
 
         // insert row in question table
         long insert = db.insert(TABLE_NAME_2, null, values);
@@ -212,7 +218,10 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
                 String backText = c.getString(c.getColumnIndex(COL3_2));
                 flipcard.setBack(backText);
 
-                String photo = c.getString(c.getColumnIndex(COL4_2));
+                String backExplanationText = c.getString(c.getColumnIndex(COL4_2));
+                flipcard.setBackExplanation(backExplanationText);
+
+                String photo = c.getString(c.getColumnIndex(COL5_2));
                 flipcard.setPhoto(photo);
 
                 // adding to Questions list

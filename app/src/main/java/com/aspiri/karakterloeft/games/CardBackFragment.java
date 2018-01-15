@@ -32,6 +32,7 @@ public  class CardBackFragment extends Fragment {
 
         ArrayList<String> front = getArguments().getStringArrayList("front");
         ArrayList<String> back = getArguments().getStringArrayList("back");
+        ArrayList<String> backExplanation = getArguments().getStringArrayList("backExplanation");
 
         backTitle = view.findViewById(R.id.back_title);
         backDescription = view.findViewById(R.id.back_description);
@@ -40,8 +41,10 @@ public  class CardBackFragment extends Fragment {
 
         if(index < front.size()) {
             String stringBack = back.get(index);
+            String stringBackExplanation = backExplanation.get(index);
 
             backTitle.setText(stringBack);
+            backDescription.setText(stringBackExplanation);
         }
 
         return view;
