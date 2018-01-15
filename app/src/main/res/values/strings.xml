@@ -14,9 +14,10 @@
 
     <!--Setting Pane Summaries-->
     <string name="summary_vibrate">Brug vibrationer i appen</string>
-    <string name="summary_about"> Mikkel Rosenstrøm\nJanus Andreasson\nJonas Mikkelsen\nJustin Fabricious</string>
+    <string name="summary_about"> Mikkel Rosenstrøm \ts124363\nJanus Andreasson \ts165152\nJonas Mikkelsen \ts165161\nJustin Fabricious \ts165158</string>
     <string name="summary_support">Tekniske problemer? Skriv til os her!</string>
     <string name="summary_faq">Se ofte stillede spørgsmål</string>
+    <string name="summary_mail">Her kan du indstille overskriften i mails sendt fra appen</string>
 
     <!--Setting Pane Titles-->
     <string name="title_version">Version</string>

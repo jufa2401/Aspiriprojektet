@@ -10,6 +10,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -49,6 +50,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.aspiri.karakterloeft.R.string.invitation_image_link;
+import static com.aspiri.karakterloeft.R2.string.mail_default_msg;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
@@ -220,17 +222,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
 
             case R.id.drawer_send_us_mail:
-                SharedPreferences prefs = this.getSharedPreferences("com.aspiri.karakterloeft", Context.    MODE_PRIVATE);
-                String mailToSend = prefs.getString("mail_default_msg","test");
+                //Building Shared Preference Manager
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                String mailToSend = sharedPref.getString(getString(R.string.mail_default_msg), "");
 
+                //Initializing Intent
                 Intent SendUsMail= new Intent(Intent.ACTION_SEND);
                 SendUsMail.setType("message/rfc822");
                 SendUsMail.putExtra(Intent.EXTRA_EMAIL, new String[]{"jm@aspiri.dk","na@aspiri.dk"});
                 SendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.title_mail_header);
-                SendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_default_msg));
+                SendUsMail.putExtra(Intent.EXTRA_TEXT, mailToSend);
+
+                //Starting activity, doing log calls
                 startActivity(Intent.createChooser(SendUsMail, getResources().getString(R.string.choose_email_client)));
-
-
                 Log.d("AspiriApp", "Mail_icon pressed");
                 return true;
 

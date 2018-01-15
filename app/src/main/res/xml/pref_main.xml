@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--Preferences-->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <!--Generel Kategori-->
     <PreferenceCategory android:title="@string/pref_title_generelt">
@@ -9,7 +11,7 @@
         <!--Mail-->
         <EditTextPreference
             android:defaultValue="@string/default_mail_header"
-            android:summary="@string/default_mail_header"
+            android:summary="@string/summary_mail"
             android:key="@string/mail_default_msg"
             android:title="@string/title_mail_header"
             />
@@ -22,16 +24,12 @@
             android:title="@string/title_sprog" />
     </PreferenceCategory>
 
-    <!--Opførsel Kategori-->
-    <PreferenceCategory android:title="@string/pref_title_opførsel">
-
         <!--Vibrer-->
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/key_vibrate"
             android:summary="@string/summary_vibrate"
             android:title="@string/title_vibrate" />
-    </PreferenceCategory>
 
     <!--Om os-->
     <PreferenceCategory android:title="@string/pref_header_about">
