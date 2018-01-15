@@ -16,6 +16,19 @@
         <item name="navigationIcon">@drawable/ic_back_arrow</item>
     </style>
 
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!--Colors-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorForeground">@android:color/background_dark</item>
+        <item name="android:navigationBarColor">@android:color/background_dark</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <!--Icon-->
+        <item name="navigationIcon">@drawable/ic_back_arrow</item>
+    </style>
+
     <!--TextSize-->
     <style name="subjectTextView">
         <item name="android:textSize">15sp</item>
