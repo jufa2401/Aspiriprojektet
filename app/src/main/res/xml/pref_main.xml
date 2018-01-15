@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--android hive-->
+<!--Preferences-->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Generel Kategori-->
     <PreferenceCategory android:title="@string/pref_title_generelt">
+
+        <!--Mail-->
         <EditTextPreference
             android:defaultValue="@string/default_mail_header"
             android:summary="@string/default_mail_header"
@@ -10,6 +14,7 @@
             android:title="@string/title_mail_header"
             />
 
+        <!--Sprog-->
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="@string/key_brug_standardsprog"
@@ -17,8 +22,10 @@
             android:title="@string/title_sprog" />
     </PreferenceCategory>
 
+    <!--Opførsel Kategori-->
     <PreferenceCategory android:title="@string/pref_title_opførsel">
 
+        <!--Vibrer-->
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/key_vibrate"
@@ -26,12 +33,15 @@
             android:title="@string/title_vibrate" />
     </PreferenceCategory>
 
+    <!--Om os-->
     <PreferenceCategory android:title="@string/pref_header_about">
 
+        <!--Liste af gruppemedlemmer-->
         <Preference
             android:selectable="false"
             android:summary="@string/summary_about" />
 
+        <!--Appversion-->
         <Preference
             android:summary="@string/app_version"
             android:title="@string/title_version"
@@ -39,13 +49,13 @@
             android:key="@string/title_version"
             />
 
-        <!-- Sends feedback via mail -->
+        <!-- Sender feedback via mail -->
         <Preference
             android:key="@string/key_send_feedback"
             android:summary="@string/summary_support"
             android:title="@string/title_send_feedback" />
 
-        <!-- preference opens url in browser -->
+        <!-- Åbner FAQ i Browser -->
         <Preference
             android:summary="@string/summary_faq"
             android:title="@string/title_faq">
@@ -54,6 +64,7 @@
                 android:data="@string/url_faq" />
         </Preference>
 
+        <!-- Åbner Privat politik i Browser -->
         <Preference
             android:title="@string/privacy_policy"
             android:summary="@string/opens_new_window">
@@ -62,6 +73,7 @@
                 android:data="@string/url_privacy" />
         </Preference>
 
+        <!-- Åbner terms and conditions i Browser -->
         <Preference
             android:title="@string/title_terms"
             android:summary="@string/opens_new_window">

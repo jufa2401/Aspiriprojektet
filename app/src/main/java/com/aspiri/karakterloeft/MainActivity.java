@@ -179,9 +179,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // User chose the "Settings" item, show the app settings UI...
                 Intent goToSettings = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(goToSettings);
-
-
-                showMessage("Yet to be implemented");
                 Log.d("AspiriApp", "action_settings pressed");
                 return true;
 

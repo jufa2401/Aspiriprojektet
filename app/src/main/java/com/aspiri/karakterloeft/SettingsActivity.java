@@ -25,7 +25,7 @@ import android.view.MenuItem;
 public class SettingsActivity extends AppCompatPreferenceActivity {
     private static final String TAG = SettingsActivity.class.getSimpleName();
     Toolbar toolbar;
-    String version;
+    //String version = getTagVersionNumber();
 
 
     @Override
@@ -53,19 +53,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 public boolean onPreferenceClick(Preference preference) {
                     sendFeedback(getActivity());
+                    Log.d("Feedback","Sender Feedback");
                     return true;
                 }
             });
-
-
-
         }
     }
 
     //TODO: Få kaldt denne metode i den statiske onCreate
     private void setVersionNumber() {
-        Preference varNumber = findPreference(getString(R.string.title_version));
-        varNumber.setTitle(version);
+        //Preference varNumber = findPreference(getString(R.string.title_version));
+        //varNumber.setTitle(version);
     }
 
     //Selecting options
@@ -122,9 +120,15 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         String body = null;
         try {
             body = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-            body = "\n\n-----------------------------\nVær venlig ikke at fjerne denne information\n Enhed OS: Android \n Enhed OS version: " +
-                    Build.VERSION.RELEASE + "\n App Version: " + body + "\n Enheds mærke: " + Build.BRAND +
-                    "\n Enhed Model: " + Build.MODEL + "\n Enhed Fabrikant: " + Build.MANUFACTURER + "\n\n-----------------------------\n";
+            body = "\n\n-----------------------------\n" +
+                    "Vær venlig ikke at fjerne denne information" +
+                    "\n Enhed OS: Android " +
+                    "\n Enhed OS version: " + Build.VERSION.RELEASE + "" +
+                    "\n App Version: " + body +
+                    "\n Enheds mærke: " + Build.BRAND +
+                    "\n Enhed Model: " + Build.MODEL +
+                    "\n Fabrikant: " + Build.MANUFACTURER +
+                    "\n-----------------------------\n";
         } catch (PackageManager.NameNotFoundException e) {
         }
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -137,13 +141,13 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     //Henter Versionsnummer
     public String getTagVersionNumber() {
-        String versionInfo = "something";
+        String tempInfo = null;
         try {
             PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
-            String version = pInfo.versionName;
+            tempInfo = pInfo.versionName.toString();
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        return versionInfo;
+        return tempInfo;
     }
 }
