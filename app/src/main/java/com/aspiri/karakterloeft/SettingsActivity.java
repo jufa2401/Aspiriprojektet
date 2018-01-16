@@ -117,6 +117,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
         }
     };
 
+
+
     //Kan Sender feedback til HQ
     public static void sendFeedback(Context context) {
         String body = null;
