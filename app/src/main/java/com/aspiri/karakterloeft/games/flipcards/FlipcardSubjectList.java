@@ -1,6 +1,7 @@
 package com.aspiri.karakterloeft.games.flipcards;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import com.aspiri.karakterloeft.R;
 import com.aspiri.karakterloeft.games.Flipcard;
@@ -116,33 +118,43 @@ public class FlipcardSubjectList extends AppCompatActivity {
             if (item.getItemId() == R.id.create_card){
                 // If the create card icon is pressed:
                 //TODO: Prøv om det kan lade sig gøre, at få det til at fungere med alertDialog, hvis ikke kan der laves et fragment til textinput.
-                ContextThemeWrapper ctw = new ContextThemeWrapper(this, R.style.Theme_dialog_create_flipcard);
-                AlertDialog.Builder alert = new AlertDialog.Builder(ctw);
-                alert.setTitle("Lav dit eget flipcard");
-                alert.setMessage("Indtast titlen på kategorien");
-                final EditText inputCatagory = new EditText(this);
+//                ContextThemeWrapper ctw = new ContextThemeWrapper(this, R.style.Theme_dialog_create_flipcard);
+//                AlertDialog.Builder alert = new AlertDialog.Builder(ctw);
+//                alert.setTitle("Lav dit eget flipcard");
+//                alert.setMessage("Indtast titlen på kategorien");
+//                final EditText inputCatagory = new EditText(this);
+//
+//
+//                alert.setView(inputCatagory);
+//
+//
+//                alert.setPositiveButton("Bekræft", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//                        //What ever you want to do with the value
+////                        Editable question = inputQuestion.getText();
+//                        Editable catagoryinp = inputCatagory.getText();
+//                        String catagory = catagoryinp.toString();
+//
+//                    }
+//                });
+//
+//                alert.setNegativeButton("Annuller", new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int whichButton) {
+//                        // what ever you want to do with No option.
+//
+//                    }
+//                });
+//
+//                alert.show();
+
+                Dialog dialog = new Dialog(this);
+                dialog.setContentView(R.layout.dialog_flipcard_creation_lv);
+
+                ListView lv = (ListView) dialog.findViewById(R.id.flipcard_create_listview);
+                dialog.setCancelable(true);
+                dialog.setTitle("Lav dit eget flipcard");
 
 
-                alert.setView(inputCatagory);
-
-
-                alert.setPositiveButton("Bekræft", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        //What ever you want to do with the value
-//                        Editable question = inputQuestion.getText();
-                        Editable catagory = inputCatagory.getText();
-                        Log.d("Editable value: ", catagory.toString());
-
-                    }
-                });
-
-                alert.setNegativeButton("Annuller", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        // what ever you want to do with No option.
-                    }
-                });
-
-                alert.show();
             }
             if (item.getItemId() == R.id.select) {
                 List<Flipcard> items = mMultiSelect.getSelectedItems();
