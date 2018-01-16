@@ -273,7 +273,9 @@ public class MultipleChoiceFragment extends Fragment {
                     mathViews[i].setClickable(true);
                     mathViews[i].setDisplayText(option[i]);
                     checkBoxes[i].setVisibility(View.VISIBLE);
+                    checkBoxes[i].setChecked(false);
                     checkBoxes[i].setClickable(true);
+
 
                 }
             }

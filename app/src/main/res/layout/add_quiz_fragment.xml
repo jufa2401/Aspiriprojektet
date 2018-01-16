@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="70dp">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-bold"
-            android:text="Add Quiz"
+            android:text="Lav et spørgsmål"
             android:textColor="#000000"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -55,18 +56,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint='"Skriv quizspørgsmål her"'
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_quiz_title" />
 
-        <CheckedTextView
+        <TextView
             android:id="@+id/addQuiz_answer1"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-            android:checked="false"
             android:text="Skriv svarmulighed 1"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -84,19 +84,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint='"Skriv her"'
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/addQuiz_answer1"
             app:layout_constraintStart_toStartOf="@id/addQuiz_answer1"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer1"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="292dp" />
 
-        <CheckedTextView
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="176dp"
+            android:text="@string/correct_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toEndOf="@+id/editText1"
+            app:layout_constraintTop_toBottomOf="@+id/add_quiz_desc" />
+
+        <TextView
             android:id="@+id/addQuiz_answer2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-            android:checked="false"
             android:text="Skriv svarmulighed 2"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -114,6 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint='"Skriv her"'
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/addQuiz_answer2"
             app:layout_constraintStart_toStartOf="@id/addQuiz_answer2"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer2"
@@ -122,13 +134,23 @@
 
             />
 
-        <CheckedTextView
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="72dp"
+            android:text="@string/correct_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+        <TextView
             android:id="@+id/addQuiz_answer3"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-            android:checked="false"
             android:text="Skriv svarmulighed 3"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -145,13 +167,26 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="16dp"
             android:hint='"Skriv her"'
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/addQuiz_answer3"
             app:layout_constraintStart_toStartOf="@id/addQuiz_answer3"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer3"
 
             />
 
-        <CheckedTextView
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="92dp"
+            android:text="@string/correct_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText3"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+        <TextView
             android:id="@+id/addQuiz_answer4"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
@@ -159,6 +194,8 @@
             android:layout_marginTop="16dp"
             android:checkMark="?android:attr/listChoiceIndicatorMultiple"
             android:checked="false"
+            android:clickable="true"
+            android:focusable="true"
             android:text="Skriv svarmulighed 4"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -175,12 +212,29 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="16dp"
             android:hint='"Skriv her"'
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/addQuiz_answer4"
             app:layout_constraintStart_toStartOf="@id/addQuiz_answer4"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer4" />
 
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/correct_answer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/editText4"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
         <Button
             android:id="@+id/buttonAddQuiz"
+            style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -190,9 +244,11 @@
             android:background="@drawable/shadow"
             android:text="Gem og Afslut"
             android:textColor="@color/black"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/editText4"
-            app:layout_constraintStart_toStartOf="@id/editText4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
