@@ -244,6 +244,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(goToFlipCards);
                 Log.d("AspiriApp", "Flipcard_pressed");
                 return true;
+
             case R.id.drawer_quiz:
                 MultipleChoiceFragment fragment = new MultipleChoiceFragment();
                 replaceFragment(fragment, "he");

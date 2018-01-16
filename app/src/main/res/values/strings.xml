@@ -66,6 +66,7 @@
     <string name="drawer_come_see_us">Besøg os</string>
     <string name="drawer_store">Åbner Butikken</string>
     <string name="drawer_home">Hjem</string>
+    <string name="drawer_uy_Course">Gå til Hjemmeside</string>
     <string name="drawer_buy_Course">Køb Kurser</string>
     <string name="drawer_communicate_with_us">Skriv til os</string>
     <string name="drawer_share">Del</string>
@@ -85,7 +86,7 @@
     <string name="drawer_URL_Aarhus">https://www.google.dk/maps/place/VIA+University+College+-+Campus+Aarhus+C/@56.1560488,10.1880261,17z/data=!3m1!4b1!4m5!3m4!1s0x464c3fec300c1d71:0x357ff97e45c9d66a!8m2!3d56.1560488!4d10.1902148</string>
     <string name="drawer_URL_Odense">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_contact">Kontakt via mail</string>
+    <string name="drawer_contact">Kontakt os via mail</string>
     <string name="drawer_communicate">REPLACE ME</string>
     <string name="drawer_getInContact">kom i kontakt</string>
     <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
@@ -1212,7 +1213,7 @@
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
     <string name="invitation_cta">Installer Mig!</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="kontakt_via_facebook">Kontakt via Facebook</string>
+    <string name="kontakt_via_facebook">Kontakt os via Facebook</string>
     <string name="question_1_sandsynlighed">Hvad er sandsynligheden for at slå to seksere, når der kastes med to terninger?</string>
     <string name="card_questionmark_the_questionmark">\?</string>
     <string name="drawer_header_nav_picture">top af draver header navigation</string>

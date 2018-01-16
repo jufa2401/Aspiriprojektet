@@ -7,52 +7,42 @@
             android:id="@+id/drawer_home"
             android:icon="@drawable/drawer_home"
             android:title="@string/drawer_home" />
-    </group>
 
-    <group android:checkableBehavior="single">
         <item android:title="@string/drawer_subjects"
-            android:icon="@drawable/drawer_gallery">
-
-            <!--Bør alle være "collapsible"-->
-
-        </item>
+            android:icon="@drawable/drawer_gallery" />
     </group>
 
     <group android:checkableBehavior="single">
-        <item android:title="@string/drawer_other">
-            <!--Bør være collapsible-->
+        <item
+            android:title="test" >
             <menu>
                 <item
-                    android:id="@+id/drawer_send_us_mail_2"
-                    android:icon="@drawable/drawer_send"
-                    android:title="@string/drawer_mail_forbedringer" />
-                <item
-                    android:id="@+id/drawer_store"
-                    android:icon="@drawable/ic_menu_store"
-                    android:title="@string/drawer_uy_Course" />
-
-                <item
                     android:id="@+id/drawer_flipcards"
-                    android:icon="@drawable/ic_game"
+                    android:icon="@drawable/button_communicate_grey_256"
                     android:title="@string/drawer_slideshow" />
 
                 <item
                     android:id="@+id/drawer_quiz"
                     android:icon="@drawable/ic_game"
                     android:title="@string/drawer_quiz" />
+
+                <item
+                    android:id="@+id/drawer_store"
+                    android:icon="@drawable/button_globe_grey_256"
+                    android:title="@string/drawer_uy_Course" />
+
                 <item
                     android:id="@+id/drawer_send_us_mail"
-                    android:icon="@drawable/drawer_send"
+                    android:icon="@drawable/button_mail_grey_256"
                     android:title="@string/drawer_contact" />
+
                 <item
                     android:id="@+id/drawer_kontakt_test"
-                    android:icon="@drawable/drawer_send"
-                    android:title="@string/kontakt_via_facebook">
-                </item>
+                    android:icon="@drawable/button_messengerlogo_grey_256"
+                    android:title="@string/kontakt_via_facebook" />
             </menu>
         </item>
     </group>
-
 
     <item android:title="@string/drawer_firebase">
         <menu>
