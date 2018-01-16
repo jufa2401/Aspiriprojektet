@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public  class CardFrontFragment extends Fragment {
     TextView textFront;
-    private AppCompatActivity mActivity;
+
     public CardFrontFragment() {
     }
 
@@ -27,7 +27,7 @@ public  class CardFrontFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_card_front, container, false);
 
-        mActivity = (AppCompatActivity) getActivity();
+        AppCompatActivity mActivity = (AppCompatActivity) getActivity();
         textFront = view.findViewById(R.id.card_question);
 
         Bundle b = getArguments();

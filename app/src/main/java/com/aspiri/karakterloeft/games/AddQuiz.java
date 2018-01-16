@@ -1,6 +1,10 @@
 package com.aspiri.karakterloeft.games;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -32,13 +36,21 @@ public class AddQuiz extends Fragment {
     Button button;
 
 
-    MultipleChoiceDataBaseHelper dataBaseHelper = new MultipleChoiceDataBaseHelper(getContext());
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.add_quiz_fragment, container, false);
         ButterKnife.bind(view);
+
+        Context context;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            context = getContext();
+        } else {
+            context = getActivity();
+        }
+        MultipleChoiceDataBaseHelper dataBaseHelper = new MultipleChoiceDataBaseHelper(context);
 
         button = view.findViewById(R.id.buttonAddQuiz);
         button.setOnClickListener(new View.OnClickListener() {
@@ -49,27 +61,45 @@ public class AddQuiz extends Fragment {
 
             @Override
             public void onClick(View v) {
-                quizTitle = editTextTitle.getText().toString();
-                for (int i = 0; i < 4; i++) {
-                    questionEditText[i] = editTextsAnswers[i].getText().toString();
-                    correctAnswer[i] = checkedTextViews[i].isChecked();
-                }
-                for (int i = 0; i < correctAnswer.length; i++) {
-                    if (correctAnswer[i]) {
-                        correctAnswerIndex = i;
-                        return;
-                    }
-                }
-                try {
-                    dataBaseHelper.addDataQuestion(new Question(quizTitle, questionEditText, questionEditText[correctAnswerIndex]));
-                } catch (NullPointerException e) {
-                    throw new NullPointerException("Null value error when adding to database");
-                }
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage(R.string.add_question)
+                        .setTitle(R.string.are_you_sure)
+                        .setNegativeButton("Nej", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-                Log.d("databaseHelper", "Question added to local database");
+                            }
+                        })
+                        .setPositiveButton("Ja", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                quizTitle = editTextTitle.getText().toString();
+                                for (int i = 0; i < 4; i++) {
+                                    questionEditText[i] = editTextsAnswers[i].getText().toString();
+                                    correctAnswer[i] = checkedTextViews[i].isChecked();
+                                }
+                                for (int i = 0; i < correctAnswer.length; i++) {
+                                    if (correctAnswer[i]) {
+                                        correctAnswerIndex = i;
+                                        return;
+                                    }
+                                }
+                                try {
+                                    dataBaseHelper.addDataQuestion(new Question(quizTitle, questionEditText, questionEditText[correctAnswerIndex]));
+                                } catch (NullPointerException e) {
+                                    throw new NullPointerException("Null value error when adding to database");
+                                }
 
+                                Log.d("databaseHelper", "Question added to local database");
+
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
+
+
+
         return view;
     }
 }

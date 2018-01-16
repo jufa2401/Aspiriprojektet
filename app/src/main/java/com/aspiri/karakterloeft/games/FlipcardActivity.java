@@ -59,7 +59,7 @@ public class FlipcardActivity extends AppCompatActivity
     /**
      * A handler object, used for deferring UI operations.
      */
-    private LinearLayout clickfrag;
+
     private Handler mHandler = new Handler();
     /**
      * Whether or not we're showing the back of the card (otherwise showing the front).
@@ -74,7 +74,8 @@ public class FlipcardActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_flip);
-        clickfrag = (LinearLayout) findViewById(R.id.card);
+
+        LinearLayout clickfrag = (LinearLayout) findViewById(R.id.card);
 
          front = getIntent().getStringArrayListExtra("front");
          back = getIntent().getStringArrayListExtra("back");
