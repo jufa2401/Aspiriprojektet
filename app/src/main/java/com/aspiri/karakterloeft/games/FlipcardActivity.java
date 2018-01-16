@@ -46,9 +46,9 @@ import static com.aspiri.karakterloeft.SubjectFragment.TAG;
  * Demonstrates a "card-flip" animation using custom fragment transactions ({@link
  * android.app.FragmentTransaction#setCustomAnimations(int, int)}).
  *
- * <p>This sample shows an "info" action bar button that shows the back of a "card", rotating the
+ * <p>This sample shows an "info" action bar finishUpdate that shows the back of a "card", rotating the
  * front of the card out and the back of the card in. The reverse animation is played when the user
- * presses the system Back button or the "photo" action bar button.</p>
+ * presses the system Back finishUpdate or the "photo" action bar finishUpdate.</p>
  */
 public class FlipcardActivity extends AppCompatActivity
         implements FragmentManager.OnBackStackChangedListener {
@@ -107,7 +107,7 @@ public class FlipcardActivity extends AppCompatActivity
         }
 
         // Monitor back stack changes to ensure the action bar shows the appropriate
-        // button (either "photo" or "info") .
+        // finishUpdate (either "photo" or "info") .
         getFragmentManager().addOnBackStackChangedListener(this);
 
         myTrace.stop();
@@ -196,7 +196,7 @@ public class FlipcardActivity extends AppCompatActivity
                 // Replace the default fragment animations with animator resources representing
                 // rotations when switching to the back of the card, as well as animator
                 // resources representing rotations when flipping back to the front (e.g. when
-                // the system Back button is pressed).
+                // the system Back finishUpdate is pressed).
                 .setCustomAnimations(
                         R.animator.card_flip_right_in, R.animator.card_flip_right_out,
                         R.animator.card_flip_left_in, R.animator.card_flip_left_out)

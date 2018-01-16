@@ -58,15 +58,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     private FragmentManager mFragmentManager;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private FirebaseAnalytics mFirebaseAnalytics;
-    // test
-//    private List<String> mExpandableListTitle;
-//    private String[] items;
-
-//         Der er problemer med ExpandableListView ikke adapteren!
-//    @BindView(R.id.navList)
-//    ExpandableListView mExpandableListView;
-//    private Map<String, List<String>> mExpandableListData;
-
 
     //On createmetode
     @Override
@@ -80,20 +71,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         navigationView.setNavigationItemSelectedListener(this);
 
-
-        // sets mActionBarDrawerToggle
-//        mExpandableListData = ExpandableListDataSource.getData(this);
-//        mExpandableListTitle = new ArrayList(mExpandableListData.keySet());
-//        // Add drawer items requires ExpandableListTitle and ExpandableListData to be initialized.
-        //addDrawerItems();
         setupDrawer();
 
         //mExpandableListView.setAdapter(mExpandableListAdapter);
 
         setDrawerIndicatorEnabled(false);
-        mFragmentManager = getFragmentManager();
-        replaceFragment(new ListFragment(), ListFragment.TAG);
-
+        FragmentManager mFragmentManager = getFragmentManager();
+        if (savedInstanceState == null) {       //Håndtering af skærmrotation
+            replaceFragment(new ListFragment(), ListFragment.TAG);
+        }
         //For Firebase
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();
@@ -153,8 +139,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         return true;
     }
 
-
-    //    Onclick for tredottede menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -178,10 +162,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-    //     On click for de forskellige optioner i drawer.
-
     /**
      * Method for handling Click Events in the navigationdrawer.
      *
@@ -231,8 +211,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         .commit();
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
-
-
             // Tester FB bot til KL, laver seperat knap til test.
             // Senere skal denne (hvis fungerende) benyttes et andet sted.
             case R.id.drawer_kontakt_test:
@@ -248,8 +226,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     showToast("Facebook ikke installeret");
                     return true;
                 }
-
-
             case R.id.drawer_share:
 
                 Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
@@ -287,8 +263,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         fragmentTransaction.replace(R.id.fragmentindhold, fragment, tag).commit();
     }
-    //    TODO: FIX HOME AS UP
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -324,7 +298,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
     private void setupDrawer() {
         mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
-
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -340,51 +313,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         };
     }
-
-//// EXPERIMENTAL CODE THAT DID NOT WORK!
-//        private void initItems() {
-//        items = getResources().getStringArray(R.array.subject_list);
-////    }
-//
-//    private void addDrawerItems() {
-//        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
-//        mExpandableListView.setAdapter(mExpandableListAdapter);
-//        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-//            @Override
-//            public void onGroupExpand(int groupPosition) {
-//                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
-//            }
-//        });
-//
-//        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-//            @Override
-//            public void onGroupCollapse(int groupPosition) {
-//                getSupportActionBar().setTitle(R.string.drawer_subjects);
-//            }
-//        });
-//
-//        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-//            @Override
-//            public boolean onChildClick(ExpandableListView parent, View v,
-//                                        int groupPosition, int childPosition, long id) {
-//                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
-//                        .get(childPosition).toString();
-//                getSupportActionBar().setTitle(selectedItem);
-//
-//                final Bundle bundle = new Bundle();
-//                SubjectFragment subjectFragment = new SubjectFragment();
-//                setOldindex(groupPosition);
-//                bundle.putInt("listindex",childPosition);
-//
-//                subjectFragment.setArguments(bundle);
-//                nextFlipCard(subjectFragment, SubjectFragment.TAG);
-//
-//                drawer.closeDrawer(GravityCompat.START);
-//                return false;
-//            }
-//        });
-//    }
-
 
     //Credit to firebase
     private void onInviteClicked() {
@@ -439,6 +367,52 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+
+    //// ExpandableListAdapterCode
+//        private void initItems() {
+//        items = getResources().getStringArray(R.array.subject_list);
+////    }
+//
+//    private void addDrawerItems() {
+//        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
+//        mExpandableListView.setAdapter(mExpandableListAdapter);
+//        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+//            @Override
+//            public void onGroupExpand(int groupPosition) {
+//                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
+//            }
+//        });
+//
+//        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+//            @Override
+//            public void onGroupCollapse(int groupPosition) {
+//                getSupportActionBar().setTitle(R.string.drawer_subjects);
+//            }
+//        });
+//
+//        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+//            @Override
+//            public boolean onChildClick(ExpandableListView parent, View v,
+//                                        int groupPosition, int childPosition, long id) {
+//                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
+//                        .get(childPosition).toString();
+//                getSupportActionBar().setTitle(selectedItem);
+//
+//                final Bundle bundle = new Bundle();
+//                SubjectFragment subjectFragment = new SubjectFragment();
+//                setOldindex(groupPosition);
+//                bundle.putInt("listindex",childPosition);
+//
+//                subjectFragment.setArguments(bundle);
+//                nextFlipCard(subjectFragment, SubjectFragment.TAG);
+//
+//                drawer.closeDrawer(GravityCompat.START);
+//                return false;
+//            }
+//        });
+//    }
+
 
 }
 

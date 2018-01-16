@@ -1190,9 +1190,21 @@
     <string name="flipcar_button_previous">Forrige kort</string>
     <string name="flipcard_button_next">Næste kort</string>
     <string name="out_of_cards">Der er ikke flere kort</string>
-    <string name="are_you_sure">Er du sikker på at du vil gemme disse spørgsmål?</string>
-    <string name="add_question">Er du sikker på at du vil gemme disse data? Kontroller stave og syntaksfejl på Quizzen du har skrevet</string>
+    <string name="are_you_sure">Er du sikker på at du vil gemme dette spørgsmål?</string>
+    <string name="add_question">Kontroller stave og syntaksfejl på Quizzen du har skrevet</string>
     <string name="correct_answer">Rigtigt svar</string>
+    <string name="cannot_be_empty">Feltet kan ikke være tomt</string>
+    <string name="create_question">Skriv et spørgsmål</string>
+    <string name="quiz_desc">Skriv en quiz i appen som kan genbruges, appen understøtter LaTeX, såfremt alle svarmulighederne er skrevet med LaTeX. Checkmark indikerer det korrekte svar.</string>
+    <string name="string_quiz_title">Skriv et Quizspørgsmål</string>
+    <string name="question_here">Skriv quizspørgsmål her</string>
+    <string name="write_answer1">Skriv svarmulighed 1</string>
+    <string name="write_here">Skriv her</string>
+    <string name="write_answer2">Skriv svarmulighed 2</string>
+    <string name="write_answer3">Skriv svarmulighed 3</string>
+    <string name="write_answer4">Skriv svarmulighed 4</string>
+    <string name="saveexit">Gem og Afslut</string>
+    <string name="preview">Preview</string>
 
     <plurals name="you_selected_x_subjects">
         <item quantity="one">Du valgte %d emne!</item>

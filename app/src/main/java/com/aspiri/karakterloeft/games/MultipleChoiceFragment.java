@@ -62,7 +62,7 @@ public class MultipleChoiceFragment extends Fragment {
     ObjectAnimator colorFade;
     private String trueanswer;
     private int mQuestionNumber = 0;
-    private String[] option;
+    private String[] questionOption;
 
     @OnClick(R.id.option1_button)
     void onOption1Click() {
@@ -116,9 +116,10 @@ public class MultipleChoiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View view = inflater.inflate(R.layout.multiple_choice_quiz, container, false);
         ButterKnife.bind(this, view);
-
         questionBank.initQuestions(mActivity.getApplicationContext());
-        opdaterUI();
+        questionOption = getQuestion(); //Erklæres ude for kaldet
+        opdaterUI(questionOption);
+
         setHasOptionsMenu(true);
         return view;
     }
@@ -126,7 +127,7 @@ public class MultipleChoiceFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.three_dot_menu, menu);
+//        inflater.inflate(R.menu.three_dot_menu, menu);
         MenuItem addItem = menu.findItem(R.id.addItem);
         addItem.setVisible(true);
         addItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -136,7 +137,6 @@ public class MultipleChoiceFragment extends Fragment {
                 return false;
             }
         });
-        super.onCreateOptionsMenu(menu, inflater);
     }
 
 
@@ -180,7 +180,7 @@ public class MultipleChoiceFragment extends Fragment {
                     case MotionEvent.ACTION_DOWN:
                         statustekst.setText(R.string.presstostart);
                         mQuestionNumber++;
-                        opdaterUI();
+                        opdaterUI(questionOption);
                         screen.setOnTouchListener(null);
                         break;
                 }
@@ -211,7 +211,7 @@ public class MultipleChoiceFragment extends Fragment {
             correct = getResources().getColor(R.color.answer_correct);      // Tager hensyn til gamle API er
             wrong = getResources().getColor(R.color.answer_wrong);
         }
-        if (option[optionindex].equals(trueanswer)) {
+        if (questionOption[optionindex].equals(trueanswer)) {
 
             mathViews[optionindex].setBackgroundColor(Color.GREEN);
 
@@ -233,7 +233,7 @@ public class MultipleChoiceFragment extends Fragment {
                             case MotionEvent.ACTION_UP:
                                 statustekst.setText(R.string.presstostart);
                                 mQuestionNumber++;
-                                opdaterUI();
+                                opdaterUI(questionOption);
                                 screen.setOnTouchListener(null);
                         }
                         return true;
@@ -255,7 +255,7 @@ public class MultipleChoiceFragment extends Fragment {
         }
     }
 
-    private void opdaterUI() {
+    private void opdaterUI(String[] option) {
         option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
         if (mQuestionNumber < questionBank.getLength()) {
             question.setText(questionBank.getQuestion(mQuestionNumber));
@@ -313,17 +313,28 @@ public class MultipleChoiceFragment extends Fragment {
     /**
      * Returns true if UI should display a MathView.* @return
      */
-    public boolean shouldUseMathViews(){
-        if(option[0].contains("$$")){ return true;
-        }
-        if (option[1].contains("$$")) {
+    private boolean shouldUseMathViews() {
+        if (questionOption[0].contains("$$")) {
             return true;
         }
-        if (option[2].contains("$$")) {
+        if (questionOption[1].contains("$$")) {
             return true;
         }
-        return option[3].contains("$$");
+        if (questionOption[2].contains("$$")) {
+            return true;
+        }
+        return questionOption[3].contains("$$");
     }
+
+    private String[] getQuestion() {
+        questionOption = new String[]{questionBank.getChoice(mQuestionNumber, 1),
+                questionBank.getChoice(mQuestionNumber, 2),
+                questionBank.getChoice(mQuestionNumber, 3),
+                questionBank.getChoice(mQuestionNumber, 4)};
+        return questionOption;
+    }
+
 }
+
 
 
