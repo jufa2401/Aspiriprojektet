@@ -16,20 +16,28 @@
             android:title="@string/title_mail_header"
             />
 
-
-        <!--Sprog-->
+        <!--Sprog-
         <Preference
             android:title="@string/title_sprog"
-            android:summary="@string/brug_standard_sprog"/>
+            android:summary="@string/brug_standard_sprog">
+            <intent
+                android:action="android.provider.Settings.ACTION_LOCALE_SETTINGS" />
+        </Preference>
+        -->
+
+        <Preference
+            android:title="@string/title_sprog"
+            android:summary="@string/brug_standard_sprog" />
+
 
     </PreferenceCategory>
 
-        <!--Vibrer-->
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/key_vibrate"
-            android:summary="@string/summary_vibrate"
-            android:title="@string/title_vibrate" />
+    <!--Vibrer-->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/key_vibrate"
+        android:summary="@string/summary_vibrate"
+        android:title="@string/title_vibrate" />
 
     <!--Om os-->
     <PreferenceCategory android:title="@string/pref_header_about">

@@ -22,8 +22,8 @@
 
                 <!-- Usermade -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+
 
                 <!-- Firebase -->
                 <action android:name="android.intent.action.VIEW" />

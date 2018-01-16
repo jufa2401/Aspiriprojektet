@@ -16,25 +16,26 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.provider.Settings;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 //Kraftigt inpireret af https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/
 public class SettingsActivity extends AppCompatPreferenceActivity  {
     private static final String TAG = SettingsActivity.class.getSimpleName();
-    Toolbar toolbar;
     //String version = getTagVersionNumber();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setSupportActionBar(toolbar);
 
         // load settings fragment
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
