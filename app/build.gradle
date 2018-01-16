@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-
+ext.kotlin_version = '1.2.0'
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.1'
@@ -28,10 +28,12 @@ android {
     }
 
 }
+allprojects{
 repositories {
     maven { url 'https://jitpack.io' }
     maven { url 'https://maven.fabric.io/public' }
     jcenter()
+}
 }
 
 dependencies {
