@@ -14,12 +14,12 @@
             android:title="@string/title_mail_header"
             />
 
+
         <!--Sprog-->
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="@string/key_brug_standardsprog"
-            android:summary="@string/brug_standard_sprog"
-            android:title="@string/title_sprog" />
+        <Preference
+            android:title="@string/title_sprog"
+            android:summary="@string/brug_standard_sprog"/>
+
     </PreferenceCategory>
 
     <!--Opførsel Kategori-->

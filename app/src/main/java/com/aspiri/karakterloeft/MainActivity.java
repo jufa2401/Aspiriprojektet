@@ -3,6 +3,7 @@ package com.aspiri.karakterloeft;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -177,6 +179,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.three_dot_settings:
                 // User chose the "Settings" item, show the app settings UI...
+
+                //Intent intent=new Intent(Settings.ACTION_LOCALE_SETTINGS);
+                //startActivity(intent);
+
                 Intent goToSettings = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(goToSettings);
                 Log.d("AspiriApp", "action_settings pressed");

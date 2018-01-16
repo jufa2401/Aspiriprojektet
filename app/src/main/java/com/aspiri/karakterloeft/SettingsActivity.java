@@ -15,14 +15,16 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
+import android.provider.Settings;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 
 //Kraftigt inpireret af https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/
-public class SettingsActivity extends AppCompatPreferenceActivity {
+public class SettingsActivity extends AppCompatPreferenceActivity  {
     private static final String TAG = SettingsActivity.class.getSimpleName();
     Toolbar toolbar;
     //String version = getTagVersionNumber();
@@ -150,4 +152,5 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
         return tempInfo;
     }
+
 }
