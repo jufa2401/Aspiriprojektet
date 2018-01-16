@@ -27,45 +27,45 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--Under construction-->
-    <string name="sample_subject">Andengradsligning</string>
+    <string name="sample_subject">Quadratic Formula</string>
     <string name="sample_subject_breadtext">Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</string>
     <string name="empty_description" />
 
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Areal, omkreds og rumfang</item>
-        <item>Rentesregning</item>
-        <item>Kvadratsætningerne</item>
-        <item>Potensregneregler</item>
-        <item>Polynomier</item>
-        <item>Lineær, eksponentiel og potenssammenhænge</item>
-        <item>Statistik</item>
-        <item>Differentialregning</item>
-        <item>Integralregning</item>
-        <item>Logaritmer</item>
-        <item>Geometri</item>
-        <item>Plangeometri med vektorer</item>
-        <item>Rumgeometri med vektorer</item>
+        <item>Area, Circumference and Volume</item>
+        <item>Percentages</item>
+        <item>Quadratic Formulas</item>
+        <item>Polynomial rules</item>
+        <item>Polynomials</item>
+        <item>Linear, exponential and polynomial connections</item>
+        <item>Statistics</item>
+        <item>Differentials</item>
+        <item>Integrals</item>
+        <item>Logarithms</item>
+        <item>Gemoetry</item>
+        <item>Planegemetry with vectors</item>
+        <item>Spacegemoetry with vectors</item>
     </string-array>
 
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
-        <item>Andre Arealer</item>
-        <item>Fremskrivning af indestående</item>\
-        <item>Spar massere af tid, hvis du lærer disse uden ad</item>
-        <item>I hvilken rækkefølge skal man gøre hvad?</item>
-        <item>Toppunkter, nulpunkter og stigning</item>
-        <item>Vækst og sammenhænge</item>
-        <item>Sammenhæng mellem data, NulHypotese</item>
-        <item>f\'(x) er din ven</item>
-        <item>F(x) er også din ven</item>
-        <item>Transformering af udtryk</item>
-        <item>Trekanter, Firkanter og Cirkler</item>
-        <item>Størrelser i plan</item>
-        <item>Størrelser i Rum</item>
+        <item>Formulas and explainations</item>
+        <item>Future Projections</item>\
+        <item>You can save time with these memorized</item>
+        <item>In what order do you do what?</item>
+        <item>Highlights, zero points and pitch</item>
+        <item>Growth and connections</item>
+        <item>Correlationsin data</item>
+        <item>f\'(x) is your friend</item>
+        <item>F(x) is also your friend</item>
+        <item>Transformations of Expressions</item>
+        <item>Triangles, circles and squares</item>
+        <item>Sizes and velocities on a plane</item>
+        <item>Sizes and velocities in space</item>
 
     </string-array>
 
@@ -74,7 +74,7 @@
     <!-- Strings related to Settings -->
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
-    <string name="card_back_title">Hvad er best ved lasagne?</string>
+    <string name="card_back_title">The chance is 1/36th</string>
     <string name="card_back_description">Fadet selvfølgelig</string>
     <!--*******************************************************************************************************************-->
 
@@ -425,16 +425,16 @@
 
     <!--Firebase-->
     <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri[&amp;amv=23][&amp;afl=https://Google.com]</string>
-    <string name="invitation_title">Den her app er bare rigtigt god</string>
-    <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
-    <string name="invitation_cta">Installer Mig!</string>
+    <string name="invitation_title">It\'s really good</string>
+    <string name="invitation_message">Here is the mathapp I was talking about</string>
+    <string name="invitation_cta">Install me</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
     <string name="kontakt_via_facebook">Contact via Facebook</string>
     <string name="drawer_subjects">Subjects</string>
     <string name="summary_vibrate">Use Vibrations in App</string>
     <string name="summary_support">Technical difficulties? Message Us Here!</string>
     <string name="summary_faq">View FAQ</string>
-    <string name="summary_mail">Here you can set the title in mails sent from the app</string>
+    <string name="summary_mail">Opens a new window</string>
     <string name="title_version">Version</string>
     <string name="title_vibrate">Vibrations</string>
     <string name="title_mail_header">Default Mail Header</string>
@@ -442,6 +442,23 @@
     <string name="title_send_feedback">Send Feedback</string>
     <string name="title_faq">FAQ</string>
     <string name="title_terms">Terms &amp; Conditions</string>
+    <string name="mail_default_msg">mail_default_msg</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="pref_title_generelt">General</string>
+    <string name="pref_header_about">Om Udviklerne:</string>
+    <string name="default_mail_header">Dear Karakterløft Appteam</string>
+    <string name="brug_standard_sprog">Use the Phone Locale</string>
+    <string name="app_version">1.0 DEFAULT</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="choose_email_client">Choose Email Client</string>
+    <string name="opens_new_window">Opens a new window</string>
+    <string name="url_privacy">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="url_faq">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="url_terms">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="question_1_sandsynlighed">What is the probability of getting a pair of six in one throw?</string>
+    <string name="card_questionmark_the_questionmark">\?</string>
+    <string name="drawer_header_nav_picture">top drawer header picture</string>
 
 
 </resources>

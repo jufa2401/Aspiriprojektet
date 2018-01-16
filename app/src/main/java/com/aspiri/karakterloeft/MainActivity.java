@@ -54,30 +54,26 @@ import static com.aspiri.karakterloeft.R2.string.mail_default_msg;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
     private final static String MESSAGE = "MESSAGE";
-    private int oldindex;
-    private FragmentManager mFragmentManager;
+    //For Firebase
+    private static String TAG = MainActivity.class.getSimpleName();
+    private static int REQUEST_INVITE = 0;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
     @BindView(R.id.nav_view)
     NavigationView navigationView;
-    private ActionBarDrawerToggle mActionBarDrawerToggle;
-    //For Firebase
-    private static String TAG = MainActivity.class.getSimpleName();
-    private static int REQUEST_INVITE = 0;
-    private FirebaseAnalytics mFirebaseAnalytics;
-
-    // test
-    private List<String> mExpandableListTitle;
-    private String[] items;
     ExpandableListAdapter mExpandableListAdapter;
-
     //     Der er problemer med ExpandableListView ikke adapteren!
     @BindView(R.id.navList)
     ExpandableListView mExpandableListView;
-
-
+    private int oldindex;
+    private FragmentManager mFragmentManager;
+    private ActionBarDrawerToggle mActionBarDrawerToggle;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    // test
+    private List<String> mExpandableListTitle;
+    private String[] items;
     private Map<String, List<String>> mExpandableListData;
 
 
@@ -342,8 +338,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle(R.string.find_way);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+
+                //getSupportActionBar().setTitle(R.string.find_way);
             }
 
             /** Called when a drawer has settled in a completely closed state. */
