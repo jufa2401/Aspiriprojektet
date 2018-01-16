@@ -16,15 +16,11 @@ import java.util.ArrayList;
  * Created by Justin on 12/01/2018.
  */
 public  class CardFrontFragment extends Fragment {
+    TextView textFront;
     private AppCompatActivity mActivity;
-
     public CardFrontFragment() {
     }
 
-
-
-
-    TextView textFront;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

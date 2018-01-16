@@ -24,7 +24,6 @@ import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,8 +47,7 @@ public class FlipcardSubjectList extends AppCompatActivity {
         ArrayList<String> back = getIntent().getStringArrayListExtra("back");
 
 
-
-        setUpToolbar((Toolbar) findViewById(R.id.toolbarFLIP));
+        setUpToolbar((Toolbar) findViewById(R.id.toolbar));
         askPermissions();
 
 

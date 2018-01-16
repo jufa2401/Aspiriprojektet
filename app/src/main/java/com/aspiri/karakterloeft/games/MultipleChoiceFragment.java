@@ -2,16 +2,22 @@ package com.aspiri.karakterloeft.games;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,10 +53,13 @@ public class MultipleChoiceFragment extends Fragment {
 
     @BindView(R.id.status_text)
     TextView statustekst;
-    AppCompatActivity mActivity;
-    MultipleChoiceDataBaseHelper dataBaseHelper = new MultipleChoiceDataBaseHelper(((MainActivity) mActivity));
 
+    @BindView(R.id.multipleChoice)
+    ConstraintLayout screen;
+
+    AppCompatActivity mActivity;
     QuestionBank questionBank = new QuestionBank();
+    ObjectAnimator colorFade;
     private String trueanswer;
     private int mQuestionNumber = 0;
     private String[] option;
@@ -103,28 +112,31 @@ public class MultipleChoiceFragment extends Fragment {
             mActivity = (AppCompatActivity) context;
     }
 
-    ObjectAnimator colorFade;
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState){
         View view = inflater.inflate(R.layout.multiple_choice_quiz, container, false);
         ButterKnife.bind(this, view);
 
-
         questionBank.initQuestions(mActivity.getApplicationContext());
-        newQuestion();
-
-//        question.setText(questiontxt);
-//
-
-//
-//        optionThumbs[0].setImageResource(R.drawable.ic_game);
-//        optionThumbs[1].setImageResource(R.drawable.ic_game);
-//        optionThumbs[2].setImageResource(R.drawable.ic_game);
-//        optionThumbs[3].setImageResource(R.drawable.ic_game);
-
-
+        opdaterUI();
+        setHasOptionsMenu(true);
         return view;
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.three_dot_menu, menu);
+        MenuItem addItem = menu.findItem(R.id.addItem);
+        addItem.setVisible(true);
+        addItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                ((MainActivity) mActivity).replaceFragment(new AddQuiz(), "add quiz fragment");
+                return false;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
 
@@ -134,6 +146,7 @@ public class MultipleChoiceFragment extends Fragment {
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void answerPressed(int optionindex) {
         int correct, wrong;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -158,27 +171,25 @@ public class MultipleChoiceFragment extends Fragment {
             optionButtons[3].setClickable(false);
             statustekst.setText(R.string.correct_choice);
 
-            ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
+            ((MainActivity) mActivity).showToast("Tryk XX på skærmen for at fortsætte");
 
-            if(getView()!=null) {
-                getView().setClickable(true);
-                getView().setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        newQuestion();
-                        for (int i = 0; i < 4; i++) {
 
-                            optionButtons[i].setBackground(getResources().getDrawable(R.drawable.shadow));
-                        }
+            Log.d("onTouchListener", "touchlistener on " + getActivity().getCurrentFocus());
+            screen.setOnTouchListener((View v, MotionEvent event) -> {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
                         statustekst.setText(R.string.presstostart);
+                        mQuestionNumber++;
+                        opdaterUI();
+                        screen.setOnTouchListener(null);
+                        break;
+                }
+                return true;
 
-                    }
-                });
-            }
+            });
+
         } else {
-            if(optionButtons[optionindex].getDrawingCacheBackgroundColor()!=0xf91400) {
-                optionButtons[optionindex].setBackgroundColor(0xf91400);
-            }
+
             colorFade = ObjectAnimator.ofObject(optionButtons[optionindex], "backgroundColor",
                     new ArgbEvaluator(), Color.argb(255,193,37,23), wrong);
             colorFade.setDuration(1000);
@@ -187,10 +198,10 @@ public class MultipleChoiceFragment extends Fragment {
             optionButtons[optionindex].setClickable(false);
             statustekst.setText(R.string.wrong_choice);
 
-//            optionButtons[optionindex].animate();
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void mathViewPressed(int optionindex) {
         int correct, wrong;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -215,26 +226,26 @@ public class MultipleChoiceFragment extends Fragment {
             checkBoxes[3].setClickable(false);
             statustekst.setText(R.string.correct_choice);
 
-            ((MainActivity) mActivity).showMessage("Tryk på skærmen for at fortsætte");
+            ((MainActivity) mActivity).showToast("Tryk på skærmen for at fortsætte");
 
-
-            if(getView()!=null) {
-                getView().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    newQuestion();
-                    for (int i = 0; i < 4; i++) {
-                        mathViews[i].setBackgroundColor(Color.WHITE);
+            screen.setOnTouchListener((View v, MotionEvent event) -> {
+                        switch (event.getAction()) {
+                            case MotionEvent.ACTION_UP:
+                                statustekst.setText(R.string.presstostart);
+                                mQuestionNumber++;
+                                opdaterUI();
+                                screen.setOnTouchListener(null);
+                        }
+                        return true;
                     }
-                    statustekst.setText(R.string.presstostart);
-                }
-            });
-            }
+            );
+
+
         } else {
             mathViews[optionindex].setBackgroundColor(0xf91400);
             ObjectAnimator colorFade = ObjectAnimator.ofObject(mathViews[optionindex], "backgroundColor",
                     new ArgbEvaluator(), Color.argb(255, 193, 37, 23), wrong);
-            colorFade.setDuration(1000);
+            colorFade.setDuration(500);
             colorFade.start();
 
             mathViews[optionindex].setClickable(false);
@@ -243,7 +254,8 @@ public class MultipleChoiceFragment extends Fragment {
 //            optionButtons[optionindex].animate();
         }
     }
-    private void newQuestion() {
+
+    private void opdaterUI() {
         option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
         if (mQuestionNumber < questionBank.getLength()) {
             question.setText(questionBank.getQuestion(mQuestionNumber));
@@ -253,68 +265,63 @@ public class MultipleChoiceFragment extends Fragment {
                 for (int i = 0; i < 4; i++) {
                     optionButtons[i].setClickable(false);
                     optionButtons[i].setVisibility(View.GONE);
+
+//                    if(colorFade!=null) {colorFade.end();}
+
+                    mathViews[i].setBackgroundColor(Color.WHITE);
+                    mathViews[i].setVisibility(View.VISIBLE);
+                    mathViews[i].setClickable(true);
                     mathViews[i].setDisplayText(option[i]);
-                    if(mathViews[i].getVisibility()!=View.VISIBLE) {
-                        mathViews[i].setVisibility(View.VISIBLE);
-                    }
-                    if(checkBoxes[i].getVisibility()!=View.VISIBLE) {
-                        checkBoxes[i].setVisibility(View.VISIBLE);
-                        checkBoxes[i].setClickable(true);
-                    }
+                    checkBoxes[i].setVisibility(View.VISIBLE);
+                    checkBoxes[i].setClickable(true);
+
                 }
             }
             if (!shouldUseMathViews()) {
                 for (int i = 0; i < 4; i++) {
-                    if(mathViews[i].getVisibility() == View.VISIBLE){
-                        mathViews[i].setClickable(false);
-                        mathViews[i].setVisibility(View.GONE);
-                        checkBoxes[i].setClickable(false);
-                        checkBoxes[i].setVisibility(View.GONE);
-                    }
+                    Log.d("opdaterUI() Method " + i, "optionbuttons at " + i + " Visibility visible");
+                    mathViews[i].setClickable(false);
+                    mathViews[i].setVisibility(View.GONE);
+                    checkBoxes[i].setClickable(false);
+                    checkBoxes[i].setVisibility(View.GONE);
 
-                    if (optionButtons[i].getVisibility() == View.GONE) {
-                        optionButtons[i].setVisibility(View.VISIBLE);
-                        optionButtons[i].setClickable(true);
-                        Log.d("optionbutton visib at " + i, "optionbuttons at" + i + "Visibility visible");
-                    }
+//                    if(colorFade!=null) {colorFade.end();}
 
+                    optionButtons[i].setBackgroundColor(Color.WHITE);
+                    optionButtons[i].setVisibility(View.VISIBLE);
+                    optionButtons[i].setClickable(true);
+                    optionButtons[i].setBackground(getResources().getDrawable(R.drawable.shadow));
                     optionTexts[i].setText(option[i]);
-
                 }
-
-
-
             }
-            mQuestionNumber++;
-            Log.d("mQuestionNumber value: " + mQuestionNumber, "mQuestionNumber value: " + mQuestionNumber);
 
-        } if(optionsNull()) {
-            ((MainActivity) mActivity).showMessage("That was the last question");
+            Log.d("opdaterUI() Method" + mQuestionNumber, "mQuestionNumber value: " + mQuestionNumber);
+
+        } else {
+            ((MainActivity) mActivity).showToast("That was the last question");
             MultipleChoiceFragment f = new MultipleChoiceFragment();
-            ((MainActivity) mActivity).replaceFragment(f, MultipleChoiceFragment.TAG);
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction
+                    .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left, R.animator.slide_out_right, R.animator.slide_in_right)
+                    .replace(R.id.fragmentindhold, f, "end of questions").commit();
         }
-
     }
+
+
+    /**
+     * Returns true if UI should display a MathView.* @return
+     */
     public boolean shouldUseMathViews(){
-        if(option[0].contains("$$")){ return true;}
-        return false;
+        if(option[0].contains("$$")){ return true;
+        }
+        if (option[1].contains("$$")) {
+            return true;
+        }
+        if (option[2].contains("$$")) {
+            return true;
+        }
+        return option[3].contains("$$");
     }
-    public boolean optionsNull(){
-        if(option[0]==null){
-            return true;
-        }
-        else if(option[1]==null){
-            return true;
-        }
-        else if(option[2]==null){
-            return true;
-        }
-        else if (option[3]==null){
-            return true;
-        }
-        return false;
-    }
-
 }
 
 

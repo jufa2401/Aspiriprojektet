@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     //For Firebase
     private static String TAG = MainActivity.class.getSimpleName();
     private static int REQUEST_INVITE = 0;
-    @BindView(R.id.toolbarFLIP)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawer;
@@ -166,15 +166,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
             case R.id.three_dot_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                showMessage("Yet to be implemented");
+                showToast("Yet to be implemented");
                 Log.d("AspiriApp", "action_settings pressed");
                 return true;
 
-            case R.id.three_dot_favorite:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite..  .
-                showMessage("Action Favorite is yet to be implemented");
-                Log.d("AspiriApp", "action_favorite pressed");
+            case R.id.addItem:              //Add item is visible exclusively in Multiple Choice Fragment for user adding of Quizzes, and is therefore not implemented here.
                 return true;
 
             //Should be unused at all times
@@ -185,6 +181,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
 
     //     On click for de forskellige optioner i drawer.
+
+    /**
+     * Method for handling Click Events in the navigationdrawer.
+     *
+     * @param item
+     * @return
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -242,7 +245,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     startActivity(contactFacebookBot);
                     return true;
                 } catch (PackageManager.NameNotFoundException e) {
-                    showMessage("Facebook ikke installeret");
+                    showToast("Facebook ikke installeret");
                     return true;
                 }
 
@@ -253,7 +256,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 myTrace.start();
 
                 onInviteClicked();
-                showMessage("Drawer share was pressed");
+                showToast("Drawer share was pressed");
 
                 myTrace.stop();
                 return true;
@@ -263,6 +266,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         return true;
     }
 
+    /**
+     * A method for replacing a fragment, if tag is not the first screen, then add to backstack, slide animations set
+     * @param fragment the fragment that we want replaced in the the fragment container
+     * @param tag a TAG that describes the Fragment
+     */
     public void replaceFragment(Fragment fragment, String tag) {
         if (mFragmentManager == null)
             return;
@@ -402,7 +410,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     Log.d(TAG, "onActivityResult: sent invitation " + id);
                 }
             } else {
-                showMessage("Error, no invitation sent");
+                showToast("Error, no invitation sent");
             }
         }
     }
@@ -411,11 +419,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.d(TAG, "On Connection failed" + connectionResult);
-        showMessage("Error OnconnectionFailed");
+        showToast("Error OnconnectionFailed");
     }
 
-    public void showMessage(String messageForToast) {
-        Log.d(TAG, "showMessage Methodwas called");
+    public void showToast(String messageForToast) {
+        Log.d(TAG, "showToast() Method");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
 
@@ -431,6 +439,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
 }
 
 

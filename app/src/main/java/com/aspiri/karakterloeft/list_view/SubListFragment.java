@@ -26,17 +26,16 @@ import com.aspiri.karakterloeft.R;
 public class SubListFragment extends Fragment {
 
     public static final String TAG = "SubListFragment";
-    private String[] subjectListArray, subtextListArray;
-    private String listtitle;
-    private AppCompatActivity mActivity;
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
-    private int listindex;
-    private TextView listtitle_TextView;
-
     //Skal laves om!
     Integer[] imageArray = {R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle, R.drawable.titlelist_triangle
     };
+    private String[] subjectListArray, subtextListArray;
+    private String listtitle;
+    private AppCompatActivity mActivity;
+    private int listindex;
+    private TextView listtitle_TextView;
 
     @Override
     public void onAttach(Context context) {
@@ -47,8 +46,7 @@ public class SubListFragment extends Fragment {
     }
 
 
-
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.recycler_list, container, false);
         recyclerView = rootView.findViewById(R.id.listRecyclerView);
 
@@ -251,13 +249,20 @@ public class SubListFragment extends Fragment {
         layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
-        RecyclerListAdapter recyclerListAdapter = new RecyclerListAdapter(getActivity(), subjectListArray, subtextListArray, imageArray);
+        RecyclerListAdapterList recyclerListAdapter = new RecyclerListAdapterList(getActivity(), subjectListArray, subtextListArray, imageArray);
         recyclerView.setAdapter(recyclerListAdapter);
 
 
+        if (savedInstanceState != null) {
+            recyclerView.getLayoutManager().onRestoreInstanceState(savedInstanceState.getParcelable("list"));
+        }
         return rootView;
+    }
 
-
+    @Override
+    public void onSaveInstanceState(Bundle outState) { // Understøttelse for skærmvending - kan evt udelades
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("list", recyclerView.getLayoutManager().onSaveInstanceState());
     }
 
     @Override

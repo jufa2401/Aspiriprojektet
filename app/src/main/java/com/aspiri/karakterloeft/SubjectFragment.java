@@ -19,26 +19,9 @@ import katex.hourglass.in.mathlib.MathView;
 
 //import butterknife.BindView;
 
-/**
- * Created by jonas on 21/11/2017.
- */
 
 public class SubjectFragment extends Fragment {
     public static final String TAG = "SubjectFragment";
-    private String[] title, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
-            text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;  // These strings are not set for Arealer nor the default layout, however they could be useful later in other subjects
-
-    private int listindex, oldindex;
-    private AppCompatActivity mActivity;
-
-
-
-    private int[] picture_1, picture_2, picture_3;
-
-    // TODO VI, VI, VI, VI, VI, VI Bruger butterknife. Det ser smart ud.
-    //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
-    // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
-
     //    Alle MathViews
     @BindViews({R.id.subject_fragment_math_view_1,          //1
             R.id.subject_fragment_math_view_2,              //2
@@ -46,7 +29,6 @@ public class SubjectFragment extends Fragment {
             R.id.subject_fragment_math_view_4               //4
     })
     MathView mathViews[];
-
     //    Alle TextViews forinden eksempler
     @BindViews({
             R.id.subject_fragment_title,
@@ -60,20 +42,26 @@ public class SubjectFragment extends Fragment {
             R.id.subject_fragment_text_above_mathview4
     })
     TextView textsViews[];             // Et tilsvarende array skal laves for billeder matematikformler etc.
-
-
     @BindViews({R.id.subject_fragment_picture_1, R.id.subject_fragment_picture_2, R.id.subject_fragment_picture_3})
     ImageView subject_pictures[];
-
     //    Gamebutton pr. default er game_button layout med GONE visibility. Hvis der skal være en spilknap sætter man den med setVisibility .VISIBLE
     @BindView(R.id.subject_fragment_game_button_layout)
     LinearLayout game_button_layout;
+
+    // TODO VI, VI, VI, VI, VI, VI Bruger butterknife. Det ser smart ud.
+    //    Leger med at bruge butterknife, det virker meget smartere at skrive det heroppe i stedet for at det skal fylde i en OnCreate metode med findViewbyId og OnClick
+    // Fordi jeg kan sætte det hele som et array her sparer jeg samtlige linjer kode
     @BindView(R.id.subject_fragment_game_button)
     LinearLayout game_button;
     @BindView(R.id.subject_fragment_game_text)
     TextView game_text;
     @BindView(R.id.subject_fragment_game_thumb)
     ImageView game_thumb;
+    private String[] title, intro, text_following_picture_1, text_following_picture_2, text_above_picture_3, mathView1, mathView2, mathView3, mathView4,
+            text_above_mathview_1, text_above_mathview_2, text_above_mathview_3, text_above_mathview_4;  // These strings are not set for Arealer nor the default layout, however they could be useful later in other subjects
+    private int listindex, oldindex;
+    private AppCompatActivity mActivity;
+    private int[] picture_1, picture_2, picture_3;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInsanceState) {
 

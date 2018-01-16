@@ -16,7 +16,6 @@
 
 package com.aspiri.karakterloeft.games;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -27,16 +26,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.list_view.ListFragment;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
@@ -59,6 +53,9 @@ import static com.aspiri.karakterloeft.SubjectFragment.TAG;
 public class FlipcardActivity extends AppCompatActivity
         implements FragmentManager.OnBackStackChangedListener {
     FlipcardBank flipcardBank = new FlipcardBank();
+    ArrayList<String> front;
+    ArrayList<String> back;
+    ArrayList<String> backExplanation;
     /**
      * A handler object, used for deferring UI operations.
      */
@@ -68,13 +65,7 @@ public class FlipcardActivity extends AppCompatActivity
      * Whether or not we're showing the back of the card (otherwise showing the front).
      */
     private boolean mShowingBack = false;
-
     private Fragment flipCardButtonFragment = new FlipcardButtonFragment();
-
-    ArrayList<String> front;
-    ArrayList<String> back;
-    ArrayList<String> backExplanation;
-
     private int currentCardIndex = 0;
     private int cardStackSize;
     private FragmentManager mFragmentManager;
@@ -132,7 +123,7 @@ public class FlipcardActivity extends AppCompatActivity
                             deepLink = pendingDynamicLinkData.getLink();
                         }
 
-                    //  showMessage("test2");
+                        //  showToast("test2");
 
                     }
                 })
@@ -243,7 +234,7 @@ public class FlipcardActivity extends AppCompatActivity
     }
 
     public void showMessage(String messageForToast) {
-        Log.d(TAG, "showMessage Method was called");
+        Log.d(TAG, "showToast Method was called");
         Toast.makeText(getApplicationContext(), messageForToast, Toast.LENGTH_SHORT).show();
     }
     public void nextFlipCard(Fragment fragment, String tag) {

@@ -20,7 +20,7 @@ import com.aspiri.karakterloeft.SubjectFragment;
  * Created by s165158 on 08-11-2017.
  */
 
-public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapter.ViewHolder> {
+public class RecyclerListAdapterList extends RecyclerView.Adapter<RecyclerListAdapterList.ViewHolder> {
     private Listener mListener;
 
     private String[] subjectListArray, subtextListArray;
@@ -28,28 +28,15 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
     private Context context;
     private AppCompatActivity mActivity;
 
-    public RecyclerListAdapter(Context context,String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
+    public RecyclerListAdapterList(Context context, String[] subjectListArray, String[] subtextListArray, Integer[] imageArray) {
         this.subjectListArray = subjectListArray;
         this.subtextListArray = subtextListArray;
         this.imageArray = imageArray;
         this.context = context;
     }
 
-
-    public interface Listener {
-        void onClick(int position);
-    }
-
     public void setListener(Listener listener) {
         mListener = listener;
-    }
-
-    public static class ViewHolder extends RecyclerView.ViewHolder{
-        View view;
-        public ViewHolder(View itemView) {
-            super(itemView);
-            view =  itemView;
-        }
     }
 
     @Override
@@ -115,11 +102,23 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
             return subjectListArray.length;
         } catch (ArrayIndexOutOfBoundsException exception) {
             Log.d("ArrayIndexOutOfBounds", "look at the switch-case in sublistfragment or listfragment");
-            ((MainActivity) mActivity).showMessage("Error generating list-element. Contact appdeveloper");
+            ((MainActivity) mActivity).showToast("Error generating list-element. Contact appdeveloper");
             return 0;
         }
 
 
+    }
 
+    public interface Listener {
+        void onClick(int position);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        View view;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            view = itemView;
+        }
     }
 }
