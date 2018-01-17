@@ -2,6 +2,7 @@ package com.aspiri.karakterloeft.games.flipcards;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.service.autofill.RegexValidator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +12,23 @@ import android.widget.TextView;
 import com.aspiri.karakterloeft.R;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import katex.hourglass.in.mathlib.MathView;
 
 /**
  * A fragment representing the back of the card.
  */
 public  class CardBackFragment extends Fragment {
-    TextView backTitle, backDescription;
     private AppCompatActivity mActivity;
-
 
     public CardBackFragment() {
     }
 
+
+    TextView backTitle,backDescription;
+    MathView mathView_back_title;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,6 +42,7 @@ public  class CardBackFragment extends Fragment {
 
         backTitle = view.findViewById(R.id.back_title);
         backDescription = view.findViewById(R.id.back_description);
+        mathView_back_title = view.findViewById(R.id.mathView_card_title);
 
         int index = ((FlipcardActivity)mActivity).getCurrentCardIndex();
 
@@ -43,7 +50,16 @@ public  class CardBackFragment extends Fragment {
             String stringBack = back.get(index);
             String stringBackExplanation = backExplanation.get(index);
 
-            backTitle.setText(stringBack);
+            if (stringBack.contains("$$")){
+                backTitle.setVisibility(View.GONE);
+                mathView_back_title.setVisibility(View.VISIBLE);
+                mathView_back_title.setDisplayText(stringBack);
+            } else{
+                mathView_back_title.setVisibility(View.GONE);
+                backTitle.setVisibility(View.VISIBLE);
+                backTitle.setText(stringBack);
+            }
+
             backDescription.setText(stringBackExplanation);
         }
 

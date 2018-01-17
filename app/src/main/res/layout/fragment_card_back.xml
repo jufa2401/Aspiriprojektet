@@ -18,6 +18,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary"
     android:gravity="center"
     android:orientation="vertical"
@@ -35,6 +36,17 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <katex.hourglass.in.mathlib.MathView
+        android:id="@+id/mathView_card_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:setTextSize="20sp"
+        android:visibility="gone">
+
+
+    </katex.hourglass.in.mathlib.MathView>
+
     <TextView
         android:id="@+id/back_description"
         style="?android:textAppearanceSmall"
@@ -42,17 +54,11 @@
         android:layout_height="wrap_content"
         android:lineSpacingMultiplier="1.2"
         android:text=""
+        android:textSize="20sp"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#80ffffff"
+        android:textColor="@color/md_grey_800"
         android:textStyle="bold" />
 
-    <katex.hourglass.in.mathlib.MathView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:paddingTop="10dp"
-        android:visibility="gone">
-
-    </katex.hourglass.in.mathlib.MathView>
 
 </LinearLayout>

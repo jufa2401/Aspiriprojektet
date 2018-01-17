@@ -14,8 +14,9 @@ import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.Toast;
 
 import com.aspiri.karakterloeft.R;
 import com.aspiri.karakterloeft.games.ourDatabaseHelper;
@@ -36,19 +37,27 @@ public class FlipcardSubjectList extends AppCompatActivity {
     private MultiSelect<Flipcard> mMultiSelect;
     private ourDatabaseHelper dbHelper;
     private FlipcardBank flipcardBank;
-
+    private String category;
+    private String question;
+    private String shortAnswer;
+    private String longAnswer;
+    private String photoTemp;
+    LeftAdapter leftAdapter;
+    RightAdapter rightAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        View cView = getLayoutInflater().inflate(R.layout.dialog_flipcard_creation, null);
         super.onCreate(savedInstanceState);
         setContentView(com.aspiri.karakterloeft.R.layout.flipcard_subject_list);
         ArrayList<String> front = getIntent().getStringArrayListExtra("front");
         ArrayList<String> back = getIntent().getStringArrayListExtra("back");
 
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         setUpToolbar((Toolbar) findViewById(R.id.toolbar));
         askPermissions();
-
 
     }
 
@@ -104,52 +113,85 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
         leftAdapter.addAll(flipcards);
 
+
         builder.withLeftAdapter(leftAdapter)
                 .withRightAdapter(rightAdapter);
     }
+
 
     private void setUpToolbar(final Toolbar toolbar) {
         toolbar.inflateMenu(R.menu.menu);
         toolbar.setNavigationIcon(R.drawable.ic_back);
         toolbar.setOnMenuItemClickListener(item -> {
+            //TODO: Lav onBack pressed.
+            // DOOO IT. IT's Not working. .
+            if (item.getItemId() == R.drawable.ic_back){
+            onBackPressed();
+//                setSupportActionBar(toolbar);
+//                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+            Log.d("Back button ", "Pressed");
+            }
+
             if (item.getItemId() == R.id.create_card){
                 // If the create card icon is pressed:
                 //TODO: Prøv om det kan lade sig gøre, at få det til at fungere med alertDialog, hvis ikke kan der laves et fragment til textinput.
-                ContextThemeWrapper ctw = new ContextThemeWrapper(this, R.style.Theme_dialog_create_flipcard);
-                AlertDialog.Builder alert = new AlertDialog.Builder(ctw);
-                alert.setTitle("Lav dit eget flipcard");
-                alert.setMessage("Indtast titlen på kategorien");
-                final EditText inputCatagory = new EditText(this);
+                AlertDialog.Builder cBuilder = new AlertDialog.Builder(FlipcardSubjectList.this);
+                View cView = getLayoutInflater().inflate(R.layout.dialog_flipcard_creation, null);
+                EditText cCategory = (EditText) cView.findViewById(R.id.card_category);
+                EditText cQuestionFront = (EditText) cView.findViewById(R.id.card_question_front);
+                EditText cShortAnswerBack = (EditText) cView.findViewById(R.id.card_shortAnswer_back);
+                EditText cLongAnswerBack = (EditText) cView.findViewById(R.id.card_longAnswer_back);
+                Button cAcknowledgeCardCreation = (Button) cView.findViewById(R.id.card_creation_acknowledge);
+                               //If all fields are filled with data (NOT REGEX YET):
+                cAcknowledgeCardCreation.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (!cCategory.getText().toString().isEmpty() &&
+                                !cQuestionFront.getText().toString().isEmpty() &&
+                                !cShortAnswerBack.getText().toString().isEmpty() &&
+                                !cLongAnswerBack.getText().toString().isEmpty()) {
+                            Toast.makeText(FlipcardSubjectList.this, "Success - kortet er lavet", Toast.LENGTH_SHORT).show();
+
+                            Log.d("FC_category: ", cCategory.getText().toString());
+                            Log.d("FC_question: ", cQuestionFront.getText().toString());
+                            Log.d("FC_shortAnswer: ", cShortAnswerBack.getText().toString());
+                            Log.d("FC_longAnswer: ", cLongAnswerBack.getText().toString());
+
+                            //Saving EditText input to strings,
+                            category = cCategory.getText().toString();
+                            question = cQuestionFront.getText().toString();
+                            shortAnswer = cShortAnswerBack.getText().toString();
+                            longAnswer = cLongAnswerBack.getText().toString();
+                            photoTemp = "null";
+
+                            Flipcard newFlipcard = new Flipcard(category,question,shortAnswer,longAnswer,photoTemp);
+                            Log.d("flipcard: ", newFlipcard.toString());
 
 
-                alert.setView(inputCatagory);
+                            //TODO: Update leftAdapter layout after card creation:
 
 
-                alert.setPositiveButton("Bekræft", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        //What ever you want to do with the value
-//                        Editable question = inputQuestion.getText();
-                        Editable catagoryinp = inputCatagory.getText();
-                        String catagory = catagoryinp.toString();
+                            dbHelper.addDataFlipCard(newFlipcard);
+
+                            cCategory.getText().clear();
+                            cQuestionFront.getText().clear();
+                            cShortAnswerBack.getText().clear();
+                            cLongAnswerBack.getText().clear();
+
+
+
+                        } else {
+                            Toast.makeText(FlipcardSubjectList.this, "Fejl, udfyld alle felter", Toast.LENGTH_SHORT).show();
+                        }
 
                     }
                 });
 
-                alert.setNegativeButton("Annuller", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        // what ever you want to do with No option.
-
-                    }
-                });
-
+                cBuilder.setView(cView);
+                AlertDialog alert = cBuilder.create();
                 alert.show();
 
-                Dialog dialog = new Dialog(this);
-                dialog.setContentView(R.layout.dialog_flipcard_creation_lv);
-
-                ListView lv = dialog.findViewById(R.id.flipcard_create_listview);
-                dialog.setCancelable(true);
-                dialog.setTitle("Lav dit eget flipcard");
 
 
             }
@@ -164,8 +206,6 @@ public class FlipcardSubjectList extends AppCompatActivity {
                     msg = getResources().getQuantityString(R.plurals.you_selected_x_subjects,
                             selectedCount, selectedCount);
                     mMultiSelect.showSelectedPage();
-                    //TODO: Handler som læser elementerne fra items og sender dem videdre til en ny evt expandable list:
-                    // Der er lavet et midlertidigt intent som går fra flipcard select til et default flipkort.
 
                     ArrayList<String> front = new ArrayList<String>();
                     ArrayList<String> back = new ArrayList<String>();
