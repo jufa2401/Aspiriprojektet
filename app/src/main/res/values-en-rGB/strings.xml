@@ -18,7 +18,7 @@
     <string name="drawer_share">Share</string>
     <string name="drawer_slideshow">Flipcards</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_contact">Contact Via Mail</string>
+    <string name="drawer_get_in_contact">Contact Via Mail</string>
     <string name="drawer_quiz">Quiz</string>
 
     <!--Mail-->
@@ -429,7 +429,7 @@
     <string name="invitation_message">Here is the mathapp I was talking about</string>
     <string name="invitation_cta">Install me</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="kontakt_via_facebook">Contact via Facebook</string>
+    <string name="drawer_kontakt_via_facebook">Contact via Facebook</string>
     <string name="drawer_subjects">Subjects</string>
     <string name="summary_vibrate">Use Vibrations in App</string>
     <string name="summary_support">Technical difficulties? Message Us Here!</string>

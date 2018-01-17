@@ -271,7 +271,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 myTrace.start();
 
                 onInviteClicked();
-                showMessage("Drawer share was pressed");
 
                 myTrace.stop();
                 return true;
@@ -351,56 +350,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         };
     }
-
-// EXPERIMENTAL CODE THAT DID NOT WORK!
-//        private void initItems() {
-//        items = getResources().getStringArray(R.array.subject_list);
-//    }
-//
-//    private void addDrawerItems() {
-//        mExpandableListAdapter = new ExpandableListAdapter2(this, mExpandableListTitle, mExpandableListData);
-//        mExpandableListView.setAdapter(mExpandableListAdapter);
-//        mExpandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
-//            @Override
-//            public void onGroupExpand(int groupPosition) {
-//                getSupportActionBar().setTitle(mExpandableListTitle.get(groupPosition).toString());
-//            }
-//        });
-//
-//        mExpandableListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-//            @Override
-//            public void onGroupCollapse(int groupPosition) {
-//                getSupportActionBar().setTitle(R.string.drawer_subjects);
-//            }
-//        });
-//
-//        mExpandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-//            @Override
-//            public boolean onChildClick(ExpandableListView parent, View v,
-//                                        int groupPosition, int childPosition, long id) {
-//                String selectedItem = ((List) (mExpandableListData.get(mExpandableListTitle.get(groupPosition))))
-//                        .get(childPosition).toString();
-//                getSupportActionBar().setTitle(selectedItem);
-//
-//                if (items[0].equals(mExpandableListTitle.get(groupPosition))) {
-//                    // Navigation Logic
-//                } else if (items[1].equals(mExpandableListTitle.get(groupPosition))) {
-//                  // Navigation logic
-//                } else if (items[2].equals(mExpandableListTitle.get(groupPosition))) {
-//                    // Navigation logic
-//                } else if (items[3].equals(mExpandableListTitle.get(groupPosition))) {
-//                   // Navigation logic
-//                } else if (items[4].equals(mExpandableListTitle.get(groupPosition))) {
-//                   // NavigationLogic
-//                } else {
-//                    throw new IllegalArgumentException("Not supported fragment type");
-//                }
-//
-//                drawer.closeDrawer(GravityCompat.START);
-//                return false;
-//            }
-//        });
-//    }
 
 
     //Credit to firebase

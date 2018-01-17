@@ -8,13 +8,13 @@
             android:icon="@drawable/drawer_home"
             android:title="@string/drawer_home" />
 
-        <item android:title="@string/drawer_subjects"
-            android:icon="@drawable/drawer_gallery" />
+        <item android:icon="@drawable/drawer_gallery"
+            android:title="@string/drawer_subjects" />
     </group>
 
     <group android:checkableBehavior="single">
         <item
-            android:title="test" >
+            android:title="@string/drawer_games" >
             <menu>
                 <item
                     android:id="@+id/drawer_flipcards"
@@ -25,7 +25,14 @@
                     android:id="@+id/drawer_quiz"
                     android:icon="@drawable/ic_game"
                     android:title="@string/drawer_quiz" />
+            </menu>
+        </item>
+    </group>
 
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/drawer_contact" >
+            <menu>
                 <item
                     android:id="@+id/drawer_store"
                     android:icon="@drawable/button_globe_grey_256"
@@ -34,22 +41,22 @@
                 <item
                     android:id="@+id/drawer_send_us_mail"
                     android:icon="@drawable/button_mail_grey_256"
-                    android:title="@string/drawer_contact" />
+                    android:title="@string/drawer_get_in_contact" />
 
                 <item
                     android:id="@+id/drawer_kontakt_test"
                     android:icon="@drawable/button_messengerlogo_grey_256"
-                    android:title="@string/kontakt_via_facebook" />
+                    android:title="@string/drawer_kontakt_via_facebook" />
             </menu>
         </item>
     </group>
 
-    <item android:title="@string/drawer_firebase">
+    <item android:title="@string/drawer_share">
         <menu>
             <item
                 android:id="@+id/drawer_share"
                 android:icon="@drawable/drawer_share"
-                android:title="@string/drawer_share"/>
+                android:title="@string/drawer_share_1"/>
 
         </menu>
     </item>

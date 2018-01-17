@@ -57,10 +57,14 @@
     <string name="drawer_home">Hjem</string>
     <string name="drawer_uy_Course">Gå til Hjemmeside</string>
     <string name="drawer_share">Del</string>
+    <string name="drawer_share_1">Send invitation via SMS</string>
     <string name="drawer_slideshow">Flipcards</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_contact">Kontakt os via mail</string>
+    <string name="drawer_contact">Kontakt</string>
+    <string name="drawer_get_in_contact">Skriv en mail</string>
     <string name="drawer_quiz">Quiz</string>
+    <string name="drawer_games">Spil</string>
+    <string name="drawer_kontakt_via_facebook">Skriv til os via Messenger</string>
 
     <!--Mail-->
 
@@ -668,7 +672,6 @@
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
     <string name="invitation_cta">Installer Mig!</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="kontakt_via_facebook">Kontakt os via Facebook</string>
     <string name="question_1_sandsynlighed">Hvad er sandsynligheden for at slå to seksere, når der kastes med to terninger?</string>
     <string name="card_questionmark_the_questionmark">\?</string>
     <string name="drawer_header_nav_picture">top af draver header navigation</string>

@@ -47,7 +47,6 @@
         <activity android:name=".SettingsActivity" android:theme="@style/SettingsTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="com.android.settings" />
                 <category android:name="com.android.settings.LanguageSettings" />
             </intent-filter>
         </activity>
