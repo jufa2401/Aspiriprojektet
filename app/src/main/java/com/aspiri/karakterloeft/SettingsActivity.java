@@ -23,6 +23,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -30,64 +32,6 @@ import butterknife.ButterKnife;
 //Kraftigt inpireret af https://www.androidhive.info/2017/07/android-implementing-preferences-settings-screen/
 public class SettingsActivity extends AppCompatPreferenceActivity  {
     private static final String TAG = SettingsActivity.class.getSimpleName();
-    //String version = getTagVersionNumber();
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // load settings fragment
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
-
-    }
-
-    public static class MainPreferenceFragment extends PreferenceFragment {
-        @Override
-        public void onCreate(final Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_main);
-
-            // gallery EditText change listener
-            bindPreferenceSummaryToValue(findPreference(getString(R.string.mail_default_msg)));
-
-            // feedback preference click listener
-            Preference myPref = findPreference(getString(R.string.key_send_feedback));
-            myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                public boolean onPreferenceClick(Preference preference) {
-                    sendFeedback(getActivity());
-                    Log.d("Feedback","Sender Feedback");
-                    return true;
-                }
-            });
-        }
-    }
-
-    //TODO: Få kaldt denne metode i den statiske onCreate
-    private void setVersionNumber() {
-        //Preference varNumber = findPreference(getString(R.string.title_version));
-        //varNumber.setTitle(version);
-    }
-
-    //Selecting options
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-
-    private static void bindPreferenceSummaryToValue(Preference preference) {
-        preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
-
-        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                PreferenceManager
-                        .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
-    }
-
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -117,8 +61,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
             return true;
         }
     };
+    //String version = getTagVersionNumber();
+    private FirebaseAnalytics mFirebaseAnalytics;
 
+    private static void bindPreferenceSummaryToValue(Preference preference) {
+        preference.setOnPreferenceChangeListener(sBindPreferenceSummaryToValueListener);
 
+        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                PreferenceManager
+                        .getDefaultSharedPreferences(preference.getContext())
+                        .getString(preference.getKey(), ""));
+    }
 
     //Kan Sender feedback til HQ
     public static void sendFeedback(Context context) {
@@ -144,6 +97,38 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
         context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_email_client)));
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        //Firebase Analytics
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        Bundle bundle = new Bundle();
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "id");
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "name");
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
+        // load settings fragment
+        getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
+
+    }
+
+    //TODO: Få kaldt denne metode i den statiske onCreate
+    private void setVersionNumber() {
+        //Preference varNumber = findPreference(getString(R.string.title_version));
+        //varNumber.setTitle(version);
+    }
+
+    //Selecting options
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     //Henter Versionsnummer
     public String getTagVersionNumber() {
         String tempInfo = null;
@@ -154,6 +139,28 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
             e.printStackTrace();
         }
         return tempInfo;
+    }
+
+    public static class MainPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(final Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.pref_main);
+
+            // gallery EditText change listener
+            bindPreferenceSummaryToValue(findPreference(getString(R.string.mail_default_msg)));
+
+            // feedback preference click listener
+            Preference myPref = findPreference(getString(R.string.key_send_feedback));
+            myPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+                public boolean onPreferenceClick(Preference preference) {
+                    sendFeedback(getActivity());
+                    Log.d("Feedback","Sender Feedback");
+                    return true;
+                }
+            });
+
+        }
     }
 
 }

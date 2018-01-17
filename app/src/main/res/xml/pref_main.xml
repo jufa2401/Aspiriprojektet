@@ -11,24 +11,19 @@
         <!--Mail-->
         <EditTextPreference
             android:defaultValue="@string/default_mail_header"
-            android:summary="@string/summary_mail"
             android:key="@string/mail_default_msg"
+            android:summary="@string/summary_mail"
             android:title="@string/title_mail_header"
             />
 
-        <!--Sprog-
         <Preference
-            android:title="@string/title_sprog"
-            android:summary="@string/brug_standard_sprog">
+            android:summary="@string/brug_standard_sprog"
+            android:title="@string/title_sprog">
             <intent
-                android:action="android.provider.Settings.ACTION_LOCALE_SETTINGS" />
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.settings"
+               />
         </Preference>
-        -->
-
-        <Preference
-            android:title="@string/title_sprog"
-            android:summary="@string/brug_standard_sprog" />
-
 
     </PreferenceCategory>
 
@@ -49,10 +44,10 @@
 
         <!--Appversion-->
         <Preference
-            android:summary="@string/app_version"
-            android:title="@string/title_version"
             android:id="@+id/settings_version"
             android:key="@string/title_version"
+            android:summary="@string/app_version"
+            android:title="@string/title_version"
             />
 
         <!-- Sender feedback via mail -->
@@ -72,8 +67,8 @@
 
         <!-- Åbner Privat politik i Browser -->
         <Preference
-            android:title="@string/privacy_policy"
-            android:summary="@string/opens_new_window">
+            android:summary="@string/opens_new_window"
+            android:title="@string/privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/url_privacy" />
@@ -81,8 +76,8 @@
 
         <!-- Åbner terms and conditions i Browser -->
         <Preference
-            android:title="@string/title_terms"
-            android:summary="@string/opens_new_window">
+            android:summary="@string/opens_new_window"
+            android:title="@string/title_terms">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="@string/url_terms" />
