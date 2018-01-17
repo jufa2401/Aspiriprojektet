@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.flipcards;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -40,7 +40,7 @@ import com.google.firebase.perf.metrics.Trace;
 
 import java.util.ArrayList;
 
-import static com.aspiri.karakterloeft.SubjectFragment.TAG;
+import static com.aspiri.karakterloeft.oldScope.SubjectFragment.TAG;
 
 /**
  * Demonstrates a "card-flip" animation using custom fragment transactions ({@link

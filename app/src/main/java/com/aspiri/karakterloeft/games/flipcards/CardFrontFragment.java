@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.flipcards;
 
 import android.app.Fragment;
 import android.os.Bundle;

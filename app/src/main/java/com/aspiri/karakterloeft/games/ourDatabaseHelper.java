@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.aspiri.karakterloeft.games.flipcards.Flipcard;
+import com.aspiri.karakterloeft.games.quiz.Question;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -15,7 +18,7 @@ import java.util.List;
  * Created by Justin on 10/01/2018.
  */
 
-public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
+public class ourDatabaseHelper extends SQLiteOpenHelper {
 
 
     public static final String DB_NAME = "KL_db";
@@ -38,7 +41,7 @@ public class MultipleChoiceDataBaseHelper extends SQLiteOpenHelper {
     String createTableFlipcard =  "CREATE TABLE " + TABLE_NAME_2 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL1_2 + " TEXT, " + COL2_2 + " TEXT, " + COL3_2 + " TEXT, " + COL4_2 + " TEXT, " + COL5_2 + " TEXT)";
 
-    public MultipleChoiceDataBaseHelper(Context context) {
+    public ourDatabaseHelper(Context context) {
         super(context, DB_NAME, null, 1);
     }
 

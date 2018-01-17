@@ -18,10 +18,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.games.Flipcard;
-import com.aspiri.karakterloeft.games.FlipcardActivity;
-import com.aspiri.karakterloeft.games.FlipcardBank;
-import com.aspiri.karakterloeft.games.MultipleChoiceDataBaseHelper;
+import com.aspiri.karakterloeft.games.ourDatabaseHelper;
 import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
@@ -37,7 +34,7 @@ import java.util.List;
 public class FlipcardSubjectList extends AppCompatActivity {
 
     private MultiSelect<Flipcard> mMultiSelect;
-    private MultipleChoiceDataBaseHelper dbHelper;
+    private ourDatabaseHelper dbHelper;
     private FlipcardBank flipcardBank;
 
 
@@ -75,7 +72,7 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
     private void loadFlipcards() {
 
-        dbHelper = new MultipleChoiceDataBaseHelper(getApplicationContext());
+        dbHelper = new ourDatabaseHelper(getApplicationContext());
         flipcardBank = new FlipcardBank();
         flipcardBank.initFlipcards(getApplicationContext());
         List<Flipcard> flipcards = dbHelper.getAllFlipcardsList();

@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.quiz;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.andreabaccega.widget.FormEditText;
 import com.aspiri.karakterloeft.R;
+import com.aspiri.karakterloeft.games.ourDatabaseHelper;
 
 import butterknife.BindView;
 import butterknife.BindViews;
@@ -32,7 +33,7 @@ import katex.hourglass.in.mathlib.MathView;
  * Created by Justin on 15/01/2018.
  */
 
-public class AddQuiz extends Fragment {
+public class AddQuestion extends Fragment {
     @BindView(R.id.editTextQuizTitle)
     FormEditText editTextTitle;
     @BindViews({R.id.editText1, R.id.editText2, R.id.editText3, R.id.editText4})
@@ -97,7 +98,7 @@ public class AddQuiz extends Fragment {
         } else {
             context = getActivity();
         }
-        MultipleChoiceDataBaseHelper dataBaseHelper = new MultipleChoiceDataBaseHelper(context);
+        ourDatabaseHelper dataBaseHelper = new ourDatabaseHelper(context);
 
 
         finishUpdate.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +108,12 @@ public class AddQuiz extends Fragment {
 
             @Override
             public void onClick(View v) {
+                for (int i = 0; i < editTextsAnswers.length; i++) {
+                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity()) {
+                        Toast.makeText(context, "Fejl, test dine felter for fejl", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setMessage(R.string.add_question)
                         .setTitle(R.string.are_you_sure)
@@ -115,12 +122,9 @@ public class AddQuiz extends Fragment {
                             public void onClick(DialogInterface dialog, int id) {
                                 quizTitleEditString = editTextTitle.getText().toString();
                                 Editable editQuiz[] = new Editable[editTextsAnswers.length];
-                                for (int i = 0; i < editTextsAnswers.length; i++) {
-                                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity()) {
-                                        Toast.makeText(context, "Fejl, test dine felter for fejl", Toast.LENGTH_SHORT).show();
-                                        return;
-                                    }
 
+
+                                for (int i = 0; i < editTextsAnswers.length; i++) {
                                     editQuiz[i] = editTextsAnswers[i].getText();
                                     questionEditString[i] = editQuiz[i].toString();
                                     correctAnswer[i] = checkBoxes[i].isChecked();
@@ -151,8 +155,6 @@ public class AddQuiz extends Fragment {
                 checkBoxes[i].setChecked(correctAnswer[i]);
             }
         }
-
-
         return view;
     }
 

@@ -1,10 +1,12 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.quiz;
 
 /**
  * Created by Justin on 10/01/2018.
  */
 
 import android.content.Context;
+
+import com.aspiri.karakterloeft.games.ourDatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ public class QuestionBank {
 
     // declare list of Question objects
     List<Question> list = new ArrayList<>();
-    MultipleChoiceDataBaseHelper myDataBaseHelper;
+    ourDatabaseHelper myDataBaseHelper;
 
     // method returns number of questions in list
     public int getLength() {
@@ -42,7 +44,7 @@ public class QuestionBank {
 
 
     public void initQuestions(Context context) {
-        myDataBaseHelper = new MultipleChoiceDataBaseHelper(context);
+        myDataBaseHelper = new ourDatabaseHelper(context);
         list = myDataBaseHelper.getAllQuestionsList();//get questions/choices/answers from database
         String[] q1 = new String[]{"$$ y=a \\cdot x+b $$", "$$ y=a\\frac{x}{a} $$", "$$ y=a\\frac{a}{x} $$", "$$ y=e^x $$"};
         String[] q2 = new String[]{"JVM", "Gradle", "Dalvik", "HAXM"};

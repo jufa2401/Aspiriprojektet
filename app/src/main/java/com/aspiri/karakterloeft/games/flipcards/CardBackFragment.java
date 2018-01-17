@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.flipcards;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -16,13 +16,13 @@ import java.util.ArrayList;
  * A fragment representing the back of the card.
  */
 public  class CardBackFragment extends Fragment {
+    TextView backTitle, backDescription;
     private AppCompatActivity mActivity;
+
 
     public CardBackFragment() {
     }
 
-
-    TextView backTitle,backDescription;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

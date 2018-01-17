@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.games.Flipcard;
 import com.yalantis.multiselection.lib.adapter.BaseLeftAdapter;
 
 //import com.aspiri.karakterloeft.games.Contact;

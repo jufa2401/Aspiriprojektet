@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.flipcards;
 
 import android.support.annotation.NonNull;
 

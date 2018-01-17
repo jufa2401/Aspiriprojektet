@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.quiz;
 
 /**
  * Created by Justin on 10/01/2018.

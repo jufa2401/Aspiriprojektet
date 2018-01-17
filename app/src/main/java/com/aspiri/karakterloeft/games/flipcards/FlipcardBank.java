@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.flipcards;
 
 /**
  * Created by Justin on 10/01/2018.
@@ -7,6 +7,8 @@ package com.aspiri.karakterloeft.games;
 import android.content.Context;
 import android.util.Log;
 
+import com.aspiri.karakterloeft.games.ourDatabaseHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +16,7 @@ public class FlipcardBank {
 
     // declare list of Question objects
     List<Flipcard> list = new ArrayList<>();
-    MultipleChoiceDataBaseHelper myDataBaseHelper;
+    ourDatabaseHelper myDataBaseHelper;
 
     // method returns number of questions in list
     public int getLength() {
@@ -37,7 +39,7 @@ public class FlipcardBank {
 
 
     public void initFlipcards(Context context) {
-        myDataBaseHelper = new MultipleChoiceDataBaseHelper(context);
+        myDataBaseHelper = new ourDatabaseHelper(context);
         list = myDataBaseHelper.getAllFlipcardsList();//get questions/choices/answers from database
         String q1 = "$$ y=a \\cdot x+b $$";
 

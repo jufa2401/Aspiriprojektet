@@ -22,7 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.aspiri.karakterloeft.games.MultipleChoiceFragment;
+import com.aspiri.karakterloeft.games.quiz.MultipleChoiceFragment;
 import com.aspiri.karakterloeft.list_view.ListFragment;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
@@ -74,12 +74,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         setupDrawer();
 
         //mExpandableListView.setAdapter(mExpandableListAdapter);
-
+        mFragmentManager = getFragmentManager();
         setDrawerIndicatorEnabled(false);
-        FragmentManager mFragmentManager = getFragmentManager();
-        if (savedInstanceState == null) {       //Håndtering af skærmrotation
+        if (savedInstanceState == null) {                                                        //Håndtering af skærmrotation
             replaceFragment(new ListFragment(), ListFragment.TAG);
         }
+
         //For Firebase
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();
@@ -248,9 +248,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
      * @param tag a TAG that describes the Fragment
      */
     public void replaceFragment(Fragment fragment, String tag) {
-        if (mFragmentManager == null)
-            return;
-
         FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
 
         if (!tag.equals(ListFragment.TAG)) {
@@ -308,7 +305,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             /** Called when a drawer has settled in a completely closed state. */
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
-                getSupportActionBar().setTitle(R.string.app_name);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
         };

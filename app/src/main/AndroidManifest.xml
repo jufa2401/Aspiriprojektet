@@ -30,7 +30,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-               <intent-filter>
+            <intent-filter>
                 <!-- Firebase -->
                 <action android:name="android.intent.action.VIEW" />
 
@@ -43,12 +43,12 @@
                 <data
                     android:host="aspiri.dk"
                     android:scheme="https"/>
-               </intent-filter>
+            </intent-filter>
 
         </activity>
 
         <!-- Test activiy 2 -->
-        <activity android:name=".games.FlipcardActivity"></activity>
+        <activity android:name=".games.flipcards.FlipcardActivity"></activity>
         <activity android:name=".games.flipcards.FlipcardSubjectList"></activity>
 
     </application>

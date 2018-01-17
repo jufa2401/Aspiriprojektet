@@ -7,7 +7,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.games.Flipcard;
 
 //import com.aspiri.karakterloeft.games.Contact;
 

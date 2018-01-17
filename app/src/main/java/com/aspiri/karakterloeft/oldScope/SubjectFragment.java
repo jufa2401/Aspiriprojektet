@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft;
+package com.aspiri.karakterloeft.oldScope;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.aspiri.karakterloeft.MainActivity;
+import com.aspiri.karakterloeft.R;
 
 import butterknife.BindView;
 import butterknife.BindViews;

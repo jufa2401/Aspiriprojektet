@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.games;
+package com.aspiri.karakterloeft.games.quiz;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
@@ -133,7 +133,7 @@ public class MultipleChoiceFragment extends Fragment {
         addItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                ((MainActivity) mActivity).replaceFragment(new AddQuiz(), "add quiz fragment");
+                ((MainActivity) mActivity).replaceFragment(new AddQuestion(), "add quiz fragment");
                 return false;
             }
         });

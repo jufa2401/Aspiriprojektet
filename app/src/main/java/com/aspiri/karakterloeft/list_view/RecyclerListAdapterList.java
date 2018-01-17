@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.aspiri.karakterloeft.MainActivity;
 import com.aspiri.karakterloeft.R;
-import com.aspiri.karakterloeft.SubjectFragment;
+import com.aspiri.karakterloeft.oldScope.SubjectFragment;
 
 /**
  * Created by s165158 on 08-11-2017.
