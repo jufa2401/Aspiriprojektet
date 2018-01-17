@@ -20,8 +20,7 @@
             android:summary="@string/brug_standard_sprog"
             android:title="@string/title_sprog">
             <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings.LanguageSettings"
+                android:action="android.settings.LOCALE_SETTINGS"
                />
         </Preference>
 

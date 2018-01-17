@@ -37,8 +37,8 @@
 
     <!--Settings Pane extra-->
     <string name="default_mail_header">Kære Karakterløft Appteam: </string>
-    <string name="brug_standard_sprog">Brug telefonens sprog?</string>
-    <string name="app_version">1.0 DEFAULT</string>
+    <string name="brug_standard_sprog">Skrift Sprog</string>
+    <string name="app_version">1.0</string>
     <string name="privacy_policy">Privat Politik</string>
     <string name="choose_email_client">Vælg Email Klient</string>
     <string name="opens_new_window">Åbner et nyt vindue</string>

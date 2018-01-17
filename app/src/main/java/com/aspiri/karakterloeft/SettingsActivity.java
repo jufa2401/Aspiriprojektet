@@ -61,7 +61,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
             return true;
         }
     };
-    //String version = getTagVersionNumber();
+
+    //public String varNumber = getTagVersionNumber();
     private FirebaseAnalytics mFirebaseAnalytics;
 
     private static void bindPreferenceSummaryToValue(Preference preference) {
@@ -97,6 +98,18 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
         context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_email_client)));
     }
 
+    //Henter Versionsnummer
+    public String getTagVersionNumber() {
+        String tempInfo = null;
+        try {
+            PackageInfo pInfo = getApplicationContext().getPackageManager().getPackageInfo(getPackageName(), 0);
+            tempInfo = pInfo.versionName.toString();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return tempInfo;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,23 +142,18 @@ public class SettingsActivity extends AppCompatPreferenceActivity  {
         return super.onOptionsItemSelected(item);
     }
 
-    //Henter Versionsnummer
-    public String getTagVersionNumber() {
-        String tempInfo = null;
-        try {
-            PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
-            tempInfo = pInfo.versionName.toString();
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return tempInfo;
-    }
+    public static class MainPreferenceFragment extends PreferenceFragment{
 
-    public static class MainPreferenceFragment extends PreferenceFragment {
+
         @Override
         public void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_main);
+
+            //Lav versionsnummeret om til 1.0:
+            Preference versionTitle;
+            versionTitle=(Preference)findPreference("test1");
+            //versionTitle.setSummary();
 
             // gallery EditText change listener
             bindPreferenceSummaryToValue(findPreference(getString(R.string.mail_default_msg)));

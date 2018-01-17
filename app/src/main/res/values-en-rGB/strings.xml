@@ -449,7 +449,7 @@
     <string name="pref_header_about">Om Udviklerne:</string>
     <string name="default_mail_header">Dear Karakterløft Appteam</string>
     <string name="brug_standard_sprog">Use the Phone Locale</string>
-    <string name="app_version">1.0 DEFAULT</string>
+    <string name="app_version">1.0</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="choose_email_client">Choose Email Client</string>
     <string name="opens_new_window">Opens a new window</string>

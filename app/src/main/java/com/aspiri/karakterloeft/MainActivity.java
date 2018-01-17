@@ -260,6 +260,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     return true;
                 } catch (PackageManager.NameNotFoundException e) {
                     showMessage("Facebook ikke installeret");
+                    Log.d(TAG, "Facebook not installed");
                     return true;
                 }
 
