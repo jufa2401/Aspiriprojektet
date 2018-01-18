@@ -236,6 +236,18 @@
 
     <!--*******************************************************************************************************************-->
 
+    <string-array name="kvadratætningerne_title">
+        <item>Første kvadratsætning</item>
+        <item>Anden kvadratsætning </item>
+        <item>Tredje kvadratsætning</item>
+    </string-array>
+    <string-array name="kvadratsætningerne_introTekst">
+        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
+        <item>test</item>
+        <item>(a-b)^2</item>
+        <item>(a+b) * (a-b)</item>
+    </string-array>
+
     <!--Kvadratsætninger-->
     <string-array name="Kvadratsætningerne_list_title">
         <item>Første kvadratsætning</item>
@@ -243,12 +255,6 @@
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="Kvadratsætningerne_introTekst">
-        <!--<item>Html.fromHtml("X<sup>2</sup>")</item>-->
-        <item>(a+b)^2</item>
-        <item>(a-b)^2</item>
-        <item>(a+b) * (a-b)</item>
-    </string-array>
 
     <!--*******************************************************************************************************************-->
 

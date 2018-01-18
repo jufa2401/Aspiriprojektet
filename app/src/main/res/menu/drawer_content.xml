@@ -15,9 +15,6 @@
             android:title="@string/drawer_games" >
             <menu>
                 <item
-                    android:icon="@drawable/button_mail_grey_256"
-                    android:title="@string/drawer_mail_forbedringer" />
-                <item
                     android:id="@+id/drawer_store"
                     android:icon="@drawable/button_shoppingcart_grey_256"
                     android:title="@string/drawer_buy_Course" />
