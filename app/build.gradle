@@ -70,19 +70,22 @@ dependencies {
     compile 'com.android.support:design:27.0.2'                             // support bibliotek
     testCompile 'junit:junit:4.12'
 
+    compile 'com.github.yalantis:multi-selection:v0.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.0@aar'
+    compile 'io.reactivex:rxjava:1.2.1'
+
     compile ('com.andreabaccega:android-form-edittext:1.3.+')
     compile 'in.hourglass.mathrender:katexmathview:1.0'
-    compile 'com.ms-square:expandableTextView:0.1.4'
-    compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
+
+    compile 'in.hourglass.mathrender:katexmathview:1.0'                 // MathView
+    compile 'com.ms-square:expandableTextView:0.1.4'                    // Blev anvendt til udvidede textview, men anvendes ikke længere
+    compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'                // Viewbinding
     compile 'com.google.firebase:firebase-invites:11.6.2'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT' // ViewBinding
 
 }
 
-    compile 'com.github.yalantis:multi-selection:v0.1'
-    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.0@aar'
-    compile 'io.reactivex:rxjava:1.2.1'
-}
+
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
         def requested = details.requested

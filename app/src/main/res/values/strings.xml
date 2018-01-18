@@ -678,5 +678,42 @@
     <string name="icon_list_view">emne icon på listview</string>
     <string name="find_way">Find rundt</string>
 
+    <string name="activity_title">Vælg emner</string>
+    <string name="nothing_selected">Vælg emner for at forsætte</string>
+    <string name="permission_rationale">Giv tilladelse til at appen må benytte kameraet, dette benyttes til selvlavede flipcards</string>
+    <string name="allow">tillad</string>
+    <string name="flipcar_button_previous">Forrige kort</string>
+    <string name="flipcard_button_next">Næste kort</string>
+    <string name="out_of_cards">Der er ikke flere kort</string>
+    <string name="are_you_sure">Er du sikker på at du vil gemme dette spørgsmål?</string>
+    <string name="add_question">Kontroller stave og syntaksfejl på Quizzen du har skrevet</string>
+    <string name="correct_answer">Rigtigt svar</string>
+    <string name="cannot_be_empty">Feltet kan ikke være tomt</string>
+    <string name="create_question">Skriv et spørgsmål</string>
+    <string name="quiz_desc">Skriv en quiz i appen som kan genbruges, appen understøtter LaTeX, såfremt alle svarmulighederne er skrevet med LaTeX. Checkmark indikerer det korrekte svar.</string>
+    <string name="string_quiz_title">Skriv et Quizspørgsmål</string>
+    <string name="question_here">Skriv quizspørgsmål her</string>
+    <string name="write_answer1">Skriv svarmulighed 1</string>
+    <string name="write_here">Skriv her</string>
+    <string name="write_answer2">Skriv svarmulighed 2</string>
+    <string name="write_answer3">Skriv svarmulighed 3</string>
+    <string name="write_answer4">Skriv svarmulighed 4</string>
+    <string name="saveexit">Gem og Afslut</string>
+    <string name="preview">Preview</string>
+    <string name="quiz">Quiz</string>
+    <string name="flipcard">Flipcards</string>
+    <string name="multiple_choice">Multiple Choice</string>
+    <string name="presstostart">Vælg én mulighed</string>
+    <string name="correct_choice">Flot! Du svarede korrekt.</string>
+    <string name="wrong_choice">Øv, du svarede forkert. Prøv igen</string>
+    <string name="drawer_mail_forbedringer">Idéer til forbedringer</string>
+    <string name="drawer_buy_Course">Køb Kurser</string>
+    <string name="kontakt_via_facebook">Kontakt via Facebook</string>
+
+    <plurals name="you_selected_x_subjects">
+        <item quantity="one">Du valgte %d emne!</item>
+        <item quantity="other">Du valgte %d emner!</item>
+    </plurals>
+
 
 </resources>
