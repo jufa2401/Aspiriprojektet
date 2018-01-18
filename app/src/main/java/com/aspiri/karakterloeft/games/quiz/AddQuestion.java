@@ -42,7 +42,6 @@ public class AddQuestion extends Fragment {
     TextView[] answerTextViews;
     @BindView(R.id.add_quiz_title)
     TextView addQuiz_title;
-
     @BindView(R.id.buttonAddQuiz)
     Button finishUpdate;
     @BindView(R.id.buttonPreview)
@@ -52,6 +51,30 @@ public class AddQuestion extends Fragment {
     String[] questionEditString = new String[4];
     String quizTitleEditString;
     boolean[] correctAnswer = new boolean[4];
+
+    @OnClick(R.id.checkBox1)
+    void onCb1Click() {
+        disableCheckBoxes1tick(checkBoxes, 0);
+
+    }
+
+    @OnClick(R.id.checkBox2)
+    void onCb2Click() {
+        disableCheckBoxes1tick(checkBoxes, 1);
+
+    }
+
+    @OnClick(R.id.checkBox3)
+    void onCb3Click() {
+        disableCheckBoxes1tick(checkBoxes, 2);
+
+    }
+
+    @OnClick(R.id.checkBox4)
+    void onCb4Click() {
+        disableCheckBoxes1tick(checkBoxes, 3);
+
+    }
 
     @OnClick(R.id.buttonPreview)
     void onPreviewClick() {
@@ -120,8 +143,8 @@ public class AddQuestion extends Fragment {
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < editTextsAnswers.length; i++) {
-                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity() || !checkBoxesTicked(checkBoxes)) {
-                        Toast.makeText(context, "Fejl, test dine felter for fejl", Toast.LENGTH_SHORT).show();
+                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity() || !areCheckBoxesTicked(checkBoxes)) {
+                        Toast.makeText(context, "Fejl, undersøg dine felter for fejl", Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
@@ -146,7 +169,7 @@ public class AddQuestion extends Fragment {
                                     }
                                 }
                                 dataBaseHelper.addDataQuestion(new Question(quizTitleEditString, questionEditString, questionEditString[correctAnswerIndex]));
-                                Toast.makeText(context, "Question added to database", Toast.LENGTH_SHORT);
+                                Toast.makeText(context, "Spørgsmål tilføjet", Toast.LENGTH_SHORT).show();
                                 Log.d("databaseHelper", "Question added to local database");
 
 
@@ -195,9 +218,32 @@ public class AddQuestion extends Fragment {
      * @param checkBoxArray a Checkbox array with the size of 4
      * @return returns false if all checkboxes are unticked
      */
-    private boolean checkBoxesTicked(CheckBox[] checkBoxArray) {
+    private boolean areCheckBoxesTicked(CheckBox[] checkBoxArray) {
         return !(!checkBoxArray[0].isChecked() && !checkBoxArray[1].isChecked() && !checkBoxArray[2].isChecked() && !checkBoxArray[3].isChecked());
     }
+
+    private int nCheckboxesTicked(CheckBox[] checkBoxArray) {
+        int n = 0;
+        for (int i = 0; i < checkBoxArray.length; i++) {
+            if (checkBoxArray[i].isChecked()) {
+                n++;
+            }
+        }
+        return n;
+    }
+
+
+    private void disableCheckBoxes1tick(CheckBox[] checkBoxes, int id) {
+        for (int i = 0; i < checkBoxes.length; i++) {
+            if (checkBoxes[i].isChecked()) {
+                checkBoxes[i].setChecked(false);
+            }
+        }
+        checkBoxes[id].setChecked(true);
+
+
+    }
+
 
 
 }

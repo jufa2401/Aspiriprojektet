@@ -3,7 +3,6 @@ package com.aspiri.karakterloeft;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -253,7 +252,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 myTrace.start();
 
                 onInviteClicked();
-                showToast("Drawer share was pressed");
+                Log.d("SMS", "Der blev trykker på sms");
 
                 myTrace.stop();
                 return true;
