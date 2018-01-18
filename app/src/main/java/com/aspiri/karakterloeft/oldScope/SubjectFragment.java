@@ -89,7 +89,7 @@ public class SubjectFragment extends Fragment {
             case 0:
                 // Title and intro
                 title = getResources().getStringArray(R.array.RentesRegning_title);
-                intro = getResources().getStringArray(R.array.RentesRegning_introTekst);
+                intro = getResources().getStringArray(R.array.rentesregning_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.RentesRegning_text_following_picture_1);
@@ -173,8 +173,8 @@ public class SubjectFragment extends Fragment {
 //Potensregneregler
             case 2:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -218,8 +218,8 @@ public class SubjectFragment extends Fragment {
 //Polynomier
             case 3:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Polynomier_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.polynomier_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Polynomier_text_following_picture_1);
@@ -265,7 +265,7 @@ public class SubjectFragment extends Fragment {
             case 4:
                 // Title and intro
                 title = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_title);
-                intro = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_introTekst);
+                intro = getResources().getStringArray(R.array.lineær_eksponentiel_potensregning_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Lineær_eksponentiel_potensregning_text_following_picture_2);
@@ -309,8 +309,8 @@ public class SubjectFragment extends Fragment {
 //Statistkik
             case 5:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -354,8 +354,8 @@ public class SubjectFragment extends Fragment {
 //Differentialregning
             case 6:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -399,8 +399,8 @@ public class SubjectFragment extends Fragment {
 //Integralregning
             case 7:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -444,8 +444,8 @@ public class SubjectFragment extends Fragment {
 //Logaritmer
             case 8:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -489,8 +489,8 @@ public class SubjectFragment extends Fragment {
 //Geometri
             case 9:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);
@@ -533,7 +533,7 @@ public class SubjectFragment extends Fragment {
 
 // Plangeometri med Vektorer
             case 10:
-                title = getResources().getStringArray(R.array.RumGeometri_list_title);
+                title = getResources().getStringArray(R.array.rumgeometri_list_title);
                 intro = getResources().getStringArray(R.array.RumGeometri_list);
 
                 // Text after pictures
@@ -568,8 +568,8 @@ public class SubjectFragment extends Fragment {
 //Rumgeometri med vektorer
             case 11:
                 // Title and intro
-                title = getResources().getStringArray(R.array.Potensregneregler_title);
-                intro = getResources().getStringArray(R.array.Polynomier_introTekst);
+                title = getResources().getStringArray(R.array.potensregneregler_title);
+                intro = getResources().getStringArray(R.array.polynomier_introTekst);
 
                 // Text after pictures
                 text_following_picture_1 = getResources().getStringArray(R.array.Potensregneregler_text_following_picture_1);

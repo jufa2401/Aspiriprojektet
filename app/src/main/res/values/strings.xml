@@ -75,18 +75,18 @@
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Rentesregning</item>
-        <item>Kvadratsætningerne</item>
-        <item>Potensregneregler</item>
-        <item>Polynomier</item>
-        <item>Lineær, eksponentiel og potens</item>
-        <item>Statistik</item>
-        <item>Differentialregning</item>
-        <item>Integralregning</item>
-        <item>Logaritmer</item>
-        <item>Geometri</item>
-        <item>Plangeometri med vektorer</item>
-        <item>Rumgeometri med vektorer</item>
+        <item>Rentesregning*</item>
+        <item>Kvadratsætningerne*</item>
+        <item>Potensregneregler*</item>
+        <item>Polynomier*</item>
+        <item>Lineær, eksponentiel og potens*</item>
+        <item>Statistik*</item>
+        <item>Differentialregning*</item>
+        <item>Integralregning*</item>
+        <item>Logaritmer*</item>
+        <item>Geometri*</item>
+        <item>Plangeometri med vektorer*</item>
+        <item>Rumgeometri med vektorer*</item>
         <item>Areal, omkreds og rumfang</item>
     </string-array>
 
@@ -134,7 +134,7 @@
 
     <!--*******************************************************************************************************************-->
     <!--Rentesregning-->
-    <string-array name="RentesRegning_list_title">
+    <string-array name="rentesregning_list_title">
         <item>Slubeløbet S LIST</item>
         <item>Renten R</item>
         <item>Antal Terminer, n</item>
@@ -153,7 +153,7 @@
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
     </string-array>
 
-    <string-array name="RentesRegning_introTekst">
+    <string-array name="rentesregning_introTekst">
         <item>S=K_0*(1+r)</item>
         <item>r=S/K_0-1</item>
         <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
@@ -249,7 +249,7 @@
     </string-array>
 
     <!--Kvadratsætninger-->
-    <string-array name="Kvadratsætningerne_list_title">
+    <string-array name="kvadratsætningerne_list_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
         <item>Tredje kvadratsætning</item>
@@ -260,13 +260,13 @@
 
 
     <!--Potensregneregler-->
-    <string-array name="Potensregneregler_title">
+    <string-array name="potensregneregler_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="Potensregneregler_introTekst">
+    <string-array name="potensregneregler_introTekst">
         <item>(a+b)^2</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
@@ -340,13 +340,13 @@
     <!--*******************************************************************************************************************-->
 
     <!--Polynomier -->
-    <string-array name="Polynomier_title">
+    <string-array name="polynomier_title">
         <item>Første kvadratsætning</item>
         <item>Anden kvadratsætning </item>
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="Polynomier_introTekst">
+    <string-array name="polynomier_introTekst">
         <item>(a+b)^2</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
@@ -428,12 +428,12 @@
         <item>Tredje kvadratsætning</item>
     </string-array>
 
-    <string-array name="Lineær_eksponentiel_potensregning_introTekst">
+    <string-array name="lineær_eksponentiel_potensregning_introTekst">
         <item>(a+b)^2</item>
         <item>(a-b)^2</item>
         <item>(a+b) * (a-b)</item>
     </string-array>
-    <string-array name="Lineær_eksponentiel_potensregning_list">
+    <string-array name="lineær_eksponentiel_potensregning_list">
         <item>Generelt</item>
         <item>Andengradsfunktioner</item>
     </string-array>
@@ -451,11 +451,11 @@
 
     <!--Statistik-->
 
-    <string-array name="Statistik_list">
+    <string-array name="statistik_list">
         <item>Generelt</item>
         <item>Andengradsfunktioner</item>
     </string-array>
-    <string-array name="Statistik_sublist">
+    <string-array name="statistik_sublist">
         <item>de mest almindelige regler indenfor statistik</item>
         <item>hyppighed, frekvens, kumuleret hyppighed og kumuleret frekvens</item>
     </string-array>
@@ -464,13 +464,13 @@
 
     <!--diffirentialregning-->
 
-    <string-array name="Diffirentialregning_list">
+    <string-array name="diffirentialregning_list">
         <item>Generelt</item>
         <item>Differentiering af flere led</item>
         <item>Førsteordensdifferentialligninger</item>
     </string-array>
     !--Array til differentialregning_list subtext-->
-    <string-array name="Diffirentialregning_sublist">
+    <string-array name="diffirentialregning_sublist">
         <item>De 10 mest almindelige regler i differentialregning</item>
         <item>Sammensatte funktioner</item>
         <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
@@ -480,13 +480,13 @@
 
     <!--Integralregninig-->
 
-    <string-array name="Integralregning_list">
+    <string-array name="integralregning_list">
         <item>Generelt</item>
         <item>Differentiering af flere led</item>
         <item>Førsteordensdifferentialligninger</item>
     </string-array>
     !--Array til differentialregning_list subtext-->
-    <string-array name="Integralregning_sublist">
+    <string-array name="integralregning_sublist">
         <item>De 10 mest almindelige regler i differentialregning</item>
         <item>Sammensatte funktioner</item>
         <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
@@ -497,13 +497,13 @@
 
     <!-- Logaritmer -->
 
-    <string-array name="Logaritmer_list">
+    <string-array name="logaritmer_list">
         <item>Generelt</item>
         <item>Differentiering af flere led</item>
         <item>Førsteordensdifferentialligninger</item>
     </string-array>
     !--Array til differentialregning_list subtext-->
-    <string-array name="Logaritmer_sublist">
+    <string-array name="logaritmer_sublist">
         <item>De 10 mest almindelige regler i differentialregning</item>
         <item>Sammensatte funktioner</item>
         <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
@@ -512,7 +512,7 @@
 
     <!--*******************************************************************************************************************-->
     <!--Geometri-->
-    <string-array name="Geometri_list_title">
+    <string-array name="geometri_list_title">
         <item>Slubeløbet S</item>
         <item>Renten R</item>
         <item>Antal Terminer, n</item>
@@ -522,7 +522,7 @@
 
     </string-array>
 
-    <string-array name="Geometri_sublist">
+    <string-array name="geometri_sublist">
         <item>relevante formler, når du arbejder med cirkler</item>
         <item>relevante formler, når du arbejder med trekanter</item>
         <item>relevante formler, når du arbejder med parallelogrammer</item>
@@ -535,7 +535,7 @@
 
     <!--*******************************************************************************************************************-->
     <!-- Geometry in the plane and vectors -->
-    <string-array name="RumGeometri_list_title">
+    <string-array name="rumgeometri_list_title">
         <item>Vektorer</item>
         <item>Areal, Vinkler og afstande</item>
     </string-array>
@@ -544,7 +544,7 @@
         <item>Areal, Vinkler og afstande</item>
     </string-array>
 
-    <string-array name="RumGeometri_sublist">
+    <string-array name="rumgeometri_sublist">
         <item>vektorer i planen og rummet</item>
         <item>vektorer i planen og rummet</item>
     </string-array>

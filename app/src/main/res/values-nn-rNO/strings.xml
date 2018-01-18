@@ -142,7 +142,7 @@
 
 
     <!--Rentesregning-->
-    <string-array name="RentesRegning_list_title">
+    <string-array name="rentesregning_list_title">
         <item>Slubeløet S</item>
         <item>Renten R</item>
         <item>Antel Terminer, n</item>
@@ -161,7 +161,7 @@
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
     </string-array>
 
-    <string-array name="RentesRegning_introTekst">
+    <string-array name="rentesregning_introTekst">
         <item>S=K_0*(1+r)</item>
         <item>r=S/K_0-1</item>
         <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
@@ -333,7 +333,7 @@
 
 
     ]]><!-- Geometry in the plane and vectors -->
-    <string-array name="RumGeometri_list_title">
+    <string-array name="rumgeometri_list_title">
         <item>Vektorer</item>
         <item>Areal, Vinkler og afstande</item>
     </string-array>
@@ -342,7 +342,7 @@
         <item>Areal, Vinkler og afstande</item>
     </string-array>
 
-    <string-array name="RumGeometri_sublist">
+    <string-array name="rumgeometri_sublist">
         <item>vektorer i planen og rummet</item>
         <item>vektorer i planen og rummet</item>
     </string-array>
