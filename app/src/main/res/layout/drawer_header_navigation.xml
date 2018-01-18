@@ -10,17 +10,16 @@
     android:layout_height=  "@dimen/drawer_header_height"
     android:gravity=        "bottom"
     android:orientation=    "vertical"
-    android:paddingTop=     "10dp"
     android:paddingBottom=  "1dp"
     android:paddingLeft=    "@dimen/activity_horizontal_margin"
     android:paddingRight=   "@dimen/activity_horizontal_margin"
+    android:paddingTop="10dp"
     android:theme=          "@style/ThemeOverlay.AppCompat.Light">
 
     <ImageView
-        android:id=             "@+id/drawerImageView"
-        android:contentDescription="@string/drawer_header_nav_picture"
         android:layout_width=   "match_parent"
         android:layout_height=  "wrap_content"
         android:layout_marginTop="5dp"
+        android:contentDescription="@string/drawer_header_nav_picture"
         app:srcCompat=          "@mipmap/karakterloeft_logo" />
 </LinearLayout>

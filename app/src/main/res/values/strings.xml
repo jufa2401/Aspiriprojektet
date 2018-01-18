@@ -2,6 +2,8 @@
 
     <!--AppInfo-->
     <string name="app_name">Karakterløft</string>
+
+    <!--Navigation-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -53,7 +55,6 @@
 
     <!--Hamburger menu-->
     <string name="drawer_subjects">Emner</string>
-    <string name="drawer_firebase">Firebase</string>
     <string name="drawer_home">Hjem</string>
     <string name="drawer_uy_Course">Gå til Hjemmeside</string>
     <string name="drawer_share">Del</string>
@@ -61,10 +62,8 @@
     <string name="drawer_slideshow">Flipcards</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
     <string name="drawer_contact">Kontakt</string>
-    <string name="drawer_get_in_contact">Skriv en mail</string>
     <string name="drawer_quiz">Quiz</string>
     <string name="drawer_games">Spil</string>
-    <string name="drawer_kontakt_via_facebook">Skriv til os via Messenger</string>
 
     <!--Mail-->
 
@@ -72,8 +71,6 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--Under construction-->
-    <string name="sample_subject">Andengradsligning</string>
-    <string name="sample_subject_breadtext">Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</string>
 
 
     <!--Array til navne i overskrifter-->
@@ -117,8 +114,6 @@
     <!-- Strings related to Settings -->
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
-    <string name="card_back_title">Sandsynligheden er 1/36</string>
-    <string name="card_back_description">Begrundelsen til ovenstående svar, er som følger. \nDer er 1/6 sandsynlighed for at slå én sekser, 1/6 * 1/6 = 1/36</string>
     <!--*******************************************************************************************************************-->
 
     <!--Example texts-->
@@ -652,16 +647,6 @@
         <item>0</item>
     </string-array>
 
-    <string-array name="arealer_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
     <!--*******************************************************************************************************************-->
 
 
@@ -672,22 +657,14 @@
     <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
     <string name="invitation_cta">Installer Mig!</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="question_1_sandsynlighed">Hvad er sandsynligheden for at slå to seksere, når der kastes med to terninger?</string>
     <string name="card_questionmark_the_questionmark">\?</string>
     <string name="drawer_header_nav_picture">top af draver header navigation</string>
     <string name="icon_list_view">emne icon på listview</string>
-    <string name="find_way">Find rundt</string>
 
-    <string name="activity_title">Vælg emner</string>
     <string name="nothing_selected">Vælg emner for at forsætte</string>
-    <string name="permission_rationale">Giv tilladelse til at appen må benytte kameraet, dette benyttes til selvlavede flipcards</string>
-    <string name="allow">tillad</string>
-    <string name="flipcar_button_previous">Forrige kort</string>
-    <string name="flipcard_button_next">Næste kort</string>
     <string name="out_of_cards">Der er ikke flere kort</string>
     <string name="are_you_sure">Er du sikker på at du vil gemme dette spørgsmål?</string>
     <string name="add_question">Kontroller stave og syntaksfejl på Quizzen du har skrevet</string>
-    <string name="correct_answer">Rigtigt svar</string>
     <string name="cannot_be_empty">Feltet kan ikke være tomt</string>
     <string name="create_question">Skriv et spørgsmål</string>
     <string name="quiz_desc">Skriv en quiz i appen som kan genbruges, appen understøtter LaTeX, såfremt alle svarmulighederne er skrevet med LaTeX. Checkmark indikerer det korrekte svar.</string>

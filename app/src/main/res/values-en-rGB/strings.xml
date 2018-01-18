@@ -2,8 +2,6 @@
 
     <!---->
     <string name="app_name">Karakterløft</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!--Three dot-->
     <string name="three_dot_favorite">Favorite</string>
@@ -12,13 +10,11 @@
 
 
     <!--Hamburger menu-->
-    <string name="drawer_firebase">Firebase</string>
     <string name="drawer_home">Home</string>
     <string name="drawer_uy_Course">Buy Courses</string>
     <string name="drawer_share">Share</string>
     <string name="drawer_slideshow">Flipcards</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_get_in_contact">Contact Via Mail</string>
     <string name="drawer_quiz">Quiz</string>
 
     <!--Mail-->
@@ -27,8 +23,6 @@
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--Under construction-->
-    <string name="sample_subject">Quadratic Formula</string>
-    <string name="sample_subject_breadtext">Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</string>
     <string name="empty_description" />
 
 
@@ -74,8 +68,6 @@
     <!-- Strings related to Settings -->
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
-    <string name="card_back_title">The chance is 1/36th</string>
-    <string name="card_back_description">Fadet selvfølgelig</string>
     <!--*******************************************************************************************************************-->
 
     <!--Example texts-->
@@ -141,16 +133,6 @@
         <item>0</item>
         <item>0</item>
         <item>*S er Sidelinien der går fra bunden af keglen og op til spidsen. Nogle gange vil man have information om s såsom et præcist tal.</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
         <item>0</item>
         <item>0</item>
     </string-array>
@@ -324,11 +306,8 @@
     <!--*******************************************************************************************************************-->
 
 
-    <!--Array til navne i underpunkter for polynomier-->
-    <string-array name="polynomier_list">
-        <item>Generelt</item>
-        <item>Andengradsfunktioner</item>
-    </string-array><![CDATA[
+    <!--Array til navne i underpunkter for polynomier--><![CDATA[
+
 
     !--Array til polynomier_list subtext-->
     ]]><!--Polynomier og potenser-->
@@ -339,12 +318,8 @@
     !--Array til polynomier_list subtext-->
 
     !--Array til navne i underpunkter for differentialregning-->
-    ]]>
-    <string-array name="diffirentialregning_list">
-        <item>Generelt</item>
-        <item>Differentiering af flere led</item>
-        <item>Førsteordensdifferentialligninger</item>
-    </string-array><![CDATA[
+
+
 
     !--Array til differentialregning_list subtext-->
 
@@ -429,7 +404,6 @@
     <string name="invitation_message">Here is the mathapp I was talking about</string>
     <string name="invitation_cta">Install me</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="drawer_kontakt_via_facebook">Contact via Facebook</string>
     <string name="drawer_subjects">Subjects</string>
     <string name="summary_vibrate">Use Vibrations in App</string>
     <string name="summary_support">Technical difficulties? Message Us Here!</string>
@@ -456,7 +430,6 @@
     <string name="url_privacy">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
     <string name="url_faq">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
     <string name="url_terms">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
-    <string name="question_1_sandsynlighed">What is the probability of getting a pair of six in one throw?</string>
     <string name="card_questionmark_the_questionmark">\?</string>
     <string name="drawer_header_nav_picture">top drawer header picture</string>
 

@@ -2,23 +2,23 @@
 
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:orientation="vertical">
+        android:paddingRight="20dp">
 
         <!--Spacer-->
         <View
+            style="@style/subjectSpacerView"
             android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            style="@style/subjectSpacerView" />
+            android:layout_height="1dp" />
 
         <!--First test-->
 
@@ -214,7 +214,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/subject_fragment_game_button1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
@@ -225,14 +224,12 @@
 
 
                 <ImageView
-                    android:id="@+id/subject_fragment_game_thumb1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:contentDescription="@string/empty_description" />
 
 
                 <TextView
-                    android:id="@+id/subject_fragment_game_text1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

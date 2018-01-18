@@ -8,8 +8,6 @@
             android:icon="@drawable/drawer_home"
             android:title="@string/drawer_home" />
 
-        <item android:icon="@drawable/drawer_gallery"
-            android:title="@string/drawer_subjects" />
     </group>
 
     <group android:checkableBehavior="single">
@@ -17,7 +15,6 @@
             android:title="@string/drawer_games" >
             <menu>
                 <item
-                    android:id="@+id/drawer_send_us_mail_2"
                     android:icon="@drawable/button_mail_grey_256"
                     android:title="@string/drawer_mail_forbedringer" />
                 <item

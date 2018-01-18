@@ -25,12 +25,8 @@
         used for programmatically-instantiated action bar items, they
         are defined here.
     -->
-    <item name="action_next" type="id" />
-    <item name="action_flip" type="id" />
 
     <!-- Test af contacts -->
-    <item name="recycler_left" type="id"/>
-    <item name="recycler_right" type="id"/>
     <item name="avatar" type="id">avatar</item>
 
 </resources>
