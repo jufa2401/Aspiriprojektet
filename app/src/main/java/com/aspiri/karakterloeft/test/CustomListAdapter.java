@@ -29,7 +29,7 @@ import com.aspiri.karakterloeft.R;
         public View getView(int position, View view, ViewGroup parent) {
             LayoutInflater inflater = context.getLayoutInflater();
             View rowView= inflater.inflate(R.layout.drawer_list_item, null, true);
-            TextView txtTitle = (TextView) rowView.findViewById(R.id.lblListItem);
+            TextView txtTitle = rowView.findViewById(R.id.lblListItem);
 //            ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
             txtTitle.setText(title[position]);
 //            imageView.setImageResource(imageId[position]);
