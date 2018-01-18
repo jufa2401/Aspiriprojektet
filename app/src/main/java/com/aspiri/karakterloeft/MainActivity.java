@@ -23,7 +23,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.aspiri.karakterloeft.games.quiz.MultipleChoiceFragment;
-import com.aspiri.karakterloeft.list_view.ListFragment;
+import com.aspiri.karakterloeft.oldScope.list_view.ListFragment;
 import com.google.android.gms.appinvite.AppInviteInvitation;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         switch (item.getItemId()) {
 
             case R.id.three_dot_quit:
-                finish();
+//                finish();
                 Log.d("AspiriApp", "action_quit pressed");
                 return true;
 
@@ -267,6 +267,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             return;
         }
         super.onBackPressed();
+//        invalidateOptionsMenu();
     }
 
     public void setActionBarTitle(String actionBarTitle) {
@@ -298,7 +299,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle(R.string.find_way);
+                getSupportActionBar().setTitle(R.string.app_name);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 

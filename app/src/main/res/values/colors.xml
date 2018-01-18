@@ -28,6 +28,7 @@
     <color name="darkblue">#0D3D54</color>
     <color name="darkdarkerblue">#0a2e40</color>
     <color name="LightGrey">#CABBBBBB</color>
+    <color name="transparent">#0000ffff</color>
 
 </resources>
 

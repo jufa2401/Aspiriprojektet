@@ -55,15 +55,25 @@ public class AddQuestion extends Fragment {
 
     @OnClick(R.id.buttonPreview)
     void onPreviewClick() {
+
+
         Dialog previewDialog;
+        Context context;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-            previewDialog = new Dialog(getContext());
+            context = getContext();
         } else {
-            previewDialog = new Dialog(getActivity());              //Gamle APIER
+            context = getActivity();              //Gamle APIER
         }
+        previewDialog = new Dialog(context);
         previewDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+        View preview;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            View preview = getLayoutInflater().inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent(), false);
+            preview = getLayoutInflater().inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent(), false);
+        } else {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            preview = inflater.inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent());
+        }
             previewDialog.setContentView(preview);
             MathView preview1 = preview.findViewById(R.id.previewMath1);        // Disse views kan ikke bindes som før, da de ligger i et "nyt layout"
             MathView preview2 = preview.findViewById(R.id.previewMath2);
@@ -80,7 +90,7 @@ public class AddQuestion extends Fragment {
             preview3.setDisplayText(displayText[2]);
             preview4.setDisplayText(displayText[3]);
 
-        }
+
 
         previewDialog.show();
     }
@@ -109,7 +119,7 @@ public class AddQuestion extends Fragment {
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < editTextsAnswers.length; i++) {
-                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity()) {
+                    if (!editTextsAnswers[i].testValidity() || !editTextTitle.testValidity() || !checkBoxesTicked(checkBoxes)) {
                         Toast.makeText(context, "Fejl, test dine felter for fejl", Toast.LENGTH_SHORT).show();
                         return;
                     }
@@ -135,9 +145,10 @@ public class AddQuestion extends Fragment {
                                     }
                                 }
                                 dataBaseHelper.addDataQuestion(new Question(quizTitleEditString, questionEditString, questionEditString[correctAnswerIndex]));
+                                Toast.makeText(context, "Question added to database", Toast.LENGTH_SHORT);
                                 Log.d("databaseHelper", "Question added to local database");
 
-                                fragmentTransaction(new MultipleChoiceFragment());
+
                             }
                         });
                 AlertDialog alert = builder.create();
@@ -174,7 +185,17 @@ public class AddQuestion extends Fragment {
     }
 
     private void fragmentTransaction(Fragment fragment) {
-        getFragmentManager().beginTransaction().replace(R.id.fragmentindhold, fragment);     // Der addes ikke til backstck
+        getFragmentManager().beginTransaction().replace(R.id.fragmentindhold, fragment).commit();     // Der addes ikke til backstck
+    }
+
+    /**
+     * Checkboxes
+     *
+     * @param checkBoxArray a Checkbox array with the size of 4
+     * @return returns false if all checkboxes are unticked
+     */
+    private boolean checkBoxesTicked(CheckBox[] checkBoxArray) {
+        return !(!checkBoxArray[0].isChecked() && !checkBoxArray[1].isChecked() && !checkBoxArray[2].isChecked() && !checkBoxArray[3].isChecked());
     }
 
 

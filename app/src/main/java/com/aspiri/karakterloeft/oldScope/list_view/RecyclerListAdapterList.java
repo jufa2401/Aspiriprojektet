@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.list_view;
+package com.aspiri.karakterloeft.oldScope.list_view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -41,7 +41,7 @@ public class RecyclerListAdapterList extends RecyclerView.Adapter<RecyclerListAd
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_view_single_row,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_view_single_row, parent, false);
 
         return new ViewHolder(view);
     }
@@ -59,18 +59,18 @@ public class RecyclerListAdapterList extends RecyclerView.Adapter<RecyclerListAd
 
         final SubjectFragment subjectFragment = new SubjectFragment();
         final SubListFragment subListFragment = new SubListFragment();
-        view.setOnClickListener(new View.OnClickListener(){
+        view.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                if(mListener != null){
+            public void onClick(View view) {
+                if (mListener != null) {
 //                 sætter on click listerner til at indekserer efter position i listen.
                     mListener.onClick(position);
                 }
 
 //              bundle til at oveføre det indtrykkede index til ExpandableTextViewExample
                 final Bundle bundle = new Bundle();
-                bundle.putInt("listindex",position);
-                bundle.putString("title",subjectListArray[position]);
+                bundle.putInt("listindex", position);
+                bundle.putString("title", subjectListArray[position]);
 
 //                Intent intent = new Intent(((Activity)context), DrawerActivityShowUp.class);
 //                intent.putExtra("bundle",bundle);

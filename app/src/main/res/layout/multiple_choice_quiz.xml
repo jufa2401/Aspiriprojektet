@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-bold"
-        android:text="En quiz om andengradslingning"
+        android:text="@string/quiz"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -63,7 +63,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
-
     <LinearLayout
         android:id="@+id/option1_button"
         android:layout_width="320dp"
@@ -110,7 +109,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status_text"
         app:setTextColor="@android:color/black"
-        app:setTextSize="16sp">
+        app:setTextSize="16sp"
+        app:setViewBackgroundColor="@color/transparent">
 
     </katex.hourglass.in.mathlib.MathView>
 

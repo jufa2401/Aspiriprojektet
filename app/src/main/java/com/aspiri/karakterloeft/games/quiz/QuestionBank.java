@@ -2,6 +2,7 @@ package com.aspiri.karakterloeft.games.quiz;
 
 /**
  * Created by Justin on 10/01/2018.
+ * Largely inspired by https://github.com/CreatorB/quiz-android
  */
 
 import android.content.Context;

@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.aspiri.karakterloeft.list_view.ListFragment;
-
 /**
  * Created by Justin on 10/01/2018.
  */

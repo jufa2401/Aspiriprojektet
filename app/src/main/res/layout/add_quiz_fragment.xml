@@ -9,7 +9,7 @@
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/addQuizHeader"
@@ -27,217 +27,205 @@
 
         <TextView
             android:id="@+id/add_quiz_desc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:text="@string/quiz_desc"
             android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addQuizHeader" />
 
         <TextView
             android:id="@+id/add_quiz_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:text="@string/string_quiz_title"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_quiz_desc" />
         <!--Nullitets tjek udføres af whateever, det er ikke begrænset mere, da vi vil give brugerne mulighed for at skrive LaTex syntaks-->
         <com.andreabaccega.widget.FormEditText
             android:id="@+id/editTextQuizTitle"
-            android:layout_width="220dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/question_here"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonPreview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_quiz_title"
             whatever:emptyErrorString="@string/cannot_be_empty"
             whatever:testType="nocheck" />
 
+        <!--Nullitets tjek udføres af whateever, det er ikke begrænset mere, da vi vil give brugerne mulighed for at skrive LaTex syntaks-->
+
         <TextView
             android:id="@+id/addQuiz_answer1"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
             android:text="@string/write_answer1"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@id/editTextQuizTitle"
-            app:layout_constraintStart_toStartOf="@id/editTextQuizTitle"
-
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextQuizTitle" />
-        <!--Nullitets tjek udføres af whateever, det er ikke begrænset mere, da vi vil give brugerne mulighed for at skrive LaTex syntaks-->
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="84dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="248dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addQuiz_answer1"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.andreabaccega.widget.FormEditText
             android:id="@+id/editText1"
-            android:layout_width="220dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/write_here"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/addQuiz_answer1"
-            app:layout_constraintStart_toStartOf="@+id/editTextQuizTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer1"
             whatever:emptyErrorString="@string/cannot_be_empty"
             whatever:testType="nocheck" />
 
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="176dp"
-            android:text="@string/correct_answer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toEndOf="@+id/editText1"
-            app:layout_constraintTop_toBottomOf="@+id/add_quiz_desc" />
-
         <TextView
             android:id="@+id/addQuiz_answer2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
+
             android:text="@string/write_answer2"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@id/editText1"
-            app:layout_constraintStart_toStartOf="@id/editText1"
-
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText1" />
-        <!--Nullitets tjek udføres af whateever, det er ikke begrænset mere, da vi vil give brugerne mulighed for at skrive LaTex syntaks-->
+
         <com.andreabaccega.widget.FormEditText
             android:id="@+id/editText2"
-            android:layout_width="220dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/write_here"
+
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/addQuiz_answer2"
-            app:layout_constraintStart_toStartOf="@id/addQuiz_answer2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer2"
             whatever:emptyErrorString="@string/cannot_be_empty"
-
             whatever:testType="nocheck" />
 
         <CheckBox
             android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="72dp"
-            android:text="@string/correct_answer"
+            android:layout_width="84dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="67dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editText2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/addQuiz_answer2"
             app:layout_constraintTop_toBottomOf="@+id/checkBox1" />
+
+        <!--Nullitets tjek udføres af whateever, det er ikke begrænset mere, da vi vil give brugerne mulighed for at skrive LaTex syntaks-->
 
         <TextView
             android:id="@+id/addQuiz_answer3"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
+
             android:text="@string/write_answer3"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@id/editText2"
-            app:layout_constraintStart_toStartOf="@id/editText2"
-
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-        <com.andreabaccega.widget.FormEditText
-            android:id="@+id/editText3"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
-            android:hint="@string/write_here"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/addQuiz_answer3"
-            app:layout_constraintStart_toStartOf="@id/addQuiz_answer3"
-            app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer3"
-            whatever:emptyErrorString="@string/cannot_be_empty"
-
-            whatever:testType="nocheck" />
 
         <CheckBox
             android:id="@+id/checkBox3"
-            android:layout_width="wrap_content"
+            android:layout_width="84dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="67dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/addQuiz_answer3"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+        <com.andreabaccega.widget.FormEditText
+            android:id="@+id/editText3"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="92dp"
-            android:text="@string/correct_answer"
+
+
+            android:layout_marginTop="8dp"
+            android:hint="@string/write_here"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editText3"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer3"
+            whatever:emptyErrorString="@string/cannot_be_empty"
+            whatever:testType="nocheck" />
 
         <TextView
             android:id="@+id/addQuiz_answer4"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="8dp"
             android:checkMark="?android:attr/listChoiceIndicatorMultiple"
             android:checked="false"
             android:clickable="true"
             android:focusable="true"
             android:text="@string/write_answer4"
             android:textColor="@color/black"
+
+
             android:textSize="20sp"
             android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@id/editText3"
-            app:layout_constraintStart_toStartOf="@id/editText3"
-
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
         <com.andreabaccega.widget.FormEditText
             android:id="@+id/editText4"
-            android:layout_width="220dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:hint="@string/write_here"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/addQuiz_answer4"
-            app:layout_constraintStart_toStartOf="@id/addQuiz_answer4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addQuiz_answer4"
             whatever:emptyErrorString="@string/cannot_be_empty"
             whatever:testType="nocheck" />
 
         <CheckBox
             android:id="@+id/checkBox4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/correct_answer"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="84dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="71dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.714"
-            app:layout_constraintStart_toEndOf="@+id/editText4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/addQuiz_answer4"
             app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
         <Button
@@ -245,35 +233,31 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
             android:background="@drawable/shadow"
             android:text="@string/saveexit"
             android:textColor="@color/black"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/buttonPreview"
-            app:layout_constraintTop_toBottomOf="@+id/editText4"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonPreview"
+            app:layout_constraintTop_toBottomOf="@id/editText4" />
 
         <Button
             android:id="@+id/buttonPreview"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/shadow"
             android:text="@string/preview"
             android:textColor="@color/black"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/buttonAddQuiz"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAddQuiz"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@id/editText4" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

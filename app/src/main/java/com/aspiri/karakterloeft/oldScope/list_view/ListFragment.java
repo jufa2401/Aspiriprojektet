@@ -1,4 +1,4 @@
-package com.aspiri.karakterloeft.list_view;
+package com.aspiri.karakterloeft.oldScope.list_view;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -88,6 +88,7 @@ public class ListFragment extends Fragment {
         super.onSaveInstanceState(outState);
         outState.putParcelable("liste", recyclerView.getLayoutManager().onSaveInstanceState());
     }
+
     @Override
     public void onResume() {
         super.onResume();

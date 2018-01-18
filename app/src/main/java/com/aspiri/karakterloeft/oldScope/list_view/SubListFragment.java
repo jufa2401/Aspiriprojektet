@@ -1,9 +1,10 @@
-package com.aspiri.karakterloeft.list_view;
+package com.aspiri.karakterloeft.oldScope.list_view;
 
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -262,7 +263,9 @@ public class SubListFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) { // Understøttelse for skærmvending - kan evt udelades
         super.onSaveInstanceState(outState);
-        outState.putParcelable("list", recyclerView.getLayoutManager().onSaveInstanceState());
+        RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+        Parcelable parcel = layoutManager.onSaveInstanceState();
+        outState.putParcelable("list", parcel);
     }
 
     @Override

@@ -146,6 +146,7 @@ public class MultipleChoiceFragment extends Fragment {
         ((MainActivity) mActivity).setDrawerIndicatorEnabled(false);
     }
 
+
     @SuppressLint("ClickableViewAccessibility")
     private void answerPressed(int optionindex) {
         int correct, wrong;
@@ -211,6 +212,7 @@ public class MultipleChoiceFragment extends Fragment {
             correct = getResources().getColor(R.color.answer_correct);      // Tager hensyn til gamle API er
             wrong = getResources().getColor(R.color.answer_wrong);
         }
+        questionOption = getQuestion();
         if (questionOption[optionindex].equals(trueanswer)) {
 
             mathViews[optionindex].setBackgroundColor(Color.GREEN);
@@ -255,13 +257,14 @@ public class MultipleChoiceFragment extends Fragment {
         }
     }
 
-    private void opdaterUI(String[] option) {
+    private String opdaterUI(String[] option) {
         option = new String[]{questionBank.getChoice(mQuestionNumber, 1), questionBank.getChoice(mQuestionNumber, 2), questionBank.getChoice(mQuestionNumber, 3), questionBank.getChoice(mQuestionNumber, 4)};
+
         if (mQuestionNumber < questionBank.getLength()) {
             question.setText(questionBank.getQuestion(mQuestionNumber));
             trueanswer = questionBank.getCorrectAnswer(mQuestionNumber);
 
-            if (shouldUseMathViews()) {
+            if (shouldUseMathViews(option)) {
                 for (int i = 0; i < 4; i++) {
                     optionButtons[i].setClickable(false);
                     optionButtons[i].setVisibility(View.GONE);
@@ -278,8 +281,7 @@ public class MultipleChoiceFragment extends Fragment {
 
 
                 }
-            }
-            if (!shouldUseMathViews()) {
+            } else if (!shouldUseMathViews(option)) {
                 for (int i = 0; i < 4; i++) {
                     Log.d("opdaterUI() Method " + i, "optionbuttons at " + i + " Visibility visible");
                     mathViews[i].setClickable(false);
@@ -307,23 +309,16 @@ public class MultipleChoiceFragment extends Fragment {
                     .setCustomAnimations(R.animator.slide_in_left, R.animator.slide_out_left, R.animator.slide_out_right, R.animator.slide_in_right)
                     .replace(R.id.fragmentindhold, f, "end of questions").commit();
         }
+
+        return trueanswer;
     }
 
 
     /**
      * Returns true if UI should display a MathView.* @return
      */
-    private boolean shouldUseMathViews() {
-        if (questionOption[0].contains("$$")) {
-            return true;
-        }
-        if (questionOption[1].contains("$$")) {
-            return true;
-        }
-        if (questionOption[2].contains("$$")) {
-            return true;
-        }
-        return questionOption[3].contains("$$");
+    private boolean shouldUseMathViews(String[] questionOption) {
+        return questionOption[0].contains("$$") && questionOption[1].contains("$$") && questionOption[2].contains("$$") && questionOption[3].contains("$$");
     }
 
     private String[] getQuestion() {
@@ -333,6 +328,7 @@ public class MultipleChoiceFragment extends Fragment {
                 questionBank.getChoice(mQuestionNumber, 4)};
         return questionOption;
     }
+
 
 }
 

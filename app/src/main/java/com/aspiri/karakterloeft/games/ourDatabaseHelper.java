@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by Justin on 10/01/2018.
+ * Largely inspired by https://github.com/CreatorB/quiz-android
  */
 
 public class ourDatabaseHelper extends SQLiteOpenHelper {

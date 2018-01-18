@@ -1205,6 +1205,7 @@
     <string name="write_answer4">Skriv svarmulighed 4</string>
     <string name="saveexit">Gem og Afslut</string>
     <string name="preview">Preview</string>
+    <string name="quiz">Quiz</string>
 
     <plurals name="you_selected_x_subjects">
         <item quantity="one">Du valgte %d emne!</item>
