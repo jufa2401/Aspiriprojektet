@@ -72,9 +72,10 @@ public class AddQuestion extends Fragment {
             preview = getLayoutInflater().inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent(), false);
         } else {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            preview = inflater.inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent());
+            preview = inflater.inflate(R.layout.preview_mathview, (ViewGroup) getView().getParent(), false);
         }
-            previewDialog.setContentView(preview);
+
+        previewDialog.setContentView(preview);
             MathView preview1 = preview.findViewById(R.id.previewMath1);        // Disse views kan ikke bindes som før, da de ligger i et "nyt layout"
             MathView preview2 = preview.findViewById(R.id.previewMath2);
             MathView preview3 = preview.findViewById(R.id.previewMath3);
