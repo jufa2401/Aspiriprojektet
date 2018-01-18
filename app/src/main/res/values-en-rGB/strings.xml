@@ -1,124 +1,81 @@
 <resources>
 
     <!---->
-    <string name="app_name">Aspiri</string>
+    <string name="app_name">Karakterløft</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="back">Tilbage</string>
-    <string name="help">Hjælp</string>
 
     <!--Three dot-->
-    <string name="three_dot_favorite">Favorit</string>
-    <string name="three_dot_exit">Afslut</string>
-    <string name="three_dot_settings">Indstillinger</string>
+    <string name="three_dot_favorite">Favorite</string>
+    <string name="three_dot_exit">Exit</string>
+    <string name="three_dot_settings">Settings</string>
 
 
     <!--Hamburger menu-->
-    <string name="drawer_subjects">Emner</string>
     <string name="drawer_firebase">Firebase</string>
-    <string name="drawer_other">Andet</string>
-    <string name="drawer_come_see_us">Besøg os</string>
-    <string name="drawer_store">Åbner Butikken</string>
-    <string name="drawer_home">Hjem</string>
-    <string name="drawer_buy_Course">Køb Kurser</string>
-    <string name="drawer_communicate_with_us">Skriv til os</string>
-    <string name="drawer_share">Del</string>
-    <string name="drawer_open_new">Open New</string>
-    <string name="drawer_gallery">Galleri</string>
+    <string name="drawer_home">Home</string>
+    <string name="drawer_uy_Course">Buy Courses</string>
+    <string name="drawer_share">Share</string>
     <string name="drawer_slideshow">Flipcards</string>
-    <string name="drawer_tool">Værktøjer</string>
-    <string name="drawer_camera">Cam</string>
-    <string name="drawer_send">Send</string>
-    <string name="drawer_we_are_here">Her holder vi til</string>
-    <string name="drawer_kbh">København</string>
-    <string name="drawer_odense">Odense</string>
-    <string name="drawer_Aarhus">Aarhus</string>
-    <string name="drawer_HQ">Hovedkvarter</string>
-    <string name="drawer_URL_KBH">https://www.google.dk/maps/place/Sigurdsgade+26,+2200+K%C3%B8benhavn+N/@55.702761,12.5531248,17z/data=!3m1!4b1!4m5!3m4!1s0x4652525124df9de3:0x56181b7bc5385d44!8m2!3d55.702761!4d12.5553135</string>
-    <string name="drawer_URL_HQ">https://www.google.dk/maps/place/Aspiri+A%2FS/@55.6804197,12.53155,17z/data=!3m1!4b1!4m5!3m4!1s0x465253bb7ef8ec77:0x4dc02be6470bb7fc!8m2!3d55.6804197!4d12.5337387</string>
-    <string name="drawer_URL_Aarhus">https://www.google.dk/maps/place/VIA+University+College+-+Campus+Aarhus+C/@56.1560488,10.1880261,17z/data=!3m1!4b1!4m5!3m4!1s0x464c3fec300c1d71:0x357ff97e45c9d66a!8m2!3d56.1560488!4d10.1902148</string>
-    <string name="drawer_URL_Odense">https://www.google.dk/maps/place/Tietgen+KompetenceCenter/@55.4118508,10.3236476,17z/data=!3m1!4b1!4m5!3m4!1s0x464ce081ea7d2395:0xb0164d1e4bc987c8!8m2!3d55.4118508!4d10.3258363</string>
     <string name="drawer_URL_ToTheStore">https://karakterloeft.aspiri.dk/UI/Shopping/CourseIndex.aspx</string>
-    <string name="drawer_contact">Kontakt via mail</string>
-    <string name="drawer_communicate">REPLACE ME</string>
-    <string name="drawer_getInContact">kom i kontakt</string>
-    <string name="drawer_mail_tekniske_problemer">Tekniske Problemer</string>
-    <string name="drawer_mail_forbedringer">Idéer til forbedringer</string>
+    <string name="drawer_get_in_contact">Contact Via Mail</string>
     <string name="drawer_quiz">Quiz</string>
 
     <!--Mail-->
-    <string name="mail_subject">Vedrørende Aspiri App Android</string>
-    <string name="mail_beginning">Kære Aspiri App team</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
 
     <!--Under construction-->
-    <string name="title_activity_subject1">subject1</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_subject2">Subject2</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="subject_picture_description">Andengradsligninger</string>
-    <string name="sample_subject">Andengradsligning</string>
+    <string name="sample_subject">Quadratic Formula</string>
     <string name="sample_subject_breadtext">Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</string>
     <string name="empty_description" />
 
 
     <!--Array til navne i overskrifter-->
     <string-array name="subject_list">
-        <item>Areal, omkreds og rumfang</item>
-        <item>Rentesregning</item>
-        <item>Kvadratsætningerne</item>
-        <item>Potensregneregler</item>
-        <item>Polynomier</item>
-        <item>Lineær, eksponentiel og potenssammenhænge</item>
-        <item>Statistik</item>
-        <item>Differentialregning</item>
-        <item>Integralregning</item>
-        <item>Logaritmer</item>
-        <item>Geometri</item>
-        <item>Plangeometri med vektorer</item>
-        <item>Rumgeometri med vektorer</item>
+        <item>Area, Circumference and Volume</item>
+        <item>Percentages</item>
+        <item>Quadratic Formulas</item>
+        <item>Polynomial rules</item>
+        <item>Polynomials</item>
+        <item>Linear, exponential and polynomial connections</item>
+        <item>Statistics</item>
+        <item>Differentials</item>
+        <item>Integrals</item>
+        <item>Logarithms</item>
+        <item>Gemoetry</item>
+        <item>Planegemetry with vectors</item>
+        <item>Spacegemoetry with vectors</item>
     </string-array>
 
 
 
     <!--Array til navne i underoverskrifter-->
     <string-array name="subtext_list">
-        <item>Andre Arealer</item>
-        <item>Fremskrivning af indestående</item>\
-        <item>Spar massere af tid, hvis du lærer disse uden ad</item>
-        <item>I hvilken rækkefølge skal man gøre hvad?</item>
-        <item>Toppunkter, nulpunkter og stigning</item>
-        <item>Vækst og sammenhænge</item>
-        <item>Sammenhæng mellem data, NulHypotese</item>
-        <item>f\'(x) er din ven</item>
-        <item>F(x) er også din ven</item>
-        <item>Transformering af udtryk</item>
-        <item>Trekanter, Firkanter og Cirkler</item>
-        <item>Størrelser i plan</item>
-        <item>Størrelser i Rum</item>
+        <item>Formulas and explainations</item>
+        <item>Future Projections</item>\
+        <item>You can save time with these memorized</item>
+        <item>In what order do you do what?</item>
+        <item>Highlights, zero points and pitch</item>
+        <item>Growth and connections</item>
+        <item>Correlationsin data</item>
+        <item>f\'(x) is your friend</item>
+        <item>F(x) is also your friend</item>
+        <item>Transformations of Expressions</item>
+        <item>Triangles, circles and squares</item>
+        <item>Sizes and velocities on a plane</item>
+        <item>Sizes and velocities in space</item>
 
     </string-array>
-    <string name="title_activity_settings_from_activity_gallery">Settings2</string>
 
     <!--General-->
-    <string name="Title_Teori">Teori:</string>
-    <string name="Title_ReviewProblems">Opgaver:</string>
-    <string name="Title_Solutions">Løsningner:</string>
-    <string name="ReviewProblems_Title">Opgaveeksempel:</string>
-    <string name="mathModeXMLTest1">When \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are $$x = {-b \\pm \\sqrt{b^2 - 4ac} \\over 2a}.$$</string>
 
     <!-- Strings related to Settings -->
 
     <!-- TEMP af lasange tekst mm. til flipcards (placeholder) -->
-    <string name="description_image_1">Lasagne</string>
-    <string name="card_back_title">Hvad er best ved lasagne?</string>
+    <string name="card_back_title">The chance is 1/36th</string>
     <string name="card_back_description">Fadet selvfølgelig</string>
-    <string name="action_info">Photo info</string>
-    <string name="action_photo">View photo</string>
-    <string name="open_drawer">Opening drawer</string>
-    <string name="close_drawer">Closing drawer</string>
     <!--*******************************************************************************************************************-->
 
     <!--Example texts-->
@@ -133,45 +90,7 @@
     </string-array>
 
     <!--MathViews følger samme rækkefølge som billederne, altså 1 er cirkler osv.-->
-    <string-array name="example_mathView1">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
 
-    <string-array name="example_mathView2">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
-
-    <string-array name="example_mathView3">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
-
-    <string-array name="example_mathView4">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
     <!--*******************************************************************************************************************-->
 
 
@@ -226,16 +145,6 @@
         <item>0</item>
     </string-array>
 
-    <string-array name="arealer_text_above_mathview1">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
     <string-array name="arealer_text_above_mathview2">
         <item>0</item>
         <item>0</item>
@@ -246,25 +155,6 @@
         <item>0</item>
     </string-array>
 
-    <string-array name="arealer_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="arealer_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
     <!--*******************************************************************************************************************-->
 
 
@@ -277,15 +167,6 @@
         <item>Kapital efter n terminer</item>
         <item>Procent (rente) i kort (r) og lang periode (R)</item>
 
-    </string-array>
-
-    <string-array name="RentesRegning_list_introTekst">
-        <item>S=K_0*(1+r)</item>
-        <item>r=S/K_0-1</item>
-        <item>n=(log(K_n)-log(K_0) / log(1+r)</item>
-        <item>K_0 = K_n / (1+r)^n</item>
-        <item>K_n = K_0 *(1+r)^n</item>
-        <item>1 + R = (1+r)^n </item>
     </string-array>
 
     <string-array name="RentesRegning_title">
@@ -378,14 +259,6 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
 
-    <string-array name="RentesRegning_mathview2">
-        <item>$2+2=4-1=3$</item>
-        <item>$x=\frac{3+x}{30+40z^99}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
     <!--*******************************************************************************************************************-->
 
     <!--Kvadratsætninger-->
@@ -420,30 +293,6 @@
         <item>Tekst efter billede33</item>
     </string-array>
 
-    <string-array name="kvadratsætningerne_text_above_mathview1">
-        <item>KvatSæt MV txt 11</item>
-        <item>KvatSæt MV txt 12</item>
-        <item>KvatSæt MV txt 13</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview2">
-        <item>KvatSæt MV txt 21</item>
-        <item>KvatSæt MV txt 22</item>
-        <item>KvatSæt MV txt 23</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview3">
-        <item>KvatSæt MV txt 31</item>
-        <item>KvatSæt MV txt 32</item>
-        <item>KvatSæt MV txt 33</item>
-    </string-array>
-
-    <string-array name="kvadratsætningerne_text_above_mathview4">
-        <item>KvatSæt MV txt 41</item>
-        <item>KvatSæt MV txt 42</item>
-        <item>KvatSæt MV txt 43</item>
-    </string-array>
-
     <string-array name="kvadratsætningerne_mathView1">
         <item>$MV=11$</item>
         <item>$MV=12$</item>
@@ -471,59 +320,7 @@
 
 
     <!--Potensregneregler-->
-    <string-array name="potensregneregler_title">
-        <item>Første kvadratsætning</item>
-        <item>Anden kvadratsætning </item>
-        <item>Tredje kvadratsætning</item>
-    </string-array>
 
-    <string-array name="v_introTekst">
-        <item>(a+b)^2</item>
-        <item>(a-b)^2</item>
-        <item>(a+b) * (a-b)</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_following_picture_1">
-        <item>Tekst efter billede 11</item>
-        <item>Tekst efter billede 12</item>
-        <item>Tekst efter billede 13</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_following_picture_2">
-        <item>Tekst efter billede21</item>
-        <item>Tekst efter billede22</item>
-        <item>Tekst efter billede23</item>
-    </string-array>
-
-    <string-array name="potensregneregler_above_picture_3">
-        <item>Tekst efter billede31</item>
-        <item>Tekst efter billede32</item>
-        <item>Tekst efter billede33</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview1">
-        <item>Tekst over MV 11</item>
-        <item>Tekst over MV 12</item>
-        <item>Tekst over MV 13</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview2">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
-    <string-array name="potensregneregler_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-        <item>0</item>
-    </string-array>
     <!--*******************************************************************************************************************-->
 
 
@@ -531,56 +328,35 @@
     <string-array name="polynomier_list">
         <item>Generelt</item>
         <item>Andengradsfunktioner</item>
-    </string-array>
+    </string-array><![CDATA[
 
     !--Array til polynomier_list subtext-->
-    <string-array name="polynomier_sublist">
-        <item>om polynomier</item>\
-        <item>spændende_temp</item>
-    </string-array>
-    <!--Polynomier og potenser-->
+    ]]><!--Polynomier og potenser-->
 
-    <!--Array til navne i underpunkter for statistik-->
-    <string-array name="statistik_list">
-        <item>Ikke-grupperede observationer</item>
-        <item>Grupperede observationer</item>
-    </string-array>
+    <!--Array til navne i underpunkter for statistik--><![CDATA[
+
 
     !--Array til polynomier_list subtext-->
-    <string-array name="statistik_sublist">
-        <item>de mest almindelige regler indenfor statistik</item>
-        <item>hyppighed, frekvens, kumuleret hyppighed og kumuleret frekvens</item>
-    </string-array>
 
     !--Array til navne i underpunkter for differentialregning-->
+    ]]>
     <string-array name="diffirentialregning_list">
         <item>Generelt</item>
         <item>Differentiering af flere led</item>
         <item>Førsteordensdifferentialligninger</item>
-    </string-array>
+    </string-array><![CDATA[
 
     !--Array til differentialregning_list subtext-->
-    <string-array name="diffirentialregning_sublist">
-        <item>De 10 mest almindelige regler i differentialregning</item>
-        <item>Sammensatte funktioner</item>
-        <item>Almindeligt forekommende typer af førsteordens differentialligninger</item>
-    </string-array>
 
 
     !--Array til navne i underpunkter for integralregning-->
-    <string-array name="integralregning_list">
-        <item>Integration af ét led</item>
-        <item>integration af flere led</item>
-    </string-array>
+
 
     !--Array til integralregning_list subtext-->
-    <string-array name="integralregning_sublist">
-        <item>de 8 mest almindelige regler</item>
-        <item>sammensatte funktioner</item>
-    </string-array>
 
 
-    <!-- Geometry in the plane and vectors -->
+
+    ]]><!-- Geometry in the plane and vectors -->
     <string-array name="RumGeometri_list_title">
         <item>Vektorer</item>
         <item>Areal, Vinkler og afstande</item>
@@ -593,11 +369,6 @@
     <string-array name="RumGeometri_sublist">
         <item>vektorer i planen og rummet</item>
         <item>vektorer i planen og rummet</item>
-    </string-array>
-    <string-array name="RumGeometri_introducerende_tekst">
-        <item>Her finder du de relavante formler, når du arbejder med Vektorer</item>
-        <item>Her finder du de relavante formler, når du arbejder med Areal,Vinkler og Afstand i rum og plan</item>
-
     </string-array>
 
 
@@ -632,17 +403,6 @@
 
     </string-array>
 
-    <string-array name="RumGeometri_text_above_mathview3">
-        <item>0</item>
-        <item>0</item>
-
-    </string-array>
-
-    <string-array name="RumGeometri_text_above_mathview4">
-        <item>0</item>
-        <item>0</item>
-    </string-array>
-
     <string-array name="RumGeometri_mathView1">
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
@@ -661,33 +421,44 @@
         <item>$x=\frac{1+y}{1+2z^2}$</item>
         <item>$x=\frac{1+y}{1+2z^2}$</item>
     </string-array>
-    <string-array name="RumGeometri_mathView3">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
-    <string-array name="RumGeometri_mathView4">
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-        <item>$x=\frac{1+y}{1+2z^2}$</item>
-    </string-array>
 
 
     <!--Firebase-->
     <string name="invitation_deep_link">https://bd763.app.goo.gl/?link=https://aspiri.dk/UI/Info/Staff.aspx&amp;apn=com.example.s165158.aspiri[&amp;amv=23][&amp;afl=https://Google.com]</string>
-    <string name="invitation_title">Den her app er bare rigtigt god</string>
-    <string name="invitation_message">Her er Matematikappen jeg snakkede om</string>
-    <string name="invitation_cta">Installer Mig!</string>
+    <string name="invitation_title">It\'s really good</string>
+    <string name="invitation_message">Here is the mathapp I was talking about</string>
+    <string name="invitation_cta">Install me</string>
     <string name="invitation_image_link">https://aspiri.dk/Images/Master/logo.png</string>
-    <string name="kontakt_via_facebook">Kontakt via Facebook</string>
+    <string name="drawer_kontakt_via_facebook">Contact via Facebook</string>
+    <string name="drawer_subjects">Subjects</string>
+    <string name="summary_vibrate">Use Vibrations in App</string>
+    <string name="summary_support">Technical difficulties? Message Us Here!</string>
+    <string name="summary_faq">View FAQ</string>
+    <string name="summary_mail">Opens a new window</string>
+    <string name="title_version">Version</string>
+    <string name="title_vibrate">Vibrations</string>
+    <string name="title_mail_header">Default Mail Header</string>
+    <string name="title_sprog">Language</string>
+    <string name="title_send_feedback">Send Feedback</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_terms">Terms &amp; Conditions</string>
+    <string name="mail_default_msg">mail_default_msg</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="pref_title_generelt">General</string>
+    <string name="pref_header_about">Om Udviklerne:</string>
+    <string name="default_mail_header">Dear Karakterløft Appteam</string>
+    <string name="brug_standard_sprog">Use the Phone Locale</string>
+    <string name="app_version">1.0</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="choose_email_client">Choose Email Client</string>
+    <string name="opens_new_window">Opens a new window</string>
+    <string name="url_privacy">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="url_faq">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="url_terms">" https://aspiri.dk/UI/Virtual/About.aspx"</string>
+    <string name="question_1_sandsynlighed">What is the probability of getting a pair of six in one throw?</string>
+    <string name="card_questionmark_the_questionmark">\?</string>
+    <string name="drawer_header_nav_picture">top drawer header picture</string>
 
 
 </resources>

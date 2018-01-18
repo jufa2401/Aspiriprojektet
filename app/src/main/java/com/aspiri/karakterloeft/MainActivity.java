@@ -3,11 +3,14 @@ package com.aspiri.karakterloeft;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -139,18 +142,21 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         return true;
     }
 
+
+    //    Onclick for tredottede menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
             case R.id.three_dot_quit:
-//                finish();
+                finish();
                 Log.d("AspiriApp", "action_quit pressed");
                 return true;
 
             case R.id.three_dot_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                showToast("Yet to be implemented");
+                Intent goToSettings = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(goToSettings);
                 Log.d("AspiriApp", "action_settings pressed");
                 return true;
 
@@ -191,10 +197,19 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 return true;
 
             case R.id.drawer_send_us_mail:
-                Intent sendUsMail = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jm@aspiri.dk", null));
-                sendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.mail_subject);
-                sendUsMail.putExtra(Intent.EXTRA_TEXT, getString(R.string.mail_beginning));
-                startActivity(Intent.createChooser(sendUsMail, "Choose an Email client :"));
+                //Building Shared Preference Manager
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                String mailToSend = sharedPref.getString(getString(R.string.mail_default_msg), "");
+
+                //Initializing Intent
+                Intent SendUsMail= new Intent(Intent.ACTION_SEND);
+                SendUsMail.setType("message/rfc822");
+                SendUsMail.putExtra(Intent.EXTRA_EMAIL, new String[]{"jm@aspiri.dk","na@aspiri.dk"});
+                SendUsMail.putExtra(Intent.EXTRA_SUBJECT, R.string.title_mail_header);
+                SendUsMail.putExtra(Intent.EXTRA_TEXT, mailToSend);
+
+                //Starting activity, doing log calls
+                startActivity(Intent.createChooser(SendUsMail, getResources().getString(R.string.choose_email_client)));
                 Log.d("AspiriApp", "Mail_icon pressed");
                 return true;
 
@@ -211,6 +226,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         .commit();
                 drawer.closeDrawer(GravityCompat.START);
                 return true;
+
+
             // Tester FB bot til KL, laver seperat knap til test.
             // Senere skal denne (hvis fungerende) benyttes et andet sted.
             case R.id.drawer_kontakt_test:
@@ -224,8 +241,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     return true;
                 } catch (PackageManager.NameNotFoundException e) {
                     showToast("Facebook ikke installeret");
+                    Log.d(TAG, "Facebook not installed");
                     return true;
                 }
+
+
+
             case R.id.drawer_share:
 
                 Trace myTrace = FirebasePerformance.getInstance().newTrace("test_trace");
@@ -267,7 +288,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             return;
         }
         super.onBackPressed();
-//        invalidateOptionsMenu();
     }
 
     public void setActionBarTitle(String actionBarTitle) {
@@ -310,6 +330,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             }
         };
     }
+
 
     //Credit to firebase
     private void onInviteClicked() {

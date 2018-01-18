@@ -27,10 +27,11 @@
 
                 <!-- Usermade -->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
+
+
                 <!-- Firebase -->
                 <action android:name="android.intent.action.VIEW" />
 
@@ -42,9 +43,8 @@
                     android:scheme="http" />
                 <data
                     android:host="aspiri.dk"
-                    android:scheme="https"/>
+                    android:scheme="https" />
             </intent-filter>
-
         </activity>
 
         <!-- Test activiy 2 -->

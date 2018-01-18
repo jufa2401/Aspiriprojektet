@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Preferences-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--Generel Kategori-->
+    <PreferenceCategory android:title="@string/pref_title_generelt">
+
+        <!--Mail-->
+        <EditTextPreference
+            android:defaultValue="@string/default_mail_header"
+            android:key="@string/mail_default_msg"
+            android:summary="@string/summary_mail"
+            android:title="@string/title_mail_header"
+            />
+
+        <Preference
+            android:summary="@string/brug_standard_sprog"
+            android:title="@string/title_sprog">
+            <intent
+                android:action="android.settings.LOCALE_SETTINGS"
+               />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <!--Vibrer-->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/key_vibrate"
+        android:summary="@string/summary_vibrate"
+        android:title="@string/title_vibrate" />
+
+    <!--Om os-->
+    <PreferenceCategory android:title="@string/pref_header_about">
+
+        <!--Liste af gruppemedlemmer-->
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about" />
+
+        <!--Appversion-->
+        <Preference
+            android:id="@+id/settings_version"
+            android:key="@string/title_version"
+            android:summary="@string/app_version"
+            android:title="@string/title_version"
+            />
+
+        <!-- Sender feedback via mail -->
+        <Preference
+            android:key="@string/key_send_feedback"
+            android:summary="@string/summary_support"
+            android:title="@string/title_send_feedback" />
+
+        <!-- Åbner FAQ i Browser -->
+        <Preference
+            android:summary="@string/summary_faq"
+            android:title="@string/title_faq">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_faq" />
+        </Preference>
+
+        <!-- Åbner Privat politik i Browser -->
+        <Preference
+            android:summary="@string/opens_new_window"
+            android:title="@string/privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_privacy" />
+        </Preference>
+
+        <!-- Åbner terms and conditions i Browser -->
+        <Preference
+            android:summary="@string/opens_new_window"
+            android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_terms" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
