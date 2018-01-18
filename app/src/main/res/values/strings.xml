@@ -1,7 +1,7 @@
 <resources>
 
     <!--AppInfo-->
-    <string name="app_name">Karakterløft</string>
+    <string name="app_name">gr08 Karakterløft</string>
 
     <!--Navigation-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
