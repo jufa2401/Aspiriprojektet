@@ -49,7 +49,11 @@
 
         <!-- Test activiy 2 -->
         <activity android:name=".games.flipcards.FlipcardActivity"></activity>
-        <activity android:name=".games.flipcards.FlipcardSubjectList"></activity>
+        <activity android:name=".games.flipcards.FlipcardSubjectList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
     </application>
 

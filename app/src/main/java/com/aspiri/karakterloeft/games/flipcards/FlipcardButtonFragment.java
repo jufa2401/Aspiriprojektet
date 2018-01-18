@@ -5,6 +5,7 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +28,13 @@ public class FlipcardButtonFragment extends Fragment {
         View view = inflater.inflate(R.layout.flipcard_buttons,container,false);
         mActivity = (AppCompatActivity) getActivity();
 
-
+        Button b0 = view.findViewById(R.id.flipcard_button_previous);
+        b0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("button pressed", "hello");
+            }
+        });
 
         Button b1 = view.findViewById(R.id.flipcard_button_next);
 
@@ -51,6 +58,7 @@ public class FlipcardButtonFragment extends Fragment {
 
                     }
             });
+
         return view;
     }
 

@@ -11,7 +11,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:setTextSize="16sp"></katex.hourglass.in.mathlib.MathView>
+        app:setTextSize="16sp">
+
+    </katex.hourglass.in.mathlib.MathView>
 
     <katex.hourglass.in.mathlib.MathView
         android:id="@+id/previewMath2"
@@ -22,7 +24,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewMath1"
-        app:setTextSize="16sp"></katex.hourglass.in.mathlib.MathView>
+        app:setTextSize="16sp">
+
+    </katex.hourglass.in.mathlib.MathView>
 
     <katex.hourglass.in.mathlib.MathView
         android:id="@+id/previewMath3"
@@ -33,7 +37,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewMath2"
-        app:setTextSize="16sp"></katex.hourglass.in.mathlib.MathView>
+        app:setTextSize="16sp">
+
+    </katex.hourglass.in.mathlib.MathView>
 
     <katex.hourglass.in.mathlib.MathView
         android:id="@+id/previewMath4"
@@ -44,6 +50,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewMath3"
-        app:setTextSize="16sp"></katex.hourglass.in.mathlib.MathView>
+        app:setTextSize="16sp">
+
+    </katex.hourglass.in.mathlib.MathView>
 
 </android.support.constraint.ConstraintLayout>
