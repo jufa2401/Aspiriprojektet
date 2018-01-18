@@ -1,6 +1,5 @@
 package com.aspiri.karakterloeft.games.flipcards;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 
 import com.aspiri.karakterloeft.R;
 import com.aspiri.karakterloeft.games.ourDatabaseHelper;
-import com.tbruyelle.rxpermissions.RxPermissions;
 import com.yalantis.multiselection.lib.MultiSelect;
 import com.yalantis.multiselection.lib.MultiSelectBuilder;
 
@@ -47,15 +45,16 @@ public class FlipcardSubjectList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        View cView = getLayoutInflater().inflate(R.layout.dialog_flipcard_creation, null);
+//        View cView = getLayoutInflater().inflate(R.layout.dialog_flipcard_creation, null);
         super.onCreate(savedInstanceState);
         setContentView(com.aspiri.karakterloeft.R.layout.flipcard_subject_list);
-        ArrayList<String> front = getIntent().getStringArrayListExtra("front");
-        ArrayList<String> back = getIntent().getStringArrayListExtra("back");
+//        ArrayList<String> front = getIntent().getStringArrayListExtra("front");
+//        ArrayList<String> back = getIntent().getStringArrayListExtra("back");
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        askPermissions();
+        loadFlipcards();
+
+//        askPermissions();         Til fremtidig brug vil vi have en feature der gør at man kan tage billeder når man vil lave sit eget Flipcard
 
 
         toolbar = (Toolbar) findViewById(R.id.flipcard_toolbar);
@@ -185,23 +184,23 @@ public class FlipcardSubjectList extends AppCompatActivity {
     }
 
 
-    //TODO: skal ændres så det er kameraet der spørges om lov til, med henblik på at kunne tage billder af grafer, til egne flipcards.
-    private void askPermissions() {
-        RxPermissions.getInstance(this)
-                .request(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
-                .subscribe(granted -> {
-                    if (granted) {
-//TODO: Tag billede, eller find fil på storage
-                        loadFlipcards();
-                        Log.d("Permission granted? ", " YES");
-                    } else {
-                        View content = findViewById(android.R.id.content);
-                        Snackbar.make(content, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
-                                .setAction(R.string.allow, v -> askPermissions())
-                                .show();
-                    }
-                });
-    }
+//    //TODO: skal ændres så det er kameraet der spørges om lov til, med henblik på at kunne tage billder af grafer, til egne flipcards.
+//    private void askPermissions() {
+//        RxPermissions.getInstance(this)
+//                .request(Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
+//                .subscribe(granted -> {
+//                    if (granted) {
+////TODO: Tag billede, eller find fil på storage
+//                        loadFlipcards();
+//                        Log.d("Permission granted? ", " YES");
+//                    } else {
+//                        View content = findViewById(android.R.id.content);
+//                        Snackbar.make(content, R.string.permission_rationale, Snackbar.LENGTH_INDEFINITE)
+//                                .setAction(R.string.allow, v -> askPermissions())
+//                                .show();
+//                    }
+//                });
+//    }
 
     private void loadFlipcards() {
 
